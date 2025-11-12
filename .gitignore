@@ -11,6 +11,9 @@
 *.DS_Store
 *.emSession
 *.ini
+*.recovery
+*.sty
+*.synthesis_touch
 
 # KiCad files
 *#
