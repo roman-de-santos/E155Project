@@ -21,3 +21,16 @@
 *.zip
 *.kicad_sch-bak
 *.lck
+*.pfl
+*.tcl
+*.udb
+*.psn
+*.lsedata
+*.synproj
+*.srp
+*.mrp
+*.vm
+*.arearep
+*.log
+*.vdb
+*.txt
