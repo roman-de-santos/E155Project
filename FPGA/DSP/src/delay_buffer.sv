@@ -10,7 +10,7 @@
  * It writes incoming valid packets (`pkt_i`) to a circular buffer and
  * reads them out after a variable delay. The delay is composed of a
  * fixed average delay (`AVG_DELAY`) and a variable extra delay
- * (`extra_delay_i`), which would be supplied by an LFO in a chorus
+ * (`extra_read_addr_delay_i`), which would be supplied by an LFO in a chorus
  * effect.
  *
  * This module infers a synchronous-read SPRAM, which is typical
@@ -23,89 +23,77 @@
  * AVG_DELAY   - The fixed, average delay in samples.
  *
  * Ports:
- * rst_n         - Active-low synchronous reset.
- * clk           - System clock (CLK_DSP).
- * pkt_i         - Input data packet from the asynchronous FIFO.
- * pkt_valid_i   - '1' when `pkt_i` contains valid data to be written.
- * extra_delay_i - Additional variable delay (from LFO).
- * pkt_delayed_o - Delayed data packet output.
+ * rst_n         			- Active-low synchronous reset.
+ * clk           			- System clock (CLK_DSP).
+ * pkt_i        			- Input data packet from the asynchronous FIFO.
+ * pkt_valid_i   			- '1' when `pkt_i` contains valid data to be written.
+ * extra_read_addr_delay_i 	- Additional variable delay (from LFO).
+ * pkt_delayed_o 			- Delayed data packet output.
  */
 module delay_buffer #(
-    parameter BUF_DEPTH   = 7680,
+    parameter BUF_DEPTH   = 7680, // Default buffer is small enough to fit within the EBR hardware limit if needed
     parameter PKT_WIDTH   = 16,
-    parameter AVG_DELAY   = 882
+    parameter AVG_DELAY   = 882,
+	parameter ADDR_WIDTH  = $clog2(BUF_DEPTH) // log_2(7680) = 13 bits
 ) (
     input  logic                   rst_n,
     input  logic                   clk,
     input  logic [PKT_WIDTH-1:0]   pkt_i,
     input  logic                   pkt_valid_i,
-    input  logic [PKT_CEILING-1:0] extra_delay_i,
+    input  logic [ADDR_WIDTH-1:0]  extra_read_addr_delay_i,
+	
     output logic [PKT_WIDTH-1:0]   pkt_delayed_o
 );
+	
+	localparam MAX_DELAY = BUF_DEPTH - 10; // choice of 10 was arbitrary
 
-    // Calculate the width of the extra_delay input port, as specified.
-    localparam PKT_CEILING = $clog2(PKT_WIDTH);
-
-    // Calculate the address width needed to index the buffer RAM.
-    // $clog2(7680) = 13 bits
-    localparam ADDR_WIDTH = $clog2(BUF_DEPTH);
-
-    // This is the RAM inferred for the circular buffer.
-    // iCE40 SPRAM is synchronous read.
+    // RAM inferred for the circular buffer. iCE40 SPRAM is synchronous read.
     logic [PKT_WIDTH-1:0] buffer [BUF_DEPTH-1:0];
 
-    // Registers for pointers and output
-    logic [ADDR_WIDTH-1:0] write_ptr_reg;
+    // Registers for storing write address and output packet
+    logic [ADDR_WIDTH-1:0] write_addr_reg;
     logic [PKT_WIDTH-1:0]  pkt_delayed_o_reg;
 
-    // Combinational signals for next state/calculations
-    logic [ADDR_WIDTH-1:0] write_ptr_next;
+    // Combinational internal signals
+    logic [ADDR_WIDTH-1:0] write_addr_nxt;
     logic [ADDR_WIDTH-1:0] read_addr_comb;
 
-    // Combinational logic for the next write pointer
-    // This pointer wraps around at BUF_DEPTH.
+    // Calculate next write address. Address wraps around at BUF_DEPTH.
     always_comb begin
-        if (write_ptr_reg == (BUF_DEPTH - 1'b1)) begin
-            write_ptr_next = '0;
+        if (write_addr_reg == (BUF_DEPTH - 1'b1)) begin
+            write_addr_nxt = '0;
         end else begin
-            write_ptr_next = write_ptr_reg + 1'b1;
+            write_addr_nxt = write_addr_reg + 1'b1;
         end
     end
 
-    // Combinational logic for the read pointer calculation
+    // Calculate read address
     always_comb begin
-        logic [ADDR_WIDTH-1:0] total_delay;
+        // Total delay local variable
+		logic [ADDR_WIDTH-1:0] total_delay;
+		total_delay = AVG_DELAY[ADDR_WIDTH-1:0] + extra_read_addr_delay_i;
+		if (total_delay > MAX_DELAY) total_delay = MAX_DELAY;
 
-        // Calculate the total delay.
-        // We assume AVG_DELAY + extra_delay_i will not exceed ADDR_WIDTH.
-        // Max delay 882 + 15 = 897, which is < 7680 (13 bits).
-        total_delay = AVG_DELAY[ADDR_WIDTH-1:0] + extra_delay_i;
-
-        // Calculate the read pointer with wrap-around logic.
-        // This implements: (write_ptr_reg - total_delay) % BUF_DEPTH
-        // in a way that is friendly to synthesis (no modulo operator).
-        if (write_ptr_reg >= total_delay) begin
-            read_addr_comb = write_ptr_reg - total_delay;
-        end else begin
-            // Handle wrap-around (underflow)
-            read_addr_comb = BUF_DEPTH + write_ptr_reg - total_delay;
+        // Calculate the read address with wrap-around logic.
+        // Implements: (write_addr_reg - total_delay) % BUF_DEPTH, in synthesis-friendly way
+        if (write_addr_reg >= total_delay) begin
+            read_addr_comb = write_addr_reg - total_delay;
+        end else begin 	// Handle wrap-around (underflow)
+            read_addr_comb = BUF_DEPTH[ADDR_WIDTH-1:0] + write_addr_reg - total_delay;
         end
     end
 
     // Main sequential logic for writing and reading
     always_ff @(posedge clk) begin
         if (!rst_n) begin
-            // Active-low synchronous reset
-            write_ptr_reg     <= '0;
+            write_addr_reg    <= '0;
             pkt_delayed_o_reg <= '0;
-            // Note: RAM contents are not explicitly reset
+            // Note: RAM contents are not explicitly reset. May cause a pop on startup.
         end else begin
-            // Write logic:
-            // If new data is valid, write it to the *next* address
-            // and update the write pointer.
+            // Write logic
             if (pkt_valid_i) begin
-                buffer[write_ptr_next] <= pkt_i;
-                write_ptr_reg <= write_ptr_next;
+                buffer[write_addr_nxt] <= pkt_i;
+                write_addr_reg <= write_addr_nxt;
             end
 
             // Read logic (Synchronous Read):
@@ -116,7 +104,6 @@ module delay_buffer #(
         end
     end
 
-    // Assign the registered output to the module's output port
     assign pkt_delayed_o = pkt_delayed_o_reg;
 
 endmodule
