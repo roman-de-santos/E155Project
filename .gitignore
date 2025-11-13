@@ -1,3 +1,11 @@
+# KiCad files
+*#
+*.kicad_prl
+*.zip
+*.kicad_sch-bak
+*.lck
+
+# Radiant & Questa
 *.html
 *.build_status
 *.xml
@@ -14,13 +22,6 @@
 *.recovery
 *.sty
 *.synthesis_touch
-
-# KiCad files
-*#
-*.kicad_prl
-*.zip
-*.kicad_sch-bak
-*.lck
 *.pfl
 *.tcl
 *.udb
@@ -34,3 +35,5 @@
 *.log
 *.vdb
 *.txt
+*.hrr
+/FPGA/DSP/sim/Questa/work

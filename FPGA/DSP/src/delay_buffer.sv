@@ -30,10 +30,10 @@
  * pkt_valid_i   			- '1' when `pkt_i` contains valid data to be written.
  * extra_read_addr_delay_i 	- Additional variable delay (from LFO).
  * pkt_delayed_o 			- Delayed data packet output.
- * pkt_delayed_valid_o		- '1' when pkt_delayed_o is valid (1 cycle after pkt_valid_i).
+ * pkt_delayed_valid_o		- '1' when pkt_delayed_o is valid (1 cycle after pk	t_valid_i).
  */
 module delay_buffer #(
-    parameter 					BUF_DEPTH   = 7680, // Default buffer is small enough to fit within the EBR hardware limit if needed
+    parameter 					BUF_DEPTH   = 7680, // Buffer depth is now arbitrary since I'm abandoning EBR
     parameter 					PKT_WIDTH   = 16,
 	parameter 					ADDR_WIDTH  = $clog2(BUF_DEPTH), // log_2(7680) = 13 bits
 	parameter [ADDR_WIDTH-1:0] 	AVG_DELAY   = 882
@@ -50,6 +50,7 @@ module delay_buffer #(
 	localparam [ADDR_WIDTH-1:0] MAX_DELAY = BUF_DEPTH - 10; // choice of 10 was arbitrary
 
     // SPRAM inferred for the circular buffer. iCE40 SPRAM is synchronous read.
+	(* ram_style = "spram" *)
     logic [PKT_WIDTH-1:0] buffer [BUF_DEPTH-1:0];
 
     // Registers
@@ -66,6 +67,7 @@ module delay_buffer #(
         if (AVG_DELAY >= BUF_DEPTH) begin
             $fatal(1, "ERROR: AVG_DELAY (%0d) must be less than the buffer depth (%0d).", AVG_DELAY, BUF_DEPTH);
         end
+		//MAYBE add a validation which makes sure that BUF_DEPTH * PKT_WIDTH isn't too big for the iCE40
     endgenerate
 
     // Calculate next write address. Address wraps around at BUF_DEPTH.
@@ -73,7 +75,7 @@ module delay_buffer #(
         if (write_addr_reg == (BUF_DEPTH - 1'b1)) 	write_addr_nxt = '0;
 		else										write_addr_nxt = write_addr_reg + 1'b1;
     end
-
+	
     // Calculate read address
     always_comb begin
         // Total delay local variables
@@ -89,11 +91,12 @@ module delay_buffer #(
         if (write_addr_reg >= total_delay) begin
             read_addr_comb = write_addr_reg - total_delay;
         end else begin 	// Handle wrap-around (underflow)
-            read_addr_comb = BUF_DEPTH + write_addr_reg - total_delay;
+            read_addr_comb = ADDR_WIDTH'(BUF_DEPTH) + write_addr_reg - total_delay;
         end
     end
 
     // Main sequential logic for writing and reading
+	//TODO: fix this to be properly single-port
     always_ff @(posedge clk) begin
         if (!rst_n) begin
             write_addr_reg    		<= '0;
