@@ -1,0 +1,20 @@
+*.html
+*.build_status
+*.xml
+*.tcr
+*.o
+*.d
+*.ind
+*.elf
+*.map
+*.jlink
+*.DS_Store
+*.emSession
+*.ini
+
+# KiCad files
+*#
+*.kicad_prl
+*.zip
+*.kicad_sch-bak
+*.lck
