@@ -1,2 +1,2 @@
 # E155Project
-Micro P's Final Project, Tremolo Guitar Pedal 
+Micro P's Final Project, Chorus Guitar Pedal 
