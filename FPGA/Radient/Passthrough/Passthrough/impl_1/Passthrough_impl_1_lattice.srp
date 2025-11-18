@@ -1,0 +1,239 @@
+synthesis:  version Radiant Software (64-bit) 2025.1.0.39.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
+Mon Nov 17 20:46:23 2025
+
+
+Command Line:  C:\lscc\radiant\2025.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_lattice.synproj -logfile Passthrough_impl_1_lattice.srp -gui -msgset C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml 
+
+INFO <35002000> - synthesis: Lattice Synthesis Engine launched.
+
+Synthesis options:
+The -a option is iCE40UP.
+The -t option is SG48.
+The -sp option is High-Performance_1.2V.
+The -p option is iCE40UP5K.
+
+###################### Device Information ######################
+----------------------------------------------------------------
+Lattice Family        | iCE40UP
+----------------------------------------------------------------
+Device                | iCE40UP5K
+----------------------------------------------------------------
+Package               | SG48
+----------------------------------------------------------------
+Performance Grade     | High-Performance_1.2V
+----------------------------------------------------------------
+################################################################
+
+####################### Device Resources #######################
+----------------------------------------------------------------
+Logic Cells           | 5280
+----------------------------------------------------------------
+RAM Blocks            | 30
+----------------------------------------------------------------
+DSP Blocks            | 8
+----------------------------------------------------------------
+PLLs                  | 1
+----------------------------------------------------------------
+I/O Pins              | 56
+----------------------------------------------------------------
+################################################################
+
+Resolving user-selected strategy settings...
+
+INFO <35001797> - synthesis: Use DCC Insertion disabled by default.
+
+###################### Strategy Settings #######################
+----------------------------------------------------------------
+Optimization Goal     | Area
+----------------------------------------------------------------
+Top-level Module Name | I2Srx
+----------------------------------------------------------------
+Target Frequency      | 200.000 MHz
+----------------------------------------------------------------
+Maximum Fanout        | 1000
+----------------------------------------------------------------
+Timing Path Count     | 3
+----------------------------------------------------------------
+RAM Read/Write Check  | False
+----------------------------------------------------------------
+BRAM Utilization      | 100.0%
+----------------------------------------------------------------
+DSP Usage             | True
+----------------------------------------------------------------
+DSP Utilization       | 100.0%
+----------------------------------------------------------------
+FSM Encoding Style    | Auto
+----------------------------------------------------------------
+Resolve Mixed Drivers | False
+----------------------------------------------------------------
+Fix Gated Clocks      | True
+----------------------------------------------------------------
+Mux Style             | Auto
+----------------------------------------------------------------
+Use Carry Chain       | True
+----------------------------------------------------------------
+Carry Chain Length    | Infinite
+----------------------------------------------------------------
+Loop Limit            | 1950
+----------------------------------------------------------------
+Use I/O Insertion     | True
+----------------------------------------------------------------
+Use I/O Registers     | True
+----------------------------------------------------------------
+Resource Sharing      | True
+----------------------------------------------------------------
+Propagate Constants   | True
+----------------------------------------------------------------
+Remove Duplicate Reg  | True
+----------------------------------------------------------------
+Force GSR             | False
+----------------------------------------------------------------
+ROM Style             | Auto
+----------------------------------------------------------------
+RAM Style             | Auto
+----------------------------------------------------------------
+Remove LOC Properties | False
+----------------------------------------------------------------
+Partition Flow        | False
+----------------------------------------------------------------
+Use DCC Insertion     | None
+----------------------------------------------------------------
+################################################################
+
+
+The -comp option is FALSE.
+The -syn option is FALSE.
+
+Output HDL filename: Passthrough_impl_1.vm
+-path C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough (searchpath added)
+-path C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1 (searchpath added)
+-path C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src (searchpath added)
+-path C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench (searchpath added)
+-path C:/lscc/radiant/2025.1/ispfpga/ice40tp/data (searchpath added)
+Mixed language design
+Verilog design file: C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.v
+Verilog design file: C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv
+VHDL library: pmi
+VHDL design file: C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.vhd
+WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM8 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM7 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM6 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM5 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM4 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM3 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM2 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM1 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port TRIM0 is not connected on this instance. VDB-5050
+WARNING <35935050> - synthesis: input port I is not connected on this instance. VDB-5050
+
+Compiling design...
+
+Analyzing Verilog file c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v. VERI-1482
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(1): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_addsub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_addsub.v(40): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/adder_subtractor/rtl/lscc_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(2): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_add.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_add.v(50): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/adder/rtl/lscc_adder.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(3): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_complex_mult.v(52): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/complex_mult/rtl/lscc_complex_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(4): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_counter.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_counter.v(39): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/counter/rtl/lscc_cntr.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(5): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo.v(44): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/fifo/rtl/lscc_fifo.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(6): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo_dc.v(47): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/fifo_dc/rtl/lscc_fifo_dc.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(7): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_mac.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_mac.v(52): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/mult_accumulate/rtl/lscc_mult_accumulate.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(8): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsubsum.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsubsum.v(53): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(9): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsub.v(52): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/mult_add_sub/rtl/lscc_mult_add_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(10): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_mult.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_mult.v(51): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/multiplier/rtl/lscc_multiplier.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(11): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v(48): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v(49): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(12): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v(45): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v(46): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(13): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_rom.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_rom.v(45): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/rom/rtl/lscc_rom.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(14): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_sub.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_sub.v(50): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/subtractor/rtl/lscc_subtractor.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(15): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v(49): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/ram_dp/rtl/lscc_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v(50): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../LFMXO4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(16): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v(45): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../common/ram_dq/rtl/lscc_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v(46): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/../LFMXO4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v. VERI-1328
+INFO <35901328> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v(17): analyzing included file c:/lscc/radiant/2025.1/ip/pmi/pmi_dsp.v. VERI-1328
+Analyzing Verilog file c:/users/roman/documents/github/e155project/fpga/src/i2srx.sv. VERI-1482
+Analyzing VHDL file c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
+Analyzing VHDL file c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd
+
+INFO <35921014> - synthesis: c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd(4): analyzing package components. VHDL-1014
+INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1". VHDL-1504
+Top module language type = Verilog.
+Top module name (Verilog, mixed language): I2Srx
+INFO <35901018> - synthesis: c:/users/roman/documents/github/e155project/fpga/src/i2srx.sv(1): compiling module I2Srx. VERI-1018
+[Parameter Setting Section Start]
+
+	[Parameter Settings for top-level module]
+	(Module: I2Srx)
+		WIDTH                     16
+
+[Parameter Setting Section End]
+
+
+
+
+################### Begin Area Report (I2Srx)######################
+Number of register bits => 63 of 5280 (1 % )
+FD1P3XZ => 63
+IB => 4
+INV => 1
+LUT4 => 3
+OB => 32
+################### End Area Report ##################
+Number of odd-length carry chains : 0
+Number of even-length carry chains : 0
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : sclk_c, loads : 1
+Clock Enable Nets
+Number of Clock Enables: 0
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : rst_c, loads : 34
+  Net : ws_r, loads : 18
+  Net : n387, loads : 18
+  Net : n372, loads : 18
+  Net : n355, loads : 15
+  Net : sdata_c, loads : 4
+  Net : ws_c, loads : 3
+  Net : left[13], loads : 2
+  Net : left[12], loads : 2
+  Net : left[11], loads : 2
+################### End Clock Report ##################
+
+################### Begin Constraint Report ######################
+Constraint Summary:
+  Total number of constraints: 0
+  Total number of constraints dropped: 0
+###################  End Constraint Report  ######################
+
+Peak Memory Usage: 96 MB
+
+--------------------------------------------------------------
+Total CPU Time: 15 secs 
+Total REAL Time: 15 secs 
+--------------------------------------------------------------
+Checksum -- synthesis -- netlist: 3f39ee4cb38839c5c390f6d6c9daf8cfe40511cb

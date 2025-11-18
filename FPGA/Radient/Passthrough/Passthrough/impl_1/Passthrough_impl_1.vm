@@ -1,0 +1,444 @@
+// Verilog netlist produced by program LSE :  version Radiant Software (64-bit) 2025.1.0.39.0
+// Netlist written on Mon Nov 17 20:46:39 2025
+// Source file index table: 
+// Object locations will have the form @<file_index>(<first_ line>[<left_column>],<last_line>[<right_column>])
+// file 0 "c:/users/roman/documents/github/e155project/fpga/src/i2srx.sv"
+// file 1 "c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.v"
+// file 2 "c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd"
+// file 3 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/ccu2_b.v"
+// file 4 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/fd1p3bz.v"
+// file 5 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/fd1p3dz.v"
+// file 6 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/fd1p3iz.v"
+// file 7 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/fd1p3jz.v"
+// file 8 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/hsosc.v"
+// file 9 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/hsosc1p8v.v"
+// file 10 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/ib.v"
+// file 11 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/ifd1p3az.v"
+// file 12 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/lsosc.v"
+// file 13 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/lsosc1p8v.v"
+// file 14 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/ob.v"
+// file 15 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/obz_b.v"
+// file 16 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/ofd1p3az.v"
+// file 17 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/pdp4k.v"
+// file 18 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/rgb.v"
+// file 19 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/rgb1p8v.v"
+// file 20 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/sp256k.v"
+// file 21 "c:/lscc/radiant/2025.1/cae_library/simulation/verilog/ice40up/legacy.v"
+// file 22 "c:/lscc/radiant/2025.1/ip/lfmxo4/ram_dp/rtl/lscc_lfmxo4_ram_dp.v"
+// file 23 "c:/lscc/radiant/2025.1/ip/lfmxo4/ram_dq/rtl/lscc_lfmxo4_ram_dq.v"
+// file 24 "c:/lscc/radiant/2025.1/ip/common/adder/rtl/lscc_adder.v"
+// file 25 "c:/lscc/radiant/2025.1/ip/common/adder_subtractor/rtl/lscc_add_sub.v"
+// file 26 "c:/lscc/radiant/2025.1/ip/common/complex_mult/rtl/lscc_complex_mult.v"
+// file 27 "c:/lscc/radiant/2025.1/ip/common/counter/rtl/lscc_cntr.v"
+// file 28 "c:/lscc/radiant/2025.1/ip/common/fifo/rtl/lscc_fifo.v"
+// file 29 "c:/lscc/radiant/2025.1/ip/common/fifo_dc/rtl/lscc_fifo_dc.v"
+// file 30 "c:/lscc/radiant/2025.1/ip/common/mult_accumulate/rtl/lscc_mult_accumulate.v"
+// file 31 "c:/lscc/radiant/2025.1/ip/common/mult_add_sub/rtl/lscc_mult_add_sub.v"
+// file 32 "c:/lscc/radiant/2025.1/ip/common/mult_add_sub_sum/rtl/lscc_mult_add_sub_sum.v"
+// file 33 "c:/lscc/radiant/2025.1/ip/common/multiplier/rtl/lscc_multiplier.v"
+// file 34 "c:/lscc/radiant/2025.1/ip/common/ram_dp/rtl/lscc_ram_dp.v"
+// file 35 "c:/lscc/radiant/2025.1/ip/common/ram_dq/rtl/lscc_ram_dq.v"
+// file 36 "c:/lscc/radiant/2025.1/ip/common/rom/rtl/lscc_rom.v"
+// file 37 "c:/lscc/radiant/2025.1/ip/common/subtractor/rtl/lscc_subtractor.v"
+// file 38 "c:/lscc/radiant/2025.1/ip/pmi/pmi_add.v"
+// file 39 "c:/lscc/radiant/2025.1/ip/pmi/pmi_addsub.v"
+// file 40 "c:/lscc/radiant/2025.1/ip/pmi/pmi_complex_mult.v"
+// file 41 "c:/lscc/radiant/2025.1/ip/pmi/pmi_counter.v"
+// file 42 "c:/lscc/radiant/2025.1/ip/pmi/pmi_dsp.v"
+// file 43 "c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo.v"
+// file 44 "c:/lscc/radiant/2025.1/ip/pmi/pmi_fifo_dc.v"
+// file 45 "c:/lscc/radiant/2025.1/ip/pmi/pmi_mac.v"
+// file 46 "c:/lscc/radiant/2025.1/ip/pmi/pmi_mult.v"
+// file 47 "c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsub.v"
+// file 48 "c:/lscc/radiant/2025.1/ip/pmi/pmi_multaddsubsum.v"
+// file 49 "c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp.v"
+// file 50 "c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dp_be.v"
+// file 51 "c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq.v"
+// file 52 "c:/lscc/radiant/2025.1/ip/pmi/pmi_ram_dq_be.v"
+// file 53 "c:/lscc/radiant/2025.1/ip/pmi/pmi_rom.v"
+// file 54 "c:/lscc/radiant/2025.1/ip/pmi/pmi_sub.v"
+
+//
+// Verilog Description of module I2Srx
+//
+
+module I2Srx (input sclk, input rst, input ws, input sdata, output [15:0]left_chan, 
+            output [15:0]right_chan);
+    
+    (* is_clock=1, lineinfo="@0(4[11],4[15])" *) wire sclk_c;
+    wire rst_c;
+    wire ws_c;
+    wire sdata_c;
+    wire left_chan_c_15;
+    wire left_chan_c_14;
+    wire left_chan_c_13;
+    wire left_chan_c_12;
+    wire left_chan_c_11;
+    wire left_chan_c_10;
+    wire left_chan_c_9;
+    wire left_chan_c_8;
+    wire left_chan_c_7;
+    wire left_chan_c_6;
+    wire left_chan_c_5;
+    wire left_chan_c_4;
+    wire left_chan_c_3;
+    wire left_chan_c_2;
+    wire left_chan_c_1;
+    wire left_chan_c_0;
+    wire right_chan_c_15;
+    wire right_chan_c_14;
+    wire right_chan_c_13;
+    wire right_chan_c_12;
+    wire right_chan_c_11;
+    wire right_chan_c_10;
+    wire right_chan_c_9;
+    wire right_chan_c_8;
+    wire right_chan_c_7;
+    wire right_chan_c_6;
+    wire right_chan_c_5;
+    wire right_chan_c_4;
+    wire right_chan_c_3;
+    wire right_chan_c_2;
+    wire right_chan_c_1;
+    wire right_chan_c_0;
+    wire [15:0]left;
+    wire [15:0]right;
+    wire ws_r;
+    (* is_clock=1, lineinfo="@0(4[11],4[15])" *) wire sclk_c_derived_1;
+    
+    wire GND_net, n387, n372, VCC_net, n355;
+    
+    VHI i115 (.Z(VCC_net));
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i1 (.D(sdata_c), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[0]));
+    defparam left__1__i1.REGSET = "RESET";
+    defparam left__1__i1.SRMODE = "CE_OVER_LSR";
+    (* lut_function="(A (B+!(C))+!A (B))", lineinfo="@0(40[8],50[4])" *) LUT4 i131_3_lut_3_lut (.A(ws_c), 
+            .B(rst_c), .C(ws_r), .Z(n372));
+    defparam i131_3_lut_3_lut.INIT = "0xcece";
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[13]  (.I(left_chan_c_13), 
+            .O(left_chan[13]));
+    (* lineinfo="@0(22[8],24[4])" *) FD1P3XZ ws_r_c (.D(ws_c), .SP(VCC_net), 
+            .CK(sclk_c_derived_1), .SR(GND_net), .Q(ws_r));
+    defparam ws_r_c.REGSET = "RESET";
+    defparam ws_r_c.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[14]  (.I(left_chan_c_14), 
+            .O(left_chan[14]));
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i2 (.D(right[0]), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[1]));
+    defparam right__0__i2.REGSET = "RESET";
+    defparam right__0__i2.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i16 (.D(right[14]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_15));
+    defparam right_chan__i16.REGSET = "RESET";
+    defparam right_chan__i16.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i1 (.D(sdata_c), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_0));
+    defparam left_chan__i1.REGSET = "RESET";
+    defparam left_chan__i1.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[15]  (.I(left_chan_c_15), 
+            .O(left_chan[15]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[12]  (.I(left_chan_c_12), 
+            .O(left_chan[12]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[11]  (.I(left_chan_c_11), 
+            .O(left_chan[11]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[10]  (.I(left_chan_c_10), 
+            .O(left_chan[10]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[9]  (.I(left_chan_c_9), 
+            .O(left_chan[9]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[8]  (.I(left_chan_c_8), 
+            .O(left_chan[8]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[7]  (.I(left_chan_c_7), 
+            .O(left_chan[7]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[6]  (.I(left_chan_c_6), 
+            .O(left_chan[6]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[5]  (.I(left_chan_c_5), 
+            .O(left_chan[5]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[4]  (.I(left_chan_c_4), 
+            .O(left_chan[4]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[3]  (.I(left_chan_c_3), 
+            .O(left_chan[3]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[2]  (.I(left_chan_c_2), 
+            .O(left_chan[2]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[1]  (.I(left_chan_c_1), 
+            .O(left_chan[1]));
+    (* lineinfo="@0(11[30],11[39])" *) OB \left_chan_pad[0]  (.I(left_chan_c_0), 
+            .O(left_chan[0]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[15]  (.I(right_chan_c_15), 
+            .O(right_chan[15]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[14]  (.I(right_chan_c_14), 
+            .O(right_chan[14]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[13]  (.I(right_chan_c_13), 
+            .O(right_chan[13]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[12]  (.I(right_chan_c_12), 
+            .O(right_chan[12]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[11]  (.I(right_chan_c_11), 
+            .O(right_chan[11]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[10]  (.I(right_chan_c_10), 
+            .O(right_chan[10]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[9]  (.I(right_chan_c_9), 
+            .O(right_chan[9]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[8]  (.I(right_chan_c_8), 
+            .O(right_chan[8]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[7]  (.I(right_chan_c_7), 
+            .O(right_chan[7]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[6]  (.I(right_chan_c_6), 
+            .O(right_chan[6]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[5]  (.I(right_chan_c_5), 
+            .O(right_chan[5]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[4]  (.I(right_chan_c_4), 
+            .O(right_chan[4]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[3]  (.I(right_chan_c_3), 
+            .O(right_chan[3]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[2]  (.I(right_chan_c_2), 
+            .O(right_chan[2]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[1]  (.I(right_chan_c_1), 
+            .O(right_chan[1]));
+    (* lineinfo="@0(12[30],12[40])" *) OB \right_chan_pad[0]  (.I(right_chan_c_0), 
+            .O(right_chan[0]));
+    (* lineinfo="@0(4[11],4[15])" *) IB sclk_pad (.I(sclk), .O(sclk_c));
+    (* lineinfo="@0(5[11],5[14])" *) IB rst_pad (.I(rst), .O(rst_c));
+    (* lineinfo="@0(7[11],7[13])" *) IB ws_pad (.I(ws), .O(ws_c));
+    (* lineinfo="@0(8[11],8[16])" *) IB sdata_pad (.I(sdata), .O(sdata_c));
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i2 (.D(left[0]), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_1));
+    defparam left_chan__i2.REGSET = "RESET";
+    defparam left_chan__i2.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i3 (.D(left[1]), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_2));
+    defparam left_chan__i3.REGSET = "RESET";
+    defparam left_chan__i3.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i4 (.D(left[2]), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_3));
+    defparam left_chan__i4.REGSET = "RESET";
+    defparam left_chan__i4.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i5 (.D(left[3]), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_4));
+    defparam left_chan__i5.REGSET = "RESET";
+    defparam left_chan__i5.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i6 (.D(left[4]), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_5));
+    defparam left_chan__i6.REGSET = "RESET";
+    defparam left_chan__i6.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i7 (.D(left[5]), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_6));
+    defparam left_chan__i7.REGSET = "RESET";
+    defparam left_chan__i7.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i8 (.D(left[6]), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_7));
+    defparam left_chan__i8.REGSET = "RESET";
+    defparam left_chan__i8.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i9 (.D(left[7]), .SP(n372), 
+            .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_8));
+    defparam left_chan__i9.REGSET = "RESET";
+    defparam left_chan__i9.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i10 (.D(left[8]), 
+            .SP(n372), .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_9));
+    defparam left_chan__i10.REGSET = "RESET";
+    defparam left_chan__i10.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i11 (.D(left[9]), 
+            .SP(n372), .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_10));
+    defparam left_chan__i11.REGSET = "RESET";
+    defparam left_chan__i11.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i12 (.D(left[10]), 
+            .SP(n372), .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_11));
+    defparam left_chan__i12.REGSET = "RESET";
+    defparam left_chan__i12.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i13 (.D(left[11]), 
+            .SP(n372), .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_12));
+    defparam left_chan__i13.REGSET = "RESET";
+    defparam left_chan__i13.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i14 (.D(left[12]), 
+            .SP(n372), .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_13));
+    defparam left_chan__i14.REGSET = "RESET";
+    defparam left_chan__i14.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i15 (.D(left[13]), 
+            .SP(n372), .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_14));
+    defparam left_chan__i15.REGSET = "RESET";
+    defparam left_chan__i15.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i1 (.D(sdata_c), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_0));
+    defparam right_chan__i1.REGSET = "RESET";
+    defparam right_chan__i1.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i2 (.D(right[0]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_1));
+    defparam right_chan__i2.REGSET = "RESET";
+    defparam right_chan__i2.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i3 (.D(right[1]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_2));
+    defparam right_chan__i3.REGSET = "RESET";
+    defparam right_chan__i3.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i4 (.D(right[2]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_3));
+    defparam right_chan__i4.REGSET = "RESET";
+    defparam right_chan__i4.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i5 (.D(right[3]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_4));
+    defparam right_chan__i5.REGSET = "RESET";
+    defparam right_chan__i5.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i6 (.D(right[4]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_5));
+    defparam right_chan__i6.REGSET = "RESET";
+    defparam right_chan__i6.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i7 (.D(right[5]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_6));
+    defparam right_chan__i7.REGSET = "RESET";
+    defparam right_chan__i7.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i8 (.D(right[6]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_7));
+    defparam right_chan__i8.REGSET = "RESET";
+    defparam right_chan__i8.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i9 (.D(right[7]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_8));
+    defparam right_chan__i9.REGSET = "RESET";
+    defparam right_chan__i9.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i10 (.D(right[8]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_9));
+    defparam right_chan__i10.REGSET = "RESET";
+    defparam right_chan__i10.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i11 (.D(right[9]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_10));
+    defparam right_chan__i11.REGSET = "RESET";
+    defparam right_chan__i11.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i12 (.D(right[10]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_11));
+    defparam right_chan__i12.REGSET = "RESET";
+    defparam right_chan__i12.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i13 (.D(right[11]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_12));
+    defparam right_chan__i13.REGSET = "RESET";
+    defparam right_chan__i13.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i14 (.D(right[12]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_13));
+    defparam right_chan__i14.REGSET = "RESET";
+    defparam right_chan__i14.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ right_chan__i15 (.D(right[13]), 
+            .SP(n387), .CK(sclk_c), .SR(rst_c), .Q(right_chan_c_14));
+    defparam right_chan__i15.REGSET = "RESET";
+    defparam right_chan__i15.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i3 (.D(right[1]), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[2]));
+    defparam right__0__i3.REGSET = "RESET";
+    defparam right__0__i3.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i4 (.D(right[2]), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[3]));
+    defparam right__0__i4.REGSET = "RESET";
+    defparam right__0__i4.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i5 (.D(right[3]), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[4]));
+    defparam right__0__i5.REGSET = "RESET";
+    defparam right__0__i5.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i6 (.D(right[4]), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[5]));
+    defparam right__0__i6.REGSET = "RESET";
+    defparam right__0__i6.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i7 (.D(right[5]), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[6]));
+    defparam right__0__i7.REGSET = "RESET";
+    defparam right__0__i7.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i8 (.D(right[6]), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[7]));
+    defparam right__0__i8.REGSET = "RESET";
+    defparam right__0__i8.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i9 (.D(right[7]), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[8]));
+    defparam right__0__i9.REGSET = "RESET";
+    defparam right__0__i9.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i10 (.D(right[8]), 
+            .SP(ws_r), .CK(sclk_c), .SR(GND_net), .Q(right[9]));
+    defparam right__0__i10.REGSET = "RESET";
+    defparam right__0__i10.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i11 (.D(right[9]), 
+            .SP(ws_r), .CK(sclk_c), .SR(GND_net), .Q(right[10]));
+    defparam right__0__i11.REGSET = "RESET";
+    defparam right__0__i11.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i12 (.D(right[10]), 
+            .SP(ws_r), .CK(sclk_c), .SR(GND_net), .Q(right[11]));
+    defparam right__0__i12.REGSET = "RESET";
+    defparam right__0__i12.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i13 (.D(right[11]), 
+            .SP(ws_r), .CK(sclk_c), .SR(GND_net), .Q(right[12]));
+    defparam right__0__i13.REGSET = "RESET";
+    defparam right__0__i13.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i14 (.D(right[12]), 
+            .SP(ws_r), .CK(sclk_c), .SR(GND_net), .Q(right[13]));
+    defparam right__0__i14.REGSET = "RESET";
+    defparam right__0__i14.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i15 (.D(right[13]), 
+            .SP(ws_r), .CK(sclk_c), .SR(GND_net), .Q(right[14]));
+    defparam right__0__i15.REGSET = "RESET";
+    defparam right__0__i15.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i2 (.D(left[0]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[1]));
+    defparam left__1__i2.REGSET = "RESET";
+    defparam left__1__i2.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i3 (.D(left[1]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[2]));
+    defparam left__1__i3.REGSET = "RESET";
+    defparam left__1__i3.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i4 (.D(left[2]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[3]));
+    defparam left__1__i4.REGSET = "RESET";
+    defparam left__1__i4.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i5 (.D(left[3]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[4]));
+    defparam left__1__i5.REGSET = "RESET";
+    defparam left__1__i5.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i6 (.D(left[4]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[5]));
+    defparam left__1__i6.REGSET = "RESET";
+    defparam left__1__i6.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i7 (.D(left[5]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[6]));
+    defparam left__1__i7.REGSET = "RESET";
+    defparam left__1__i7.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i8 (.D(left[6]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[7]));
+    defparam left__1__i8.REGSET = "RESET";
+    defparam left__1__i8.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i9 (.D(left[7]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[8]));
+    defparam left__1__i9.REGSET = "RESET";
+    defparam left__1__i9.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i10 (.D(left[8]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[9]));
+    defparam left__1__i10.REGSET = "RESET";
+    defparam left__1__i10.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i11 (.D(left[9]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[10]));
+    defparam left__1__i11.REGSET = "RESET";
+    defparam left__1__i11.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i12 (.D(left[10]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[11]));
+    defparam left__1__i12.REGSET = "RESET";
+    defparam left__1__i12.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i13 (.D(left[11]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[12]));
+    defparam left__1__i13.REGSET = "RESET";
+    defparam left__1__i13.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i14 (.D(left[12]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[13]));
+    defparam left__1__i14.REGSET = "RESET";
+    defparam left__1__i14.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ left__1__i15 (.D(left[13]), .SP(n355), 
+            .CK(sclk_c), .SR(GND_net), .Q(left[14]));
+    defparam left__1__i15.REGSET = "RESET";
+    defparam left__1__i15.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(40[8],50[4])" *) FD1P3XZ left_chan__i16 (.D(left[14]), 
+            .SP(n372), .CK(sclk_c), .SR(rst_c), .Q(left_chan_c_15));
+    defparam left_chan__i16.REGSET = "RESET";
+    defparam left_chan__i16.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(32[8],37[4])" *) FD1P3XZ right__0__i1 (.D(sdata_c), .SP(ws_r), 
+            .CK(sclk_c), .SR(GND_net), .Q(right[0]));
+    defparam right__0__i1.REGSET = "RESET";
+    defparam right__0__i1.SRMODE = "CE_OVER_LSR";
+    (* lineinfo="@0(22[10],22[22])" *) INV i4_1_lut (.A(sclk_c), .Z(sclk_c_derived_1));
+    (* lut_function="(A (B)+!A (B+(C)))", lineinfo="@0(40[8],50[4])" *) LUT4 i146_3_lut (.A(ws_c), 
+            .B(rst_c), .C(ws_r), .Z(n387));
+    defparam i146_3_lut.INIT = "0xdcdc";
+    VLO i152 (.Z(GND_net));
+    (* lut_function="(!(A))", lineinfo="@0(28[24],28[29])" *) LUT4 i9_1_lut (.A(ws_r), 
+            .Z(n355));
+    defparam i9_1_lut.INIT = "0x5555";
+    
+endmodule

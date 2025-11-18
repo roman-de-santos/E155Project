@@ -1,0 +1,9 @@
+---------------------------------------------------
+Report for cell I2Srx
+   Instance path: I2Srx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         66        100.0
+                               LUTGATE	         66        100.0
+                                 IOBUF	         36        100.0
+                                PFUREG	         63        100.0

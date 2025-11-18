@@ -1,0 +1,1015 @@
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 19:34:50 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x0000, R=0x0000
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x0000, R=0x0000
+# All test cases complete. Finishing simulation.
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(102)
+#    Time: 225 ns  Iteration: 0  Instance: /i2s_rx_tb
+# 1
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 102
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x0000, R=0x0000
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x0000, R=0x0000
+# All test cases complete. Finishing simulation.
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(102)
+#    Time: 225 ns  Iteration: 0  Instance: /i2s_rx_tb
+# End time: 19:36:27 on Nov 17,2025, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 19:37:13 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x0000, R=0x0000
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x0000, R=0x0000
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(102)
+#    Time: 225 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 102
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x0000, R=0x0000
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x0000, R=0x0000
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(102)
+#    Time: 225 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 102
+# End time: 19:46:00 on Nov 17,2025, Elapsed time: 0:08:47
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 19:46:31 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x0000, R=0x0000
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x0000, R=0x0000
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(102)
+#    Time: 405 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 102
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x0000, R=0x0000
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x0000, R=0x0000
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(102)
+#    Time: 405 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 102
+# End time: 19:50:37 on Nov 17,2025, Elapsed time: 0:04:06
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 19:54:29 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(138)
+#    Time: 1135 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 138
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(138)
+#    Time: 1135 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 138
+# End time: 20:54:02 on Nov 17,2025, Elapsed time: 0:59:33
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 20:56:27 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7dde
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(138)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 138
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7dde
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(138)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 138
+# End time: 20:58:31 on Nov 17,2025, Elapsed time: 0:02:04
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 20:59:03 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7dde
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(140)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 140
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7dde
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(140)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 140
+# End time: 21:10:26 on Nov 17,2025, Elapsed time: 0:11:23
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:10:58 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x7ab7, R=0xfbbe
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x48d0, R=0x59e0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(138)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 138
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x7ab7, R=0xfbbe
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x48d0, R=0x59e0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(138)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 138
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 21:33:47 on Nov 17,2025, Elapsed time: 0:22:49
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:34:25 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x7ab7, R=0xfbbe
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x48d0, R=0x59e0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+# End time: 21:42:33 on Nov 17,2025, Elapsed time: 0:08:08
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:43:02 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xxxxX, R=0xxxxX
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0xxxxX, R=0xxxxX
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+# End time: 21:44:41 on Nov 17,2025, Elapsed time: 0:01:39
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:45:12 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0x2cf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0x2cf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0x2cf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+# Causality operation skipped due to absence of debug database file
+# **** Error: SelectedSignalQ cmd: Dataflow::MessageHandler SelectedSignalQ .main_pane.dataflow.interior.cs.body.pw.df.c sim
+# ****        invalid command name ".main_pane.dataflow.interior.cs.body.pw.df.c.nlv"
+# invalid command name ".main_pane.dataflow.interior.cs.body.pw.df.c.nlv"
+#     while executing
+# "$nlv search -exact netBundle ${sel}"
+#     (method "::vsimwidgets::Dataflow::selectsig_cmd" body line 44)
+#     invoked from within
+# "$nl selectsig_cmd SelectedSignalQ $ns "
+#     (procedure "Dataflow::MessageHandler" line 15)
+#     invoked from within
+# "Dataflow::MessageHandler SelectedSignalQ .main_pane.dataflow.interior.cs.body.pw.df.c sim"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $p $tankNamespace "
+# **** Error: SelectedSignalQ cmd: Wave::SelectSigCmd .main_pane.dataflow.interior.cs.body.pw.wf.top.tree sim
+# ****        can't read "vsimPriv(.main_pane.dataflow.interior.cs.body:grid)": no such element in array
+# can't read "vsimPriv(.main_pane.dataflow.interior.cs.body:grid)": no such element in array
+#     while executing
+# "set grid $vsimPriv($grid:grid)"
+#     (procedure "ginfo" line 10)
+#     invoked from within
+# "ginfo trees $w"
+#     (procedure "Wave::SelectSigCmd" line 8)
+#     invoked from within
+# "Wave::SelectSigCmd .main_pane.dataflow.interior.cs.body.pw.wf.top.tree sim"
+#     ("eval" body line 1)
+#     invoked from within
+# "eval $p $tankNamespace "
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 21:48:26 on Nov 17,2025, Elapsed time: 0:03:14
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:48:55 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+# End time: 21:53:01 on Nov 17,2025, Elapsed time: 0:04:06
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:53:52 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+# End time: 22:02:33 on Nov 17,2025, Elapsed time: 0:08:41
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:03:08 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+# End time: 22:04:38 on Nov 17,2025, Elapsed time: 0:01:30
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:05:05 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+# End time: 22:09:03 on Nov 17,2025, Elapsed time: 0:03:58
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:10:40 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x7ab7, R=0xfbbe
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x48d0, R=0x59e0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x7ab7, R=0xfbbe
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x48d0, R=0x59e0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+# End time: 22:15:30 on Nov 17,2025, Elapsed time: 0:04:50
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:16:03 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(135)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 135
+# End time: 22:19:56 on Nov 17,2025, Elapsed time: 0:03:53
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:22:03 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(130)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 130
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(130)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 130
+# End time: 22:25:39 on Nov 17,2025, Elapsed time: 0:03:36
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:26:11 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(130)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 130
+# End time: 22:27:10 on Nov 17,2025, Elapsed time: 0:00:59
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:27:46 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(120)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 120
+# End time: 22:28:15 on Nov 17,2025, Elapsed time: 0:00:29
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:28:41 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(130)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 130
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(130)
+#    Time: 1130 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 130
+# End time: 22:41:12 on Nov 17,2025, Elapsed time: 0:12:31
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:41:45 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(122)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 122
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0xbd5b, R=0x7ddf
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0x2468, R=0xacf0
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(122)
+#    Time: 1090 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 122
+# End time: 22:56:49 on Nov 17,2025, Elapsed time: 0:15:04
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 22:57:31 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x37ab, R=0x6fbb
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0xc48d, R=0x959e
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(125)
+#    Time: 1070 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 125
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 FAILED: Expected L=0xdead, R=0xbeef. Got L=0x37ab, R=0x6fbb
+# Test 2 FAILED: Expected L=0x1234, R=0x5678. Got L=0xc48d, R=0x959e
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(125)
+#    Time: 1070 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 125
+# End time: 23:04:00 on Nov 17,2025, Elapsed time: 0:06:29
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 23:04:28 on Nov 17,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 PASSED: L=0xdead, R=0xbeef
+# Test 2 PASSED: L=0x1234, R=0x5678
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(125)
+#    Time: 1070 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 125
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 PASSED: L=0xdead, R=0xbeef
+# Test 2 PASSED: L=0x1234, R=0x5678
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(125)
+#    Time: 1070 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 125
+# End time: 23:08:38 on Nov 17,2025, Elapsed time: 0:04:10
+# Errors: 0, Warnings: 0
