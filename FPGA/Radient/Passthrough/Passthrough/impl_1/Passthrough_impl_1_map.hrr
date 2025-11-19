@@ -1,0 +1,12 @@
+---------------------------------------------------
+Report for cell I2Stx
+   Instance path: I2Stx
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                 IOLGC	       1.00        100.0
+                                  LUT4	         47        100.0
+                               LUTGATE	         39        100.0
+                                LUTCCU	          8        100.0
+                                 IOREG	          1        100.0
+                                 IOBUF	         36        100.0
+                                PFUREG	         39        100.0

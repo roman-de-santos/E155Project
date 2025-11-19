@@ -1,0 +1,18 @@
+<top name = "I2Stx"  library = "work"  arch = ""  entry = "Verilog">
+
+<clocks>
+    <clockitem name = "sclk"  type = "port" />
+    <clockitem name = "n2"  type = "net" />
+</clocks>
+
+<!--
+    //=============================================================
+    //  Number of Clocks processed: 1
+    //
+    //  If a clock cannot be found in the top level pins section,
+    //  that means it is an internal clock.
+    //
+    //=============================================================
+-->
+
+</top>

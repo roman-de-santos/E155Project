@@ -1,0 +1,14 @@
+----------------------------------------------------------------------
+Report for cell I2Stx.TECH
+Register bits:  39 of 5280 (0.739%)
+I/O cells:      36
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                               CCU2         4          100.0
+                            FD1P3XZ        39          100.0
+                                 IB        34          100.0
+                                INV         1          100.0
+                              IOL_B         1          100.0
+                               LUT4        37          100.0
+                                 OB         2          100.0
+                              TOTAL       118

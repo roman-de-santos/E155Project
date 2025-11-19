@@ -1,0 +1,10 @@
+<RadiantSimulationProject language="1" name="Sim" path="." simType="QuestaSim Qrun" stage="0" version="2.0">
+    <Source include="none" langstandard="System Verilog" path="../../../Src/I2Srx.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="System Verilog" path="../../../Src/I2Stx.sv" type="VERILOG" worklib="work"/>
+    <Source include="none" langstandard="" path="../../../Testbench/I2Sfull_tb.sv" type="VERILOG" worklib=""/>
+    <SimLib value="pmi_work ovi_ice40up"/>
+    <GlbInc value=""/>
+    <Macro value=""/>
+    <Udo value=""/>
+    <TopModule instance="" language="VERILOG" name="i2s_tb"/>
+</RadiantSimulationProject>
