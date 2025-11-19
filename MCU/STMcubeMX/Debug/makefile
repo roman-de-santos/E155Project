@@ -60,8 +60,8 @@ all: main-build
 main-build: STMcubeMX.elf secondary-outputs
 
 # Tool invocations
-STMcubeMX.elf STMcubeMX.map: $(OBJS) $(USER_OBJS) C:\Users\roman\OneDrive\Documents\STMcubeMX\STM32L432KCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STMcubeMX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\roman\OneDrive\Documents\STMcubeMX\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STMcubeMX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STMcubeMX.elf STMcubeMX.map: $(OBJS) $(USER_OBJS) C:\Git\E155Project\MCU\STMcubeMX\STM32L432KCUX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STMcubeMX.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Git\E155Project\MCU\STMcubeMX\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STMcubeMX.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
