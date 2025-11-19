@@ -1,14 +1,32 @@
 ----------------------------------------------------------------------
-Report for cell I2Stx.TECH
-Register bits:  39 of 5280 (0.739%)
-I/O cells:      36
+Report for cell top.TECH
+Register bits:  7 of 5280 (0.133%)
+I/O cells:      5
                                   Cell usage:
                                cell     count   Res Usage(%)
                                CCU2         4          100.0
-                            FD1P3XZ        39          100.0
-                                 IB        34          100.0
+                            FD1P3XZ         7          100.0
+                                 IB         2          100.0
                                 INV         1          100.0
-                              IOL_B         1          100.0
-                               LUT4        37          100.0
-                                 OB         2          100.0
-                              TOTAL       118
+                               LUT4         8          100.0
+                                 OB         3          100.0
+SUB MODULES
+                              I2Srx         1
+                              I2Stx         1
+                              TOTAL        27
+----------------------------------------------------------------------
+Report for cell I2Stx.v1
+Instance Path : I2Stx0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         4          100.0
+                            FD1P3XZ         7          100.0
+                               LUT4         8          100.0
+                              TOTAL        19
+----------------------------------------------------------------------
+Report for cell I2Srx.v1
+Instance Path : I2Srx0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                INV         1          100.0
+                              TOTAL         1

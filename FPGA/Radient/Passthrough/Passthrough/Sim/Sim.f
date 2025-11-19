@@ -3,9 +3,10 @@
 -reflib ovi_ice40up
 
 
-"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv" 
-"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv" 
-"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv" 
+"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv" 
+"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv" 
+"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/top.sv" 
+"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*

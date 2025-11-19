@@ -1,11 +1,11 @@
 module I2Srx #(
     parameter WIDTH = 16
 )(
-    input sclk,  // Clock
-    input rst,   // Reset
+    input logic sclk,  // Clock
+    input logic rst,   // Reset
 
-    input ws,    // Word Select
-    input sdata, // Audio Data
+    input logic ws,    // Word Select
+    input logic sdata, // Audio Data
 
     // Audio Output
     output logic [WIDTH-1:0] left_chan,

@@ -33,7 +33,6 @@ module I2Stx #(
 		
 		if (rst) begin
 			shift_reg <= {1'b0, left_chan, right_chan};
-			sdata = 0;
 		end else if (bitCnt == (WIDTH*2 - 2)) begin
 			shift_reg <= {shift_reg[2*WIDTH],left_chan, right_chan};
 		end else begin

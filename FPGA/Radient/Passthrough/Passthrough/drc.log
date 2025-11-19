@@ -1,0 +1,5 @@
+DRC: Design Rule Check Radiant Software (64-bit) 2024.2.0.3.0
+Wed Nov 19 14:03:54 2025
+
+WARNING <71003020> - Top module port 'ws_in' does not connect to anything.
+WARNING <71003020> - Top module port 'sdata_in' does not connect to anything.

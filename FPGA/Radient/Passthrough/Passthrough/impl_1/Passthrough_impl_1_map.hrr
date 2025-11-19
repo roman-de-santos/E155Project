@@ -1,12 +1,28 @@
 ---------------------------------------------------
-Report for cell I2Stx
-   Instance path: I2Stx
+Report for cell top
+   Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                 IOLGC	       1.00        100.0
-                                  LUT4	         47        100.0
-                               LUTGATE	         39        100.0
+                                  LUT4	         18        100.0
+                               LUTGATE	         10        100.0
                                 LUTCCU	          8        100.0
-                                 IOREG	          1        100.0
-                                 IOBUF	         36        100.0
-                                PFUREG	         39        100.0
+                                 IOBUF	          5        100.0
+                                PFUREG	          7        100.0
+SUB MODULES
+                                  cell	      count    LUT4 Usage(%)
+                                 I2Srx	          1         0.0
+                                 I2Stx	          1        88.9
+---------------------------------------------------
+Report for cell I2Stx
+   Instance path: top/I2Stx0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         16        88.9
+                               LUTGATE	          8        80.0
+                                LUTCCU	          8        100.0
+                                PFUREG	          7        100.0
+---------------------------------------------------
+Report for cell I2Srx
+   Instance path: top/I2Srx0
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
