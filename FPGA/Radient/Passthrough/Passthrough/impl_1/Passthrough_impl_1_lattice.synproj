@@ -44,10 +44,10 @@
 -ver "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.v"
 -lib pmi -vhd "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.vhd"
 -sver "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv"
+"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv"
 
 
 -path "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough"
--top I2Srx
 -udb "Passthrough_impl_1_rtl.udb"
 -output_hdl "Passthrough_impl_1.vm"
 

@@ -1,7 +1,8 @@
-<top name = "I2Srx"  library = "work"  arch = ""  entry = "Verilog">
+<top name = "I2Stx"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
     <clockitem name = "sclk"  type = "port" />
+    <clockitem name = "n2"  type = "net" />
 </clocks>
 
 <!--

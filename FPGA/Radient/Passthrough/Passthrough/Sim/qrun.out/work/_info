@@ -10,28 +10,28 @@ Z0 !s99 nomlopt
 !i10f 100
 cModel Technology
 Z1 dC:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim
-vi2s_rx_tb
-Z2 2C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv
+vi2s_tb
+Z2 2C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv
 Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1763449468
+Z4 !s110 1763514881
 !i10b 1
-!s100 _[HLmg@T?I`2za>lNK>IV0
-IOaJ=hAjUTNMzi[G1olDD33
+!s100 0Oc2>VdS;?f6:Hg<`gKi>3
+I=c@YR<0Rzbg<9i9?2SaTM3
 S1
 R1
-w1763449433
-8C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv
-FC:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv
+w1763513757
+8C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv
+FC:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv
 !i122 0
-L0 1 129
+L0 1 55
 Z5 VDg1SIo80bB@j0V0VzS_@n1
 Z6 OL;L;2024.2;79
 r1
 !s85 0
 31
-Z7 !s108 1763449467.000000
-Z8 !s107 C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv|
-Z9 !s90 -reportprogress|300|-L|work|-sv|+noacc+pmi_work.*|+noacc+ovi_ice40up.*|-L|pmi_work|-L|ovi_ice40up|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-writesessionid|+qrun.out/top_dus|-csession=incr|
+Z7 !s108 1763514881.000000
+Z8 !s107 C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv|
+Z9 !s90 -reportprogress|300|-L|work|-sv|+noacc+pmi_work.*|+noacc+ovi_ice40up.*|-L|pmi_work|-L|ovi_ice40up|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-writesessionid|+qrun.out/top_dus|-csession=incr|
 !i113 0
 Z10 o-L work -sv +noacc+pmi_work.* +noacc+ovi_ice40up.* -L pmi_work -L ovi_ice40up -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z11 tCvgOpt 0
@@ -40,15 +40,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 10XR58Ki5m@OMCCdkY1cM0
-I<?0[:0iRS2WZ`WEDBVCY_3
+!s100 >;QCQR8_3KTozhG3m6hE^2
+I=JWT?]GgWS;HB[b0iZCf73
 S1
 R1
-w1763449435
+w1763463746
 8C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv
 FC:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv
 !i122 0
-L0 1 59
+Z12 L0 1 56
 R5
 R6
 r1
@@ -61,12 +61,38 @@ R9
 R10
 R11
 n@i2@srx
-Tqrun_opt
+vI2Stx
+R2
+R3
 R4
-VURV74nNaRzTLA58;k<5I=3
-04 9 4 work i2s_rx_tb fast 0
+!i10b 1
+!s100 GU0J=:4iCWK7G>S;nA@HD2
+Ih1eGPT8KEnU0XIV77boYO0
+S1
+R1
+w1763514849
+8C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv
+FC:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv
+!i122 0
+R12
+R5
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 0
+R10
+R11
+n@i2@stx
+Tqrun_opt
+!s110 1763514882
+V_<MVXTd7:FY1>zjnoU8o12
+04 6 4 work i2s_tb fast 0
 R0
-!s12f OEM25U2 
+!s12f OEM25U3 
 !s12b OEM100
 !s124 OEM100
 !s135 nogc

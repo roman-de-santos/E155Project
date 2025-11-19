@@ -49,6 +49,7 @@ always @(posedge sclk) begin
     end else if (ws_pedge) begin
         // End of Left channel. Latch the *fully assembled* left data.
         left_chan <= left;
+		//ASYNCH FIFO ENABLE HERE AFTER FULL CYCLE
     end
 end
 

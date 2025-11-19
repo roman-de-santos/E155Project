@@ -1,0 +1,12 @@
+synthesis:  version Radiant Software (64-bit) 2025.1.0.39.0
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
+Tue Nov 18 15:58:39 2025
+
+
+Command Line:  C:\lscc\radiant\2025.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_lattice.synproj -logfile Passthrough_impl_1_lattice.srp -gui -msgset C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml 
+

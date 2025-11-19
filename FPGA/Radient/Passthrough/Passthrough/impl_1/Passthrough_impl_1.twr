@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2025.1.0.39.0
 
-Mon Nov 17 20:47:15 2025
+Tue Nov 18 15:58:36 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -11,7 +11,7 @@ Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
 Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt Passthrough_impl_1.twr Passthrough_impl_1.udb -gui -msgset C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml
 
 -----------------------------------------
-Design:          I2Srx
+Design:          I2Stx
 Family:          iCE40UP
 Device:          iCE40UP5K
 Package:         SG48
@@ -93,14 +93,14 @@ create_generated_clock,
 -------------------------------------------------------------------
 sclk                                    |                     input
 rst                                     |                     input
-ws                                      |                     input
-sdata                                   |                     input
-left_chan[13]                           |                    output
-left_chan[14]                           |                    output
-left_chan[15]                           |                    output
-left_chan[12]                           |                    output
-left_chan[11]                           |                    output
-left_chan[10]                           |                    output
+left_chan[15]                           |                     input
+left_chan[14]                           |                     input
+left_chan[13]                           |                     input
+left_chan[12]                           |                     input
+left_chan[11]                           |                     input
+left_chan[10]                           |                     input
+left_chan[9]                            |                     input
+left_chan[8]                            |                     input
 -------------------------------------------------------------------
                                         |                          
 Number of I/O ports without constraint  |                        36

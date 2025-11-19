@@ -19,12 +19,12 @@ end
 
 // Reset
 initial begin
-    #100 rst = 0;
+    #95 rst = 0;
 end
 
 
 // Instantiate modules
-I2Stx #(WIDTH) I2Stx0 (sclk, rst, prescaler, ws, sdata, left_tx_chan, right_tx_chan);
+I2Stx #(WIDTH) I2Stx0 (sclk, rst, ws, sdata, left_tx_chan, right_tx_chan);
 I2Srx #(WIDTH) I2Srx0 (sclk, rst, ws, sdata, left_rx_chan, right_rx_chan);
 
 // Test data transfer
@@ -48,8 +48,8 @@ initial begin
 	if (left_rx_chan == left_tx_chan && right_rx_chan == right_tx_chan)
 		$display("Test passed!");
 	else
-		$display("Test failed!");
-	#100 $finish();
+		$display("Test failed! Recieved (L):%h, (R):%h; Sent (L):%h, (R):%h", left_rx_chan, right_rx_chan, left_tx_chan, right_tx_chan);
+	#100 $stop();
 end
 
 endmodule

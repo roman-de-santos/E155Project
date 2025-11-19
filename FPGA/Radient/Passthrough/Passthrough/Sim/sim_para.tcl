@@ -5,15 +5,15 @@ set ::bali::simulation::Para(DEVICEFAMILYNAME) {iCE40UP}
 set ::bali::simulation::Para(PROJECT) {Sim}
 set ::bali::simulation::Para(MDOFILE) {}
 set ::bali::simulation::Para(PROJECTPATH) {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim}
-set ::bali::simulation::Para(FILELIST) {"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv" }
+set ::bali::simulation::Para(FILELIST) {"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv" }
 set ::bali::simulation::Para(GLBINCLIST) {}
-set ::bali::simulation::Para(INCLIST) {"none" "none"}
-set ::bali::simulation::Para(WORKLIBLIST) {"work" "" }
-set ::bali::simulation::Para(COMPLIST) {"VERILOG" "VERILOG" }
-set ::bali::simulation::Para(LANGSTDLIST) {"System Verilog" "" }
+set ::bali::simulation::Para(INCLIST) {"none" "none" "none"}
+set ::bali::simulation::Para(WORKLIBLIST) {"work" "work" "" }
+set ::bali::simulation::Para(COMPLIST) {"VERILOG" "VERILOG" "VERILOG" }
+set ::bali::simulation::Para(LANGSTDLIST) {"System Verilog" "System Verilog" "" }
 set ::bali::simulation::Para(SIMLIBLIST) {pmi_work ovi_ice40up}
 set ::bali::simulation::Para(MACROLIST) {}
-set ::bali::simulation::Para(SIMULATIONTOPMODULE) {i2s_rx_tb}
+set ::bali::simulation::Para(SIMULATIONTOPMODULE) {i2s_tb}
 set ::bali::simulation::Para(SIMULATIONINSTANCE) {}
 set ::bali::simulation::Para(LANGUAGE) {VERILOG}
 set ::bali::simulation::Para(SDFPATH)  {}

@@ -1,6 +1,6 @@
                          Lattice PAR Report File
 Radiant Software (64-bit) 2025.1.0.39.0
-Mon Nov 17 20:47:09 2025
+Tue Nov 18 15:58:28 2025
 
 Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -hsp m -exp parPathBased=ON \
 	Passthrough_impl_1_map.udb Passthrough_impl_1.udb 
@@ -9,16 +9,16 @@ Command Line: par -w -n 1 -t 1 -s 1 -cores 1 -hsp m -exp parPathBased=ON \
 Level/       Number       Estimated       Timing       Estimated Worst    Timing          Run      Run
 Cost [udb]   Unrouted     Worst Slack     Score        Slack(hold)        Score(hold)     Time     Status
 ----------   --------     -----------     ------       ---------------    -----------     ----     ------
-5_1   *      0            -               -            -                  -               05       Completed
+5_1   *      0            -               -            -                  -               07       Completed
 
 * : Design saved.
 
-Total (real) run time for 1-seed: 5 secs 
+Total (real) run time for 1-seed: 7 secs 
 
 par done!
 
 PAR: Place And Route Radiant Software (64-bit) 2025.1.0.39.0.
-PARed on: Mon Nov 17 20:47:09 2025
+PARed on: Tue Nov 18 15:58:28 2025
 
 Command Line: par -w -t 1 -cores 1 -hsp m -exp parPathBased=ON \
 	Passthrough_impl_1_map.udb Passthrough_impl_1_par.dir/5_1.udb 
@@ -30,7 +30,7 @@ Performance Hardware Data Status:   Advanced       Version 1.0.
 
 
 
-Design:  I2Srx
+Design:  I2Stx
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
@@ -40,16 +40,16 @@ Constraint Summary
    Total number of constraints: 0
    Total number of constraints dropped: 0
 
-Number of Signals: 133
-Number of Connections: 322
+Number of Signals: 126
+Number of Connections: 218
 Device utilization summary:
 
-   SLICE (est.)      34/2640          1% used
-     LUT             66/5280          1% used
-     REG             63/5280          1% used
+   SLICE (est.)      25/2640          1% used
+     LUT             47/5280          1% used
+     REG             39/5280          1% used
    PIO               36/56           64% used
                      36/36          100% bonded
-   IOLOGIC            0/56            0% used
+   IOLOGIC            1/56            2% used
    DSP                0/8             0% used
    I2C                0/2             0% used
    HFOSC              0/1             0% used
@@ -69,7 +69,7 @@ Device utilization summary:
 Pin Constraint Summary:
    0 out of 36 pins locked (0% locked).
 .
-.............
+.....
 Finished Placer Phase 0 (HIER). CPU time: 0 secs , REAL time: 0 secs 
 
 
@@ -80,24 +80,24 @@ Starting Placer Phase 1. CPU time: 0 secs , REAL time: 0 secs
 ..  ..
 ....................
 
-Placer score = 21683.
+Placer score = 12272.
 
 Device SLICE utilization summary after final SLICE packing:
-   SLICE             34/2640          1% used
+   SLICE             25/2640         <1% used
 
-Finished Placer Phase 1. CPU time: 3 secs , REAL time: 4 secs 
+Finished Placer Phase 1. CPU time: 6 secs , REAL time: 7 secs 
 
 Starting Placer Phase 2.
 .
 
-Placer score =  41149
-Finished Placer Phase 2.  CPU time: 3 secs , REAL time: 4 secs 
+Placer score =  25344
+Finished Placer Phase 2.  CPU time: 6 secs , REAL time: 7 secs 
 
 
 ------------------ Clock Report ------------------
 
 Global Clocks :
-  PRIMARY "sclk_c" from comp "sclk" on CLK_PIN site "35 (PR13B)", clk load = 33, ce load = 0, sr load = 0
+  PRIMARY "sclk_c" from comp "sclk" on CLK_PIN site "35 (PR13B)", clk load = 23, ce load = 0, sr load = 0
 
   PRIMARY  : 1 out of 8 (12%)
 
@@ -119,10 +119,10 @@ I/O Bank Usage Summary:
 | 2        | 8 / 8 (100%)   | 3.3V       |            |            |
 +----------+----------------+------------+------------+------------+
 
-Total Placer CPU time: 3 secs , REAL time: 4 secs 
+Total Placer CPU time: 6 secs , REAL time: 7 secs 
 
 
-Checksum -- place: 4aabee5c254cee0da72f87ccdcf1fdc534c414ff
+Checksum -- place: 36ffd6d0fac0685bc644addb8b53f24627057ba4
 Writing design to file Passthrough_impl_1_par.dir/5_1.udb ...
 
 
@@ -131,7 +131,7 @@ INFO - par: ASE feature is off due to non timing-driven settings.
 -----------------------------------------------------------------
 
 
-Start NBR router at 20:47:13 11/17/25
+Start NBR router at 15:58:35 11/18/25
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -150,40 +150,40 @@ Starting routing resource preassignment
 Preassignment Summary:
 --------------------------------------------------------------------------------
 1 global clock signals routed
-96 connections routed (of 246 total) (39.02%)
+70 connections routed (of 203 total) (34.48%)
 ---------------------------------------------------------
 Clock routing summary:
 Primary clocks (1 used out of 8 available):
 #7  Signal "sclk_c"
-       Clock   loads: 33    out of    33 routed (100.00%)
+       Clock   loads: 23    out of    23 routed (100.00%)
 ---------------------------------------------------------
 --------------------------------------------------------------------------------
 Completed routing resource preassignment
 
-Start NBR section for initial routing at 20:47:14 11/17/25
+Start NBR section for initial routing at 15:58:35 11/18/25
 Level 4, iteration 1
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Routing in Serial Mode ......
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-2(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
+3(0.00%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
 Info: Initial congestion level at 75.00% usage is 0
 Info: Initial congestion area  at 75.00% usage is 0 (0.00%)
 
-Start NBR section for normal routing at 20:47:14 11/17/25
+Start NBR section for normal routing at 15:58:35 11/18/25
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 0 secs 
 
-Start NBR section for post-routing at 20:47:14 11/17/25
+Start NBR section for post-routing at 15:58:35 11/18/25
 
 End NBR router with 0 unrouted connection(s)
 
-Checksum -- route: 1651c52fc4f6be9ae70c0c6e02488a0d360ba5d
+Checksum -- route: 53b114cb9793c4a3ad47002538fa497149625c0f
 
 Total CPU time 0 secs 
 Total REAL time: 0 secs 
 Completely routed.
-End of route.  246 routed (100.00%); 0 unrouted.
+End of route.  203 routed (100.00%); 0 unrouted.
 
 Writing design to file Passthrough_impl_1_par.dir/5_1.udb ...
 
@@ -201,9 +201,9 @@ PAR_SUMMARY::Number of errors = 0
 
 Note: user must run 'timing' for timing closure signoff.
 
-Total CPU  Time: 4 secs 
-Total REAL Time: 5 secs 
-Peak Memory Usage: 107.27 MB
+Total CPU  Time: 7 secs 
+Total REAL Time: 7 secs 
+Peak Memory Usage: 108.00 MB
 
 
 par done!

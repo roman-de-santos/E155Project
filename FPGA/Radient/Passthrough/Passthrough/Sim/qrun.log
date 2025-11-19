@@ -1013,3 +1013,725 @@ run -all
 # Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 125
 # End time: 23:08:38 on Nov 17,2025, Elapsed time: 0:04:10
 # Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   1
+#     vopt: Errors:   0, Warnings:   4
+#   Totals: Errors:   0, Warnings:   5
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 03:15:52 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.I2Stx_tb(fast)
+# Loading work.I2Stx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# === Starting I2S TX Testbench ===
+# ERROR: Bit mismatch at index 31. Expected 1, got 0
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Stx_tb.sv(52)
+#    Time: 160 ns  Iteration: 1  Instance: /I2Stx_tb
+# Break in Task check_frame at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Stx_tb.sv line 52
+add wave -position end  sim:/I2Stx_tb/dut/WIDTH
+add wave -position end  sim:/I2Stx_tb/dut/sclk
+add wave -position end  sim:/I2Stx_tb/dut/rst
+add wave -position end  sim:/I2Stx_tb/dut/ws
+add wave -position end  sim:/I2Stx_tb/dut/sdata
+add wave -position end  sim:/I2Stx_tb/dut/left_chan
+add wave -position end  sim:/I2Stx_tb/dut/right_chan
+add wave -position end  sim:/I2Stx_tb/dut/bitCnt
+add wave -position end  sim:/I2Stx_tb/dut/shift_reg
+restart -f
+# Loading work.I2Stx_tb(fast)
+# Loading work.I2Stx(fast)
+run -all
+# === Starting I2S TX Testbench ===
+# ERROR: Bit mismatch at index 31. Expected 1, got 0
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Stx_tb.sv(52)
+#    Time: 160 ns  Iteration: 1  Instance: /I2Stx_tb
+# Break in Task check_frame at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Stx_tb.sv line 52
+# Causality operation skipped due to absence of debug database file
+# End time: 14:06:12 on Nov 18,2025, Elapsed time: 10:50:20
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 15:30:59 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed!
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 505 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 15:33:49 on Nov 18,2025, Elapsed time: 0:02:50
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 15:34:20 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):77ab, (R):6fbb; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 505 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+restart-f
+# invalid command name "restart-f"
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):77ab, (R):6fbb; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 505 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 15:37:21 on Nov 18,2025, Elapsed time: 0:03:01
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 15:37:51 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 15:57:40 on Nov 18,2025, Elapsed time: 0:19:49
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 15:59:12 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 16:01:48 on Nov 18,2025, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:02:34 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Srx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Srx0/sclk
+add wave -position end  sim:/i2s_tb/I2Srx0/rst
+add wave -position end  sim:/i2s_tb/I2Srx0/ws
+add wave -position end  sim:/i2s_tb/I2Srx0/sdata
+add wave -position end  sim:/i2s_tb/I2Srx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/left
+add wave -position end  sim:/i2s_tb/I2Srx0/right
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_r
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_nedge
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_pedge
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# 1
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 16:16:27 on Nov 18,2025, Elapsed time: 0:13:53
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:17:35 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 PASSED: L=0xdead, R=0xbeef
+# Test 2 PASSED: L=0x1234, R=0x5678
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(124)
+#    Time: 1070 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 124
+add wave -position end  sim:/i2s_rx_tb/dut/WIDTH
+add wave -position end  sim:/i2s_rx_tb/dut/sclk
+add wave -position end  sim:/i2s_rx_tb/dut/rst
+add wave -position end  sim:/i2s_rx_tb/dut/ws
+add wave -position end  sim:/i2s_rx_tb/dut/sdata
+add wave -position end  sim:/i2s_rx_tb/dut/left_chan
+add wave -position end  sim:/i2s_rx_tb/dut/right_chan
+add wave -position end  sim:/i2s_rx_tb/dut/left
+add wave -position end  sim:/i2s_rx_tb/dut/right
+add wave -position end  sim:/i2s_rx_tb/dut/ws_r
+add wave -position end  sim:/i2s_rx_tb/dut/ws_nedge
+add wave -position end  sim:/i2s_rx_tb/dut/ws_pedge
+restart -f
+# Loading work.i2s_rx_tb(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Starting testbench...
+# Reset complete. Starting test cases...
+# Test 1 PASSED: L=0xdead, R=0xbeef
+# Test 2 PASSED: L=0x1234, R=0x5678
+# All test cases complete. Finishing simulation.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv(124)
+#    Time: 1070 ns  Iteration: 0  Instance: /i2s_rx_tb
+# Break in Module i2s_rx_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv line 124
+# End time: 16:21:13 on Nov 18,2025, Elapsed time: 0:03:38
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:21:47 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 16:22:01 on Nov 18,2025, Elapsed time: 0:00:14
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:23:52 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 16:26:34 on Nov 18,2025, Elapsed time: 0:02:42
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:27:06 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):ef56, (R):df77; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 16:27:17 on Nov 18,2025, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:28:02 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):37ab, (R):6fbb; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):37ab, (R):6fbb; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Srx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Srx0/sclk
+add wave -position end  sim:/i2s_tb/I2Srx0/rst
+add wave -position end  sim:/i2s_tb/I2Srx0/ws
+add wave -position end  sim:/i2s_tb/I2Srx0/sdata
+add wave -position end  sim:/i2s_tb/I2Srx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/left
+add wave -position end  sim:/i2s_tb/I2Srx0/right
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_r
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_nedge
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_pedge
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):37ab, (R):6fbb; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 515 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# Causality operation skipped due to absence of debug database file
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 16:36:34 on Nov 18,2025, Elapsed time: 0:08:32
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:37:05 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):6f56, (R):bd5b; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 685 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+add wave -position end  sim:/i2s_tb/I2Srx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Srx0/sclk
+add wave -position end  sim:/i2s_tb/I2Srx0/rst
+add wave -position end  sim:/i2s_tb/I2Srx0/ws
+add wave -position end  sim:/i2s_tb/I2Srx0/sdata
+add wave -position end  sim:/i2s_tb/I2Srx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/left
+add wave -position end  sim:/i2s_tb/I2Srx0/right
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_r
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_nedge
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_pedge
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):6f56, (R):bd5b; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 685 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 16:56:17 on Nov 18,2025, Elapsed time: 0:19:12
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 16:56:52 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):6f56, (R):bd5b; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 675 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Srx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Srx0/sclk
+add wave -position end  sim:/i2s_tb/I2Srx0/rst
+add wave -position end  sim:/i2s_tb/I2Srx0/ws
+add wave -position end  sim:/i2s_tb/I2Srx0/sdata
+add wave -position end  sim:/i2s_tb/I2Srx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/left
+add wave -position end  sim:/i2s_tb/I2Srx0/right
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_r
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_nedge
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_pedge
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test failed! Recieved (L):6f56, (R):bd5b; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 675 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 17:06:32 on Nov 18,2025, Elapsed time: 0:09:40
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:07:48 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):dead, (R):bd5b; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 685 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+add wave -position end  sim:/i2s_tb/I2Srx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Srx0/sclk
+add wave -position end  sim:/i2s_tb/I2Srx0/rst
+add wave -position end  sim:/i2s_tb/I2Srx0/ws
+add wave -position end  sim:/i2s_tb/I2Srx0/sdata
+add wave -position end  sim:/i2s_tb/I2Srx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/left
+add wave -position end  sim:/i2s_tb/I2Srx0/right
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_r
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_nedge
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_pedge
+run -all
+# Test failed! Recieved (L):dead, (R):bd5b; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 685 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 17:14:13 on Nov 18,2025, Elapsed time: 0:06:25
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:14:42 on Nov 18,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test passed!
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 525 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+add wave -position end  sim:/i2s_tb/I2Stx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Stx0/sclk
+add wave -position end  sim:/i2s_tb/I2Stx0/rst
+add wave -position end  sim:/i2s_tb/I2Stx0/ws
+add wave -position end  sim:/i2s_tb/I2Stx0/sdata
+add wave -position end  sim:/i2s_tb/I2Stx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Stx0/bitCnt
+add wave -position end  sim:/i2s_tb/I2Stx0/shift_reg
+add wave -position end  sim:/i2s_tb/I2Srx0/WIDTH
+add wave -position end  sim:/i2s_tb/I2Srx0/sclk
+add wave -position end  sim:/i2s_tb/I2Srx0/rst
+add wave -position end  sim:/i2s_tb/I2Srx0/ws
+add wave -position end  sim:/i2s_tb/I2Srx0/sdata
+add wave -position end  sim:/i2s_tb/I2Srx0/left_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/right_chan
+add wave -position end  sim:/i2s_tb/I2Srx0/left
+add wave -position end  sim:/i2s_tb/I2Srx0/right
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_r
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_nedge
+add wave -position end  sim:/i2s_tb/I2Srx0/ws_pedge
+restart -f
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+run -all
+# Test passed!
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 525 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 17:27:33 on Nov 18,2025, Elapsed time: 0:12:51
+# Errors: 0, Warnings: 0

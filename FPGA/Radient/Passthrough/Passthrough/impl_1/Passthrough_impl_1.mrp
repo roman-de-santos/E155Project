@@ -1,14 +1,14 @@
 
                          Lattice Mapping Report File
 
-Design:  I2Srx
+Design:  I2Stx
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
-Mapped on: Mon Nov 17 20:46:55 2025
+Mapped on: Tue Nov 18 15:58:14 2025
 
 Design Information
 ------------------
@@ -20,12 +20,12 @@ Command line:   map -i Passthrough_impl_1_syn.udb -o Passthrough_impl_1_map.udb
 Design Summary
 --------------
 
-   Number of slice registers:  63 out of  5280 (1%)
-   Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:            66 out of  5280 (1%)
-      Number of logic LUT4s:               3
-      Number of inserted feedthru LUT4s:  63
-      Number of ripple logic:              0 (0 LUT4s)
+   Number of slice registers:  39 out of  5280 (1%)
+   Number of I/O registers:      1 out of   117 (1%)
+   Number of LUT4s:            47 out of  5280 (1%)
+      Number of logic LUT4s:              38
+      Number of inserted feedthru LUT4s:   1
+      Number of ripple logic:              4 (8 LUT4s)
    Number of IO sites used:   36 out of 39 (92%)
       Number of IO sites used for general PIO: 36
       Number of IO sites used for I3C: 0 out of 2 (0%)
@@ -48,18 +48,18 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net sclk_c: 63 loads, 62 rising, 1 falling (Driver: Port sclk)
-   Number of Clock Enables:  4
-      Net n355: 15 loads, 15 SLICEs
-      Net ws_r: 15 loads, 15 SLICEs
-      Net n372: 16 loads, 16 SLICEs
-      Net n387: 16 loads, 16 SLICEs
-   Number of LSRs:  1
-      Pin rst: 32 loads, 32 SLICEs (Net: rst_c)
+      Net sclk_c: 38 loads, 0 rising, 38 falling (Driver: Port sclk)
+   Number of Clock Enables:  0
+   Number of LSRs:  3
+      Pin rst: 1 loads, 1 SLICEs (Net: rst_c)
+      Net n261: 1 loads, 1 SLICEs
+      Net n241: 4 loads, 4 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net rst_c: 34 loads
-      Net ws_r: 18 loads
-      Net n372: 16 loads
+      Net n261: 32 loads
+      Net bitCnt[5]: 4 loads
+      Net n241: 4 loads
+      Net bitCnt[0]: 3 loads
+      Net bitCnt[3]: 3 loads
 
                                     Page 1
 
@@ -69,13 +69,11 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net n387: 16 loads
-      Net n355: 15 loads
-      Net sdata_c: 4 loads
-      Net ws_c: 3 loads
-      Net left[0]: 2 loads
-      Net right[0]: 2 loads
-      Net right[1]: 2 loads
+      Net rst_c: 3 loads
+      Net n337: 2 loads
+      Net n347: 2 loads
+      Net n349: 2 loads
+      Net n472: 2 loads
 
 
 
@@ -97,35 +95,37 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[13]       | OUTPUT    |           |       |       |           |
+| sdata               | OUTPUT    |           | O     |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[14]       | OUTPUT    |           |       |       |           |
+| ws                  | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[15]       | OUTPUT    |           |       |       |           |
+| sclk                | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[12]       | OUTPUT    |           |       |       |           |
+| rst                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[11]       | OUTPUT    |           |       |       |           |
+| left_chan[15]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[10]       | OUTPUT    |           |       |       |           |
+| left_chan[14]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[9]        | OUTPUT    |           |       |       |           |
+| left_chan[13]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[8]        | OUTPUT    |           |       |       |           |
+| left_chan[12]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[7]        | OUTPUT    |           |       |       |           |
+| left_chan[11]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[6]        | OUTPUT    |           |       |       |           |
+| left_chan[10]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[5]        | OUTPUT    |           |       |       |           |
+| left_chan[9]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[4]        | OUTPUT    |           |       |       |           |
+| left_chan[8]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[3]        | OUTPUT    |           |       |       |           |
+| left_chan[7]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[2]        | OUTPUT    |           |       |       |           |
+| left_chan[6]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[1]        | OUTPUT    |           |       |       |           |
+| left_chan[5]        | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| left_chan[4]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
                                     Page 2
@@ -136,63 +136,63 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
-| left_chan[0]        | OUTPUT    |           |       |       |           |
+| left_chan[3]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[15]      | OUTPUT    |           |       |       |           |
+| left_chan[2]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[14]      | OUTPUT    |           |       |       |           |
+| left_chan[1]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[13]      | OUTPUT    |           |       |       |           |
+| left_chan[0]        | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[12]      | OUTPUT    |           |       |       |           |
+| right_chan[15]      | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[11]      | OUTPUT    |           |       |       |           |
+| right_chan[14]      | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[10]      | OUTPUT    |           |       |       |           |
+| right_chan[13]      | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[9]       | OUTPUT    |           |       |       |           |
+| right_chan[12]      | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[8]       | OUTPUT    |           |       |       |           |
+| right_chan[11]      | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[7]       | OUTPUT    |           |       |       |           |
+| right_chan[10]      | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[6]       | OUTPUT    |           |       |       |           |
+| right_chan[9]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[5]       | OUTPUT    |           |       |       |           |
+| right_chan[8]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[4]       | OUTPUT    |           |       |       |           |
+| right_chan[7]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[3]       | OUTPUT    |           |       |       |           |
+| right_chan[6]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[2]       | OUTPUT    |           |       |       |           |
+| right_chan[5]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[1]       | OUTPUT    |           |       |       |           |
+| right_chan[4]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[0]       | OUTPUT    |           |       |       |           |
+| right_chan[3]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| sclk                | INPUT     |           |       |       |           |
+| right_chan[2]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| rst                 | INPUT     |           |       |       |           |
+| right_chan[1]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| ws                  | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sdata               | INPUT     |           |       |       |           |
+| right_chan[0]       | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 
 Removed logic
 -------------
 
 Block i4_1_lut was optimized away.
-Block i152 was optimized away.
-Block i115 was optimized away.
+Block i1 was optimized away.
+
+ASIC Components
+---------------
+
+Instance Name: sdata_i1
+         Type: IOLOGIC
 
 Constraint Summary
 ------------------
 
    Total number of constraints: 0
-   Total number of constraints dropped: 0
-
-
 
                                     Page 3
 
@@ -200,17 +200,17 @@ Constraint Summary
 
 
 
+Constraint Summary (cont)
+-------------------------
+   Total number of constraints dropped: 0
+
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 63 MB
-Checksum -- map: 47ea4957b9d3f0ef61070423ed43726b275e03
-
-
-
-
+Checksum -- map: dff5af0f828af9765f25e84096ea913c600912d9
 
 
 

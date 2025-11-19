@@ -1732,3 +1732,1255 @@ vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -d
 # Errors: 0, Warnings: 3
 # 
 vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 03:15:48 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Stx_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Stx
+# 
+# ** Warning: C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv(30): (vlog-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# 
+# -- Compiling module I2Stx_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	I2Stx_tb
+# 
+# End time: 03:15:48 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 1
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 03:15:49 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up I2Stx_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	I2Stx_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module I2Stx_tb
+# 
+# -- Loading module I2Stx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module I2Stx_tb(fast)
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# ** Warning: C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv(30): (vopt-2121) Illegal concatenation of an unsized constant. Will treat it as a 32-bit value.
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 03:15:52 on Nov 18,2025, Elapsed time: 0:00:03
+# 
+# Errors: 0, Warnings: 4
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 15:30:57 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 15:30:58 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 15:30:58 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 15:30:59 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 15:34:19 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 15:34:19 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 15:34:19 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 15:34:20 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 15:37:51 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 15:37:51 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 15:37:51 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 15:37:51 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 15:59:11 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 15:59:11 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 15:59:12 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 15:59:12 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 16:02:33 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 16:02:33 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 16:02:33 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 16:02:34 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 16:17:34 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module i2s_rx_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_rx_tb
+# 
+# End time: 16:17:34 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 16:17:34 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_rx_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_rx_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_rx_tb
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module i2s_rx_tb(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 16:17:34 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 16:21:46 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 16:21:46 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 16:21:46 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 16:21:47 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 16:23:51 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 16:23:51 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 16:23:51 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 16:23:52 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 16:27:05 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 16:27:06 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 16:27:06 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 16:27:06 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 16:28:01 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 16:28:01 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 16:28:01 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 16:28:02 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 16:37:04 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 16:37:04 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 16:37:04 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 16:37:05 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 16:56:51 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 16:56:51 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 16:56:51 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 16:56:52 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 17:07:47 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 17:07:47 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 17:07:47 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 17:07:48 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 17:14:41 on Nov 18,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module i2s_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# End time: 17:14:41 on Nov 18,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 17:14:41 on Nov 18,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up i2s_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	i2s_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module i2s_tb
+# 
+# -- Loading module I2Stx
+# 
+# -- Loading module I2Srx
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module I2Stx(fast)
+# 
+# -- Optimizing module I2Srx(fast)
+# 
+# -- Optimizing module i2s_tb(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 17:14:42 on Nov 18,2025, Elapsed time: 0:00:01
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log

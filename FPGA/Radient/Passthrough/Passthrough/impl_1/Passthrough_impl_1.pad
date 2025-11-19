@@ -6,48 +6,48 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Mon Nov 17 20:47:13 2025
+Tue Nov 18 15:58:35 2025
 
 Pinout by Port Name:
 +----------------+----------+--------------+-------+------------------------------------------+
 | Port Name      | Pin/Bank | Buffer Type  | Site  | Properties                               |
 +----------------+----------+--------------+-------+------------------------------------------+
-| left_chan[0]   | 3/2      | LVCMOS33_OUT | PL10B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[10]  | 31/0     | LVCMOS33_OUT | PR17B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[11]  | 23/0     | LVCMOS33_OUT | PR20A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[12]  | 34/0     | LVCMOS33_OUT | PR14B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[13]  | 37/0     | LVCMOS33_OUT | PR14A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[14]  | 42/0     | LVCMOS33_OUT | PR9A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[15]  | 43/0     | LVCMOS33_OUT | PR10A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[1]   | 45/2     | LVCMOS33_OUT | PL8B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[2]   | 4/2      | LVCMOS33_OUT | PL10A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[3]   | 48/2     | LVCMOS33_OUT | PL8A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[4]   | 38/0     | LVCMOS33_OUT | PR9B  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[5]   | 36/0     | LVCMOS33_OUT | PR10B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[6]   | 27/0     | LVCMOS33_OUT | PR19B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[7]   | 32/0     | LVCMOS33_OUT | PR17A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[8]   | 25/0     | LVCMOS33_OUT | PR20B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| left_chan[9]   | 28/0     | LVCMOS33_OUT | PR18A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[0]  | 2/2      | LVCMOS33_OUT | PL9A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[10] | 20/1     | LVCMOS33_OUT | PL20B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[11] | 19/1     | LVCMOS33_OUT | PL22B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[12] | 18/1     | LVCMOS33_OUT | PL23B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[13] | 17/1     | LVCMOS33_OUT | PL24B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[14] | 16/1     | LVCMOS33_OUT | PL25B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[15] | 12/1     | LVCMOS33_OUT | PL19A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[1]  | 47/2     | LVCMOS33_OUT | PL7A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[2]  | 6/1      | LVCMOS33_OUT | PL14B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[3]  | 46/2     | LVCMOS33_OUT | PL6A  | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[4]  | 10/1     | LVCMOS33_OUT | PL17A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[5]  | 11/1     | LVCMOS33_OUT | PL18A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[6]  | 21/1     | LVCMOS33_OUT | PL19B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[7]  | 14/1     | LVCMOS33_OUT | PL24A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[8]  | 15/1     | LVCMOS33_OUT | PL25A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| right_chan[9]  | 13/1     | LVCMOS33_OUT | PL20A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| rst            | 26/0     | LVCMOS33_IN  | PR19A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[0]   | 46/2     | LVCMOS33_IN  | PL6A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[10]  | 20/1     | LVCMOS33_IN  | PL20B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[11]  | 21/1     | LVCMOS33_IN  | PL19B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[12]  | 13/1     | LVCMOS33_IN  | PL20A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[13]  | 19/1     | LVCMOS33_IN  | PL22B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[14]  | 16/1     | LVCMOS33_IN  | PL25B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[15]  | 14/1     | LVCMOS33_IN  | PL24A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[1]   | 2/2      | LVCMOS33_IN  | PL9A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[2]   | 44/2     | LVCMOS33_IN  | PL7B  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[3]   | 4/2      | LVCMOS33_IN  | PL10A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[4]   | 3/2      | LVCMOS33_IN  | PL10B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[5]   | 9/1      | LVCMOS33_IN  | PL16A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[6]   | 6/1      | LVCMOS33_IN  | PL14B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[7]   | 11/1     | LVCMOS33_IN  | PL18A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[8]   | 10/1     | LVCMOS33_IN  | PL17A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| left_chan[9]   | 12/1     | LVCMOS33_IN  | PL19A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[0]  | 26/0     | LVCMOS33_IN  | PR19A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[10] | 36/0     | LVCMOS33_IN  | PR10B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[11] | 38/0     | LVCMOS33_IN  | PR9B  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[12] | 42/0     | LVCMOS33_IN  | PR9A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[13] | 47/2     | LVCMOS33_IN  | PL7A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[14] | 45/2     | LVCMOS33_IN  | PL8B  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[15] | 48/2     | LVCMOS33_IN  | PL8A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[1]  | 27/0     | LVCMOS33_IN  | PR19B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[2]  | 23/0     | LVCMOS33_IN  | PR20A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[3]  | 28/0     | LVCMOS33_IN  | PR18A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[4]  | 25/0     | LVCMOS33_IN  | PR20B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[5]  | 31/0     | LVCMOS33_IN  | PR17B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[6]  | 32/0     | LVCMOS33_IN  | PR17A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[7]  | 37/0     | LVCMOS33_IN  | PR14A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[8]  | 34/0     | LVCMOS33_IN  | PR14B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| right_chan[9]  | 43/0     | LVCMOS33_IN  | PR10A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| rst            | 17/1     | LVCMOS33_IN  | PL24B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
 | sclk           | 35/0     | LVCMOS33_IN  | PR13B | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| sdata          | 44/2     | LVCMOS33_IN  | PL7B  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| ws             | 9/1      | LVCMOS33_IN  | PL16A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| sdata          | 18/1     | LVCMOS33_OUT | PL23B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| ws             | 15/1     | LVCMOS33_OUT | PL25A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
 +----------------+----------+--------------+-------+------------------------------------------+
 
 Vccio by Bank:
@@ -63,45 +63,45 @@ Pinout by Pin Number:
 +----------+---------------------+------------+--------------+-------+------------------+
 | Pin/Bank | Pin Info            | Constraint | Buffer Type  | Site  | Dual Function    |
 +----------+---------------------+------------+--------------+-------+------------------+
-| 2/2      | right_chan[0]       |            | LVCMOS33_OUT | PL9A  |                  |
-| 3/2      | left_chan[0]        |            | LVCMOS33_OUT | PL10B |                  |
-| 4/2      | left_chan[2]        |            | LVCMOS33_OUT | PL10A |                  |
-| 6/1      | right_chan[2]       |            | LVCMOS33_OUT | PL14B |                  |
-| 9/1      | ws                  |            | LVCMOS33_IN  | PL16A |                  |
-| 10/1     | right_chan[4]       |            | LVCMOS33_OUT | PL17A |                  |
-| 11/1     | right_chan[5]       |            | LVCMOS33_OUT | PL18A |                  |
-| 12/1     | right_chan[15]      |            | LVCMOS33_OUT | PL19A |                  |
-| 13/1     | right_chan[9]       |            | LVCMOS33_OUT | PL20A |                  |
-| 14/1     | right_chan[7]       |            | LVCMOS33_OUT | PL24A | SPI_SO           |
-| 15/1     | right_chan[8]       |            | LVCMOS33_OUT | PL25A | SPISCK           |
-| 16/1     | right_chan[14]      |            | LVCMOS33_OUT | PL25B | SPI_SS           |
-| 17/1     | right_chan[13]      |            | LVCMOS33_OUT | PL24B | SPI_SI           |
-| 18/1     | right_chan[12]      |            | LVCMOS33_OUT | PL23B |                  |
-| 19/1     | right_chan[11]      |            | LVCMOS33_OUT | PL22B |                  |
-| 20/1     | right_chan[10]      |            | LVCMOS33_OUT | PL20B | PCLKT1_0         |
-| 21/1     | right_chan[6]       |            | LVCMOS33_OUT | PL19B |                  |
-| 23/0     | left_chan[11]       |            | LVCMOS33_OUT | PR20A |                  |
-| 25/0     | left_chan[8]        |            | LVCMOS33_OUT | PR20B |                  |
-| 26/0     | rst                 |            | LVCMOS33_IN  | PR19A |                  |
-| 27/0     | left_chan[6]        |            | LVCMOS33_OUT | PR19B |                  |
-| 28/0     | left_chan[9]        |            | LVCMOS33_OUT | PR18A |                  |
-| 31/0     | left_chan[10]       |            | LVCMOS33_OUT | PR17B |                  |
-| 32/0     | left_chan[7]        |            | LVCMOS33_OUT | PR17A |                  |
-| 34/0     | left_chan[12]       |            | LVCMOS33_OUT | PR14B |                  |
+| 2/2      | left_chan[1]        |            | LVCMOS33_IN  | PL9A  |                  |
+| 3/2      | left_chan[4]        |            | LVCMOS33_IN  | PL10B |                  |
+| 4/2      | left_chan[3]        |            | LVCMOS33_IN  | PL10A |                  |
+| 6/1      | left_chan[6]        |            | LVCMOS33_IN  | PL14B |                  |
+| 9/1      | left_chan[5]        |            | LVCMOS33_IN  | PL16A |                  |
+| 10/1     | left_chan[8]        |            | LVCMOS33_IN  | PL17A |                  |
+| 11/1     | left_chan[7]        |            | LVCMOS33_IN  | PL18A |                  |
+| 12/1     | left_chan[9]        |            | LVCMOS33_IN  | PL19A |                  |
+| 13/1     | left_chan[12]       |            | LVCMOS33_IN  | PL20A |                  |
+| 14/1     | left_chan[15]       |            | LVCMOS33_IN  | PL24A | SPI_SO           |
+| 15/1     | ws                  |            | LVCMOS33_OUT | PL25A | SPISCK           |
+| 16/1     | left_chan[14]       |            | LVCMOS33_IN  | PL25B | SPI_SS           |
+| 17/1     | rst                 |            | LVCMOS33_IN  | PL24B | SPI_SI           |
+| 18/1     | sdata               |            | LVCMOS33_OUT | PL23B |                  |
+| 19/1     | left_chan[13]       |            | LVCMOS33_IN  | PL22B |                  |
+| 20/1     | left_chan[10]       |            | LVCMOS33_IN  | PL20B | PCLKT1_0         |
+| 21/1     | left_chan[11]       |            | LVCMOS33_IN  | PL19B |                  |
+| 23/0     | right_chan[2]       |            | LVCMOS33_IN  | PR20A |                  |
+| 25/0     | right_chan[4]       |            | LVCMOS33_IN  | PR20B |                  |
+| 26/0     | right_chan[0]       |            | LVCMOS33_IN  | PR19A |                  |
+| 27/0     | right_chan[1]       |            | LVCMOS33_IN  | PR19B |                  |
+| 28/0     | right_chan[3]       |            | LVCMOS33_IN  | PR18A |                  |
+| 31/0     | right_chan[5]       |            | LVCMOS33_IN  | PR17B |                  |
+| 32/0     | right_chan[6]       |            | LVCMOS33_IN  | PR17A |                  |
+| 34/0     | right_chan[8]       |            | LVCMOS33_IN  | PR14B |                  |
 | 35/0     | sclk                |            | LVCMOS33_IN  | PR13B | GPLL_IN/PCLKT0_1 |
-| 36/0     | left_chan[5]        |            | LVCMOS33_OUT | PR10B |                  |
-| 37/0     | left_chan[13]       |            | LVCMOS33_OUT | PR14A | PCLKT0_0         |
-| 38/0     | left_chan[4]        |            | LVCMOS33_OUT | PR9B  |                  |
+| 36/0     | right_chan[10]      |            | LVCMOS33_IN  | PR10B |                  |
+| 37/0     | right_chan[7]       |            | LVCMOS33_IN  | PR14A | PCLKT0_0         |
+| 38/0     | right_chan[11]      |            | LVCMOS33_IN  | PR9B  |                  |
 | 39/0     |                     |            |              | PR5A  | RGB0             |
 | 40/0     |                     |            |              | PR6A  | RGB1             |
 | 41/0     |                     |            |              | PR7A  | RGB2             |
-| 42/0     | left_chan[14]       |            | LVCMOS33_OUT | PR9A  |                  |
-| 43/0     | left_chan[15]       |            | LVCMOS33_OUT | PR10A |                  |
-| 44/2     | sdata               |            | LVCMOS33_IN  | PL7B  | PCLKT2_0         |
-| 45/2     | left_chan[1]        |            | LVCMOS33_OUT | PL8B  |                  |
-| 46/2     | right_chan[3]       |            | LVCMOS33_OUT | PL6A  |                  |
-| 47/2     | right_chan[1]       |            | LVCMOS33_OUT | PL7A  |                  |
-| 48/2     | left_chan[3]        |            | LVCMOS33_OUT | PL8A  |                  |
+| 42/0     | right_chan[12]      |            | LVCMOS33_IN  | PR9A  |                  |
+| 43/0     | right_chan[9]       |            | LVCMOS33_IN  | PR10A |                  |
+| 44/2     | left_chan[2]        |            | LVCMOS33_IN  | PL7B  | PCLKT2_0         |
+| 45/2     | right_chan[14]      |            | LVCMOS33_IN  | PL8B  |                  |
+| 46/2     | left_chan[0]        |            | LVCMOS33_IN  | PL6A  |                  |
+| 47/2     | right_chan[13]      |            | LVCMOS33_IN  | PL7A  |                  |
+| 48/2     | right_chan[15]      |            | LVCMOS33_IN  | PL8A  |                  |
 | PL6B/2   |     unused, PULL:UP |            |              | PL6B  |                  |
 | PL9B/2   |     unused, PULL:UP |            |              | PL9B  |                  |
 | PL13A/1  |     unused, PULL:UP |            |              | PL13A |                  |
@@ -124,42 +124,42 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
-ldc_set_location -site {3} [ get_ports {left_chan[0]} ]
-ldc_set_location -site {31} [ get_ports {left_chan[10]} ]
-ldc_set_location -site {23} [ get_ports {left_chan[11]} ]
-ldc_set_location -site {34} [ get_ports {left_chan[12]} ]
-ldc_set_location -site {37} [ get_ports {left_chan[13]} ]
-ldc_set_location -site {42} [ get_ports {left_chan[14]} ]
-ldc_set_location -site {43} [ get_ports {left_chan[15]} ]
-ldc_set_location -site {45} [ get_ports {left_chan[1]} ]
-ldc_set_location -site {4} [ get_ports {left_chan[2]} ]
-ldc_set_location -site {48} [ get_ports {left_chan[3]} ]
-ldc_set_location -site {38} [ get_ports {left_chan[4]} ]
-ldc_set_location -site {36} [ get_ports {left_chan[5]} ]
-ldc_set_location -site {27} [ get_ports {left_chan[6]} ]
-ldc_set_location -site {32} [ get_ports {left_chan[7]} ]
-ldc_set_location -site {25} [ get_ports {left_chan[8]} ]
-ldc_set_location -site {28} [ get_ports {left_chan[9]} ]
-ldc_set_location -site {2} [ get_ports {right_chan[0]} ]
-ldc_set_location -site {20} [ get_ports {right_chan[10]} ]
-ldc_set_location -site {19} [ get_ports {right_chan[11]} ]
-ldc_set_location -site {18} [ get_ports {right_chan[12]} ]
-ldc_set_location -site {17} [ get_ports {right_chan[13]} ]
-ldc_set_location -site {16} [ get_ports {right_chan[14]} ]
-ldc_set_location -site {12} [ get_ports {right_chan[15]} ]
-ldc_set_location -site {47} [ get_ports {right_chan[1]} ]
-ldc_set_location -site {6} [ get_ports {right_chan[2]} ]
-ldc_set_location -site {46} [ get_ports {right_chan[3]} ]
-ldc_set_location -site {10} [ get_ports {right_chan[4]} ]
-ldc_set_location -site {11} [ get_ports {right_chan[5]} ]
-ldc_set_location -site {21} [ get_ports {right_chan[6]} ]
-ldc_set_location -site {14} [ get_ports {right_chan[7]} ]
-ldc_set_location -site {15} [ get_ports {right_chan[8]} ]
-ldc_set_location -site {13} [ get_ports {right_chan[9]} ]
-ldc_set_location -site {26} [ get_ports {rst} ]
+ldc_set_location -site {46} [ get_ports {left_chan[0]} ]
+ldc_set_location -site {20} [ get_ports {left_chan[10]} ]
+ldc_set_location -site {21} [ get_ports {left_chan[11]} ]
+ldc_set_location -site {13} [ get_ports {left_chan[12]} ]
+ldc_set_location -site {19} [ get_ports {left_chan[13]} ]
+ldc_set_location -site {16} [ get_ports {left_chan[14]} ]
+ldc_set_location -site {14} [ get_ports {left_chan[15]} ]
+ldc_set_location -site {2} [ get_ports {left_chan[1]} ]
+ldc_set_location -site {44} [ get_ports {left_chan[2]} ]
+ldc_set_location -site {4} [ get_ports {left_chan[3]} ]
+ldc_set_location -site {3} [ get_ports {left_chan[4]} ]
+ldc_set_location -site {9} [ get_ports {left_chan[5]} ]
+ldc_set_location -site {6} [ get_ports {left_chan[6]} ]
+ldc_set_location -site {11} [ get_ports {left_chan[7]} ]
+ldc_set_location -site {10} [ get_ports {left_chan[8]} ]
+ldc_set_location -site {12} [ get_ports {left_chan[9]} ]
+ldc_set_location -site {26} [ get_ports {right_chan[0]} ]
+ldc_set_location -site {36} [ get_ports {right_chan[10]} ]
+ldc_set_location -site {38} [ get_ports {right_chan[11]} ]
+ldc_set_location -site {42} [ get_ports {right_chan[12]} ]
+ldc_set_location -site {47} [ get_ports {right_chan[13]} ]
+ldc_set_location -site {45} [ get_ports {right_chan[14]} ]
+ldc_set_location -site {48} [ get_ports {right_chan[15]} ]
+ldc_set_location -site {27} [ get_ports {right_chan[1]} ]
+ldc_set_location -site {23} [ get_ports {right_chan[2]} ]
+ldc_set_location -site {28} [ get_ports {right_chan[3]} ]
+ldc_set_location -site {25} [ get_ports {right_chan[4]} ]
+ldc_set_location -site {31} [ get_ports {right_chan[5]} ]
+ldc_set_location -site {32} [ get_ports {right_chan[6]} ]
+ldc_set_location -site {37} [ get_ports {right_chan[7]} ]
+ldc_set_location -site {34} [ get_ports {right_chan[8]} ]
+ldc_set_location -site {43} [ get_ports {right_chan[9]} ]
+ldc_set_location -site {17} [ get_ports {rst} ]
 ldc_set_location -site {35} [ get_ports {sclk} ]
-ldc_set_location -site {44} [ get_ports {sdata} ]
-ldc_set_location -site {9} [ get_ports {ws} ]
+ldc_set_location -site {18} [ get_ports {sdata} ]
+ldc_set_location -site {15} [ get_ports {ws} ]
 
 
 
@@ -167,5 +167,5 @@ ldc_set_location -site {9} [ get_ports {ws} ]
 
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Mon Nov 17 20:47:13 2025
+Tue Nov 18 15:58:35 2025
 

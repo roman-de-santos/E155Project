@@ -4,7 +4,8 @@
 
 
 "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv" 
-"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Srx_tb.sv" 
+"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv" 
+"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*
@@ -15,7 +16,7 @@
 -end
 
 -gui
--top i2s_rx_tb
+-top i2s_tb
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end
