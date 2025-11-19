@@ -12,7 +12,7 @@ module I2Stx #(
     logic [5:0] bitCnt; 
     
     // Shift register for serializing data
-    logic [(2*WIDTH):0] shift_reg; 
+    logic [(2*WIDTH):0] shift_reg; // 33 bits for Width=16
 
 	// Counter
     always @(negedge sclk) begin
