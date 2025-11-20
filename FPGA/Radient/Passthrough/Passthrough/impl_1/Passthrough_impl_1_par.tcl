@@ -23,8 +23,8 @@ if {[file exists {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/P
   file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_syn.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postsyn.udb}
   file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_map.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postmap.udb}
   file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postpar.udb}
-  if [file exists {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/source/fpgapins.pdc}] {
-    file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/source/fpgapins.pdc} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/lastrun.pdc}
+  if [file exists {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/FPGApins.pdc}] {
+    file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/FPGApins.pdc} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/lastrun.pdc}
   }
 }
 

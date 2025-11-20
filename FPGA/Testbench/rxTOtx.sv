@@ -3,21 +3,25 @@ module i2s_rx_tb;
 
     // Testbench signals
     logic sclk = 0; 
-	logic sclk_out = 0;
     logic rst;
-    logic ws_in;
-	logic ws_out;
-    logic sdata_in;
-	logic sdata_out;
-	
+    logic ws;
+    logic sdata;
 
     // Wires to capture the DUT's output
     logic [WIDTH-1:0] left_chan;
     logic [WIDTH-1:0] right_chan;
 
     // Instantiate the Device Under Test (DUT)
-I2Stx #(WIDTH) I2Stx0 (sclk, rst, ws_out, sdata_out, left_chan, right_chan);
-I2Srx #(WIDTH) I2Srx0 (sclk, rst, ws_in, sdata_in, left_chan, right_chan);
+    I2Srx #(
+        .WIDTH(WIDTH)
+    ) dut (
+        .sclk(sclk),
+        .rst(rst),
+        .ws(ws),
+        .sdata(sdata),
+        .left_chan(left_chan),
+        .right_chan(right_chan)
+    );
 
     // Create a 10ns period clock
     always #5 sclk = ~sclk;
@@ -88,7 +92,19 @@ task send_i2s_frame(
         
         // Give a small delay for signals to propagate before checking
         #100;
-		
+
+        // Verification 1 
+        if (left_chan == test_left_1 && right_chan == test_right_1) begin
+            $display("Test 1 PASSED: L=0x%h, R=0x%h", left_chan, right_chan);
+        end else begin
+            $display("Test 1 FAILED: Expected L=0x%h, R=0x%h. Got L=0x%h, R=0x%h",
+                       test_left_1, test_right_1, left_chan, right_chan);
+        end
+
+        // Test Case 2 
+        test_left_2  = 16'h1234;
+        test_right_2 = 16'h5678;
+
         // Send the second frame
         send_i2s_frame(test_left_2, test_right_2);
         

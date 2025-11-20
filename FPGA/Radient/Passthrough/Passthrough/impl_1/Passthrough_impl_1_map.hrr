@@ -3,26 +3,27 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         18        100.0
-                               LUTGATE	         10        100.0
-                                LUTCCU	          8        100.0
-                                 IOBUF	          5        100.0
-                                PFUREG	          7        100.0
+                                  LUT4	        131        100.0
+                               LUTGATE	        121        100.0
+                                LUTCCU	         10        100.0
+                                 IOBUF	          7        100.0
+                                PFUREG	        108        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
                                  I2Srx	          1         0.0
-                                 I2Stx	          1        88.9
+                                 I2Stx	          1        36.6
 ---------------------------------------------------
 Report for cell I2Stx
    Instance path: top/I2Stx0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         16        88.9
-                               LUTGATE	          8        80.0
-                                LUTCCU	          8        100.0
-                                PFUREG	          7        100.0
+                                  LUT4	         48        36.6
+                               LUTGATE	         38        31.4
+                                LUTCCU	         10        100.0
+                                PFUREG	         43        39.8
 ---------------------------------------------------
 Report for cell I2Srx
    Instance path: top/I2Srx0
                      Cell usage:
                                   cell	      count    Res Usage(%)
+                                PFUREG	         65        60.2

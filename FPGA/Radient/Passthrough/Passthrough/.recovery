@@ -21,10 +21,16 @@
         <Source name="../../../Src/top.sv" type="Verilog" type_short="Verilog">
             <Options VerilogStandard="System Verilog" top_module="top"/>
         </Source>
+        <Source name="../../../Testbench/rxTOtx.sv" type="Verilog" type_short="Verilog" excluded="TRUE">
+            <Options VerilogStandard="System Verilog"/>
+        </Source>
         <Source name="Sim/Sim.spf" type="Simulation Project File" type_short="SPF">
             <Options/>
         </Source>
         <Source name="source/impl_1.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="../../../Src/FPGApins.pdc" type="Physical Constraints File" type_short="PDC">
             <Options/>
         </Source>
     </Implementation>

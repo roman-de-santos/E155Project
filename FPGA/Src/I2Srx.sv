@@ -30,10 +30,14 @@ assign ws_pedge = ws & !ws_r;
 
 // Check previous cycle since I2S runs on a 1 cycle delay
 always @(posedge sclk) begin
-	if (ws_r)
+	if (rst)begin
+		left       = 0;
+		right      = 0;
+	end else if (ws_r) begin
 		right = {right[WIDTH-2:0], sdata};
-	else
+	end else begin
 		left = {left[WIDTH-2:0], sdata};
+	end
 end
 
 // Latch L/R audio data
@@ -41,8 +45,6 @@ always @(posedge sclk) begin
     if (rst) begin
         left_chan  <= 0;
         right_chan <= 0;
-		left       <= 0;
-		right      <= 0;
     end else if (ws_nedge) begin
         // End of Right channel. Latch the *fully assembled* right data.
         right_chan <= right;

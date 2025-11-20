@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Nov 19 14:03:23 2025
+Wed Nov 19 15:53:17 2025
 
 
 Command Line:  C:\lscc\radiant\2024.2\ispfpga\bin\nt64\synthesis.exe -f C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_lattice.synproj -logfile Passthrough_impl_1_lattice.srp -gui -msgset C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml 
@@ -178,7 +178,7 @@ Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO <35901018> - synthesis: c:/users/rdesantos/documents/github/e155project/fpga/src/top.sv(1): compiling module top. VERI-1018
 INFO <35901018> - synthesis: c:/users/rdesantos/documents/github/e155project/fpga/src/i2stx.sv(1): compiling module I2Stx. VERI-1018
-WARNING <35901209> - synthesis: c:/users/rdesantos/documents/github/e155project/fpga/src/i2stx.sv(24): expression size 32 truncated to fit in target size 6. VERI-1209
+WARNING <35901209> - synthesis: c:/users/rdesantos/documents/github/e155project/fpga/src/i2stx.sv(24): expression size 32 truncated to fit in target size 8. VERI-1209
 INFO <35901018> - synthesis: c:/users/rdesantos/documents/github/e155project/fpga/src/i2srx.sv(1): compiling module I2Srx. VERI-1018
 [Parameter Setting Section Start]
 
@@ -198,54 +198,14 @@ INFO <35901018> - synthesis: c:/users/rdesantos/documents/github/e155project/fpg
 
 
 
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Srx0/left_2 stuck at '0': 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
-CRITICAL <35001747> - synthesis: Bit(s) of register driving left_chan[15:0] stuck at '0': 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
-CRITICAL <35001747> - synthesis: Bit(s) of register driving right_chan[15:0] stuck at '0': 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Srx0/right_2 stuck at '0': 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14
-CRITICAL <35001747> - synthesis: Bit(s) of register driving \I2Stx0/shift_reg[32:0] stuck at '0': 0
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 1
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 2
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 3
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 4
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 5
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 6
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 7
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 8
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 9
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 10
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 11
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 12
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 13
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 14
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 15
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 16
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 17
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 18
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 19
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 20
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 21
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 22
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 23
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 24
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 25
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 26
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 27
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 28
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 29
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 30
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 31
-CRITICAL <35001747> - synthesis: Bit(s) of register \I2Stx0/shift_reg stuck at '0': 32
-WARNING <35935040> - synthesis: Register \I2Stx0/sdata clock is stuck at Zero. VDB-5040
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: ws_in
-CRITICAL <35002028> - synthesis: I/O port's net has no driver and is unused: sdata_in
 
 ################### Begin Area Report (top)######################
-Number of register bits => 7 of 5280 (0 % )
-CCU2 => 4
-FD1P3XZ => 7
-IB => 2
+Number of register bits => 108 of 5280 (2 % )
+CCU2 => 5
+FD1P3XZ => 108
+IB => 4
 INV => 1
-LUT4 => 8
+LUT4 => 52
 OB => 3
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
@@ -255,21 +215,21 @@ Number of even-length carry chains : 1
 Clock Nets
 Number of Clocks: 2
   Net : sclk_out_c_c, loads : 2
-  Net : I2Srx0/sclk_out_c_c_derived_7, loads : 0
+  Net : I2Srx0/sclk_out_c_c_derived_44, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : I2Stx0/bitCnt[5], loads : 8
-  Net : rst_c, loads : 7
-  Net : I2Stx0/n39[5], loads : 6
-  Net : I2Stx0/n1347, loads : 6
-  Net : I2Stx0/n39[3], loads : 5
-  Net : I2Stx0/n39[4], loads : 5
-  Net : I2Stx0/n1319, loads : 5
-  Net : I2Stx0/n37[5], loads : 5
-  Net : I2Stx0/n1317, loads : 4
-  Net : I2Stx0/n37[3], loads : 4
+  Net : rst_c_N_151, loads : 76
+  Net : I2Stx0/n94, loads : 35
+  Net : n347, loads : 18
+  Net : n332, loads : 18
+  Net : n361, loads : 17
+  Net : n317, loads : 17
+  Net : I2Stx0/n630, loads : 12
+  Net : I2Stx0/shift_reg_32__N_49[9], loads : 7
+  Net : I2Stx0/shift_reg_32__N_49[8], loads : 7
+  Net : I2Stx0/n678, loads : 7
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -278,10 +238,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 96 MB
+Peak Memory Usage: 95 MB
 
 --------------------------------------------------------------
 Total CPU Time: 5 secs 
 Total REAL Time: 12 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 16a8872eb17df7a5115c9b7dbc795aac965dd427
+Checksum -- synthesis -- netlist: 81ecc307cc0a0b02820c3f38fbfb7bc3aeb7ec2a

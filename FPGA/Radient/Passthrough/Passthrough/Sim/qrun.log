@@ -1775,3 +1775,68 @@ run -all
 # ** Note: $stop    : C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
 #    Time: 525 ns  Iteration: 0  Instance: /i2s_tb
 # Break in Module i2s_tb at C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 14:19:15 on Nov 19,2025, Elapsed time: 0:11:30
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 14:20:20 on Nov 19,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test passed!
+# ** Note: $stop    : C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 525 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 14:21:06 on Nov 19,2025, Elapsed time: 0:00:46
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 14:23:37 on Nov 19,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test failed! Recieved (L):dead, (R):bd5b; Sent (L):dead, (R):beef
+# ** Note: $stop    : C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 685 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 14:24:24 on Nov 19,2025, Elapsed time: 0:00:47
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 14:38:07 on Nov 19,2025
+# Loading sv_std.std
+# Loading work.i2s_tb(fast)
+# Loading work.I2Stx(fast)
+# Loading work.I2Srx(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# Test passed!
+# ** Note: $stop    : C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv(52)
+#    Time: 525 ns  Iteration: 0  Instance: /i2s_tb
+# Break in Module i2s_tb at C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
+# End time: 14:38:40 on Nov 19,2025, Elapsed time: 0:00:33
+# Errors: 0, Warnings: 0
