@@ -92,6 +92,7 @@ pmi_work = $MODEL_TECH/../../cae_library/simulation/libs/pmi_work
 ovi_lfmxo5t = $MODEL_TECH/../../cae_library/simulation/libs/lfmxo5t
 ovi_lfmxo5t1 = $MODEL_TECH/../../cae_library/simulation/libs/lfmxo5t1
 ovi_lfd2nx2 = $MODEL_TECH/../../cae_library/simulation/libs/lfmxo5t1
+ovi_lfmxo4 = $MODEL_TECH/../../cae_library/simulation/libs/lfmxo4
 ; VHDL Section
 ;
 lifcl = $MODEL_TECH/../../cae_library/simulation/libs/lifcl
@@ -105,6 +106,7 @@ ut24cp = $MODEL_TECH/../../cae_library/simulation/libs/lfcpnx
 lfmxo5t = $MODEL_TECH/../../cae_library/simulation/libs/lfmxo5t
 lfmxo5t1 = $MODEL_TECH/../../cae_library/simulation/libs/lfmxo5t1
 lfd2nx2 = $MODEL_TECH/../../cae_library/simulation/libs/lfmxo5t1
+lfmxo4 = $MODEL_TECH/../../cae_library/simulation/libs/lfmxo4
 
 lav_ate = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00c
 lav_atg = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00c
@@ -113,9 +115,8 @@ lav_ate_es = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00b
 lav_atg_es = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00b
 lav_atx_es = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00b
 lav_ate_b = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00b
-ln2_mh = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00b
+ln2_mh = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00c
 ln2_ct = $MODEL_TECH/../../cae_library/simulation/libs/ovi_ap6a00b
-
 
 ; Automatically perform logical->physical mapping for physical libraries that
 ; appear in -L/-Lf options with filesystem path delimiters (e.g. '.' or '/').
@@ -977,7 +978,7 @@ Resolution = ns
 UserTimeUnit = default
 
 ; Default run length
-RunLength = 100 ms
+RunLength = 100 ps
 
 ; Maximum iterations that can be run without advancing simulation time
 IterationLimit = 10000000
@@ -2292,13 +2293,11 @@ suppress = 8780 ;an explanation can be had by running: verror 8780
 Project_Version = 6
 Project_DefaultLib = work
 Project_SortMethod = unused
-Project_Files_Count = 3
-Project_File_0 = C:/Users/llemos/Documents/GitHub/E155Project/FPGA/DSP/sim/delay_buffer_manual_tb.sv
-Project_File_P_0 = cover_toggle 0 file_type systemverilog group_id 0 cover_exttoggle 0 cover_nofec 0 cover_cond 0 vlog_1995compat SV vlog_nodebug 0 cover_fsm 0 cover_branch 0 vlog_noload 0 folder {Top Level} last_compile 1763018527 cover_excludedefault 0 vlog_enable0In 0 vlog_disableopt 0 cover_covercells 0 voptflow 1 vlog_showsource 0 vlog_hazard 0 cover_optlevel 3 toggle - vlog_0InOptions {} ood 0 cover_noshort 0 vlog_upper 0 compile_to work vlog_options {} compile_order 2 cover_expr 0 dont_compile 0 cover_stmt 0
-Project_File_1 = C:/Users/llemos/Documents/GitHub/E155Project/FPGA/DSP/sim/delay_buffer_automatic_tb.sv
-Project_File_P_1 = cover_toggle 0 file_type systemverilog group_id 0 cover_exttoggle 0 cover_nofec 0 cover_cond 0 vlog_1995compat SV vlog_nodebug 0 folder {Top Level} last_compile 1763018533 cover_fsm 0 cover_branch 0 vlog_noload 0 cover_excludedefault 0 vlog_enable0In 0 vlog_disableopt 0 cover_covercells 0 voptflow 1 vlog_showsource 0 vlog_hazard 0 cover_optlevel 3 toggle - vlog_0InOptions {} ood 0 cover_noshort 0 vlog_upper 0 compile_to work vlog_options {} compile_order 1 cover_expr 0 dont_compile 0 cover_stmt 0
-Project_File_2 = C:/Users/llemos/Documents/GitHub/E155Project/FPGA/DSP/src/delay_buffer.sv
-Project_File_P_2 = cover_toggle 0 file_type systemverilog group_id 0 cover_exttoggle 0 cover_nofec 0 cover_cond 0 vlog_1995compat SV vlog_nodebug 0 cover_branch 0 vlog_noload 0 folder {Top Level} last_compile 1763014204 cover_fsm 0 vlog_enable0In 0 cover_excludedefault 0 vlog_disableopt 0 cover_covercells 0 cover_optlevel 3 vlog_hazard 0 vlog_showsource 0 voptflow 1 ood 0 vlog_0InOptions {} toggle - vlog_options {} compile_to work vlog_upper 0 cover_noshort 0 compile_order 0 dont_compile 0 cover_expr 0 cover_stmt 0
+Project_Files_Count = 2
+Project_File_0 = C:/Users/lucas/Documents/GitHub/E155-uP-labs/E155Project/FPGA/DSP/sim/delay_buffer_manual_tb.sv
+Project_File_P_0 = cover_toggle 0 file_type systemverilog group_id 0 cover_exttoggle 0 cover_nofec 0 cover_cond 0 vlog_1995compat SV vlog_nodebug 0 vlog_noload 0 folder {Top Level} last_compile 1763703373 cover_fsm 0 cover_branch 0 vlog_enable0In 0 cover_excludedefault 0 vlog_disableopt 0 cover_covercells 0 cover_optlevel 3 vlog_hazard 0 vlog_showsource 0 voptflow 1 ood 0 vlog_0InOptions {} toggle - vlog_options {} compile_to work vlog_upper 0 cover_noshort 0 compile_order 0 dont_compile 0 cover_expr 0 cover_stmt 0
+Project_File_1 = C:/Users/lucas/Documents/GitHub/E155-uP-labs/E155Project/FPGA/DSP/src/DelayBuffer.sv
+Project_File_P_1 = cover_toggle 0 file_type systemverilog group_id 0 cover_exttoggle 0 cover_nofec 0 cover_cond 0 vlog_1995compat SV vlog_nodebug 0 cover_branch 0 vlog_noload 0 folder {Top Level} last_compile 1763703302 cover_fsm 0 vlog_enable0In 0 cover_excludedefault 0 vlog_disableopt 0 cover_covercells 0 cover_optlevel 3 vlog_hazard 0 vlog_showsource 0 voptflow 1 ood 0 vlog_0InOptions {} toggle - vlog_options {} compile_to work vlog_upper 0 cover_noshort 0 compile_order 1 dont_compile 0 cover_expr 0 cover_stmt 0
 Project_Sim_Count = 0
 Project_Folder_Count = 0
 Echo_Compile_Output = 0
