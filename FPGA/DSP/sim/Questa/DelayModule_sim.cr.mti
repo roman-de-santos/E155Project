@@ -1,1 +1,8 @@
+C:/Users/lucas/Documents/GitHub/E155-uP-labs/E155Project/FPGA/DSP/src/DelayBuffer.sv {1 {vlog -work work -vopt -sv -stats=none C:/Users/lucas/Documents/GitHub/E155-uP-labs/E155Project/FPGA/DSP/src/DelayBuffer.sv
+Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+-- Compiling module DelayBuffer
 
+Top level modules:
+	DelayBuffer
+
+} {} {}}

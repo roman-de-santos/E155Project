@@ -27,10 +27,10 @@
 	 * rst_n         			- Active-low synchronous reset.
 	 * clk           			- System clock (CLK_DSP).
 	 * pkt_reg_i        			- Input data packet from the asynchronous FIFO.
-	 * pktChanged_reg_i   			- '1' when `pkt_reg_i` contains valid data to be written.
+	 * pktChanged_reg_i   		- '1' when `pkt_reg_i` contains valid data to be written.
 	 * extraDelay_reg_i			- Additional variable delay (from LFO).
 	 * pktDelayed_reg_o 			- Delayed data packet output.
-	 * pktDelayedChanged_reg_o		- '1' when `pktDelayed_reg_o` is valid (1 cycle after `pktChanged_reg_i`).
+	 * pktDelayedChanged_reg_o	- '1' when `pktDelayed_reg_o` is valid (1 cycle after `pktChanged_reg_i`).
 	 */
 	module DelayBuffer #(
 		parameter 					BUF_DEPTH   = 4410, 	// At Fs = 44.1kHz, up to 100 ms delay
