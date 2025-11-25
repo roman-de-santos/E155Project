@@ -37,3 +37,4 @@
 *.txt
 *.hrr
 /FPGA/DSP/sim/Questa/work
+/FPGA/DSP/sim/Questa/DelayBufferFSM/work

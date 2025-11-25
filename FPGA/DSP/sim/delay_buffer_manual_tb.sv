@@ -98,7 +98,7 @@ module delay_buffer_manual_tb;
     // -------------------------------------------------------------------------
     // Instantiate Device Under Test (DUT)
     // -------------------------------------------------------------------------
-    DelayBuffer #(
+    DelayBufferFSM #(
         .BUF_DEPTH(BUF_DEPTH),
         .AVG_DELAY(TEST_AVG_DELAY)
     ) DUT (
@@ -203,7 +203,7 @@ module delay_buffer_manual_tb;
 
         // Procedure: Send nine dummy packets, each with a delay of TEST_AVG_DELAY - 4
 		for (int i = 0; i<9; i++) begin
-			send_data(-4, packets_array[i]);
+			send_data(1, packets_array[i]);
 			wait_cycles(3);
 		end
 		
