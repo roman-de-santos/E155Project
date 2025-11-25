@@ -9,10 +9,10 @@ module I2Stx #(
     input  logic [WIDTH-1:0] right_chan
 );
 
-    logic [5:0] bitCnt; 
+    logic [7:0] bitCnt; 
     
     // Shift register for serializing data
-    logic [(2*WIDTH):0] shift_reg; 
+    logic [(2*WIDTH):0] shift_reg; // 33 bits for Width=16
 
 	// Counter
     always @(negedge sclk) begin
@@ -29,15 +29,17 @@ module I2Stx #(
 	always @(negedge sclk) begin
 
 		// Assign value first to prevent logic overwriting LSB
-		sdata <= shift_reg[2*WIDTH];
+		
 		
 		if (rst) begin
 			shift_reg <= {1'b0, left_chan, right_chan};
-			sdata = 0;
+			sdata <= 1'b0;
 		end else if (bitCnt == (WIDTH*2 - 2)) begin
 			shift_reg <= {shift_reg[2*WIDTH],left_chan, right_chan};
+			sdata <= shift_reg[2*WIDTH];
 		end else begin
 			shift_reg <= shift_reg << 1;	
+			sdata <= shift_reg[2*WIDTH];
 		end
 		
 

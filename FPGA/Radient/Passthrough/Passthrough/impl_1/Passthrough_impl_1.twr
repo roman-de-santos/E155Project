@@ -1,17 +1,17 @@
-Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2025.1.0.39.0
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.2.0.3.0
 
-Tue Nov 18 15:58:36 2025
+Wed Nov 19 15:53:50 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
+Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt Passthrough_impl_1.twr Passthrough_impl_1.udb -gui -msgset C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt Passthrough_impl_1.twr Passthrough_impl_1.udb -gui -msgset C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml
 
 -----------------------------------------
-Design:          I2Stx
+Design:          top
 Family:          iCE40UP
 Device:          iCE40UP5K
 Package:         SG48
@@ -89,21 +89,18 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 10 Start or End Points     |           Type           
+     Listing 7 Start or End Points      |           Type           
 -------------------------------------------------------------------
-sclk                                    |                     input
+sdata_in                                |                     input
+sclk_in                                 |                     input
+ws_in                                   |                     input
 rst                                     |                     input
-left_chan[15]                           |                     input
-left_chan[14]                           |                     input
-left_chan[13]                           |                     input
-left_chan[12]                           |                     input
-left_chan[11]                           |                     input
-left_chan[10]                           |                     input
-left_chan[9]                            |                     input
-left_chan[8]                            |                     input
+sdata_out                               |                    output
+ws_out                                  |                    output
+sclk_out                                |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                        36
+Number of I/O ports without constraint  |                         7
                                         |                          
 -------------------------------------------------------------------
 
@@ -112,7 +109,7 @@ Define a clock on a top level port or a generated clock on a clock divider pin a
 -------------------------------------------------------------------
             Listing 1 Net(s)            |        Source pin        
 -------------------------------------------------------------------
-sclk_c                                  |        sclk_pad.bb_inst/O
+sclk_out_c_c                            |  sclk_out_c_pad.bb_inst/O
 -------------------------------------------------------------------
                                         |                          
 Number of clock nets without clock defi |                          

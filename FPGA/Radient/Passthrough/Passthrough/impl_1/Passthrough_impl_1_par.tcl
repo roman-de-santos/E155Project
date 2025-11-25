@@ -4,13 +4,13 @@
 set ret 0
 if {[catch {
 
-if {![file exists {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1}]} {
-  file mkdir {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1}
+if {![file exists {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1}]} {
+  file mkdir {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1}
 }
-cd {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1}
+cd {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1}
 
-sys_set_attribute -gui on -msg {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml}
-msg_load {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml}
+sys_set_attribute -gui on -msg {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml}
+msg_load {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml}
 des_set_project_udb -in {Passthrough_impl_1_map.udb} -out {Passthrough_impl_1.udb} -milestone par -pm ice40tp
 des_set_reference_udb -clean
 # par option
@@ -18,11 +18,14 @@ par_set_option { disable_timing_driven false placement_iterations 1 placement_it
 # run place & route
 par_run
 # backup netlist & constraint file
-if {[file exists {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_syn.udb}] && [file exists {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_map.udb}] && [file exists {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1.udb}]} {
-  file delete -force {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/Passthrough_impl_1_syn.udb} {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/Passthrough_impl_1_map.udb} {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/Passthrough_impl_1.udb} {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/lastrun.pdc}
-  file copy -force -- {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_syn.udb} {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postsyn.udb}
-  file copy -force -- {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_map.udb} {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postmap.udb}
-  file copy -force -- {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1.udb} {C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postpar.udb}
+if {[file exists {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_syn.udb}] && [file exists {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_map.udb}] && [file exists {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1.udb}]} {
+  file delete -force {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/Passthrough_impl_1_syn.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/Passthrough_impl_1_map.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/Passthrough_impl_1.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/lastrun.pdc}
+  file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_syn.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postsyn.udb}
+  file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_map.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postmap.udb}
+  file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1.udb} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/postpar.udb}
+  if [file exists {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/FPGApins.pdc}] {
+    file copy -force -- {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/FPGApins.pdc} {C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/incr/lastrun.pdc}
+  }
 }
 
 } out]} {

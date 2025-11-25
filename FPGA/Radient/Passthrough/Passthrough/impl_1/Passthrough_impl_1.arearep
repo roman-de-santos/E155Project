@@ -1,14 +1,33 @@
 ----------------------------------------------------------------------
-Report for cell I2Stx.TECH
-Register bits:  39 of 5280 (0.739%)
-I/O cells:      36
+Report for cell top.TECH
+Register bits:  108 of 5280 (2.045%)
+I/O cells:      7
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2         4          100.0
-                            FD1P3XZ        39          100.0
-                                 IB        34          100.0
+                               CCU2         5          100.0
+                            FD1P3XZ       108          100.0
+                                 IB         4          100.0
                                 INV         1          100.0
-                              IOL_B         1          100.0
-                               LUT4        37          100.0
-                                 OB         2          100.0
-                              TOTAL       118
+                               LUT4        52          100.0
+                                 OB         3          100.0
+SUB MODULES
+                              I2Srx         1
+                              I2Stx         1
+                              TOTAL       175
+----------------------------------------------------------------------
+Report for cell I2Stx.v1
+Instance Path : I2Stx0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2         5          100.0
+                            FD1P3XZ        43           39.8
+                               LUT4        47           90.4
+                              TOTAL        95
+----------------------------------------------------------------------
+Report for cell I2Srx.v1
+Instance Path : I2Srx0
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        65           60.2
+                                INV         1          100.0
+                              TOTAL        66

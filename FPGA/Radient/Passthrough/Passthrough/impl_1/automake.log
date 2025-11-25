@@ -1,130 +1,34 @@
 
-"C:/lscc/radiant/2025.1/tcltk/windows/bin/tclsh" "Passthrough_impl_1_synthesize.tcl"
-
-synthesis -f C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_lattice.synproj -logfile Passthrough_impl_1_lattice.srp
-synthesis:  version Radiant Software (64-bit) 2025.1.0.39.0
-
-Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
-Copyright (c) 1995 AT&T Corp.   All rights reserved.
-Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
-Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Nov 18 15:58:39 2025
-
-
-Command Line:  C:\lscc\radiant\2025.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_lattice.synproj -logfile Passthrough_impl_1_lattice.srp -gui -msgset C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml 
-
-INFO <35002000> - synthesis: Lattice Synthesis Engine launched.
-
-The -top option is not used.
-Synthesis options:
-The -a option is iCE40UP.
-The -t option is SG48.
-The -sp option is High-Performance_1.2V.
-The -p option is iCE40UP5K.
-
-###################### Device Information ######################
-----------------------------------------------------------------
-Lattice Family        | iCE40UP
-----------------------------------------------------------------
-Device                | iCE40UP5K
-----------------------------------------------------------------
-Package               | SG48
-----------------------------------------------------------------
-Performance Grade     | High-Performance_1.2V
-----------------------------------------------------------------
-################################################################
-
-####################### Device Resources #######################
-----------------------------------------------------------------
-Logic Cells           | 5280
-----------------------------------------------------------------
-RAM Blocks            | 30
-----------------------------------------------------------------
-DSP Blocks            | 8
-----------------------------------------------------------------
-PLLs                  | 1
-----------------------------------------------------------------
-I/O Pins              | 56
-----------------------------------------------------------------
-################################################################
-
-Resolving user-selected strategy settings...
-
-INFO <35001797> - Use DCC Insertion disabled by default.
-
-###################### Strategy Settings #######################
-----------------------------------------------------------------
-Optimization Goal     | Area
-----------------------------------------------------------------
-Top-level Module Name | 
-----------------------------------------------------------------
-Target Frequency      | 200.000 MHz
-----------------------------------------------------------------
-Maximum Fanout        | 1000
-----------------------------------------------------------------
-Timing Path Count     | 3
-----------------------------------------------------------------
-RAM Read/Write Check  | False
-----------------------------------------------------------------
-BRAM Utilization      | 100.0%
-----------------------------------------------------------------
-DSP Usage             | True
-----------------------------------------------------------------
-DSP Utilization       | 100.0%
-----------------------------------------------------------------
-FSM Encoding Style    | Auto
-----------------------------------------------------------------
-Resolve Mixed Drivers | False
-----------------------------------------------------------------
-Fix Gated Clocks      | True
-----------------------------------------------------------------
-Mux Style             | Auto
-----------------------------------------------------------------
-Use Carry Chain       | True
-----------------------------------------------------------------
-Carry Chain Length    | Infinite
-----------------------------------------------------------------
-Loop Limit            | 1950
-----------------------------------------------------------------
-Use I/O Insertion     | True
-----------------------------------------------------------------
-Use I/O Registers     | True
-----------------------------------------------------------------
-Resource Sharing      | True
-----------------------------------------------------------------
-Propagate Constants   | True
-----------------------------------------------------------------
-Remove Duplicate Reg  | True
-----------------------------------------------------------------
-Force GSR             | False
-----------------------------------------------------------------
-ROM Style             | Auto
-----------------------------------------------------------------
-RAM Style             | Auto
-----------------------------------------------------------------
-Remove LOC Properties | False
-----------------------------------------------------------------
-Partition Flow        | False
-----------------------------------------------------------------
-Use DCC Insertion     | None
-----------------------------------------------------------------
-################################################################
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m   -pwrprd -html -rpt "Passthrough_impl_1.twr" "Passthrough_impl_1.udb" 
+timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt Passthrough_impl_1.twr Passthrough_impl_1.udb -gui -msgset C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml
+Starting design reading...
+Loading device for application GENERIC from file 'itpa08.nph' in environment: C:/lscc/radiant/2024.2/ispfpga.
+Package Status:                     Preliminary    Version 1.5.
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Loading udb::Database ...
+Design:  top
+Family:  iCE40UP
+Device:  iCE40UP5K
+Package: SG48
+Performance Grade:   High-Performance_1.2V
 
 
-The -comp option is FALSE.
-The -syn option is FALSE.
 
-Output HDL filename: Passthrough_impl_1.vm
--path C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough (searchpath added)
--path C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1 (searchpath added)
--path C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src (searchpath added)
--path C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench (searchpath added)
--path C:/lscc/radiant/2025.1/ispfpga/ice40tp/data (searchpath added)
-Mixed language design
-CRITICAL <35001476> - A top-level module has not been specified for the mixed language design.
-Verilog design file: C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.v
-Verilog design file: C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv
-Verilog design file: C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv
-VHDL library: pmi
-VHDL design file: C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.vhd
+Successfully loading udb, 0.03 seconds
+
+Initializing timer
+Starting design annotation....
+High-Performance_1.2V
+
+Starting full timing analysis...
+Performance Hardware Data Status:   Advanced       Version 1.0.
+Connections ignored  58  counted  438  covered  0
+Changing speed to m;   changing temperature to -40
+
+STA Runtime and Peak Memory Usage :
+Total CPU Time: 0 secs 
+Total REAL Time: 0 secs 
+Peak Memory Usage: 105 MB
+
+ 0.604721s wall, 0.515625s user + 0.078125s system = 0.593750s CPU (98.2%)
+

@@ -1,40 +1,42 @@
 
                          Lattice Mapping Report File
 
-Design:  I2Stx
+Design:  top
 Family:  iCE40UP
 Device:  iCE40UP5K
 Package: SG48
 Performance Grade:  High-Performance_1.2V
 
-Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
-Mapped on: Tue Nov 18 15:58:14 2025
+Mapper:    version Radiant Software (64-bit) 2024.2.0.3.0
+Mapped on: Wed Nov 19 15:53:38 2025
 
 Design Information
 ------------------
 
-Command line:   map -i Passthrough_impl_1_syn.udb -o Passthrough_impl_1_map.udb
-     -mp Passthrough_impl_1.mrp -hierrpt -gui -msgset C:/Users/roman/Documents/G
+Command line:   map -pdc
+     C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/FPGApins.pdc -i
+     Passthrough_impl_1_syn.udb -o Passthrough_impl_1_map.udb -mp
+     Passthrough_impl_1.mrp -hierrpt -gui -msgset C:/Users/rdesantos/Documents/G
      itHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml
 
 Design Summary
 --------------
 
-   Number of slice registers:  39 out of  5280 (1%)
-   Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:            47 out of  5280 (1%)
-      Number of logic LUT4s:              38
-      Number of inserted feedthru LUT4s:   1
-      Number of ripple logic:              4 (8 LUT4s)
-   Number of IO sites used:   36 out of 39 (92%)
-      Number of IO sites used for general PIO: 36
+   Number of slice registers: 108 out of  5280 (2%)
+   Number of I/O registers:      0 out of   117 (0%)
+   Number of LUT4s:           131 out of  5280 (2%)
+      Number of logic LUT4s:              53
+      Number of inserted feedthru LUT4s:  68
+      Number of ripple logic:              5 (10 LUT4s)
+   Number of IO sites used:   7 out of 39 (18%)
+      Number of IO sites used for general PIO: 7
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 36 out of 36 (100%)
+      Number of IO sites used for PIO+I3C: 7 out of 36 (19%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 36 out of 39 (92%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 7 out of 39 (18%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  0 out of 1 (0%)
@@ -48,18 +50,16 @@ Design Summary
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net sclk_c: 38 loads, 0 rising, 38 falling (Driver: Port sclk)
-   Number of Clock Enables:  0
-   Number of LSRs:  3
-      Pin rst: 1 loads, 1 SLICEs (Net: rst_c)
-      Net n261: 1 loads, 1 SLICEs
-      Net n241: 4 loads, 4 SLICEs
-   Top 10 highest fanout non-clock nets:
-      Net n261: 32 loads
-      Net bitCnt[5]: 4 loads
-      Net n241: 4 loads
-      Net bitCnt[0]: 3 loads
-      Net bitCnt[3]: 3 loads
+      Net sclk_out_c_c: 108 loads, 64 rising, 44 falling (Driver: Port sclk_in)
+   Number of Clock Enables:  5
+      Net I2Stx0.n302: 1 loads, 1 SLICEs
+      Net n317: 16 loads, 16 SLICEs
+      Net n361: 16 loads, 16 SLICEs
+      Net n332: 16 loads, 16 SLICEs
+      Net n347: 16 loads, 16 SLICEs
+   Number of LSRs:  2
+      Net I2Stx0.n94: 1 loads, 1 SLICEs
+      Net rst_c_N_151: 75 loads, 75 SLICEs
 
                                     Page 1
 
@@ -69,11 +69,17 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net rst_c: 3 loads
-      Net n337: 2 loads
-      Net n347: 2 loads
-      Net n349: 2 loads
-      Net n472: 2 loads
+   Top 10 highest fanout non-clock nets:
+      Net rst_c_N_151: 75 loads
+      Net I2Stx0.n94: 32 loads
+      Net n317: 16 loads
+      Net n332: 16 loads
+      Net n347: 16 loads
+      Net n361: 16 loads
+      Net I2Stx0.bitCnt[5]: 11 loads
+      Net I2Stx0.bitCnt[6]: 11 loads
+      Net I2Stx0.bitCnt[7]: 11 loads
+      Net rst_c: 7 loads
 
 
 
@@ -95,38 +101,32 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| sdata               | OUTPUT    |           | O     |       |           |
+| sdata_in            | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| ws                  | OUTPUT    |           |       |       |           |
+| sclk_in             | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| sclk                | INPUT     |           |       |       |           |
+| sdata_out           | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ws_out              | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sclk_out            | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ws_in               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | rst                 | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[15]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[14]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[13]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[12]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[11]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[10]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[9]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[8]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[7]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[6]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[5]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[4]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
+
+Removed logic
+-------------
+
+Block I2Srx0/i4_1_lut was optimized away.
+Block sdata_in_pad.vlo_inst was optimized away.
+
+Constraint Summary
+------------------
+
+   Total number of constraints: 7
+   Total number of constraints dropped: 0
 
                                     Page 2
 
@@ -134,83 +134,14 @@ IO (PIO) Attributes
 
 
 
-IO (PIO) Attributes (cont)
---------------------------
-| left_chan[3]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[2]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[1]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| left_chan[0]        | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[15]      | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[14]      | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[13]      | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[12]      | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[11]      | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[10]      | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[9]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[8]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[7]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[6]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[5]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[4]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[3]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[2]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[1]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| right_chan[0]       | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-
-Removed logic
--------------
-
-Block i4_1_lut was optimized away.
-Block i1 was optimized away.
-
-ASIC Components
----------------
-
-Instance Name: sdata_i1
-         Type: IOLOGIC
-
-Constraint Summary
-------------------
-
-   Total number of constraints: 0
-
-                                    Page 3
-
-
-
-
-
-Constraint Summary (cont)
--------------------------
-   Total number of constraints dropped: 0
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 63 MB
-Checksum -- map: dff5af0f828af9765f25e84096ea913c600912d9
+   Peak Memory Usage: 69 MB
+Checksum -- map: 2e1b617d84223070ef16d8d34dc918236f0f0d
 
 
 
@@ -260,7 +191,10 @@ Checksum -- map: dff5af0f828af9765f25e84096ea913c600912d9
 
 
 
-                                    Page 4
+
+
+
+                                    Page 3
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
@@ -270,5 +204,5 @@ Copyright (c) 1995-2001 Lucent
      Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems
      All rights reserved.
-Copyright (c) 2002-2025 Lattice Semiconductor
+Copyright (c) 2002-2024 Lattice Semiconductor
      Corporation,  All rights reserved.
