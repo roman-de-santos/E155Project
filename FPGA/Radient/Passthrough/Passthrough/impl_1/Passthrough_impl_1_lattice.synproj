@@ -35,19 +35,22 @@
 
 
 
+
 -drc_cfg 35103300 20
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1" "C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough"
--ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
--lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv"
-"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv"
-"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/top.sv"
+-path "C:/lscc/radiant/2025.1/ispfpga/ice40tp/data" "C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1" "C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough" "C:/Git/E155Project/FPGA/Src" "C:/Git/E155Project/FPGA/Testbench"
+-ver "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Git/E155Project/FPGA/Src/I2Srx.sv"
+"C:/Git/E155Project/FPGA/Src/I2Stx.sv"
+"C:/Git/E155Project/FPGA/Src/top.sv"
+"C:/Git/E155Project/FPGA/Src/Data_Fast_to_Slow.sv"
+"C:/Git/E155Project/FPGA/Src/Fast_to_Slow_CDC.sv"
 
 
--path "C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough"
+-path "C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough"
 -top top
 -udb "Passthrough_impl_1_rtl.udb"
 -output_hdl "Passthrough_impl_1.vm"

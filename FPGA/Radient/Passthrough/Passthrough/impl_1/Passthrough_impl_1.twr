@@ -1,14 +1,14 @@
-Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2024.2.0.3.0
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2025.1.0.39.0
 
-Wed Nov 19 15:53:50 2025
+Tue Nov 25 03:44:23 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
-Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
+Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
 
-Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt Passthrough_impl_1.twr Passthrough_impl_1.udb -gui -msgset C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt Passthrough_impl_1.twr Passthrough_impl_1.udb -gui -msgset C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml
 
 -----------------------------------------
 Design:          top
@@ -91,13 +91,13 @@ create_generated_clock,
 -------------------------------------------------------------------
      Listing 7 Start or End Points      |           Type           
 -------------------------------------------------------------------
-sdata_in                                |                     input
 sclk_in                                 |                     input
-ws_in                                   |                     input
 rst                                     |                     input
-sdata_out                               |                    output
+ws_in                                   |                     input
+sdata_in                                |                     input
 ws_out                                  |                    output
 sclk_out                                |                    output
+sdata_out                               |                    output
 -------------------------------------------------------------------
                                         |                          
 Number of I/O ports without constraint  |                         7
