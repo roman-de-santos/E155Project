@@ -1,5 +1,4 @@
 BEGIN 1:LFOgen:fast:work
     tuningVal :  1:LFOgen_tb:fast:work
     phaseAcc :  1:LFOgen_tb:fast:work
-    tick48k :  1:LFOgen_tb:fast:work
 END 

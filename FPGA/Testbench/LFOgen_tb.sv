@@ -6,9 +6,9 @@ module LFOgen_tb;
     parameter CLK_PERIOD = 166.666; // 6MHz clock period (~166.667ns)
     parameter HALF_PERIOD = CLK_PERIOD / 2.0;
 
-    // The module is set to tick every 125 cycles for 48kHz
-    parameter CYCLES_PER_TICK = 125; 
-    parameter TICK_PERIOD_NS = CLK_PERIOD * CYCLES_PER_TICK; // ~20.833 us
+    // The module is set to tick every 136 cycles for 44.1kHz
+    parameter CYCLES_PER_TICK = 136; 
+    parameter TICK_PERIOD_NS = CLK_PERIOD * CYCLES_PER_TICK; // ~22.675 us
 
     // --- Signals for DUT interface ---
     logic clk;
@@ -16,9 +16,10 @@ module LFOgen_tb;
     logic [3:0] freqSetting;
     logic [3:0] scaleFactor;
     logic signed [15:0] waveOut;
+	logic newValFlag;
+	logic FIFOupdate;
 
     // --- Internal signals for monitoring ---
-    logic         tick48k_mon;
     logic [31:0]  phaseAcc_mon;
     logic [31:0]  tuningVal_mon;
 
@@ -28,11 +29,12 @@ module LFOgen_tb;
         .reset(reset),
         .freqSetting(freqSetting),
         .scaleFactor(scaleFactor),
-        .waveOut(waveOut)
+		.FIFOupdate(FIFOupdate),
+        .waveOut(waveOut),
+		.newValFlag(newValFlag)		
     );
 
     // Grab internal signals for verification
-    assign tick48k_mon   = DUT.tick48k;
     assign phaseAcc_mon  = DUT.phaseAcc;
     assign tuningVal_mon = DUT.tuningVal;
     
@@ -40,6 +42,29 @@ module LFOgen_tb;
     initial begin
         clk = 1'b0;
         forever #(HALF_PERIOD) clk = ~clk;
+    end
+
+    // --- Strobe Generation ---
+    initial begin
+        FIFOupdate = 1'b0;
+        
+        // Optional: Align start with the main clock to avoid race conditions
+        @(posedge clk); 
+
+        forever begin
+            // 1. Drive High
+            FIFOupdate = 1'b1;
+            
+            // 2. Wait exactly 1 Clock Period
+            #(CLK_PERIOD);
+            
+            // 3. Drive Low
+            FIFOupdate = 1'b0;
+            
+            // 4. Wait for the remainder of the 44.1kHz period
+            // (136 total cycles - 1 cycle used for high pulse = 135 cycles wait)
+            #(CLK_PERIOD * (CYCLES_PER_TICK - 1));
+        end
     end
 
     // --- Main Test Stimulus ---
@@ -65,8 +90,8 @@ module LFOgen_tb;
         # (CLK_PERIOD); 
         
         // 3. Sync to 48kHz tick
-        @(posedge tick48k_mon); 
-        $display("[%0t] First 48kHz Tick detected!", $time);
+        @(posedge FIFOupdate); 
+        $display("[%0t] First FIFOupdate Tick detected!", $time);
         
         // 4. Test Case 1: 1.0 Hz (Too slow to see change in short sim, but we check accum)
         #1; 
@@ -76,7 +101,7 @@ module LFOgen_tb;
         $display("[%0t] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...", $time);
 
         for (int i = 0; i < 10; i++) begin
-            @(posedge tick48k_mon);
+            @(posedge FIFOupdate);
             // We expect waveOut to be 0 here because phaseAcc hasn't reached Index 1 yet
         end
         $display("[%0t] Case 1 PhaseAcc check: 0x%h (Should be increasing)", $time, phaseAcc_mon);
@@ -92,7 +117,7 @@ module LFOgen_tb;
         $display("        (Transition from Index 0 -> 1 expected around Sample 47)");
 
         for (int i = 0; i < 120; i++) begin
-            @(posedge tick48k_mon);
+            @(posedge FIFOupdate);
             // Only print if waveOut changes or periodically
             if (waveOut != 0 || i > 40) begin
                  $display("[%0t] Sample %0d: phaseAcc=0x%h (Idx: %0d), waveOut=%d", 
@@ -104,7 +129,7 @@ module LFOgen_tb;
 		scaleFactor = 4'b1000; 
 		
 		for (int i = 0; i < 60; i++) begin
-            @(posedge tick48k_mon);
+            @(posedge FIFOupdate);
             // Only print if waveOut changes or periodically
             if (waveOut != 0 || i > 40) begin
                  $display("[%0t] Sample %0d: phaseAcc=0x%h (Idx: %0d), waveOut=%d", 

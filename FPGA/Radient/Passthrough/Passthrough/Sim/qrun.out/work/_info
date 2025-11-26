@@ -13,23 +13,23 @@ Z1 dC:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthr
 vLFOgen
 Z2 2C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv
 Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1764121674
+Z4 !s110 1764142389
 !i10b 1
-!s100 Nm:ckI8DN[ZO:^[I^S@Pm1
-IS?fCJOUE26;7BHG2;06aE3
+!s100 5?6a:OQ<bASZeRlRkDPCN0
+I8S7=8]dj5U4XX?<eIMIJE3
 S1
 R1
-w1764121643
+w1764141446
 8C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv
 FC:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv
 !i122 0
-L0 1 100
+L0 1 82
 Z5 VDg1SIo80bB@j0V0VzS_@n1
 Z6 OL;L;2024.2;79
 r1
 !s85 0
 31
-Z7 !s108 1764121674.000000
+Z7 !s108 1764142389.000000
 Z8 !s107 C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv|
 Z9 !s90 -reportprogress|300|-L|work|-sv|+noacc+pmi_work.*|+noacc+ovi_ice40up.*|-L|pmi_work|-L|ovi_ice40up|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv|C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv|-work|qrun.out/work|-statslog|qrun.out/stats_log|-writesessionid|+qrun.out/top_dus|-csession=incr|
 !i113 0
@@ -41,15 +41,15 @@ R2
 R3
 R4
 !i10b 1
-!s100 `I[]lj_d<HZT7j0M4LFUG0
-IUW>DBG0E_b7a0fUF?bG8c1
+!s100 WnzE]efnYQf>gd`YGmE5Z1
+I_DgNF@114kK31F=?KiiV63
 S1
 R1
-w1764121574
+w1764142362
 8C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv
 FC:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv
 !i122 0
-L0 3 117
+L0 3 144
 R5
 R6
 r1
@@ -63,8 +63,8 @@ R10
 R11
 n@l@f@ogen_tb
 Tqrun_opt
-R4
-VW]J88fAMb@STkNY9P<9?22
+!s110 1764142390
+VGO4i7BkeaRJEaoZJZ_RPC1
 04 9 4 work LFOgen_tb fast 0
 R0
 !s12f OEM25U2 

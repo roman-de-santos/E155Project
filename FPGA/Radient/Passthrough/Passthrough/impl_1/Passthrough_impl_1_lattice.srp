@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Nov 25 17:38:14 2025
+Tue Nov 25 23:15:55 2025
 
 
 Command Line:  C:\lscc\radiant\2025.1\ispfpga\bin\nt64\synthesis.exe -f C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_lattice.synproj -logfile Passthrough_impl_1_lattice.srp -gui -msgset C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml 
@@ -182,12 +182,12 @@ INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Use
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): LFOgen
 INFO <35901018> - synthesis: c:/users/roman/documents/github/e155project/fpga/src/lfogen.sv(1): compiling module LFOgen. VERI-1018
-WARNING <35901209> - synthesis: c:/users/roman/documents/github/e155project/fpga/src/lfogen.sv(94): expression size 17 truncated to fit in target size 16. VERI-1209
-WARNING <35931002> - synthesis: c:/users/roman/documents/github/e155project/fpga/src/lfogen.sv(22): net LUT does not have a driver. VDB-1002
+WARNING <35901209> - synthesis: c:/users/roman/documents/github/e155project/fpga/src/lfogen.sv(75): expression size 17 truncated to fit in target size 16. VERI-1209
+WARNING <35931002> - synthesis: c:/users/roman/documents/github/e155project/fpga/src/lfogen.sv(23): net LUT does not have a driver. VDB-1002
 [Parameter Setting Section Start]
 
 [Parameter Setting Section End]
-WARNING <35931038> - synthesis: c:/users/roman/documents/github/e155project/fpga/src/lfogen.sv(22): ram LUT_original_ramnet has no write-port on it. VDB-1038
+WARNING <35931038> - synthesis: c:/users/roman/documents/github/e155project/fpga/src/lfogen.sv(23): ram LUT_original_ramnet has no write-port on it. VDB-1038
 
 
 
@@ -197,17 +197,17 @@ Mapped 1 multiplier(s)
 INFO <35002039> - synthesis: Special Primitives IFD1P3AZ and OFD1P3AZ for ThunderPlus are synthesized using IOL_B.
 
 ################### Begin Area Report (LFOgen)######################
-Number of register bits => 99 of 5280 (1 % )
+Number of register bits => 91 of 5280 (1 % )
 EBR_B => 1
-CCU2 => 21
-FD1P3XZ => 99
-IB => 10
+CCU2 => 17
+FD1P3XZ => 91
+IB => 11
 IOL_B => 1
-LUT4 => 77
+LUT4 => 73
 MAC16 => 1
 OB => 17
 ################### End Area Report ##################
-Number of odd-length carry chains : 1
+Number of odd-length carry chains : 0
 Number of even-length carry chains : 1
 
 ################### Begin Clock Report ######################
@@ -218,16 +218,16 @@ Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : reset_c, loads : 74
-  Net : n1112, loads : 51
-  Net : tick48k, loads : 23
+  Net : reset_c, loads : 73
+  Net : n1117, loads : 35
+  Net : FIFOupdate_c, loads : 24
+  Net : n1052, loads : 24
   Net : clk_c_enable_1, loads : 23
-  Net : n1263, loads : 20
   Net : n167[31], loads : 20
-  Net : freqSetting_c_3, loads : 19
-  Net : freqSetting_c_2, loads : 19
+  Net : n1225, loads : 20
   Net : freqSetting_c_1, loads : 19
-  Net : n1261, loads : 19
+  Net : freqSetting_c_0, loads : 19
+  Net : n167[30], loads : 19
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -240,6 +240,6 @@ Peak Memory Usage: 104 MB
 
 --------------------------------------------------------------
 Total CPU Time: 15 secs 
-Total REAL Time: 16 secs 
+Total REAL Time: 15 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 7ddc31fbec85dce0a3e6be46a55d23e6c382e4e
+Checksum -- synthesis -- netlist: 73a8b3e892f9761b42fc421b72cd0e65dec7d04e

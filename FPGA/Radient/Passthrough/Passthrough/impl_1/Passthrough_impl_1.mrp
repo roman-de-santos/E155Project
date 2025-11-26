@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
-Mapped on: Tue Nov 25 17:38:44 2025
+Mapped on: Tue Nov 25 23:16:25 2025
 
 Design Information
 ------------------
@@ -22,21 +22,21 @@ Command line:   map -pdc
 Design Summary
 --------------
 
-   Number of slice registers:  99 out of  5280 (2%)
+   Number of slice registers:  91 out of  5280 (2%)
    Number of I/O registers:      1 out of   117 (1%)
-   Number of LUT4s:           158 out of  5280 (3%)
-      Number of logic LUT4s:              78
+   Number of LUT4s:           146 out of  5280 (3%)
+      Number of logic LUT4s:              74
       Number of inserted feedthru LUT4s:  38
-      Number of ripple logic:             21 (42 LUT4s)
-   Number of IO sites used:   27 out of 39 (69%)
-      Number of IO sites used for general PIO: 27
+      Number of ripple logic:             17 (34 LUT4s)
+   Number of IO sites used:   28 out of 39 (72%)
+      Number of IO sites used for general PIO: 28
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 27 out of 36 (75%)
+      Number of IO sites used for PIO+I3C: 28 out of 36 (78%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 27 out of 39 (69%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 28 out of 39 (72%)
    Number of DSPs:             1 out of 8 (13%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  0 out of 1 (0%)
@@ -50,16 +50,16 @@ Design Summary
    Number of EBRs:             1 out of 30 (3%)
    Number of PLLs:             0 out of 1 (0%)
    Number of Clocks:  1
-      Net clk_c: 83 loads, 83 rising, 0 falling (Driver: Port clk)
-   Number of Clock Enables:  3
+      Net clk_c: 78 loads, 78 rising, 0 falling (Driver: Port clk)
+   Number of Clock Enables:  4
       Net VCC_net: 2 loads, 0 SLICEs
       Net clk_c_enable_1: 22 loads, 21 SLICEs
-      Net n1112: 35 loads, 34 SLICEs
-   Number of LSRs:  2
+      Net n1117: 19 loads, 18 SLICEs
+      Net n1052: 16 loads, 16 SLICEs
+   Number of LSRs:  1
       Pin reset: 33 loads, 33 SLICEs (Net: reset_c)
-      Net n649: 4 loads, 4 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net reset_c: 59 loads
+      Net reset_c: 58 loads
 
                                     Page 1
 
@@ -69,15 +69,15 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
-      Net n1112: 35 loads
-      Net tick48k: 23 loads
+      Net FIFOupdate_c: 24 loads
       Net clk_c_enable_1: 22 loads
+      Net freqSetting_c_0: 19 loads
       Net freqSetting_c_1: 19 loads
-      Net freqSetting_c_2: 19 loads
-      Net freqSetting_c_3: 19 loads
-      Net freqSetting_c_0: 18 loads
-      Net preWave_0__N_99: 16 loads
-      Net multResult[18]: 4 loads
+      Net n1117: 19 loads
+      Net freqSetting_c_2: 18 loads
+      Net freqSetting_c_3: 17 loads
+      Net n1052: 16 loads
+      Net preWave_0__N_95: 16 loads
 
 
 
@@ -177,6 +177,8 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
+| FIFOupdate          | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | scaleFactor[0]      | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | scaleFactor[1]      | INPUT     |           |       |       |           |
@@ -191,8 +193,6 @@ IO (PIO) Attributes
 +---------------------+-----------+-----------+-------+-------+-----------+
 | freqSetting[2]      | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| freqSetting[3]      | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 
                                     Page 3
 
@@ -202,6 +202,8 @@ IO (PIO) Attributes
 
 IO (PIO) Attributes (cont)
 --------------------------
+| freqSetting[3]      | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 | reset               | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | clk                 | INPUT     |           |       |       |           |
@@ -249,14 +251,12 @@ Block i1 was optimized away.
 ASIC Components
 ---------------
 
-Instance Name: mult_15
+Instance Name: mult_7
          Type: DSP
-Instance Name: mux_43
+Instance Name: mux_35
          Type: EBR
 Instance Name: newValFlag_i0
          Type: IOLOGIC
-
-
 
 
 
@@ -286,7 +286,7 @@ Run Time and Memory Usage
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
    Peak Memory Usage: 69 MB
-Checksum -- map: 6165846a8b410f865c18f3fd4bb93e7f388e9f59
+Checksum -- map: 8b3ff6d67e288ba0ead3d99282012533e4505a2b
 
 
 
