@@ -1,13 +1,12 @@
-<top name = "top"  library = "work"  arch = ""  entry = "Verilog">
+<top name = "LFOgen"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
-    <clockitem name = "sclk_in"  type = "port" />
-    <clockitem name = "I2Stx0/n2"  type = "net" />
+    <clockitem name = "clk"  type = "port" />
 </clocks>
 
 <!--
     //=============================================================
-    //  Number of Clocks processed: 2
+    //  Number of Clocks processed: 1
     //
     //  If a clock cannot be found in the top level pins section,
     //  that means it is an internal clock.

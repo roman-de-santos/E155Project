@@ -3,10 +3,8 @@
 -reflib ovi_ice40up
 
 
-"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv" 
-"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv" 
-"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/top.sv" 
-"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv" 
+"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv" 
+"C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv" 
 -sv
 -optionset VOPTDEBUG
 +noacc+pmi_work.*
@@ -17,7 +15,7 @@
 -end
 
 -gui
--top i2s_tb
+-top LFOgen_tb
 -vsim.options
   -suppress vsim-7033,vsim-8630,3009,3389
 -end

@@ -48,7 +48,7 @@ module I2Stx #(
 	// WS clock
 	always @(negedge sclk) begin
 		if (rst) begin
-			ws <= 0;    // start with left channel
+			ws <= 1;    // start with left channel
 		end else if ((bitCnt == (WIDTH)) || (bitCnt == (WIDTH*2))) begin
 			ws <= ~ws; 
 		end

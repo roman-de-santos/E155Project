@@ -3,7 +3,8 @@ module LFOgen (
     input  logic reset,
     input  logic [3:0] freqSetting,      // Stepsize, Determines Frequency
     input  logic [3:0] scaleFactor,      // 0000=0.0, 1111=1.0
-    output logic signed [15:0] waveOut
+    output logic signed [15:0] waveOut,
+	output logic newValFlag
 );
 
     // Phase Accumulator
@@ -15,12 +16,15 @@ module LFOgen (
     // Wave scaling
     logic signed [15:0] preWave;
     logic signed [20:0] multResult;
+	logic signed [20:0] multResultPrev;
     
     // Memory Array (256 Resolution, 16 bit width)
     reg signed [15:0] LUT [0:255];
     
     // Load the LUT
-    initial $readmemh("./LFO-LUTs/sineFixed(256).mem", LUT);
+	// Synthesis path: ./LFO-LUTs/sineFixed(256).mem
+	// Sim Path:       ../../../../Src/LFO-LUTs/sineFixed(256).mem
+    initial $readmemh("sineFixed(256).mem", LUT); 
 
     // Generate a 48kHz signal to read LUT
     logic [6:0] counter; // 6MHz to 48kHz (pulse every 125 cycles on the 6MHz clock)
@@ -67,14 +71,24 @@ module LFOgen (
 
     always @(posedge clk) begin
         if (reset) begin
-            phaseAcc <= 0;
-            waveOut <= 0;
+            phaseAcc    <= 0;
+            waveOut     <= 0;
+			preWave     <= 0;
+			multResult  <= 0;
 
         end else if (tick48k) begin
             phaseAcc <= phaseAcc + tuningVal; // add stepsize
             preWave <= LUT[phaseAcc[31:24]];
 
             multResult <= preWave * $signed({1'b0, scaleFactor});
+			
+			multResultPrev <= multResult;
+			
+			if (~(multResult == multResultPrev))begin
+				newValFlag = 1;
+			end else begin
+				newValFlag = 0;
+			end
 
             // Normalize (scaleFactor = 0b1111 becomes 0d1)
             // dividing by 16 is a good approximation that saves on hardware and improves speed

@@ -1840,3 +1840,1046 @@ run -all
 # Break in Module i2s_tb at C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
 # End time: 14:38:40 on Nov 19,2025, Elapsed time: 0:00:33
 # Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:14:22 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# ** Warning: (vsim-7) Failed to open readmem file "./LFO-LUTs/sineFixed(256).mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv(23)
+#    Time: 0 ps  Iteration: 0  Instance: /LFOgen_tb/DUT
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [1000000] Reset released. Waiting for first 48kHz tick...
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz (4'b0011, Tval=0x000022f4), Scale=Max (4'b1111)
+# [42416000] Sample 1: phaseAcc=0x00015d86, waveOut=     x
+# [63250000] Sample 2: phaseAcc=0x0002bb0c, waveOut=     x
+# [84083000] Sample 3: phaseAcc=0x00041892, waveOut=     x
+# [104916000] Sample 4: phaseAcc=0x00057618, waveOut=     x
+# [125749000] Sample 5: phaseAcc=0x0006d39e, waveOut=     x
+# [146583000] Sample 6: phaseAcc=0x00083124, waveOut=     x
+# [167416000] Sample 7: phaseAcc=0x00098eaa, waveOut=     x
+# [188249000] Sample 8: phaseAcc=0x000aec30, waveOut=     x
+# [209082000] Sample 9: phaseAcc=0x000c49b6, waveOut=     x
+# [229916000] Sample 10: phaseAcc=0x000da73c, waveOut=     x
+# [230083000] Case 2: Freq=4.0Hz (4'b1101, Tval=0x0005761a), Scale=Half (4'b1000)
+# [250749000] Sample 11: phaseAcc=0x000f04c2, waveOut=     x
+# [271582000] Sample 12: phaseAcc=0x00147adc, waveOut=     x
+# [292415000] Sample 13: phaseAcc=0x0019f0f6, waveOut=     x
+# [313249000] Sample 14: phaseAcc=0x001f6710, waveOut=     x
+# [334082000] Sample 15: phaseAcc=0x0024dd2a, waveOut=     x
+# [354915000] Sample 16: phaseAcc=0x002a5344, waveOut=     x
+# [375748000] Sample 17: phaseAcc=0x002fc95e, waveOut=     x
+# [396582000] Sample 18: phaseAcc=0x00353f78, waveOut=     x
+# [417415000] Sample 19: phaseAcc=0x003ab592, waveOut=     x
+# [438248000] Sample 20: phaseAcc=0x00402bac, waveOut=     x
+# [438416000] Case 3: Scale Factor set to 0 (4'b0000). waveOut should be 0.
+# [459081000] Final Sample: waveOut=     x. Test complete.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(119)
+#    Time: 459081497 ps  Iteration: 2  Instance: /LFOgen_tb
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 119
+# End time: 17:18:47 on Nov 25,2025, Elapsed time: 0:04:25
+# Errors: 0, Warnings: 1
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:19:15 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.LFOgen(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# End time: 17:19:55 on Nov 25,2025, Elapsed time: 0:00:40
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:20:26 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [1000000] Reset released. Waiting for first 48kHz tick...
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz (4'b0011, Tval=0x000022f4), Scale=Max (4'b1111)
+# [42416000] Sample 1: phaseAcc=0x00015d86, waveOut=     x
+# [63250000] Sample 2: phaseAcc=0x0002bb0c, waveOut=     x
+# [84083000] Sample 3: phaseAcc=0x00041892, waveOut=     0
+# [104916000] Sample 4: phaseAcc=0x00057618, waveOut=     0
+# [125749000] Sample 5: phaseAcc=0x0006d39e, waveOut=     0
+# [146583000] Sample 6: phaseAcc=0x00083124, waveOut=     0
+# [167416000] Sample 7: phaseAcc=0x00098eaa, waveOut=     0
+# [188249000] Sample 8: phaseAcc=0x000aec30, waveOut=     0
+# [209082000] Sample 9: phaseAcc=0x000c49b6, waveOut=     0
+# [229916000] Sample 10: phaseAcc=0x000da73c, waveOut=     0
+# [230083000] Case 2: Freq=4.0Hz (4'b1101, Tval=0x0005761a), Scale=Half (4'b1000)
+# [250749000] Sample 11: phaseAcc=0x000f04c2, waveOut=     0
+# [271582000] Sample 12: phaseAcc=0x00147adc, waveOut=     0
+# [292415000] Sample 13: phaseAcc=0x0019f0f6, waveOut=     0
+# [313249000] Sample 14: phaseAcc=0x001f6710, waveOut=     0
+# [334082000] Sample 15: phaseAcc=0x0024dd2a, waveOut=     0
+# [354915000] Sample 16: phaseAcc=0x002a5344, waveOut=     0
+# [375748000] Sample 17: phaseAcc=0x002fc95e, waveOut=     0
+# [396582000] Sample 18: phaseAcc=0x00353f78, waveOut=     0
+# [417415000] Sample 19: phaseAcc=0x003ab592, waveOut=     0
+# [438248000] Sample 20: phaseAcc=0x00402bac, waveOut=     0
+# [438416000] Case 3: Scale Factor set to 0 (4'b0000). waveOut should be 0.
+# [459081000] Final Sample: waveOut=     0. Test complete.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(119)
+#    Time: 459081497 ps  Iteration: 2  Instance: /LFOgen_tb
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 119
+# End time: 17:28:05 on Nov 25,2025, Elapsed time: 0:07:39
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:28:58 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...
+# [229916000] Case 1 PhaseAcc check: 0x000da73c (Should be increasing)
+# [230083000] Case 2: Freq=4.0Hz. Running 60 samples to wait for LUT Index change...
+#         (Transition from Index 0 -> 1 expected around Sample 47)
+# [1104912000] Sample 42: phaseAcc=0x00eeeeec (Idx: 0), waveOut=     0
+# [1125745000] Sample 43: phaseAcc=0x00f46506 (Idx: 0), waveOut=     0
+# [1146579000] Sample 44: phaseAcc=0x00f9db20 (Idx: 0), waveOut=     0
+# [1167412000] Sample 45: phaseAcc=0x00ff513a (Idx: 0), waveOut=     0
+# [1188245000] Sample 46: phaseAcc=0x0104c754 (Idx: 1), waveOut=     0
+# [1209078000] Sample 47: phaseAcc=0x010a3d6e (Idx: 1), waveOut=     0
+# [1229912000] Sample 48: phaseAcc=0x010fb388 (Idx: 1), waveOut=     0
+# [1250745000] Sample 49: phaseAcc=0x011529a2 (Idx: 1), waveOut=   101
+# [1271578000] Sample 50: phaseAcc=0x011a9fbc (Idx: 1), waveOut=   101
+# [1292411000] Sample 51: phaseAcc=0x012015d6 (Idx: 1), waveOut=   101
+# [1313245000] Sample 52: phaseAcc=0x01258bf0 (Idx: 1), waveOut=   101
+# [1334078000] Sample 53: phaseAcc=0x012b020a (Idx: 1), waveOut=   101
+# [1354911000] Sample 54: phaseAcc=0x01307824 (Idx: 1), waveOut=   101
+# [1375744000] Sample 55: phaseAcc=0x0135ee3e (Idx: 1), waveOut=   101
+# [1396578000] Sample 56: phaseAcc=0x013b6458 (Idx: 1), waveOut=   101
+# [1417411000] Sample 57: phaseAcc=0x0140da72 (Idx: 1), waveOut=   101
+# [1438244000] Sample 58: phaseAcc=0x0146508c (Idx: 1), waveOut=   101
+# [1459077000] Sample 59: phaseAcc=0x014bc6a6 (Idx: 1), waveOut=   101
+# [1479911000] Sample 60: phaseAcc=0x01513cc0 (Idx: 1), waveOut=   101
+# [1479911000] Test complete.
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(104)
+#    Time: 1479910747 ps  Iteration: 2  Instance: /LFOgen_tb
+# 1
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 104
+add wave -position end  sim:/LFOgen_tb/DUT/clk
+add wave -position end  sim:/LFOgen_tb/DUT/reset
+add wave -position end  sim:/LFOgen_tb/DUT/freqSetting
+add wave -position end  sim:/LFOgen_tb/DUT/scaleFactor
+add wave -position end  sim:/LFOgen_tb/DUT/waveOut
+add wave -position end  sim:/LFOgen_tb/DUT/phaseAcc
+add wave -position end  sim:/LFOgen_tb/DUT/tuningVal
+add wave -position end  sim:/LFOgen_tb/DUT/preWave
+add wave -position end  sim:/LFOgen_tb/DUT/multResult
+add wave -position end  sim:/LFOgen_tb/DUT/LUT
+add wave -position end  sim:/LFOgen_tb/DUT/counter
+add wave -position end  sim:/LFOgen_tb/DUT/tick48k
+restart -f
+# Closing VCD file "LFOgen.vcd"
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+run -all
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...
+# [229916000] Case 1 PhaseAcc check: 0x000da73c (Should be increasing)
+# [230083000] Case 2: Freq=4.0Hz. Running 60 samples to wait for LUT Index change...
+#         (Transition from Index 0 -> 1 expected around Sample 47)
+# [1104912000] Sample 42: phaseAcc=0x00eeeeec (Idx: 0), waveOut=     0
+# [1125745000] Sample 43: phaseAcc=0x00f46506 (Idx: 0), waveOut=     0
+# [1146579000] Sample 44: phaseAcc=0x00f9db20 (Idx: 0), waveOut=     0
+# [1167412000] Sample 45: phaseAcc=0x00ff513a (Idx: 0), waveOut=     0
+# [1188245000] Sample 46: phaseAcc=0x0104c754 (Idx: 1), waveOut=     0
+# [1209078000] Sample 47: phaseAcc=0x010a3d6e (Idx: 1), waveOut=     0
+# [1229912000] Sample 48: phaseAcc=0x010fb388 (Idx: 1), waveOut=     0
+# [1250745000] Sample 49: phaseAcc=0x011529a2 (Idx: 1), waveOut=   101
+# [1271578000] Sample 50: phaseAcc=0x011a9fbc (Idx: 1), waveOut=   101
+# [1292411000] Sample 51: phaseAcc=0x012015d6 (Idx: 1), waveOut=   101
+# [1313245000] Sample 52: phaseAcc=0x01258bf0 (Idx: 1), waveOut=   101
+# [1334078000] Sample 53: phaseAcc=0x012b020a (Idx: 1), waveOut=   101
+# [1354911000] Sample 54: phaseAcc=0x01307824 (Idx: 1), waveOut=   101
+# [1375744000] Sample 55: phaseAcc=0x0135ee3e (Idx: 1), waveOut=   101
+# [1396578000] Sample 56: phaseAcc=0x013b6458 (Idx: 1), waveOut=   101
+# [1417411000] Sample 57: phaseAcc=0x0140da72 (Idx: 1), waveOut=   101
+# [1438244000] Sample 58: phaseAcc=0x0146508c (Idx: 1), waveOut=   101
+# [1459077000] Sample 59: phaseAcc=0x014bc6a6 (Idx: 1), waveOut=   101
+# [1479911000] Sample 60: phaseAcc=0x01513cc0 (Idx: 1), waveOut=   101
+# [1479911000] Test complete.
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(104)
+#    Time: 1479910747 ps  Iteration: 2  Instance: /LFOgen_tb
+# 1
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 104
+# End time: 17:39:19 on Nov 25,2025, Elapsed time: 0:10:21
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   5
+#   Totals: Errors:   0, Warnings:   5
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:40:02 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# ** Warning: (vsim-7) Failed to open readmem file "./LFO-LUTs/sineFixed(256).mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv(25)
+#    Time: 0 ps  Iteration: 0  Instance: /LFOgen_tb/DUT
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...
+# [229916000] Case 1 PhaseAcc check: 0x000da73c (Should be increasing)
+# [230083000] Case 2: Freq=4.0Hz. Running 60 samples to wait for LUT Index change...
+#         (Transition from Index 0 -> 1 expected around Sample 47)
+# [1104912000] Sample 42: phaseAcc=0x00eeeeec (Idx: 0), waveOut=     x
+# [1125745000] Sample 43: phaseAcc=0x00f46506 (Idx: 0), waveOut=     x
+# [1146579000] Sample 44: phaseAcc=0x00f9db20 (Idx: 0), waveOut=     x
+# [1167412000] Sample 45: phaseAcc=0x00ff513a (Idx: 0), waveOut=     x
+# [1188245000] Sample 46: phaseAcc=0x0104c754 (Idx: 1), waveOut=     x
+# [1209078000] Sample 47: phaseAcc=0x010a3d6e (Idx: 1), waveOut=     x
+# [1229912000] Sample 48: phaseAcc=0x010fb388 (Idx: 1), waveOut=     x
+# [1250745000] Sample 49: phaseAcc=0x011529a2 (Idx: 1), waveOut=     x
+# [1271578000] Sample 50: phaseAcc=0x011a9fbc (Idx: 1), waveOut=     x
+# [1292411000] Sample 51: phaseAcc=0x012015d6 (Idx: 1), waveOut=     x
+# [1313245000] Sample 52: phaseAcc=0x01258bf0 (Idx: 1), waveOut=     x
+# [1334078000] Sample 53: phaseAcc=0x012b020a (Idx: 1), waveOut=     x
+# [1354911000] Sample 54: phaseAcc=0x01307824 (Idx: 1), waveOut=     x
+# [1375744000] Sample 55: phaseAcc=0x0135ee3e (Idx: 1), waveOut=     x
+# [1396578000] Sample 56: phaseAcc=0x013b6458 (Idx: 1), waveOut=     x
+# [1417411000] Sample 57: phaseAcc=0x0140da72 (Idx: 1), waveOut=     x
+# [1438244000] Sample 58: phaseAcc=0x0146508c (Idx: 1), waveOut=     x
+# [1459077000] Sample 59: phaseAcc=0x014bc6a6 (Idx: 1), waveOut=     x
+# [1479911000] Sample 60: phaseAcc=0x01513cc0 (Idx: 1), waveOut=     x
+# [1500744000] Sample 61: phaseAcc=0x0156b2da (Idx: 1), waveOut=     x
+# [1521577000] Sample 62: phaseAcc=0x015c28f4 (Idx: 1), waveOut=     x
+# [1542410000] Sample 63: phaseAcc=0x01619f0e (Idx: 1), waveOut=     x
+# [1563244000] Sample 64: phaseAcc=0x01671528 (Idx: 1), waveOut=     x
+# [1584077000] Sample 65: phaseAcc=0x016c8b42 (Idx: 1), waveOut=     x
+# [1604910000] Sample 66: phaseAcc=0x0172015c (Idx: 1), waveOut=     x
+# [1625743000] Sample 67: phaseAcc=0x01777776 (Idx: 1), waveOut=     x
+# [1646577000] Sample 68: phaseAcc=0x017ced90 (Idx: 1), waveOut=     x
+# [1667410000] Sample 69: phaseAcc=0x018263aa (Idx: 1), waveOut=     x
+# [1688243000] Sample 70: phaseAcc=0x0187d9c4 (Idx: 1), waveOut=     x
+# [1709076000] Sample 71: phaseAcc=0x018d4fde (Idx: 1), waveOut=     x
+# [1729910000] Sample 72: phaseAcc=0x0192c5f8 (Idx: 1), waveOut=     x
+# [1750743000] Sample 73: phaseAcc=0x01983c12 (Idx: 1), waveOut=     x
+# [1771576000] Sample 74: phaseAcc=0x019db22c (Idx: 1), waveOut=     x
+# [1792409000] Sample 75: phaseAcc=0x01a32846 (Idx: 1), waveOut=     x
+# [1813243000] Sample 76: phaseAcc=0x01a89e60 (Idx: 1), waveOut=     x
+# [1834076000] Sample 77: phaseAcc=0x01ae147a (Idx: 1), waveOut=     x
+# [1854909000] Sample 78: phaseAcc=0x01b38a94 (Idx: 1), waveOut=     x
+# [1875742000] Sample 79: phaseAcc=0x01b900ae (Idx: 1), waveOut=     x
+# [1896576000] Sample 80: phaseAcc=0x01be76c8 (Idx: 1), waveOut=     x
+# [1917409000] Sample 81: phaseAcc=0x01c3ece2 (Idx: 1), waveOut=     x
+# [1938242000] Sample 82: phaseAcc=0x01c962fc (Idx: 1), waveOut=     x
+# [1959075000] Sample 83: phaseAcc=0x01ced916 (Idx: 1), waveOut=     x
+# [1979909000] Sample 84: phaseAcc=0x01d44f30 (Idx: 1), waveOut=     x
+# [2000742000] Sample 85: phaseAcc=0x01d9c54a (Idx: 1), waveOut=     x
+# [2021575000] Sample 86: phaseAcc=0x01df3b64 (Idx: 1), waveOut=     x
+# [2042408000] Sample 87: phaseAcc=0x01e4b17e (Idx: 1), waveOut=     x
+# [2063242000] Sample 88: phaseAcc=0x01ea2798 (Idx: 1), waveOut=     x
+# [2084075000] Sample 89: phaseAcc=0x01ef9db2 (Idx: 1), waveOut=     x
+# [2104908000] Sample 90: phaseAcc=0x01f513cc (Idx: 1), waveOut=     x
+# [2125741000] Sample 91: phaseAcc=0x01fa89e6 (Idx: 1), waveOut=     x
+# [2146575000] Sample 92: phaseAcc=0x02000000 (Idx: 2), waveOut=     x
+# [2167408000] Sample 93: phaseAcc=0x0205761a (Idx: 2), waveOut=     x
+# [2188241000] Sample 94: phaseAcc=0x020aec34 (Idx: 2), waveOut=     x
+# [2209074000] Sample 95: phaseAcc=0x0210624e (Idx: 2), waveOut=     x
+# [2229908000] Sample 96: phaseAcc=0x0215d868 (Idx: 2), waveOut=     x
+# [2250741000] Sample 97: phaseAcc=0x021b4e82 (Idx: 2), waveOut=     x
+# [2271574000] Sample 98: phaseAcc=0x0220c49c (Idx: 2), waveOut=     x
+# [2292407000] Sample 99: phaseAcc=0x02263ab6 (Idx: 2), waveOut=     x
+# [2313241000] Sample 100: phaseAcc=0x022bb0d0 (Idx: 2), waveOut=     x
+# [2334074000] Sample 101: phaseAcc=0x023126ea (Idx: 2), waveOut=     x
+# [2354907000] Sample 102: phaseAcc=0x02369d04 (Idx: 2), waveOut=     x
+# [2375740000] Sample 103: phaseAcc=0x023c131e (Idx: 2), waveOut=     x
+# [2396574000] Sample 104: phaseAcc=0x02418938 (Idx: 2), waveOut=     x
+# [2417407000] Sample 105: phaseAcc=0x0246ff52 (Idx: 2), waveOut=     x
+# [2438240000] Sample 106: phaseAcc=0x024c756c (Idx: 2), waveOut=     x
+# [2459073000] Sample 107: phaseAcc=0x0251eb86 (Idx: 2), waveOut=     x
+# [2479907000] Sample 108: phaseAcc=0x025761a0 (Idx: 2), waveOut=     x
+# [2500740000] Sample 109: phaseAcc=0x025cd7ba (Idx: 2), waveOut=     x
+# [2521573000] Sample 110: phaseAcc=0x02624dd4 (Idx: 2), waveOut=     x
+# [2542406000] Sample 111: phaseAcc=0x0267c3ee (Idx: 2), waveOut=     x
+# [2563240000] Sample 112: phaseAcc=0x026d3a08 (Idx: 2), waveOut=     x
+# [2584073000] Sample 113: phaseAcc=0x0272b022 (Idx: 2), waveOut=     x
+# [2604906000] Sample 114: phaseAcc=0x0278263c (Idx: 2), waveOut=     x
+# [2625739000] Sample 115: phaseAcc=0x027d9c56 (Idx: 2), waveOut=     x
+# [2646573000] Sample 116: phaseAcc=0x02831270 (Idx: 2), waveOut=     x
+# [2667406000] Sample 117: phaseAcc=0x0288888a (Idx: 2), waveOut=     x
+# [2688239000] Sample 118: phaseAcc=0x028dfea4 (Idx: 2), waveOut=     x
+# [2709072000] Sample 119: phaseAcc=0x029374be (Idx: 2), waveOut=     x
+# [2729906000] Sample 120: phaseAcc=0x0298ead8 (Idx: 2), waveOut=     x
+# [2729906000] Test complete.
+# ** Note: $finish    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(104)
+#    Time: 2729905747 ps  Iteration: 2  Instance: /LFOgen_tb
+# 1
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 104
+# End time: 17:40:47 on Nov 25,2025, Elapsed time: 0:00:45
+# Errors: 0, Warnings: 1
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   5
+#   Totals: Errors:   0, Warnings:   5
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:41:22 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...
+# [229916000] Case 1 PhaseAcc check: 0x000da73c (Should be increasing)
+# [230083000] Case 2: Freq=4.0Hz. Running 120 samples to wait for LUT Index change twice...
+#         (Transition from Index 0 -> 1 expected around Sample 47)
+# [1104912000] Sample 42: phaseAcc=0x00eeeeec (Idx: 0), waveOut=     0
+# [1125745000] Sample 43: phaseAcc=0x00f46506 (Idx: 0), waveOut=     0
+# [1146579000] Sample 44: phaseAcc=0x00f9db20 (Idx: 0), waveOut=     0
+# [1167412000] Sample 45: phaseAcc=0x00ff513a (Idx: 0), waveOut=     0
+# [1188245000] Sample 46: phaseAcc=0x0104c754 (Idx: 1), waveOut=     0
+# [1209078000] Sample 47: phaseAcc=0x010a3d6e (Idx: 1), waveOut=     0
+# [1229912000] Sample 48: phaseAcc=0x010fb388 (Idx: 1), waveOut=     0
+# [1250745000] Sample 49: phaseAcc=0x011529a2 (Idx: 1), waveOut=   101
+# [1271578000] Sample 50: phaseAcc=0x011a9fbc (Idx: 1), waveOut=   101
+# [1292411000] Sample 51: phaseAcc=0x012015d6 (Idx: 1), waveOut=   101
+# [1313245000] Sample 52: phaseAcc=0x01258bf0 (Idx: 1), waveOut=   101
+# [1334078000] Sample 53: phaseAcc=0x012b020a (Idx: 1), waveOut=   101
+# [1354911000] Sample 54: phaseAcc=0x01307824 (Idx: 1), waveOut=   101
+# [1375744000] Sample 55: phaseAcc=0x0135ee3e (Idx: 1), waveOut=   101
+# [1396578000] Sample 56: phaseAcc=0x013b6458 (Idx: 1), waveOut=   101
+# [1417411000] Sample 57: phaseAcc=0x0140da72 (Idx: 1), waveOut=   101
+# [1438244000] Sample 58: phaseAcc=0x0146508c (Idx: 1), waveOut=   101
+# [1459077000] Sample 59: phaseAcc=0x014bc6a6 (Idx: 1), waveOut=   101
+# [1479911000] Sample 60: phaseAcc=0x01513cc0 (Idx: 1), waveOut=   101
+# [1500744000] Sample 61: phaseAcc=0x0156b2da (Idx: 1), waveOut=   101
+# [1521577000] Sample 62: phaseAcc=0x015c28f4 (Idx: 1), waveOut=   101
+# [1542410000] Sample 63: phaseAcc=0x01619f0e (Idx: 1), waveOut=   101
+# [1563244000] Sample 64: phaseAcc=0x01671528 (Idx: 1), waveOut=   101
+# [1584077000] Sample 65: phaseAcc=0x016c8b42 (Idx: 1), waveOut=   101
+# [1604910000] Sample 66: phaseAcc=0x0172015c (Idx: 1), waveOut=   101
+# [1625743000] Sample 67: phaseAcc=0x01777776 (Idx: 1), waveOut=   101
+# [1646577000] Sample 68: phaseAcc=0x017ced90 (Idx: 1), waveOut=   101
+# [1667410000] Sample 69: phaseAcc=0x018263aa (Idx: 1), waveOut=   101
+# [1688243000] Sample 70: phaseAcc=0x0187d9c4 (Idx: 1), waveOut=   101
+# [1709076000] Sample 71: phaseAcc=0x018d4fde (Idx: 1), waveOut=   101
+# [1729910000] Sample 72: phaseAcc=0x0192c5f8 (Idx: 1), waveOut=   101
+# [1750743000] Sample 73: phaseAcc=0x01983c12 (Idx: 1), waveOut=   101
+# [1771576000] Sample 74: phaseAcc=0x019db22c (Idx: 1), waveOut=   101
+# [1792409000] Sample 75: phaseAcc=0x01a32846 (Idx: 1), waveOut=   101
+# [1813243000] Sample 76: phaseAcc=0x01a89e60 (Idx: 1), waveOut=   101
+# [1834076000] Sample 77: phaseAcc=0x01ae147a (Idx: 1), waveOut=   101
+# [1854909000] Sample 78: phaseAcc=0x01b38a94 (Idx: 1), waveOut=   101
+# [1875742000] Sample 79: phaseAcc=0x01b900ae (Idx: 1), waveOut=   101
+# [1896576000] Sample 80: phaseAcc=0x01be76c8 (Idx: 1), waveOut=   101
+# [1917409000] Sample 81: phaseAcc=0x01c3ece2 (Idx: 1), waveOut=   101
+# [1938242000] Sample 82: phaseAcc=0x01c962fc (Idx: 1), waveOut=   101
+# [1959075000] Sample 83: phaseAcc=0x01ced916 (Idx: 1), waveOut=   101
+# [1979909000] Sample 84: phaseAcc=0x01d44f30 (Idx: 1), waveOut=   101
+# [2000742000] Sample 85: phaseAcc=0x01d9c54a (Idx: 1), waveOut=   101
+# [2021575000] Sample 86: phaseAcc=0x01df3b64 (Idx: 1), waveOut=   101
+# [2042408000] Sample 87: phaseAcc=0x01e4b17e (Idx: 1), waveOut=   101
+# [2063242000] Sample 88: phaseAcc=0x01ea2798 (Idx: 1), waveOut=   101
+# [2084075000] Sample 89: phaseAcc=0x01ef9db2 (Idx: 1), waveOut=   101
+# [2104908000] Sample 90: phaseAcc=0x01f513cc (Idx: 1), waveOut=   101
+# [2125741000] Sample 91: phaseAcc=0x01fa89e6 (Idx: 1), waveOut=   101
+# [2146575000] Sample 92: phaseAcc=0x02000000 (Idx: 2), waveOut=   101
+# [2167408000] Sample 93: phaseAcc=0x0205761a (Idx: 2), waveOut=   101
+# [2188241000] Sample 94: phaseAcc=0x020aec34 (Idx: 2), waveOut=   101
+# [2209074000] Sample 95: phaseAcc=0x0210624e (Idx: 2), waveOut=   202
+# [2229908000] Sample 96: phaseAcc=0x0215d868 (Idx: 2), waveOut=   202
+# [2250741000] Sample 97: phaseAcc=0x021b4e82 (Idx: 2), waveOut=   202
+# [2271574000] Sample 98: phaseAcc=0x0220c49c (Idx: 2), waveOut=   202
+# [2292407000] Sample 99: phaseAcc=0x02263ab6 (Idx: 2), waveOut=   202
+# [2313241000] Sample 100: phaseAcc=0x022bb0d0 (Idx: 2), waveOut=   202
+# [2334074000] Sample 101: phaseAcc=0x023126ea (Idx: 2), waveOut=   202
+# [2354907000] Sample 102: phaseAcc=0x02369d04 (Idx: 2), waveOut=   202
+# [2375740000] Sample 103: phaseAcc=0x023c131e (Idx: 2), waveOut=   202
+# [2396574000] Sample 104: phaseAcc=0x02418938 (Idx: 2), waveOut=   202
+# [2417407000] Sample 105: phaseAcc=0x0246ff52 (Idx: 2), waveOut=   202
+# [2438240000] Sample 106: phaseAcc=0x024c756c (Idx: 2), waveOut=   202
+# [2459073000] Sample 107: phaseAcc=0x0251eb86 (Idx: 2), waveOut=   202
+# [2479907000] Sample 108: phaseAcc=0x025761a0 (Idx: 2), waveOut=   202
+# [2500740000] Sample 109: phaseAcc=0x025cd7ba (Idx: 2), waveOut=   202
+# [2521573000] Sample 110: phaseAcc=0x02624dd4 (Idx: 2), waveOut=   202
+# [2542406000] Sample 111: phaseAcc=0x0267c3ee (Idx: 2), waveOut=   202
+# [2563240000] Sample 112: phaseAcc=0x026d3a08 (Idx: 2), waveOut=   202
+# [2584073000] Sample 113: phaseAcc=0x0272b022 (Idx: 2), waveOut=   202
+# [2604906000] Sample 114: phaseAcc=0x0278263c (Idx: 2), waveOut=   202
+# [2625739000] Sample 115: phaseAcc=0x027d9c56 (Idx: 2), waveOut=   202
+# [2646573000] Sample 116: phaseAcc=0x02831270 (Idx: 2), waveOut=   202
+# [2667406000] Sample 117: phaseAcc=0x0288888a (Idx: 2), waveOut=   202
+# [2688239000] Sample 118: phaseAcc=0x028dfea4 (Idx: 2), waveOut=   202
+# [2709072000] Sample 119: phaseAcc=0x029374be (Idx: 2), waveOut=   202
+# [2729906000] Sample 120: phaseAcc=0x0298ead8 (Idx: 2), waveOut=   202
+# [2729906000] Test complete.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(104)
+#    Time: 2729905747 ps  Iteration: 2  Instance: /LFOgen_tb
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 104
+add wave -position end  sim:/LFOgen_tb/DUT/clk
+add wave -position end  sim:/LFOgen_tb/DUT/reset
+add wave -position end  sim:/LFOgen_tb/DUT/freqSetting
+add wave -position end  sim:/LFOgen_tb/DUT/scaleFactor
+add wave -position end  sim:/LFOgen_tb/DUT/waveOut
+add wave -position end  sim:/LFOgen_tb/DUT/newValFlag
+add wave -position end  sim:/LFOgen_tb/DUT/phaseAcc
+add wave -position end  sim:/LFOgen_tb/DUT/tuningVal
+add wave -position end  sim:/LFOgen_tb/DUT/preWave
+add wave -position end  sim:/LFOgen_tb/DUT/multResult
+add wave -position end  sim:/LFOgen_tb/DUT/multResultPrev
+add wave -position end  sim:/LFOgen_tb/DUT/LUT
+add wave -position end  sim:/LFOgen_tb/DUT/counter
+add wave -position end  sim:/LFOgen_tb/DUT/tick48k
+restart -f
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+run -all
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...
+# [229916000] Case 1 PhaseAcc check: 0x000da73c (Should be increasing)
+# [230083000] Case 2: Freq=4.0Hz. Running 120 samples to wait for LUT Index change twice...
+#         (Transition from Index 0 -> 1 expected around Sample 47)
+# [1104912000] Sample 42: phaseAcc=0x00eeeeec (Idx: 0), waveOut=     0
+# [1125745000] Sample 43: phaseAcc=0x00f46506 (Idx: 0), waveOut=     0
+# [1146579000] Sample 44: phaseAcc=0x00f9db20 (Idx: 0), waveOut=     0
+# [1167412000] Sample 45: phaseAcc=0x00ff513a (Idx: 0), waveOut=     0
+# [1188245000] Sample 46: phaseAcc=0x0104c754 (Idx: 1), waveOut=     0
+# [1209078000] Sample 47: phaseAcc=0x010a3d6e (Idx: 1), waveOut=     0
+# [1229912000] Sample 48: phaseAcc=0x010fb388 (Idx: 1), waveOut=     0
+# [1250745000] Sample 49: phaseAcc=0x011529a2 (Idx: 1), waveOut=   101
+# [1271578000] Sample 50: phaseAcc=0x011a9fbc (Idx: 1), waveOut=   101
+# [1292411000] Sample 51: phaseAcc=0x012015d6 (Idx: 1), waveOut=   101
+# [1313245000] Sample 52: phaseAcc=0x01258bf0 (Idx: 1), waveOut=   101
+# [1334078000] Sample 53: phaseAcc=0x012b020a (Idx: 1), waveOut=   101
+# [1354911000] Sample 54: phaseAcc=0x01307824 (Idx: 1), waveOut=   101
+# [1375744000] Sample 55: phaseAcc=0x0135ee3e (Idx: 1), waveOut=   101
+# [1396578000] Sample 56: phaseAcc=0x013b6458 (Idx: 1), waveOut=   101
+# [1417411000] Sample 57: phaseAcc=0x0140da72 (Idx: 1), waveOut=   101
+# [1438244000] Sample 58: phaseAcc=0x0146508c (Idx: 1), waveOut=   101
+# [1459077000] Sample 59: phaseAcc=0x014bc6a6 (Idx: 1), waveOut=   101
+# [1479911000] Sample 60: phaseAcc=0x01513cc0 (Idx: 1), waveOut=   101
+# [1500744000] Sample 61: phaseAcc=0x0156b2da (Idx: 1), waveOut=   101
+# [1521577000] Sample 62: phaseAcc=0x015c28f4 (Idx: 1), waveOut=   101
+# [1542410000] Sample 63: phaseAcc=0x01619f0e (Idx: 1), waveOut=   101
+# [1563244000] Sample 64: phaseAcc=0x01671528 (Idx: 1), waveOut=   101
+# [1584077000] Sample 65: phaseAcc=0x016c8b42 (Idx: 1), waveOut=   101
+# [1604910000] Sample 66: phaseAcc=0x0172015c (Idx: 1), waveOut=   101
+# [1625743000] Sample 67: phaseAcc=0x01777776 (Idx: 1), waveOut=   101
+# [1646577000] Sample 68: phaseAcc=0x017ced90 (Idx: 1), waveOut=   101
+# [1667410000] Sample 69: phaseAcc=0x018263aa (Idx: 1), waveOut=   101
+# [1688243000] Sample 70: phaseAcc=0x0187d9c4 (Idx: 1), waveOut=   101
+# [1709076000] Sample 71: phaseAcc=0x018d4fde (Idx: 1), waveOut=   101
+# [1729910000] Sample 72: phaseAcc=0x0192c5f8 (Idx: 1), waveOut=   101
+# [1750743000] Sample 73: phaseAcc=0x01983c12 (Idx: 1), waveOut=   101
+# [1771576000] Sample 74: phaseAcc=0x019db22c (Idx: 1), waveOut=   101
+# [1792409000] Sample 75: phaseAcc=0x01a32846 (Idx: 1), waveOut=   101
+# [1813243000] Sample 76: phaseAcc=0x01a89e60 (Idx: 1), waveOut=   101
+# [1834076000] Sample 77: phaseAcc=0x01ae147a (Idx: 1), waveOut=   101
+# [1854909000] Sample 78: phaseAcc=0x01b38a94 (Idx: 1), waveOut=   101
+# [1875742000] Sample 79: phaseAcc=0x01b900ae (Idx: 1), waveOut=   101
+# [1896576000] Sample 80: phaseAcc=0x01be76c8 (Idx: 1), waveOut=   101
+# [1917409000] Sample 81: phaseAcc=0x01c3ece2 (Idx: 1), waveOut=   101
+# [1938242000] Sample 82: phaseAcc=0x01c962fc (Idx: 1), waveOut=   101
+# [1959075000] Sample 83: phaseAcc=0x01ced916 (Idx: 1), waveOut=   101
+# [1979909000] Sample 84: phaseAcc=0x01d44f30 (Idx: 1), waveOut=   101
+# [2000742000] Sample 85: phaseAcc=0x01d9c54a (Idx: 1), waveOut=   101
+# [2021575000] Sample 86: phaseAcc=0x01df3b64 (Idx: 1), waveOut=   101
+# [2042408000] Sample 87: phaseAcc=0x01e4b17e (Idx: 1), waveOut=   101
+# [2063242000] Sample 88: phaseAcc=0x01ea2798 (Idx: 1), waveOut=   101
+# [2084075000] Sample 89: phaseAcc=0x01ef9db2 (Idx: 1), waveOut=   101
+# [2104908000] Sample 90: phaseAcc=0x01f513cc (Idx: 1), waveOut=   101
+# [2125741000] Sample 91: phaseAcc=0x01fa89e6 (Idx: 1), waveOut=   101
+# [2146575000] Sample 92: phaseAcc=0x02000000 (Idx: 2), waveOut=   101
+# [2167408000] Sample 93: phaseAcc=0x0205761a (Idx: 2), waveOut=   101
+# [2188241000] Sample 94: phaseAcc=0x020aec34 (Idx: 2), waveOut=   101
+# [2209074000] Sample 95: phaseAcc=0x0210624e (Idx: 2), waveOut=   202
+# [2229908000] Sample 96: phaseAcc=0x0215d868 (Idx: 2), waveOut=   202
+# [2250741000] Sample 97: phaseAcc=0x021b4e82 (Idx: 2), waveOut=   202
+# [2271574000] Sample 98: phaseAcc=0x0220c49c (Idx: 2), waveOut=   202
+# [2292407000] Sample 99: phaseAcc=0x02263ab6 (Idx: 2), waveOut=   202
+# [2313241000] Sample 100: phaseAcc=0x022bb0d0 (Idx: 2), waveOut=   202
+# [2334074000] Sample 101: phaseAcc=0x023126ea (Idx: 2), waveOut=   202
+# [2354907000] Sample 102: phaseAcc=0x02369d04 (Idx: 2), waveOut=   202
+# [2375740000] Sample 103: phaseAcc=0x023c131e (Idx: 2), waveOut=   202
+# [2396574000] Sample 104: phaseAcc=0x02418938 (Idx: 2), waveOut=   202
+# [2417407000] Sample 105: phaseAcc=0x0246ff52 (Idx: 2), waveOut=   202
+# [2438240000] Sample 106: phaseAcc=0x024c756c (Idx: 2), waveOut=   202
+# [2459073000] Sample 107: phaseAcc=0x0251eb86 (Idx: 2), waveOut=   202
+# [2479907000] Sample 108: phaseAcc=0x025761a0 (Idx: 2), waveOut=   202
+# [2500740000] Sample 109: phaseAcc=0x025cd7ba (Idx: 2), waveOut=   202
+# [2521573000] Sample 110: phaseAcc=0x02624dd4 (Idx: 2), waveOut=   202
+# [2542406000] Sample 111: phaseAcc=0x0267c3ee (Idx: 2), waveOut=   202
+# [2563240000] Sample 112: phaseAcc=0x026d3a08 (Idx: 2), waveOut=   202
+# [2584073000] Sample 113: phaseAcc=0x0272b022 (Idx: 2), waveOut=   202
+# [2604906000] Sample 114: phaseAcc=0x0278263c (Idx: 2), waveOut=   202
+# [2625739000] Sample 115: phaseAcc=0x027d9c56 (Idx: 2), waveOut=   202
+# [2646573000] Sample 116: phaseAcc=0x02831270 (Idx: 2), waveOut=   202
+# [2667406000] Sample 117: phaseAcc=0x0288888a (Idx: 2), waveOut=   202
+# [2688239000] Sample 118: phaseAcc=0x028dfea4 (Idx: 2), waveOut=   202
+# [2709072000] Sample 119: phaseAcc=0x029374be (Idx: 2), waveOut=   202
+# [2729906000] Sample 120: phaseAcc=0x0298ead8 (Idx: 2), waveOut=   202
+# [2729906000] Test complete.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(104)
+#    Time: 2729905747 ps  Iteration: 2  Instance: /LFOgen_tb
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 104
+# End time: 17:46:18 on Nov 25,2025, Elapsed time: 0:04:56
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   5
+#   Totals: Errors:   0, Warnings:   5
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:46:53 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# ** Warning: (vsim-7) Failed to open readmem file "./LFO-LUTs/sineFixed(256).mem" in read mode.
+# No such file or directory. (errno = ENOENT)    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv(27)
+#    Time: 0 ps  Iteration: 0  Instance: /LFOgen_tb/DUT
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...
+# [229916000] Case 1 PhaseAcc check: 0x000da73c (Should be increasing)
+# [230083000] Case 2: Freq=4.0Hz. Running 120 samples to wait for LUT Index change twice...
+#         (Transition from Index 0 -> 1 expected around Sample 47)
+# [1104912000] Sample 42: phaseAcc=0x00eeeeec (Idx: 0), waveOut=     x
+# [1125745000] Sample 43: phaseAcc=0x00f46506 (Idx: 0), waveOut=     x
+# [1146579000] Sample 44: phaseAcc=0x00f9db20 (Idx: 0), waveOut=     x
+# [1167412000] Sample 45: phaseAcc=0x00ff513a (Idx: 0), waveOut=     x
+# [1188245000] Sample 46: phaseAcc=0x0104c754 (Idx: 1), waveOut=     x
+# [1209078000] Sample 47: phaseAcc=0x010a3d6e (Idx: 1), waveOut=     x
+# [1229912000] Sample 48: phaseAcc=0x010fb388 (Idx: 1), waveOut=     x
+# [1250745000] Sample 49: phaseAcc=0x011529a2 (Idx: 1), waveOut=     x
+# [1271578000] Sample 50: phaseAcc=0x011a9fbc (Idx: 1), waveOut=     x
+# [1292411000] Sample 51: phaseAcc=0x012015d6 (Idx: 1), waveOut=     x
+# [1313245000] Sample 52: phaseAcc=0x01258bf0 (Idx: 1), waveOut=     x
+# [1334078000] Sample 53: phaseAcc=0x012b020a (Idx: 1), waveOut=     x
+# [1354911000] Sample 54: phaseAcc=0x01307824 (Idx: 1), waveOut=     x
+# [1375744000] Sample 55: phaseAcc=0x0135ee3e (Idx: 1), waveOut=     x
+# [1396578000] Sample 56: phaseAcc=0x013b6458 (Idx: 1), waveOut=     x
+# [1417411000] Sample 57: phaseAcc=0x0140da72 (Idx: 1), waveOut=     x
+# [1438244000] Sample 58: phaseAcc=0x0146508c (Idx: 1), waveOut=     x
+# [1459077000] Sample 59: phaseAcc=0x014bc6a6 (Idx: 1), waveOut=     x
+# [1479911000] Sample 60: phaseAcc=0x01513cc0 (Idx: 1), waveOut=     x
+# [1500744000] Sample 61: phaseAcc=0x0156b2da (Idx: 1), waveOut=     x
+# [1521577000] Sample 62: phaseAcc=0x015c28f4 (Idx: 1), waveOut=     x
+# [1542410000] Sample 63: phaseAcc=0x01619f0e (Idx: 1), waveOut=     x
+# [1563244000] Sample 64: phaseAcc=0x01671528 (Idx: 1), waveOut=     x
+# [1584077000] Sample 65: phaseAcc=0x016c8b42 (Idx: 1), waveOut=     x
+# [1604910000] Sample 66: phaseAcc=0x0172015c (Idx: 1), waveOut=     x
+# [1625743000] Sample 67: phaseAcc=0x01777776 (Idx: 1), waveOut=     x
+# [1646577000] Sample 68: phaseAcc=0x017ced90 (Idx: 1), waveOut=     x
+# [1667410000] Sample 69: phaseAcc=0x018263aa (Idx: 1), waveOut=     x
+# [1688243000] Sample 70: phaseAcc=0x0187d9c4 (Idx: 1), waveOut=     x
+# [1709076000] Sample 71: phaseAcc=0x018d4fde (Idx: 1), waveOut=     x
+# [1729910000] Sample 72: phaseAcc=0x0192c5f8 (Idx: 1), waveOut=     x
+# [1750743000] Sample 73: phaseAcc=0x01983c12 (Idx: 1), waveOut=     x
+# [1771576000] Sample 74: phaseAcc=0x019db22c (Idx: 1), waveOut=     x
+# [1792409000] Sample 75: phaseAcc=0x01a32846 (Idx: 1), waveOut=     x
+# [1813243000] Sample 76: phaseAcc=0x01a89e60 (Idx: 1), waveOut=     x
+# [1834076000] Sample 77: phaseAcc=0x01ae147a (Idx: 1), waveOut=     x
+# [1854909000] Sample 78: phaseAcc=0x01b38a94 (Idx: 1), waveOut=     x
+# [1875742000] Sample 79: phaseAcc=0x01b900ae (Idx: 1), waveOut=     x
+# [1896576000] Sample 80: phaseAcc=0x01be76c8 (Idx: 1), waveOut=     x
+# [1917409000] Sample 81: phaseAcc=0x01c3ece2 (Idx: 1), waveOut=     x
+# [1938242000] Sample 82: phaseAcc=0x01c962fc (Idx: 1), waveOut=     x
+# [1959075000] Sample 83: phaseAcc=0x01ced916 (Idx: 1), waveOut=     x
+# [1979909000] Sample 84: phaseAcc=0x01d44f30 (Idx: 1), waveOut=     x
+# [2000742000] Sample 85: phaseAcc=0x01d9c54a (Idx: 1), waveOut=     x
+# [2021575000] Sample 86: phaseAcc=0x01df3b64 (Idx: 1), waveOut=     x
+# [2042408000] Sample 87: phaseAcc=0x01e4b17e (Idx: 1), waveOut=     x
+# [2063242000] Sample 88: phaseAcc=0x01ea2798 (Idx: 1), waveOut=     x
+# [2084075000] Sample 89: phaseAcc=0x01ef9db2 (Idx: 1), waveOut=     x
+# [2104908000] Sample 90: phaseAcc=0x01f513cc (Idx: 1), waveOut=     x
+# [2125741000] Sample 91: phaseAcc=0x01fa89e6 (Idx: 1), waveOut=     x
+# [2146575000] Sample 92: phaseAcc=0x02000000 (Idx: 2), waveOut=     x
+# [2167408000] Sample 93: phaseAcc=0x0205761a (Idx: 2), waveOut=     x
+# [2188241000] Sample 94: phaseAcc=0x020aec34 (Idx: 2), waveOut=     x
+# [2209074000] Sample 95: phaseAcc=0x0210624e (Idx: 2), waveOut=     x
+# [2229908000] Sample 96: phaseAcc=0x0215d868 (Idx: 2), waveOut=     x
+# [2250741000] Sample 97: phaseAcc=0x021b4e82 (Idx: 2), waveOut=     x
+# [2271574000] Sample 98: phaseAcc=0x0220c49c (Idx: 2), waveOut=     x
+# [2292407000] Sample 99: phaseAcc=0x02263ab6 (Idx: 2), waveOut=     x
+# [2313241000] Sample 100: phaseAcc=0x022bb0d0 (Idx: 2), waveOut=     x
+# [2334074000] Sample 101: phaseAcc=0x023126ea (Idx: 2), waveOut=     x
+# [2354907000] Sample 102: phaseAcc=0x02369d04 (Idx: 2), waveOut=     x
+# [2375740000] Sample 103: phaseAcc=0x023c131e (Idx: 2), waveOut=     x
+# [2396574000] Sample 104: phaseAcc=0x02418938 (Idx: 2), waveOut=     x
+# [2417407000] Sample 105: phaseAcc=0x0246ff52 (Idx: 2), waveOut=     x
+# [2438240000] Sample 106: phaseAcc=0x024c756c (Idx: 2), waveOut=     x
+# [2459073000] Sample 107: phaseAcc=0x0251eb86 (Idx: 2), waveOut=     x
+# [2479907000] Sample 108: phaseAcc=0x025761a0 (Idx: 2), waveOut=     x
+# [2500740000] Sample 109: phaseAcc=0x025cd7ba (Idx: 2), waveOut=     x
+# [2521573000] Sample 110: phaseAcc=0x02624dd4 (Idx: 2), waveOut=     x
+# [2542406000] Sample 111: phaseAcc=0x0267c3ee (Idx: 2), waveOut=     x
+# [2563240000] Sample 112: phaseAcc=0x026d3a08 (Idx: 2), waveOut=     x
+# [2584073000] Sample 113: phaseAcc=0x0272b022 (Idx: 2), waveOut=     x
+# [2604906000] Sample 114: phaseAcc=0x0278263c (Idx: 2), waveOut=     x
+# [2625739000] Sample 115: phaseAcc=0x027d9c56 (Idx: 2), waveOut=     x
+# [2646573000] Sample 116: phaseAcc=0x02831270 (Idx: 2), waveOut=     x
+# [2667406000] Sample 117: phaseAcc=0x0288888a (Idx: 2), waveOut=     x
+# [2688239000] Sample 118: phaseAcc=0x028dfea4 (Idx: 2), waveOut=     x
+# [2709072000] Sample 119: phaseAcc=0x029374be (Idx: 2), waveOut=     x
+# [2729906000] Sample 120: phaseAcc=0x0298ead8 (Idx: 2), waveOut=     x
+# Test another scale Factor
+# [3604902000] Sample 42: phaseAcc=0x037e4b1c (Idx: 3), waveOut=     x
+# [3625735000] Sample 43: phaseAcc=0x0383c136 (Idx: 3), waveOut=     x
+# [3646569000] Sample 44: phaseAcc=0x03893750 (Idx: 3), waveOut=     x
+# [3667402000] Sample 45: phaseAcc=0x038ead6a (Idx: 3), waveOut=     x
+# [3688235000] Sample 46: phaseAcc=0x03942384 (Idx: 3), waveOut=     x
+# [3709068000] Sample 47: phaseAcc=0x0399999e (Idx: 3), waveOut=     x
+# [3729902000] Sample 48: phaseAcc=0x039f0fb8 (Idx: 3), waveOut=     x
+# [3750735000] Sample 49: phaseAcc=0x03a485d2 (Idx: 3), waveOut=     x
+# [3771568000] Sample 50: phaseAcc=0x03a9fbec (Idx: 3), waveOut=     x
+# [3792401000] Sample 51: phaseAcc=0x03af7206 (Idx: 3), waveOut=     x
+# [3813235000] Sample 52: phaseAcc=0x03b4e820 (Idx: 3), waveOut=     x
+# [3834068000] Sample 53: phaseAcc=0x03ba5e3a (Idx: 3), waveOut=     x
+# [3854901000] Sample 54: phaseAcc=0x03bfd454 (Idx: 3), waveOut=     x
+# [3875734000] Sample 55: phaseAcc=0x03c54a6e (Idx: 3), waveOut=     x
+# [3896568000] Sample 56: phaseAcc=0x03cac088 (Idx: 3), waveOut=     x
+# [3917401000] Sample 57: phaseAcc=0x03d036a2 (Idx: 3), waveOut=     x
+# [3938234000] Sample 58: phaseAcc=0x03d5acbc (Idx: 3), waveOut=     x
+# [3959067000] Sample 59: phaseAcc=0x03db22d6 (Idx: 3), waveOut=     x
+# [3979901000] Sample 60: phaseAcc=0x03e098f0 (Idx: 3), waveOut=     x
+# [3979901000] Test complete.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(116)
+#    Time: 3979900747 ps  Iteration: 2  Instance: /LFOgen_tb
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 116
+# End time: 17:47:13 on Nov 25,2025, Elapsed time: 0:00:20
+# Errors: 0, Warnings: 1
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   5
+#   Totals: Errors:   0, Warnings:   5
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 17:47:54 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...
+# [229916000] Case 1 PhaseAcc check: 0x000da73c (Should be increasing)
+# [230083000] Case 2: Freq=4.0Hz. Running 120 samples to wait for LUT Index change twice...
+#         (Transition from Index 0 -> 1 expected around Sample 47)
+# [1104912000] Sample 42: phaseAcc=0x00eeeeec (Idx: 0), waveOut=     0
+# [1125745000] Sample 43: phaseAcc=0x00f46506 (Idx: 0), waveOut=     0
+# [1146579000] Sample 44: phaseAcc=0x00f9db20 (Idx: 0), waveOut=     0
+# [1167412000] Sample 45: phaseAcc=0x00ff513a (Idx: 0), waveOut=     0
+# [1188245000] Sample 46: phaseAcc=0x0104c754 (Idx: 1), waveOut=     0
+# [1209078000] Sample 47: phaseAcc=0x010a3d6e (Idx: 1), waveOut=     0
+# [1229912000] Sample 48: phaseAcc=0x010fb388 (Idx: 1), waveOut=     0
+# [1250745000] Sample 49: phaseAcc=0x011529a2 (Idx: 1), waveOut=   101
+# [1271578000] Sample 50: phaseAcc=0x011a9fbc (Idx: 1), waveOut=   101
+# [1292411000] Sample 51: phaseAcc=0x012015d6 (Idx: 1), waveOut=   101
+# [1313245000] Sample 52: phaseAcc=0x01258bf0 (Idx: 1), waveOut=   101
+# [1334078000] Sample 53: phaseAcc=0x012b020a (Idx: 1), waveOut=   101
+# [1354911000] Sample 54: phaseAcc=0x01307824 (Idx: 1), waveOut=   101
+# [1375744000] Sample 55: phaseAcc=0x0135ee3e (Idx: 1), waveOut=   101
+# [1396578000] Sample 56: phaseAcc=0x013b6458 (Idx: 1), waveOut=   101
+# [1417411000] Sample 57: phaseAcc=0x0140da72 (Idx: 1), waveOut=   101
+# [1438244000] Sample 58: phaseAcc=0x0146508c (Idx: 1), waveOut=   101
+# [1459077000] Sample 59: phaseAcc=0x014bc6a6 (Idx: 1), waveOut=   101
+# [1479911000] Sample 60: phaseAcc=0x01513cc0 (Idx: 1), waveOut=   101
+# [1500744000] Sample 61: phaseAcc=0x0156b2da (Idx: 1), waveOut=   101
+# [1521577000] Sample 62: phaseAcc=0x015c28f4 (Idx: 1), waveOut=   101
+# [1542410000] Sample 63: phaseAcc=0x01619f0e (Idx: 1), waveOut=   101
+# [1563244000] Sample 64: phaseAcc=0x01671528 (Idx: 1), waveOut=   101
+# [1584077000] Sample 65: phaseAcc=0x016c8b42 (Idx: 1), waveOut=   101
+# [1604910000] Sample 66: phaseAcc=0x0172015c (Idx: 1), waveOut=   101
+# [1625743000] Sample 67: phaseAcc=0x01777776 (Idx: 1), waveOut=   101
+# [1646577000] Sample 68: phaseAcc=0x017ced90 (Idx: 1), waveOut=   101
+# [1667410000] Sample 69: phaseAcc=0x018263aa (Idx: 1), waveOut=   101
+# [1688243000] Sample 70: phaseAcc=0x0187d9c4 (Idx: 1), waveOut=   101
+# [1709076000] Sample 71: phaseAcc=0x018d4fde (Idx: 1), waveOut=   101
+# [1729910000] Sample 72: phaseAcc=0x0192c5f8 (Idx: 1), waveOut=   101
+# [1750743000] Sample 73: phaseAcc=0x01983c12 (Idx: 1), waveOut=   101
+# [1771576000] Sample 74: phaseAcc=0x019db22c (Idx: 1), waveOut=   101
+# [1792409000] Sample 75: phaseAcc=0x01a32846 (Idx: 1), waveOut=   101
+# [1813243000] Sample 76: phaseAcc=0x01a89e60 (Idx: 1), waveOut=   101
+# [1834076000] Sample 77: phaseAcc=0x01ae147a (Idx: 1), waveOut=   101
+# [1854909000] Sample 78: phaseAcc=0x01b38a94 (Idx: 1), waveOut=   101
+# [1875742000] Sample 79: phaseAcc=0x01b900ae (Idx: 1), waveOut=   101
+# [1896576000] Sample 80: phaseAcc=0x01be76c8 (Idx: 1), waveOut=   101
+# [1917409000] Sample 81: phaseAcc=0x01c3ece2 (Idx: 1), waveOut=   101
+# [1938242000] Sample 82: phaseAcc=0x01c962fc (Idx: 1), waveOut=   101
+# [1959075000] Sample 83: phaseAcc=0x01ced916 (Idx: 1), waveOut=   101
+# [1979909000] Sample 84: phaseAcc=0x01d44f30 (Idx: 1), waveOut=   101
+# [2000742000] Sample 85: phaseAcc=0x01d9c54a (Idx: 1), waveOut=   101
+# [2021575000] Sample 86: phaseAcc=0x01df3b64 (Idx: 1), waveOut=   101
+# [2042408000] Sample 87: phaseAcc=0x01e4b17e (Idx: 1), waveOut=   101
+# [2063242000] Sample 88: phaseAcc=0x01ea2798 (Idx: 1), waveOut=   101
+# [2084075000] Sample 89: phaseAcc=0x01ef9db2 (Idx: 1), waveOut=   101
+# [2104908000] Sample 90: phaseAcc=0x01f513cc (Idx: 1), waveOut=   101
+# [2125741000] Sample 91: phaseAcc=0x01fa89e6 (Idx: 1), waveOut=   101
+# [2146575000] Sample 92: phaseAcc=0x02000000 (Idx: 2), waveOut=   101
+# [2167408000] Sample 93: phaseAcc=0x0205761a (Idx: 2), waveOut=   101
+# [2188241000] Sample 94: phaseAcc=0x020aec34 (Idx: 2), waveOut=   101
+# [2209074000] Sample 95: phaseAcc=0x0210624e (Idx: 2), waveOut=   202
+# [2229908000] Sample 96: phaseAcc=0x0215d868 (Idx: 2), waveOut=   202
+# [2250741000] Sample 97: phaseAcc=0x021b4e82 (Idx: 2), waveOut=   202
+# [2271574000] Sample 98: phaseAcc=0x0220c49c (Idx: 2), waveOut=   202
+# [2292407000] Sample 99: phaseAcc=0x02263ab6 (Idx: 2), waveOut=   202
+# [2313241000] Sample 100: phaseAcc=0x022bb0d0 (Idx: 2), waveOut=   202
+# [2334074000] Sample 101: phaseAcc=0x023126ea (Idx: 2), waveOut=   202
+# [2354907000] Sample 102: phaseAcc=0x02369d04 (Idx: 2), waveOut=   202
+# [2375740000] Sample 103: phaseAcc=0x023c131e (Idx: 2), waveOut=   202
+# [2396574000] Sample 104: phaseAcc=0x02418938 (Idx: 2), waveOut=   202
+# [2417407000] Sample 105: phaseAcc=0x0246ff52 (Idx: 2), waveOut=   202
+# [2438240000] Sample 106: phaseAcc=0x024c756c (Idx: 2), waveOut=   202
+# [2459073000] Sample 107: phaseAcc=0x0251eb86 (Idx: 2), waveOut=   202
+# [2479907000] Sample 108: phaseAcc=0x025761a0 (Idx: 2), waveOut=   202
+# [2500740000] Sample 109: phaseAcc=0x025cd7ba (Idx: 2), waveOut=   202
+# [2521573000] Sample 110: phaseAcc=0x02624dd4 (Idx: 2), waveOut=   202
+# [2542406000] Sample 111: phaseAcc=0x0267c3ee (Idx: 2), waveOut=   202
+# [2563240000] Sample 112: phaseAcc=0x026d3a08 (Idx: 2), waveOut=   202
+# [2584073000] Sample 113: phaseAcc=0x0272b022 (Idx: 2), waveOut=   202
+# [2604906000] Sample 114: phaseAcc=0x0278263c (Idx: 2), waveOut=   202
+# [2625739000] Sample 115: phaseAcc=0x027d9c56 (Idx: 2), waveOut=   202
+# [2646573000] Sample 116: phaseAcc=0x02831270 (Idx: 2), waveOut=   202
+# [2667406000] Sample 117: phaseAcc=0x0288888a (Idx: 2), waveOut=   202
+# [2688239000] Sample 118: phaseAcc=0x028dfea4 (Idx: 2), waveOut=   202
+# [2709072000] Sample 119: phaseAcc=0x029374be (Idx: 2), waveOut=   202
+# [2729906000] Sample 120: phaseAcc=0x0298ead8 (Idx: 2), waveOut=   202
+# Test another scale Factor
+# [2750739000] Sample 1: phaseAcc=0x029e60f2 (Idx: 2), waveOut=   202
+# [2771572000] Sample 2: phaseAcc=0x02a3d70c (Idx: 2), waveOut=   108
+# [2792405000] Sample 3: phaseAcc=0x02a94d26 (Idx: 2), waveOut=   108
+# [2813239000] Sample 4: phaseAcc=0x02aec340 (Idx: 2), waveOut=   108
+# [2834072000] Sample 5: phaseAcc=0x02b4395a (Idx: 2), waveOut=   108
+# [2854905000] Sample 6: phaseAcc=0x02b9af74 (Idx: 2), waveOut=   108
+# [2875738000] Sample 7: phaseAcc=0x02bf258e (Idx: 2), waveOut=   108
+# [2896572000] Sample 8: phaseAcc=0x02c49ba8 (Idx: 2), waveOut=   108
+# [2917405000] Sample 9: phaseAcc=0x02ca11c2 (Idx: 2), waveOut=   108
+# [2938238000] Sample 10: phaseAcc=0x02cf87dc (Idx: 2), waveOut=   108
+# [2959071000] Sample 11: phaseAcc=0x02d4fdf6 (Idx: 2), waveOut=   108
+# [2979905000] Sample 12: phaseAcc=0x02da7410 (Idx: 2), waveOut=   108
+# [3000738000] Sample 13: phaseAcc=0x02dfea2a (Idx: 2), waveOut=   108
+# [3021571000] Sample 14: phaseAcc=0x02e56044 (Idx: 2), waveOut=   108
+# [3042404000] Sample 15: phaseAcc=0x02ead65e (Idx: 2), waveOut=   108
+# [3063238000] Sample 16: phaseAcc=0x02f04c78 (Idx: 2), waveOut=   108
+# [3084071000] Sample 17: phaseAcc=0x02f5c292 (Idx: 2), waveOut=   108
+# [3104904000] Sample 18: phaseAcc=0x02fb38ac (Idx: 2), waveOut=   108
+# [3125737000] Sample 19: phaseAcc=0x0300aec6 (Idx: 3), waveOut=   108
+# [3146571000] Sample 20: phaseAcc=0x030624e0 (Idx: 3), waveOut=   108
+# [3167404000] Sample 21: phaseAcc=0x030b9afa (Idx: 3), waveOut=   108
+# [3188237000] Sample 22: phaseAcc=0x03111114 (Idx: 3), waveOut=   162
+# [3209070000] Sample 23: phaseAcc=0x0316872e (Idx: 3), waveOut=   162
+# [3229904000] Sample 24: phaseAcc=0x031bfd48 (Idx: 3), waveOut=   162
+# [3250737000] Sample 25: phaseAcc=0x03217362 (Idx: 3), waveOut=   162
+# [3271570000] Sample 26: phaseAcc=0x0326e97c (Idx: 3), waveOut=   162
+# [3292403000] Sample 27: phaseAcc=0x032c5f96 (Idx: 3), waveOut=   162
+# [3313237000] Sample 28: phaseAcc=0x0331d5b0 (Idx: 3), waveOut=   162
+# [3334070000] Sample 29: phaseAcc=0x03374bca (Idx: 3), waveOut=   162
+# [3354903000] Sample 30: phaseAcc=0x033cc1e4 (Idx: 3), waveOut=   162
+# [3375736000] Sample 31: phaseAcc=0x034237fe (Idx: 3), waveOut=   162
+# [3396570000] Sample 32: phaseAcc=0x0347ae18 (Idx: 3), waveOut=   162
+# [3417403000] Sample 33: phaseAcc=0x034d2432 (Idx: 3), waveOut=   162
+# [3438236000] Sample 34: phaseAcc=0x03529a4c (Idx: 3), waveOut=   162
+# [3459069000] Sample 35: phaseAcc=0x03581066 (Idx: 3), waveOut=   162
+# [3479903000] Sample 36: phaseAcc=0x035d8680 (Idx: 3), waveOut=   162
+# [3500736000] Sample 37: phaseAcc=0x0362fc9a (Idx: 3), waveOut=   162
+# [3521569000] Sample 38: phaseAcc=0x036872b4 (Idx: 3), waveOut=   162
+# [3542402000] Sample 39: phaseAcc=0x036de8ce (Idx: 3), waveOut=   162
+# [3563236000] Sample 40: phaseAcc=0x03735ee8 (Idx: 3), waveOut=   162
+# [3584069000] Sample 41: phaseAcc=0x0378d502 (Idx: 3), waveOut=   162
+# [3604902000] Sample 42: phaseAcc=0x037e4b1c (Idx: 3), waveOut=   162
+# [3625735000] Sample 43: phaseAcc=0x0383c136 (Idx: 3), waveOut=   162
+# [3646569000] Sample 44: phaseAcc=0x03893750 (Idx: 3), waveOut=   162
+# [3667402000] Sample 45: phaseAcc=0x038ead6a (Idx: 3), waveOut=   162
+# [3688235000] Sample 46: phaseAcc=0x03942384 (Idx: 3), waveOut=   162
+# [3709068000] Sample 47: phaseAcc=0x0399999e (Idx: 3), waveOut=   162
+# [3729902000] Sample 48: phaseAcc=0x039f0fb8 (Idx: 3), waveOut=   162
+# [3750735000] Sample 49: phaseAcc=0x03a485d2 (Idx: 3), waveOut=   162
+# [3771568000] Sample 50: phaseAcc=0x03a9fbec (Idx: 3), waveOut=   162
+# [3792401000] Sample 51: phaseAcc=0x03af7206 (Idx: 3), waveOut=   162
+# [3813235000] Sample 52: phaseAcc=0x03b4e820 (Idx: 3), waveOut=   162
+# [3834068000] Sample 53: phaseAcc=0x03ba5e3a (Idx: 3), waveOut=   162
+# [3854901000] Sample 54: phaseAcc=0x03bfd454 (Idx: 3), waveOut=   162
+# [3875734000] Sample 55: phaseAcc=0x03c54a6e (Idx: 3), waveOut=   162
+# [3896568000] Sample 56: phaseAcc=0x03cac088 (Idx: 3), waveOut=   162
+# [3917401000] Sample 57: phaseAcc=0x03d036a2 (Idx: 3), waveOut=   162
+# [3938234000] Sample 58: phaseAcc=0x03d5acbc (Idx: 3), waveOut=   162
+# [3959067000] Sample 59: phaseAcc=0x03db22d6 (Idx: 3), waveOut=   162
+# [3979901000] Sample 60: phaseAcc=0x03e098f0 (Idx: 3), waveOut=   162
+# [3979901000] Test complete.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(116)
+#    Time: 3979900747 ps  Iteration: 2  Instance: /LFOgen_tb
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 116
+add wave -position end  sim:/LFOgen_tb/DUT/newValFlag
+restart -f
+# Loading work.LFOgen_tb(fast)
+# Loading work.LFOgen(fast)
+run -all
+# ---------------------------------------------------------
+# Starting LFOgen Testbench (6MHz System Clock)
+# 48kHz Sample Period: 20833.250000ns (~20.833us)
+# ---------------------------------------------------------
+# NOTE: Ensure 'sineFixed(256).mem' is in a subdirectory named 'LFO-LUTs'
+# relative to the directory where the simulation is being executed.
+# ---------------------------------------------------------
+# [833000] Reset held high. phaseAcc: 0x00000000, waveOut:      0
+# [21583000] First 48kHz Tick detected!
+# [21584000] Case 1: Freq=1.0Hz. Running 10 samples to check Accumulator logic...
+# [229916000] Case 1 PhaseAcc check: 0x000da73c (Should be increasing)
+# [230083000] Case 2: Freq=4.0Hz. Running 120 samples to wait for LUT Index change twice...
+#         (Transition from Index 0 -> 1 expected around Sample 47)
+# [1104912000] Sample 42: phaseAcc=0x00eeeeec (Idx: 0), waveOut=     0
+# [1125745000] Sample 43: phaseAcc=0x00f46506 (Idx: 0), waveOut=     0
+# [1146579000] Sample 44: phaseAcc=0x00f9db20 (Idx: 0), waveOut=     0
+# [1167412000] Sample 45: phaseAcc=0x00ff513a (Idx: 0), waveOut=     0
+# [1188245000] Sample 46: phaseAcc=0x0104c754 (Idx: 1), waveOut=     0
+# [1209078000] Sample 47: phaseAcc=0x010a3d6e (Idx: 1), waveOut=     0
+# [1229912000] Sample 48: phaseAcc=0x010fb388 (Idx: 1), waveOut=     0
+# [1250745000] Sample 49: phaseAcc=0x011529a2 (Idx: 1), waveOut=   101
+# [1271578000] Sample 50: phaseAcc=0x011a9fbc (Idx: 1), waveOut=   101
+# [1292411000] Sample 51: phaseAcc=0x012015d6 (Idx: 1), waveOut=   101
+# [1313245000] Sample 52: phaseAcc=0x01258bf0 (Idx: 1), waveOut=   101
+# [1334078000] Sample 53: phaseAcc=0x012b020a (Idx: 1), waveOut=   101
+# [1354911000] Sample 54: phaseAcc=0x01307824 (Idx: 1), waveOut=   101
+# [1375744000] Sample 55: phaseAcc=0x0135ee3e (Idx: 1), waveOut=   101
+# [1396578000] Sample 56: phaseAcc=0x013b6458 (Idx: 1), waveOut=   101
+# [1417411000] Sample 57: phaseAcc=0x0140da72 (Idx: 1), waveOut=   101
+# [1438244000] Sample 58: phaseAcc=0x0146508c (Idx: 1), waveOut=   101
+# [1459077000] Sample 59: phaseAcc=0x014bc6a6 (Idx: 1), waveOut=   101
+# [1479911000] Sample 60: phaseAcc=0x01513cc0 (Idx: 1), waveOut=   101
+# [1500744000] Sample 61: phaseAcc=0x0156b2da (Idx: 1), waveOut=   101
+# [1521577000] Sample 62: phaseAcc=0x015c28f4 (Idx: 1), waveOut=   101
+# [1542410000] Sample 63: phaseAcc=0x01619f0e (Idx: 1), waveOut=   101
+# [1563244000] Sample 64: phaseAcc=0x01671528 (Idx: 1), waveOut=   101
+# [1584077000] Sample 65: phaseAcc=0x016c8b42 (Idx: 1), waveOut=   101
+# [1604910000] Sample 66: phaseAcc=0x0172015c (Idx: 1), waveOut=   101
+# [1625743000] Sample 67: phaseAcc=0x01777776 (Idx: 1), waveOut=   101
+# [1646577000] Sample 68: phaseAcc=0x017ced90 (Idx: 1), waveOut=   101
+# [1667410000] Sample 69: phaseAcc=0x018263aa (Idx: 1), waveOut=   101
+# [1688243000] Sample 70: phaseAcc=0x0187d9c4 (Idx: 1), waveOut=   101
+# [1709076000] Sample 71: phaseAcc=0x018d4fde (Idx: 1), waveOut=   101
+# [1729910000] Sample 72: phaseAcc=0x0192c5f8 (Idx: 1), waveOut=   101
+# [1750743000] Sample 73: phaseAcc=0x01983c12 (Idx: 1), waveOut=   101
+# [1771576000] Sample 74: phaseAcc=0x019db22c (Idx: 1), waveOut=   101
+# [1792409000] Sample 75: phaseAcc=0x01a32846 (Idx: 1), waveOut=   101
+# [1813243000] Sample 76: phaseAcc=0x01a89e60 (Idx: 1), waveOut=   101
+# [1834076000] Sample 77: phaseAcc=0x01ae147a (Idx: 1), waveOut=   101
+# [1854909000] Sample 78: phaseAcc=0x01b38a94 (Idx: 1), waveOut=   101
+# [1875742000] Sample 79: phaseAcc=0x01b900ae (Idx: 1), waveOut=   101
+# [1896576000] Sample 80: phaseAcc=0x01be76c8 (Idx: 1), waveOut=   101
+# [1917409000] Sample 81: phaseAcc=0x01c3ece2 (Idx: 1), waveOut=   101
+# [1938242000] Sample 82: phaseAcc=0x01c962fc (Idx: 1), waveOut=   101
+# [1959075000] Sample 83: phaseAcc=0x01ced916 (Idx: 1), waveOut=   101
+# [1979909000] Sample 84: phaseAcc=0x01d44f30 (Idx: 1), waveOut=   101
+# [2000742000] Sample 85: phaseAcc=0x01d9c54a (Idx: 1), waveOut=   101
+# [2021575000] Sample 86: phaseAcc=0x01df3b64 (Idx: 1), waveOut=   101
+# [2042408000] Sample 87: phaseAcc=0x01e4b17e (Idx: 1), waveOut=   101
+# [2063242000] Sample 88: phaseAcc=0x01ea2798 (Idx: 1), waveOut=   101
+# [2084075000] Sample 89: phaseAcc=0x01ef9db2 (Idx: 1), waveOut=   101
+# [2104908000] Sample 90: phaseAcc=0x01f513cc (Idx: 1), waveOut=   101
+# [2125741000] Sample 91: phaseAcc=0x01fa89e6 (Idx: 1), waveOut=   101
+# [2146575000] Sample 92: phaseAcc=0x02000000 (Idx: 2), waveOut=   101
+# [2167408000] Sample 93: phaseAcc=0x0205761a (Idx: 2), waveOut=   101
+# [2188241000] Sample 94: phaseAcc=0x020aec34 (Idx: 2), waveOut=   101
+# [2209074000] Sample 95: phaseAcc=0x0210624e (Idx: 2), waveOut=   202
+# [2229908000] Sample 96: phaseAcc=0x0215d868 (Idx: 2), waveOut=   202
+# [2250741000] Sample 97: phaseAcc=0x021b4e82 (Idx: 2), waveOut=   202
+# [2271574000] Sample 98: phaseAcc=0x0220c49c (Idx: 2), waveOut=   202
+# [2292407000] Sample 99: phaseAcc=0x02263ab6 (Idx: 2), waveOut=   202
+# [2313241000] Sample 100: phaseAcc=0x022bb0d0 (Idx: 2), waveOut=   202
+# [2334074000] Sample 101: phaseAcc=0x023126ea (Idx: 2), waveOut=   202
+# [2354907000] Sample 102: phaseAcc=0x02369d04 (Idx: 2), waveOut=   202
+# [2375740000] Sample 103: phaseAcc=0x023c131e (Idx: 2), waveOut=   202
+# [2396574000] Sample 104: phaseAcc=0x02418938 (Idx: 2), waveOut=   202
+# [2417407000] Sample 105: phaseAcc=0x0246ff52 (Idx: 2), waveOut=   202
+# [2438240000] Sample 106: phaseAcc=0x024c756c (Idx: 2), waveOut=   202
+# [2459073000] Sample 107: phaseAcc=0x0251eb86 (Idx: 2), waveOut=   202
+# [2479907000] Sample 108: phaseAcc=0x025761a0 (Idx: 2), waveOut=   202
+# [2500740000] Sample 109: phaseAcc=0x025cd7ba (Idx: 2), waveOut=   202
+# [2521573000] Sample 110: phaseAcc=0x02624dd4 (Idx: 2), waveOut=   202
+# [2542406000] Sample 111: phaseAcc=0x0267c3ee (Idx: 2), waveOut=   202
+# [2563240000] Sample 112: phaseAcc=0x026d3a08 (Idx: 2), waveOut=   202
+# [2584073000] Sample 113: phaseAcc=0x0272b022 (Idx: 2), waveOut=   202
+# [2604906000] Sample 114: phaseAcc=0x0278263c (Idx: 2), waveOut=   202
+# [2625739000] Sample 115: phaseAcc=0x027d9c56 (Idx: 2), waveOut=   202
+# [2646573000] Sample 116: phaseAcc=0x02831270 (Idx: 2), waveOut=   202
+# [2667406000] Sample 117: phaseAcc=0x0288888a (Idx: 2), waveOut=   202
+# [2688239000] Sample 118: phaseAcc=0x028dfea4 (Idx: 2), waveOut=   202
+# [2709072000] Sample 119: phaseAcc=0x029374be (Idx: 2), waveOut=   202
+# [2729906000] Sample 120: phaseAcc=0x0298ead8 (Idx: 2), waveOut=   202
+# Test another scale Factor
+# [2750739000] Sample 1: phaseAcc=0x029e60f2 (Idx: 2), waveOut=   202
+# [2771572000] Sample 2: phaseAcc=0x02a3d70c (Idx: 2), waveOut=   108
+# [2792405000] Sample 3: phaseAcc=0x02a94d26 (Idx: 2), waveOut=   108
+# [2813239000] Sample 4: phaseAcc=0x02aec340 (Idx: 2), waveOut=   108
+# [2834072000] Sample 5: phaseAcc=0x02b4395a (Idx: 2), waveOut=   108
+# [2854905000] Sample 6: phaseAcc=0x02b9af74 (Idx: 2), waveOut=   108
+# [2875738000] Sample 7: phaseAcc=0x02bf258e (Idx: 2), waveOut=   108
+# [2896572000] Sample 8: phaseAcc=0x02c49ba8 (Idx: 2), waveOut=   108
+# [2917405000] Sample 9: phaseAcc=0x02ca11c2 (Idx: 2), waveOut=   108
+# [2938238000] Sample 10: phaseAcc=0x02cf87dc (Idx: 2), waveOut=   108
+# [2959071000] Sample 11: phaseAcc=0x02d4fdf6 (Idx: 2), waveOut=   108
+# [2979905000] Sample 12: phaseAcc=0x02da7410 (Idx: 2), waveOut=   108
+# [3000738000] Sample 13: phaseAcc=0x02dfea2a (Idx: 2), waveOut=   108
+# [3021571000] Sample 14: phaseAcc=0x02e56044 (Idx: 2), waveOut=   108
+# [3042404000] Sample 15: phaseAcc=0x02ead65e (Idx: 2), waveOut=   108
+# [3063238000] Sample 16: phaseAcc=0x02f04c78 (Idx: 2), waveOut=   108
+# [3084071000] Sample 17: phaseAcc=0x02f5c292 (Idx: 2), waveOut=   108
+# [3104904000] Sample 18: phaseAcc=0x02fb38ac (Idx: 2), waveOut=   108
+# [3125737000] Sample 19: phaseAcc=0x0300aec6 (Idx: 3), waveOut=   108
+# [3146571000] Sample 20: phaseAcc=0x030624e0 (Idx: 3), waveOut=   108
+# [3167404000] Sample 21: phaseAcc=0x030b9afa (Idx: 3), waveOut=   108
+# [3188237000] Sample 22: phaseAcc=0x03111114 (Idx: 3), waveOut=   162
+# [3209070000] Sample 23: phaseAcc=0x0316872e (Idx: 3), waveOut=   162
+# [3229904000] Sample 24: phaseAcc=0x031bfd48 (Idx: 3), waveOut=   162
+# [3250737000] Sample 25: phaseAcc=0x03217362 (Idx: 3), waveOut=   162
+# [3271570000] Sample 26: phaseAcc=0x0326e97c (Idx: 3), waveOut=   162
+# [3292403000] Sample 27: phaseAcc=0x032c5f96 (Idx: 3), waveOut=   162
+# [3313237000] Sample 28: phaseAcc=0x0331d5b0 (Idx: 3), waveOut=   162
+# [3334070000] Sample 29: phaseAcc=0x03374bca (Idx: 3), waveOut=   162
+# [3354903000] Sample 30: phaseAcc=0x033cc1e4 (Idx: 3), waveOut=   162
+# [3375736000] Sample 31: phaseAcc=0x034237fe (Idx: 3), waveOut=   162
+# [3396570000] Sample 32: phaseAcc=0x0347ae18 (Idx: 3), waveOut=   162
+# [3417403000] Sample 33: phaseAcc=0x034d2432 (Idx: 3), waveOut=   162
+# [3438236000] Sample 34: phaseAcc=0x03529a4c (Idx: 3), waveOut=   162
+# [3459069000] Sample 35: phaseAcc=0x03581066 (Idx: 3), waveOut=   162
+# [3479903000] Sample 36: phaseAcc=0x035d8680 (Idx: 3), waveOut=   162
+# [3500736000] Sample 37: phaseAcc=0x0362fc9a (Idx: 3), waveOut=   162
+# [3521569000] Sample 38: phaseAcc=0x036872b4 (Idx: 3), waveOut=   162
+# [3542402000] Sample 39: phaseAcc=0x036de8ce (Idx: 3), waveOut=   162
+# [3563236000] Sample 40: phaseAcc=0x03735ee8 (Idx: 3), waveOut=   162
+# [3584069000] Sample 41: phaseAcc=0x0378d502 (Idx: 3), waveOut=   162
+# [3604902000] Sample 42: phaseAcc=0x037e4b1c (Idx: 3), waveOut=   162
+# [3625735000] Sample 43: phaseAcc=0x0383c136 (Idx: 3), waveOut=   162
+# [3646569000] Sample 44: phaseAcc=0x03893750 (Idx: 3), waveOut=   162
+# [3667402000] Sample 45: phaseAcc=0x038ead6a (Idx: 3), waveOut=   162
+# [3688235000] Sample 46: phaseAcc=0x03942384 (Idx: 3), waveOut=   162
+# [3709068000] Sample 47: phaseAcc=0x0399999e (Idx: 3), waveOut=   162
+# [3729902000] Sample 48: phaseAcc=0x039f0fb8 (Idx: 3), waveOut=   162
+# [3750735000] Sample 49: phaseAcc=0x03a485d2 (Idx: 3), waveOut=   162
+# [3771568000] Sample 50: phaseAcc=0x03a9fbec (Idx: 3), waveOut=   162
+# [3792401000] Sample 51: phaseAcc=0x03af7206 (Idx: 3), waveOut=   162
+# [3813235000] Sample 52: phaseAcc=0x03b4e820 (Idx: 3), waveOut=   162
+# [3834068000] Sample 53: phaseAcc=0x03ba5e3a (Idx: 3), waveOut=   162
+# [3854901000] Sample 54: phaseAcc=0x03bfd454 (Idx: 3), waveOut=   162
+# [3875734000] Sample 55: phaseAcc=0x03c54a6e (Idx: 3), waveOut=   162
+# [3896568000] Sample 56: phaseAcc=0x03cac088 (Idx: 3), waveOut=   162
+# [3917401000] Sample 57: phaseAcc=0x03d036a2 (Idx: 3), waveOut=   162
+# [3938234000] Sample 58: phaseAcc=0x03d5acbc (Idx: 3), waveOut=   162
+# [3959067000] Sample 59: phaseAcc=0x03db22d6 (Idx: 3), waveOut=   162
+# [3979901000] Sample 60: phaseAcc=0x03e098f0 (Idx: 3), waveOut=   162
+# [3979901000] Test complete.
+# ** Note: $stop    : C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv(116)
+#    Time: 3979900747 ps  Iteration: 2  Instance: /LFOgen_tb
+# Break in Module LFOgen_tb at C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench/LFOgen_tb.sv line 116
+# End time: 17:50:03 on Nov 25,2025, Elapsed time: 0:02:09
+# Errors: 0, Warnings: 0

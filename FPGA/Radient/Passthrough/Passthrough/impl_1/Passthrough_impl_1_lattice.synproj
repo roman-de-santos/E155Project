@@ -35,20 +35,19 @@
 
 
 
+
 -drc_cfg 35103300 20
 -use_io_insertion 1
 
 -resolve_mixed_drivers 0
--path "C:/lscc/radiant/2024.2/ispfpga/ice40tp/data" "C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1" "C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough"
--ver "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.v"
--lib pmi -vhd "C:/lscc/radiant/2024.2/ip/pmi/pmi_iCE40UP.vhd"
--sver "C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv"
-"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Stx.sv"
-"C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/top.sv"
+-path "C:/lscc/radiant/2025.1/ispfpga/ice40tp/data" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Testbench"
+-ver "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.v"
+-lib pmi -vhd "C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.vhd"
+-sver "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Src/LFOgen.sv"
 
 
--path "C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough"
--top top
+-path "C:/Users/roman/Documents/GitHub/E155Project/FPGA/Radient/Passthrough/Passthrough"
+-top LFOgen
 -udb "Passthrough_impl_1_rtl.udb"
 -output_hdl "Passthrough_impl_1.vm"
 
