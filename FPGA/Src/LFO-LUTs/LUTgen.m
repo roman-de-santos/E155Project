@@ -1,6 +1,4 @@
-% ---------------------------------------------------------
-% Configuration
-% ---------------------------------------------------------
+%% Configuration
 res = 50;               % Number of samples between the range [sin(0), sin(2*pi)) 
 width = 16;             % Bit width (Must be >= 14 for amplitude 4410)
 amplitude = 4410;       % Peak amplitude (maximum delay)
