@@ -38,3 +38,10 @@
 *.hrr
 /FPGA/DSP/sim/Questa/work
 /FPGA/DSP/sim/Questa/DelayBufferFSM/work
+/FPGA/DSP/sim/Questa/CDC_STF/work
+*.ldc
+*.cprj
+*.p2t
+*.par
+*.pad
+*.mti
