@@ -1,0 +1,15 @@
+----------------------------------------------------------------------
+Report for cell LFOgen.TECH
+Register bits:  91 of 5280 (1.723%)
+I/O cells:      28
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                              EBR_B         1          100.0
+                               CCU2        17          100.0
+                            FD1P3XZ        91          100.0
+                                 IB        11          100.0
+                              IOL_B         1          100.0
+                               LUT4        73          100.0
+                              MAC16         1          100.0
+                                 OB        17          100.0
+                              TOTAL       212
