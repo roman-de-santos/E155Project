@@ -27,7 +27,7 @@
  * _comb: Combinational internal signal
  */
 module CDC_STF #(
-	parameter PKT_WIDTH = 16 // Must be 16 for this design
+	parameter PKT_WIDTH = 16 // Must be 16 for chorus pedal design
 ) (
     // --- Clock & Global Reset Inputs ---
 	input  logic        			clkI2SBit_i,    	// Slow Domain: 1.4112 MHz BCLK
@@ -65,24 +65,24 @@ module CDC_STF #(
         .wr_clk_i   (clkI2SBit_i),
         .rd_clk_i   (clkDSP_i),
         .rst_i      (!rstDSP_n_i),
-        .rp_rst_i   (1'd1), 	   // Never reset only the read port (MAY CAUSE BUG)
+        .rp_rst_i   (!rstDSP_n_i),
         .wr_en_i    (wrEN_comb),
-        .rd_en_i    (1'd1), // TEMP (!fifoEmpty_comb)
+        .rd_en_i    (!fifoEmpty_comb),
         .wr_data_i  (pktI2S_i),
 		
         .full_o     (fifoFull_comb),
-        .empty_o    (fifoEmpty_comb), // NOT WORKING
+        .empty_o    (fifoEmpty_comb),
         .rd_data_o  (fifoPktOut_reg)
     );
 	
 	always_ff @( posedge clkDSP_i ) begin
-		if 	(~rstDSP_n_i) 	fifoPktOut_old_reg <= '0;
-		else				fifoPktOut_old_reg <= fifoPktOut_reg;
+		if 	(!rstDSP_n_i) 			fifoPktOut_old_reg <= '0;
+		else if (!fifoEmpty_comb)	fifoPktOut_old_reg <= fifoPktOut_old_reg;
+		else						fifoPktOut_old_reg <= fifoPktOut_reg;
 	end
 
     // Output Assignments
     assign pktDSP_reg_o  = fifoPktOut_reg;
-    assign pktChangedDSP_comb_o = fifoPktOut_old_reg ^ fifoPktOut_reg; // If packet is new, strobe pktChangedDSP_comb_o
-	//TODO^ this generated a warning that the 16 bit xor is being crushed to a 1 bit signal
+    assign pktChangedDSP_comb_o = |(fifoPktOut_old_reg ^ fifoPktOut_reg); // If packet is new, strobe pktChangedDSP_comb_o
 
 endmodule
