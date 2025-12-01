@@ -1840,3 +1840,111 @@ run -all
 # Break in Module i2s_tb at C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv line 52
 # End time: 14:38:40 on Nov 19,2025, Elapsed time: 0:00:33
 # Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 20:49:41 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.Data_Fast_to_Slow_tb(fast)
+# Loading work.Data_Fast_to_Slow(fast)
+# Loading work.Fast_to_Slow_CDC(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# === Starting Fast to Slow CDC Testbench ===
+# Reset Released
+# ERROR: Timeout waiting for data transfer!
+# ** Note: $stop    : C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv(99)
+#    Time: 2315 ns  Iteration: 0  Instance: /Data_Fast_to_Slow_tb
+# Break in Module Data_Fast_to_Slow_tb at C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv line 99
+# End time: 21:02:51 on Nov 25,2025, Elapsed time: 0:13:10
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 21:14:34 on Nov 25,2025
+# Loading sv_std.std
+# Loading work.Data_Fast_to_Slow_tb(fast)
+# Loading work.Data_Fast_to_Slow(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# === Starting Fast to Slow CDC Testbench ===
+# Reset Released
+# [PASS] Sent: 0x7da4 | Received: 0x7da4
+# [PASS] Sent: 0x9ebe | Received: 0x9ebe
+# [PASS] Sent: 0xe5b1 | Received: 0xe5b1
+# [PASS] Sent: 0x042b | Received: 0x042b
+# [PASS] Sent: 0x601a | Received: 0x601a
+# [PASS] Sent: 0x1d38 | Received: 0x1d38
+# [PASS] Sent: 0x5055 | Received: 0x5055
+# [PASS] Sent: 0x09e9 | Received: 0x09e9
+# [PASS] Sent: 0xcf8f | Received: 0xcf8f
+# [PASS] Sent: 0x8a92 | Received: 0x8a92
+# === TEST PASSED: 10 Transactions Successful ===
+# ** Note: $stop    : C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv(125)
+#    Time: 4345 ns  Iteration: 0  Instance: /Data_Fast_to_Slow_tb
+# Break in Module Data_Fast_to_Slow_tb at C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv line 125
+# End time: 23:26:39 on Nov 25,2025, Elapsed time: 2:12:05
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 13:23:13 on Dec 01,2025
+# Loading sv_std.std
+# Loading work.Data_Fast_to_Slow_tb(fast)
+# Loading work.Data_Fast_to_Slow(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# === Starting Fast to Slow CDC Testbench ===
+# Reset Released
+# [PASS] Sent: 0x7da4 | Received: 0x7da4
+# [PASS] Sent: 0x9ebe | Received: 0x9ebe
+# [PASS] Sent: 0xe5b1 | Received: 0xe5b1
+# [PASS] Sent: 0x042b | Received: 0x042b
+# [PASS] Sent: 0x601a | Received: 0x601a
+# [PASS] Sent: 0x1d38 | Received: 0x1d38
+# [PASS] Sent: 0x5055 | Received: 0x5055
+# [PASS] Sent: 0x09e9 | Received: 0x09e9
+# [PASS] Sent: 0xcf8f | Received: 0xcf8f
+# [PASS] Sent: 0x8a92 | Received: 0x8a92
+# === TEST PASSED: 10 Transactions Successful ===
+# ** Note: $stop    : C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv(125)
+#    Time: 4345 ns  Iteration: 0  Instance: /Data_Fast_to_Slow_tb
+# Break in Module Data_Fast_to_Slow_tb at C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv line 125
+# End time: 14:51:38 on Dec 01,2025, Elapsed time: 1:28:25
+# Errors: 0, Warnings: 0
+# *** Summary *********************************************
+#     qrun: Errors:   0, Warnings:   0
+#     vlog: Errors:   0, Warnings:   0
+#     vopt: Errors:   0, Warnings:   3
+#   Totals: Errors:   0, Warnings:   3
+# vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do "view wave" -do "add wave /*" -do "run -all" -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log 
+# Start time: 14:53:12 on Dec 01,2025
+# Loading sv_std.std
+# Loading work.Data_Slow_to_Fast_tb(fast)
+# Loading work.Data_Slow_to_Fast(fast)
+# view wave
+# .main_pane.wave.interior.cs.body.pw.wf
+# add wave /*
+# run -all
+# === Starting Slow to Fast CDC Testbench ===
+# Ref: Fast Clock = 6MHz, Slow Clock = 1.41MHz
+# Reset Released
+# ERROR: Timeout waiting for data transfer!
+# ** Note: $stop    : C:/Git/E155Project/FPGA/Testbench/Data_Slow_to_Fast_tb.sv(108)
+#    Time: 5272500 ps  Iteration: 0  Instance: /Data_Slow_to_Fast_tb
+# Break in Module Data_Slow_to_Fast_tb at C:/Git/E155Project/FPGA/Testbench/Data_Slow_to_Fast_tb.sv line 108

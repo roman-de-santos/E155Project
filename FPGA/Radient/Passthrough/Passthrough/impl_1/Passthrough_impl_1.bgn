@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Nov 25 03:44:37 2025
+Mon Dec  1 14:48:22 2025
 
 
 Command: bitgen -w -gui -msgset C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml -freq 0 Passthrough_impl_1.udb C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1 
@@ -26,5 +26,5 @@ Bitstream generation complete!
 
 Total CPU Time: 0 secs 
 Total REAL Time: 0 secs 
-Peak Memory Usage: 120 MB
+Peak Memory Usage: 123 MB
 

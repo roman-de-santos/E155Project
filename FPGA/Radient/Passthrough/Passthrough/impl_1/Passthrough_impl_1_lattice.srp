@@ -5,7 +5,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
-Tue Nov 25 03:43:36 2025
+Mon Dec  1 14:47:16 2025
 
 
 Command Line:  C:\lscc\radiant\2025.1\ispfpga\bin\nt64\synthesis.exe -f C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/impl_1/Passthrough_impl_1_lattice.synproj -logfile Passthrough_impl_1_lattice.srp -gui -msgset C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/promote.xml 
@@ -123,6 +123,7 @@ Verilog design file: C:/Git/E155Project/FPGA/Src/I2Stx.sv
 Verilog design file: C:/Git/E155Project/FPGA/Src/top.sv
 Verilog design file: C:/Git/E155Project/FPGA/Src/Data_Fast_to_Slow.sv
 Verilog design file: C:/Git/E155Project/FPGA/Src/Fast_to_Slow_CDC.sv
+Verilog design file: C:/Git/E155Project/FPGA/Src/Data_Slow_to_Fast.sv
 VHDL library: pmi
 VHDL design file: C:/lscc/radiant/2025.1/ip/pmi/pmi_iCE40UP.vhd
 WARNING <35935050> - synthesis: input port TRIM9 is not connected on this instance. VDB-5050
@@ -182,6 +183,7 @@ Analyzing Verilog file c:/git/e155project/fpga/src/i2stx.sv. VERI-1482
 Analyzing Verilog file c:/git/e155project/fpga/src/top.sv. VERI-1482
 Analyzing Verilog file c:/git/e155project/fpga/src/data_fast_to_slow.sv. VERI-1482
 Analyzing Verilog file c:/git/e155project/fpga/src/fast_to_slow_cdc.sv. VERI-1482
+Analyzing Verilog file c:/git/e155project/fpga/src/data_slow_to_fast.sv. VERI-1482
 Analyzing VHDL file c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd. VHDL-1481
 Analyzing VHDL file c:/lscc/radiant/2025.1/ip/pmi/pmi_ice40up.vhd
 
@@ -190,80 +192,76 @@ INFO <35921504> - synthesis: The default VHDL library search path is now "C:/Git
 Top module language type = Verilog.
 Top module name (Verilog, mixed language): top
 INFO <35901018> - synthesis: c:/git/e155project/fpga/src/top.sv(1): compiling module top. VERI-1018
+INFO <35901018> - synthesis: c:/git/e155project/fpga/src/i2srx.sv(1): compiling module I2Srx. VERI-1018
+INFO <35901018> - synthesis: c:/git/e155project/fpga/src/data_slow_to_fast.sv(3): compiling module Data_Slow_to_Fast. VERI-1018
+INFO <35901018> - synthesis: c:/git/e155project/fpga/src/data_fast_to_slow.sv(3): compiling module Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411). VERI-1018
 INFO <35901018> - synthesis: c:/git/e155project/fpga/src/i2stx.sv(1): compiling module I2Stx. VERI-1018
 WARNING <35901209> - synthesis: c:/git/e155project/fpga/src/i2stx.sv(24): expression size 32 truncated to fit in target size 8. VERI-1209
-INFO <35901018> - synthesis: c:/git/e155project/fpga/src/data_fast_to_slow.sv(1): compiling module Data_Fast_to_Slow. VERI-1018
-INFO <35901018> - synthesis: c:/git/e155project/fpga/src/fast_to_slow_cdc.sv(3): compiling module Fast_to_Slow_CDC. VERI-1018
-INFO <35901018> - synthesis: c:/git/e155project/fpga/src/i2srx.sv(1): compiling module I2Srx. VERI-1018
-WARNING <35931002> - synthesis: c:/git/e155project/fpga/src/top.sv(18): net dsp_left_out[15] does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: c:/git/e155project/fpga/src/top.sv(18): net dsp_right_out[15] does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: c:/git/e155project/fpga/src/top.sv(19): net dsp_data_ready does not have a driver. VDB-1002
-WARNING <35931002> - synthesis: c:/git/e155project/fpga/src/top.sv(30): net clk_100mhz does not have a driver. VDB-1002
 [Parameter Setting Section Start]
 
 	[Parameter Settings for top-level module]
 	(Module: top)
 		WIDTH                     16
 
-	[Parameter Settings for Instance(s): I2Stx0]
-	(Module: I2Stx)
-		WIDTH                     16
-
-	[Parameter Settings for Instance(s): CDC_Left, CDC_Right]
-	(Module: Data_Fast_to_Slow)
-		WIDTH                     16
-		FAST_FREQ                 100
-		SLOW_FREQ                 12
-
 	[Parameter Settings for Instance(s): I2Srx0]
 	(Module: I2Srx)
 		WIDTH                     16
 
-	[Parameter Settings for Instance(s): Flag_Sync]
-	(Module: Fast_to_Slow_CDC)
-		FAST_CLK_FREQ_MHZ         100
-		SLOW_CLK_FREQ_MHZ         12
-		RATIO                     8
-		EXTEND_LIMIT              12
+	[Parameter Settings for Instance(s): CDC_Rx_Left, CDC_Rx_Right]
+	(Module: Data_Slow_to_Fast)
+		WIDTH                     16
+
+	[Parameter Settings for Instance(s): CDC_Tx_Left, CDC_Tx_Right]
+	(Module: Data_Fast_to_Slow)
+		WIDTH                     16
+		FAST_FREQ                 6000
+		SLOW_FREQ                 1411
+		RATIO                     4
+		EXTEND_LIMIT              6
+
+	[Parameter Settings for Instance(s): I2Stx0]
+	(Module: I2Stx)
+		WIDTH                     16
 
 [Parameter Setting Section End]
-WARNING <35935047> - synthesis: Unused instance CDC_Left is removed. VDB-5047
-WARNING <35935047> - synthesis: Unused instance CDC_Right is removed. VDB-5047
 
 
 
+Duplicate register/latch removal. \CDC_Tx_Left/valid_extended is a one-to-one match with \CDC_Tx_Left/extend_active.
+Duplicate register/latch removal. \CDC_Tx_Right/valid_extended is a one-to-one match with \CDC_Tx_Right/extend_active.
 
 ################### Begin Area Report (top)######################
-Number of register bits => 108 of 5280 (2 % )
-CCU2 => 5
-FD1P3XZ => 108
-IB => 4
+Number of register bits => 318 of 5280 (6 % )
+CCU2 => 39
+FD1P3XZ => 318
+IB => 5
 INV => 1
-LUT4 => 45
+LUT4 => 143
 OB => 3
 ################### End Area Report ##################
 Number of odd-length carry chains : 0
-Number of even-length carry chains : 1
+Number of even-length carry chains : 3
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
+Number of Clocks: 3
+  Net : sys_clk_c, loads : 0
   Net : sclk_out_c_c, loads : 2
-  Net : I2Srx0/sclk_out_c_c_derived_44, loads : 0
+  Net : I2Stx0/sclk_out_c_c_derived_44, loads : 0
 Clock Enable Nets
 Number of Clock Enables: 0
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : rst_c_N_151, loads : 67
-  Net : rst_c, loads : 39
+  Net : rst_c_N_347, loads : 276
+  Net : CDC_Rx_Right/dsp_trigger, loads : 70
+  Net : rst_c, loads : 43
+  Net : CDC_Tx_Right/extend_active, loads : 36
+  Net : CDC_Tx_Left/extend_active, loads : 36
+  Net : n1118, loads : 33
+  Net : CDC_Tx_Right/n989, loads : 33
+  Net : CDC_Tx_Left/n927, loads : 33
   Net : I2Stx0/n15, loads : 32
-  Net : n357, loads : 18
-  Net : n342, loads : 18
-  Net : n386, loads : 17
-  Net : n372, loads : 17
-  Net : I2Stx0/n91, loads : 10
-  Net : I2Stx0/shift_reg_32__N_33[24], loads : 7
-  Net : I2Stx0/shift_reg_32__N_33[23], loads : 7
+  Net : CDC_Tx_Right/n988, loads : 26
 ################### End Clock Report ##################
 
 ################### Begin Constraint Report ######################
@@ -272,10 +270,10 @@ Constraint Summary:
   Total number of constraints dropped: 0
 ###################  End Constraint Report  ######################
 
-Peak Memory Usage: 97 MB
+Peak Memory Usage: 99 MB
 
 --------------------------------------------------------------
-Total CPU Time: 14 secs 
+Total CPU Time: 15 secs 
 Total REAL Time: 15 secs 
 --------------------------------------------------------------
-Checksum -- synthesis -- netlist: 1a04d87cd85c3c1bc138e06af9c6817c2d85ade3
+Checksum -- synthesis -- netlist: 827a714c885330408474e2e86df17acd6c85717

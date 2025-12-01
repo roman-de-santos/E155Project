@@ -1,2 +1,3 @@
-top,/,C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/top.sv
-i2s_tb,/,C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Testbench/I2Sfull_tb.sv
+top,/,C:/Git/E155Project/FPGA/Src/top.sv
+Fast_to_Slow_CDC,/,C:/Git/E155Project/FPGA/Src/Fast_to_Slow_CDC.sv
+Data_Slow_to_Fast_tb,/,C:/Git/E155Project/FPGA/Testbench/Data_Slow_to_Fast_tb.sv

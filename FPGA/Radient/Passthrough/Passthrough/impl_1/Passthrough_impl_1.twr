@@ -1,6 +1,6 @@
 Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2025.1.0.39.0
 
-Tue Nov 25 03:44:23 2025
+Mon Dec  1 14:48:08 2025
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -89,31 +89,33 @@ create_generated_clock,
 ...
 
 -------------------------------------------------------------------
-     Listing 7 Start or End Points      |           Type           
+     Listing 8 Start or End Points      |           Type           
 -------------------------------------------------------------------
-sclk_in                                 |                     input
-rst                                     |                     input
-ws_in                                   |                     input
 sdata_in                                |                     input
-ws_out                                  |                    output
+sys_clk                                 |                     input
+ws_in                                   |                     input
+rst                                     |                     input
+sclk_in                                 |                     input
 sclk_out                                |                    output
+ws_out                                  |                    output
 sdata_out                               |                    output
 -------------------------------------------------------------------
                                         |                          
-Number of I/O ports without constraint  |                         7
+Number of I/O ports without constraint  |                         8
                                         |                          
 -------------------------------------------------------------------
 
 Nets without clock definition
 Define a clock on a top level port or a generated clock on a clock divider pin associated with this net(s).
 -------------------------------------------------------------------
-            Listing 1 Net(s)            |        Source pin        
+            Listing 2 Net(s)            |        Source pin        
 -------------------------------------------------------------------
 sclk_out_c_c                            |  sclk_out_c_pad.bb_inst/O
+sys_clk_c                               |     sys_clk_pad.bb_inst/O
 -------------------------------------------------------------------
                                         |                          
 Number of clock nets without clock defi |                          
-nition                                  |                         1
+nition                                  |                         2
                                         |                          
 -------------------------------------------------------------------
 

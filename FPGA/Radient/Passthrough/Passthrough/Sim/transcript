@@ -438,3 +438,367 @@ vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -d
 # Errors: 0, Warnings: 3
 # 
 vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 20:49:37 on Nov 25,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Git/E155Project/FPGA/Src/I2Srx.sv C:/Git/E155Project/FPGA/Src/I2Stx.sv C:/Git/E155Project/FPGA/Src/top.sv C:/Git/E155Project/FPGA/Src/Data_Fast_to_Slow.sv C:/Git/E155Project/FPGA/Src/Fast_to_Slow_CDC.sv C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module top
+# 
+# -- Compiling module Data_Fast_to_Slow
+# 
+# -- Compiling module Fast_to_Slow_CDC
+# 
+# -- Compiling module Data_Fast_to_Slow_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	top
+# 
+# 	Data_Fast_to_Slow_tb
+# 
+# End time: 20:49:37 on Nov 25,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 20:49:38 on Nov 25,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up Data_Fast_to_Slow_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	Data_Fast_to_Slow_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module Data_Fast_to_Slow_tb
+# 
+# -- Loading module Data_Fast_to_Slow
+# 
+# -- Loading module Fast_to_Slow_CDC
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 3 design-units (inlining 0/3 module instances):
+# 
+# -- Optimizing module Data_Fast_to_Slow_tb(fast)
+# 
+# -- Optimizing module Fast_to_Slow_CDC(fast)
+# 
+# -- Optimizing module Data_Fast_to_Slow(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 20:49:41 on Nov 25,2025, Elapsed time: 0:00:03
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 21:14:32 on Nov 25,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Git/E155Project/FPGA/Src/I2Srx.sv C:/Git/E155Project/FPGA/Src/I2Stx.sv C:/Git/E155Project/FPGA/Src/top.sv C:/Git/E155Project/FPGA/Src/Data_Fast_to_Slow.sv C:/Git/E155Project/FPGA/Src/Fast_to_Slow_CDC.sv C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module top
+# 
+# -- Compiling module Data_Fast_to_Slow
+# 
+# -- Compiling module Fast_to_Slow_CDC
+# 
+# -- Compiling module Data_Fast_to_Slow_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	top
+# 
+# 	Fast_to_Slow_CDC
+# 
+# 	Data_Fast_to_Slow_tb
+# 
+# End time: 21:14:32 on Nov 25,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 21:14:32 on Nov 25,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up Data_Fast_to_Slow_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	Data_Fast_to_Slow_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module Data_Fast_to_Slow_tb
+# 
+# -- Loading module Data_Fast_to_Slow
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module Data_Fast_to_Slow_tb(fast)
+# 
+# -- Optimizing module Data_Fast_to_Slow(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 21:14:34 on Nov 25,2025, Elapsed time: 0:00:02
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 13:23:10 on Dec 01,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Git/E155Project/FPGA/Src/I2Srx.sv C:/Git/E155Project/FPGA/Src/I2Stx.sv C:/Git/E155Project/FPGA/Src/top.sv C:/Git/E155Project/FPGA/Src/Data_Fast_to_Slow.sv C:/Git/E155Project/FPGA/Src/Fast_to_Slow_CDC.sv C:/Git/E155Project/FPGA/Testbench/Data_Fast_to_Slow_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module top
+# 
+# -- Compiling module Data_Fast_to_Slow
+# 
+# -- Compiling module Fast_to_Slow_CDC
+# 
+# -- Compiling module Data_Fast_to_Slow_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	top
+# 
+# 	Fast_to_Slow_CDC
+# 
+# 	Data_Fast_to_Slow_tb
+# 
+# End time: 13:23:10 on Dec 01,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 13:23:11 on Dec 01,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up Data_Fast_to_Slow_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	Data_Fast_to_Slow_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module Data_Fast_to_Slow_tb
+# 
+# -- Loading module Data_Fast_to_Slow
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module Data_Fast_to_Slow_tb(fast)
+# 
+# -- Optimizing module Data_Fast_to_Slow(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 13:23:13 on Dec 01,2025, Elapsed time: 0:00:02
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log
+# //  Questa Lattice OEM Edition-64
+# //  Version 2024.2 win64 May 20 2024
+# //
+# // Unpublished work. Copyright 2024 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough/Sim/Sim.vdo
+# Deleting directory qrun.out...
+# Creating library 'qrun.out/work'.
+# Questa Lattice OEM Edition-64 vlog 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# Start time: 14:53:11 on Dec 01,2025
+# 
+# vlog -reportprogress 300 -L work -sv "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up C:/Git/E155Project/FPGA/Src/I2Srx.sv C:/Git/E155Project/FPGA/Src/I2Stx.sv C:/Git/E155Project/FPGA/Src/top.sv C:/Git/E155Project/FPGA/Src/Data_Fast_to_Slow.sv C:/Git/E155Project/FPGA/Src/Fast_to_Slow_CDC.sv C:/Git/E155Project/FPGA/Src/Data_Slow_to_Fast.sv C:/Git/E155Project/FPGA/Testbench/Data_Slow_to_Fast_tb.sv -work qrun.out/work -statslog qrun.out/stats_log -writesessionid "+qrun.out/top_dus" -csession=incr 
+# 
+# -- Compiling module I2Srx
+# 
+# -- Compiling module I2Stx
+# 
+# -- Compiling module top
+# 
+# -- Compiling module Data_Fast_to_Slow
+# 
+# -- Compiling module Fast_to_Slow_CDC
+# 
+# -- Compiling module Data_Slow_to_Fast
+# 
+# -- Compiling module Data_Slow_to_Fast_tb
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	top
+# 
+# 	Fast_to_Slow_CDC
+# 
+# 	Data_Slow_to_Fast_tb
+# 
+# End time: 14:53:11 on Dec 01,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 0
+# 
+# Questa Lattice OEM Edition-64 vopt 2024.2 Compiler 2024.05 May 20 2024
+# 
+# 
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# 
+# Start time: 14:53:12 on Dec 01,2025
+# 
+# vopt -reportprogress 300 -L work "+acc" "+noacc+pmi_work.*" "+noacc+ovi_ice40up.*" -L pmi_work -L ovi_ice40up Data_Slow_to_Fast_tb -suppress vopt-7033 -work qrun.out/work -statslog qrun.out/stats_log -csession=incr -o qrun_opt -csessionid=2 
+# 
+# 
+# 
+# Top level modules:
+# 
+# 	Data_Slow_to_Fast_tb
+# 
+# 
+# 
+# Analyzing design...
+# 
+# -- Loading module Data_Slow_to_Fast_tb
+# 
+# -- Loading module Data_Slow_to_Fast
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# ** Warning: (vopt-2108) Cannot find module '*' specified in +noacc option.
+# 
+# Optimizing 2 design-units (inlining 0/2 module instances):
+# 
+# -- Optimizing module Data_Slow_to_Fast_tb(fast)
+# 
+# -- Optimizing module Data_Slow_to_Fast(fast)
+# 
+# Optimized design name is qrun_opt
+# 
+# End time: 14:53:12 on Dec 01,2025, Elapsed time: 0:00:00
+# 
+# Errors: 0, Warnings: 3
+# 
+vsim -L work -L pmi_work -L ovi_ice40up -lib qrun.out/work -wlf vsim.wlf -gui -do {view wave} -do {add wave /*} -do {run -all} -statslog qrun.out/stats_log qrun_opt -suppress vsim-7033,vsim-8630,3009,3389 -appendlog -l qrun.log

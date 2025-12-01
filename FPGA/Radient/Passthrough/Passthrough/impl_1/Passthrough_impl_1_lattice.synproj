@@ -48,6 +48,7 @@
 "C:/Git/E155Project/FPGA/Src/top.sv"
 "C:/Git/E155Project/FPGA/Src/Data_Fast_to_Slow.sv"
 "C:/Git/E155Project/FPGA/Src/Fast_to_Slow_CDC.sv"
+"C:/Git/E155Project/FPGA/Src/Data_Slow_to_Fast.sv"
 
 
 -path "C:/Git/E155Project/FPGA/Radient/Passthrough/Passthrough"

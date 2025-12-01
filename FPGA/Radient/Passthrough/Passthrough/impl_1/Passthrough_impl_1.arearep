@@ -1,33 +1,70 @@
 ----------------------------------------------------------------------
 Report for cell top.TECH
-Register bits:  108 of 5280 (2.045%)
-I/O cells:      7
+Register bits:  318 of 5280 (6.023%)
+I/O cells:      8
                                   Cell usage:
                                cell     count   Res Usage(%)
-                               CCU2         5          100.0
-                            FD1P3XZ       108          100.0
-                                 IB         4          100.0
+                               CCU2        39          100.0
+                            FD1P3XZ       318          100.0
+                                 IB         5          100.0
                                 INV         1          100.0
-                               LUT4        45          100.0
+                               LUT4       143          100.0
                                  OB         3          100.0
 SUB MODULES
+Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411)         1
+Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411)_U0         1
+                  Data_Slow_to_Fast         1
+               Data_Slow_to_Fast_U1         1
                               I2Srx         1
                               I2Stx         1
-                              TOTAL       168
+                              TOTAL       515
 ----------------------------------------------------------------------
 Report for cell I2Stx.v1
 Instance Path : I2Stx0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                                FA2         5          100.0
-                            FD1P3XZ        43           39.8
-                               LUT4        39           86.7
-                              TOTAL        87
+                                FA2         5           12.8
+                            FD1P3XZ        43           13.5
+                                INV         1          100.0
+                               LUT4        39           27.3
+                              TOTAL        88
+----------------------------------------------------------------------
+Report for cell Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411).v1
+Instance Path : CDC_Tx_Right
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        17           43.6
+                            FD1P3XZ        68           21.4
+                               LUT4        46           32.2
+                              TOTAL       131
+----------------------------------------------------------------------
+Report for cell Data_Slow_to_Fast_U1.v1
+Instance Path : CDC_Rx_Left
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        19            6.0
+                              TOTAL        19
+----------------------------------------------------------------------
+Report for cell Data_Slow_to_Fast.v1
+Instance Path : CDC_Rx_Right
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1P3XZ        20            6.3
+                               LUT4         2            1.4
+                              TOTAL        22
 ----------------------------------------------------------------------
 Report for cell I2Srx.v1
 Instance Path : I2Srx0
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3XZ        65           60.2
-                                INV         1          100.0
-                              TOTAL        66
+                            FD1P3XZ        65           20.4
+                              TOTAL        65
+----------------------------------------------------------------------
+Report for cell Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411)_U0.v1
+Instance Path : CDC_Tx_Left
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                FA2        17           43.6
+                            FD1P3XZ        68           21.4
+                               LUT4        46           32.2
+                              TOTAL       131

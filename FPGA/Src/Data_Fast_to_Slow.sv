@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module Data_Fast_to_Slow #(
     parameter int WIDTH = 16,
     parameter int FAST_FREQ = 100,
@@ -9,60 +11,84 @@ module Data_Fast_to_Slow #(
     
     // Fast Domain Inputs
     input  logic [WIDTH-1:0] Data_In_Fast,
-    input  logic             Valid_In_Fast, // Pulse this when DSP is done
+    input  logic             Valid_In_Fast,
     
     // Slow Domain Outputs
     output logic [WIDTH-1:0] Data_Out_Slow,
-    output logic             Valid_Out_Slow // High for 1 cycle when new data arrives
+    output logic             Valid_Out_Slow
 );
 
+    // --- 1. Pulse Extender Logic (Fast Domain) ---
+    // We extend the pulse so the slow clock doesn't miss it.
+    localparam int RATIO = FAST_FREQ / SLOW_FREQ;
+    localparam int EXTEND_LIMIT = RATIO + (RATIO / 2); // 1.5x width
+
+    logic extend_active;
+    int   extend_cntr;
     logic valid_extended;
-    logic valid_sync_meta, valid_sync;
-    logic valid_sync_prev;
 
-    // 1. Instantiate the Pulse Extender for the "Valid" signal
-    Fast_to_Slow_CDC #(
-        .FAST_CLK_FREQ_MHZ(FAST_FREQ),
-        .SLOW_CLK_FREQ_MHZ(SLOW_FREQ)
-    ) Flag_Sync (
-        .Clk_Fast(Clk_Fast),
-        .Clk_Slow(Clk_Slow),
-        .Rst(Rst),
-        .Input_Signal(Valid_In_Fast),
-        .Received_Sample(valid_extended) 
-    );
+    // --- 2. Data Holding Register (The Fix) ---
+    // We latch the data IMMEDIATELY when the DSP says it's ready.
+    // This holds the data stable while the flags are synchronizing.
+    logic [WIDTH-1:0] data_latched;
 
-    // 2. Data Latching Logic
-    // We rely on the fact that the data is stable while the valid flag is being synchronized.
-    
-    // Edge detection in Slow Domain
-    always_ff @(posedge Clk_Slow) begin
-        valid_sync_prev <= valid_extended;
-    end
-    
-    // Detect Rising Edge of the synchronized flag
-    assign Valid_Out_Slow = valid_extended && !valid_sync_prev;
-
-    // 3. Capture Data safely
-    // Since Valid_In_Fast triggered the process, we assume Data_In_Fast 
-    // was valid at that moment. We capture it into the slow domain 
-    // ONLY when the slow sync flag arrives.
-    
-    // Note: For this to work perfectly, Data_In_Fast should ideally be held 
-    // stable by the DSP until the handshake is complete, or we simply latch 
-    // it into a register in the fast domain first (recommended).
-    
-    logic [WIDTH-1:0] data_holding_reg;
-    
-    always_ff @(posedge Clk_Fast) begin
-        if (Valid_In_Fast) begin
-            data_holding_reg <= Data_In_Fast;
+    always_ff @(posedge Clk_Fast or posedge Rst) begin
+        if (Rst) begin
+            extend_active  <= 0;
+            extend_cntr    <= 0;
+            valid_extended <= 0;
+            data_latched   <= 0;
+        end else begin
+            // Latch data and Start Pulse
+            if (Valid_In_Fast && !extend_active) begin
+                extend_active  <= 1;
+                extend_cntr    <= 0;
+                valid_extended <= 1;
+                data_latched   <= Data_In_Fast; // <--- CAPTURE DATA HERE
+            end 
+            // Extend the pulse
+            else if (extend_active) begin
+                if (extend_cntr < EXTEND_LIMIT) begin
+                    extend_cntr    <= extend_cntr + 1;
+                    valid_extended <= 1;
+                end else begin
+                    extend_active  <= 0;
+                    valid_extended <= 0;
+                end
+            end 
+            // Idle
+            else begin
+                valid_extended <= 0;
+            end
         end
     end
 
-    always_ff @(posedge Clk_Slow) begin
-        if (Valid_Out_Slow) begin
-            Data_Out_Slow <= data_holding_reg;
+    // --- 3. Output Synchronization (Slow Domain) ---
+    logic valid_meta, valid_sync;
+    logic valid_sync_prev;
+    
+    always_ff @(posedge Clk_Slow or posedge Rst) begin
+        if (Rst) begin
+            valid_meta      <= 0;
+            valid_sync      <= 0;
+            valid_sync_prev <= 0;
+            Data_Out_Slow   <= 0;
+            Valid_Out_Slow  <= 0;
+        end else begin
+            // Double-Flop Synchronizer for the Flag
+            valid_meta <= valid_extended;
+            valid_sync <= valid_meta;
+            
+            // Edge Detection
+            valid_sync_prev <= valid_sync;
+            
+            // Rising Edge = Safe to sample data
+            if (valid_sync && !valid_sync_prev) begin
+                Valid_Out_Slow <= 1'b1;
+                Data_Out_Slow  <= data_latched; // <--- Sample the STABLE latched data
+            end else begin
+                Valid_Out_Slow <= 1'b0;
+            end
         end
     end
 

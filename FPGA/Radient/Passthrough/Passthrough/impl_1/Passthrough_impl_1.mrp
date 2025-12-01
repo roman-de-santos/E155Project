@@ -8,7 +8,7 @@ Package: SG48
 Performance Grade:  High-Performance_1.2V
 
 Mapper:    version Radiant Software (64-bit) 2025.1.0.39.0
-Mapped on: Tue Nov 25 03:44:05 2025
+Mapped on: Mon Dec  1 14:47:46 2025
 
 Design Information
 ------------------
@@ -21,21 +21,21 @@ Command line:   map -pdc C:/Git/E155Project/FPGA/Src/FPGApins.pdc -i
 Design Summary
 --------------
 
-   Number of slice registers: 108 out of  5280 (2%)
+   Number of slice registers: 318 out of  5280 (6%)
    Number of I/O registers:      0 out of   117 (0%)
-   Number of LUT4s:           124 out of  5280 (2%)
-      Number of logic LUT4s:              46
-      Number of inserted feedthru LUT4s:  68
-      Number of ripple logic:              5 (10 LUT4s)
-   Number of IO sites used:   7 out of 39 (18%)
-      Number of IO sites used for general PIO: 7
+   Number of LUT4s:           431 out of  5280 (8%)
+      Number of logic LUT4s:             144
+      Number of inserted feedthru LUT4s: 209
+      Number of ripple logic:             39 (78 LUT4s)
+   Number of IO sites used:   8 out of 39 (21%)
+      Number of IO sites used for general PIO: 8
       Number of IO sites used for I3C: 0 out of 2 (0%)
       (note: If I3C is not used, its site can be used as general PIO)
-      Number of IO sites used for PIO+I3C: 7 out of 36 (19%)
+      Number of IO sites used for PIO+I3C: 8 out of 36 (22%)
       Number of IO sites used for OD+RGB IO buffers: 0 out of 3 (0%)
       (note: If RGB LED drivers are not used, sites can be used as OD outputs,
        see TN1288 iCE40 LED Driver Usage Guide)
-      Number of IO sites used for PIO+I3C+OD+RGB: 7 out of 39 (18%)
+      Number of IO sites used for PIO+I3C+OD+RGB: 8 out of 39 (21%)
    Number of DSPs:             0 out of 8 (0%)
    Number of I2Cs:             0 out of 2 (0%)
    Number of High Speed OSCs:  0 out of 1 (0%)
@@ -48,18 +48,18 @@ Design Summary
    Number of SPIs:             0 out of 2 (0%)
    Number of EBRs:             0 out of 30 (0%)
    Number of PLLs:             0 out of 1 (0%)
-   Number of Clocks:  1
-      Net sclk_out_c_c: 105 loads, 64 rising, 41 falling (Driver: Port sclk_in)
-   Number of Clock Enables:  5
-      Net n327: 1 loads, 1 SLICEs
-      Net n386: 16 loads, 16 SLICEs
-      Net n342: 16 loads, 16 SLICEs
-      Net n357: 16 loads, 16 SLICEs
-      Net n372: 16 loads, 16 SLICEs
-   Number of LSRs:  3
-      Net I2Stx0.n119: 1 loads, 1 SLICEs
-      Net rst_c_N_151: 67 loads, 67 SLICEs
-      Net I2Stx0.n91: 5 loads, 5 SLICEs
+   Number of Clocks:  2
+      Net sys_clk_c: 169 loads, 169 rising, 0 falling (Driver: Port sys_clk)
+      Net sclk_out_c_c: 146 loads, 105 rising, 41 falling (Driver: Port sclk_in)
+   Number of Clock Enables:  14
+      Net n1118: 32 loads, 32 SLICEs
+      Net n1119: 1 loads, 1 SLICEs
+      Net CDC_Tx_Right.n215: 16 loads, 16 SLICEs
+      Net CDC_Tx_Right.n4: 16 loads, 16 SLICEs
+      Net CDC_Tx_Right.n989: 32 loads, 32 SLICEs
+      Net n1013: 16 loads, 16 SLICEs
+      Net n1028: 16 loads, 16 SLICEs
+      Net n1043: 16 loads, 16 SLICEs
 
                                     Page 1
 
@@ -69,17 +69,27 @@ Design Summary
 
 Design Summary (cont)
 ---------------------
+      Net n1058: 16 loads, 16 SLICEs
+      Net n1073: 16 loads, 16 SLICEs
+      Net CDC_Rx_Right.n1088: 16 loads, 16 SLICEs
+      Net CDC_Tx_Left.n4: 16 loads, 16 SLICEs
+      Net CDC_Tx_Left.n215: 16 loads, 16 SLICEs
+      Net CDC_Tx_Left.n927: 32 loads, 32 SLICEs
+   Number of LSRs:  3
+      Net rst_c_N_347: 276 loads, 276 SLICEs
+      Net I2Stx0.n315: 5 loads, 5 SLICEs
+      Net I2Stx0.n400: 1 loads, 1 SLICEs
    Top 10 highest fanout non-clock nets:
-      Net rst_c_N_151: 67 loads
-      Net rst_c: 39 loads
+      Net rst_c_N_347: 276 loads
+      Net dsp_trigger: 71 loads
+      Net rst_c: 43 loads
+      Net CDC_Tx_Left.extend_active: 36 loads
+      Net CDC_Tx_Right.extend_active: 36 loads
       Net n15: 33 loads
-      Net n342: 16 loads
-      Net n357: 16 loads
-      Net n372: 16 loads
-      Net n386: 16 loads
-      Net I2Stx0.n91: 5 loads
-      Net I2Stx0.bitCnt[5]: 4 loads
-      Net ws_r: 4 loads
+      Net CDC_Tx_Left.n927: 32 loads
+      Net CDC_Tx_Right.n989: 32 loads
+      Net n1118: 32 loads
+      Net CDC_Tx_Right.n215: 16 loads
 
 
 
@@ -101,32 +111,22 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode |  IO   |  IO   | Special   |
 |                     |           |  IO_TYPE  |  REG  |  DDR  | IO Buffer |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| ws_out              | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
 | sclk_out            | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-| sdata_out           | OUTPUT    |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| sclk_in             | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| rst                 | INPUT     |           |       |       |           |
-+---------------------+-----------+-----------+-------+-------+-----------+
-| ws_in               | INPUT     |           |       |       |           |
+| ws_out              | OUTPUT    |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
 | sdata_in            | INPUT     |           |       |       |           |
 +---------------------+-----------+-----------+-------+-------+-----------+
-
-Removed logic
--------------
-
-Block I2Srx0/i4_1_lut was optimized away.
-Block sclk_out_c_pad.vlo_inst was optimized away.
-
-Constraint Summary
-------------------
-
-   Total number of constraints: 7
-   Total number of constraints dropped: 0
+| sys_clk             | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| ws_in               | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| rst                 | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sclk_in             | INPUT     |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
+| sdata_out           | OUTPUT    |           |       |       |           |
++---------------------+-----------+-----------+-------+-------+-----------+
 
                                     Page 2
 
@@ -135,25 +135,25 @@ Constraint Summary
 
 
 
+Removed logic
+-------------
+
+Block I2Stx0/i4_1_lut was optimized away.
+Block sdata_in_pad.vlo_inst was optimized away.
+
+Constraint Summary
+------------------
+
+   Total number of constraints: 7
+   Total number of constraints dropped: 0
+
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs
    Total REAL Time: 0 secs
-   Peak Memory Usage: 68 MB
-Checksum -- map: d501d911133d70c8126e22e4150bf3a7d112e6e4
-
-
-
-
-
-
-
-
-
-
-
-
+   Peak Memory Usage: 73 MB
+Checksum -- map: fcb3c5af25a1d753fa4c70afa5619dfdbe9f482
 
 
 

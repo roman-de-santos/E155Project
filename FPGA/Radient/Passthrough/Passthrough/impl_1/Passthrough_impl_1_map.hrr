@@ -3,27 +3,63 @@ Report for cell top
    Instance path: top
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	        124        100.0
-                               LUTGATE	        114        100.0
-                                LUTCCU	         10        100.0
-                                 IOBUF	          7        100.0
-                                PFUREG	        108        100.0
+                                  LUT4	        431        100.0
+                               LUTGATE	        353        100.0
+                                LUTCCU	         78        100.0
+                                 IOBUF	          8        100.0
+                                PFUREG	        318        100.0
 SUB MODULES
                                   cell	      count    LUT4 Usage(%)
+Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411)	          1        18.6
+Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411)_U0	          1        18.6
+                     Data_Slow_to_Fast	          1         0.5
+                  Data_Slow_to_Fast_U1	          1         0.0
                                  I2Srx	          1         0.0
-                                 I2Stx	          1        39.5
+                                 I2Stx	          1        11.4
 ---------------------------------------------------
 Report for cell I2Stx
    Instance path: top/I2Stx0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  LUT4	         49        39.5
-                               LUTGATE	         39        34.2
-                                LUTCCU	         10        100.0
-                                PFUREG	         43        39.8
+                                  LUT4	         49        11.4
+                               LUTGATE	         39        11.0
+                                LUTCCU	         10        12.8
+                                PFUREG	         43        13.5
+---------------------------------------------------
+Report for cell Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411)
+   Instance path: top/CDC_Tx_Right
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         80        18.6
+                               LUTGATE	         46        13.0
+                                LUTCCU	         34        43.6
+                                PFUREG	         68        21.4
+---------------------------------------------------
+Report for cell Data_Slow_to_Fast_U1
+   Instance path: top/CDC_Rx_Left
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                PFUREG	         19         6.0
+---------------------------------------------------
+Report for cell Data_Slow_to_Fast
+   Instance path: top/CDC_Rx_Right
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	          2         0.5
+                               LUTGATE	          2         0.6
+                                PFUREG	         20         6.3
 ---------------------------------------------------
 Report for cell I2Srx
    Instance path: top/I2Srx0
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                PFUREG	         65        60.2
+                                PFUREG	         65        20.4
+---------------------------------------------------
+Report for cell Data_Fast_to_Slow(FAST_FREQ=6000,SLOW_FREQ=1411)_U0
+   Instance path: top/CDC_Tx_Left
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	         80        18.6
+                               LUTGATE	         46        13.0
+                                LUTCCU	         34        43.6
+                                PFUREG	         68        21.4
