@@ -1,3 +1,5 @@
+`timescale 1ns / 1ps
+
 module top_tb ();
 
 parameter WIDTH = 16;
@@ -30,10 +32,10 @@ end
 
 
 // Instantiate modules
-I2Srx #(WIDTH) I2Srx0 (sclk, rst, ws, sdata, left_rx_chan, right_rx_chan, pktI2SRxChanged_o);
-DSP   #(WIDTH) DSP0   (rst, sclk, rst, right_rx_chan, pktI2SRxChanged_o, freqSetting_i, scaleFactor_i,
+I2Srx #(WIDTH) u_I2Srx (sclk, rst, ws, sdata, left_rx_chan, right_rx_chan, pktI2SRxChanged_o);
+DSP   #(WIDTH) u_DSP   (rst, sclk, rst, right_rx_chan, pktI2SRxChanged_o, freqSetting_i, scaleFactor_i,
 						i2sTxPkt_o, i2sTxPktChanged_o, errorLED_o);
-I2Stx #(WIDTH) I2Stx0 (sclk, rst, ws, sdata, left_tx_chan, i2sTxPkt_o);
+I2Stx #(WIDTH) u_I2Stx (sclk, rst, ws, sdata, left_tx_chan, i2sTxPkt_o);
 
 
 

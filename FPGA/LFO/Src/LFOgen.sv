@@ -4,7 +4,7 @@ module LFOgen (
     input  logic [3:0] freqSetting_i,      // Stepsize, Determines Frequency
     input  logic [3:0] scaleFactor_i,      // 0000=0.0, 1111=1.0
     input  logic       FIFOupdate_i,
-    output logic signed [15:0] wave_o,
+    output logic signed [15:0] wave_o, //TODO: this should be [13:0]
 	output logic newValFlag_o
 );
 
