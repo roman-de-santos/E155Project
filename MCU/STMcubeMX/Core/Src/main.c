@@ -49,10 +49,10 @@
 
 /* USER CODE BEGIN PV */
 // Buffer to store data coming IN from the ADC
-uint16_t adc_buffer[BUFFER_SIZE];
+volatile uint16_t adc_buffer[BUFFER_SIZE];
 
 // Buffer to send data OUT to the SAI
-uint16_t sai_buffer[BUFFER_SIZE];
+volatile uint16_t sai_buffer[BUFFER_SIZE];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -105,6 +105,12 @@ int main(void)
   MX_SAI1_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+
+  // Run ADC Calibration
+  if (HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED) != HAL_OK)
+  {
+    Error_Handler();
+  }
 
   // 1. Start the SAI (Output) first so it is ready to receive data
   // Note: We cast to uint8_t* because the HAL function expects it, even for 16-bit data.
