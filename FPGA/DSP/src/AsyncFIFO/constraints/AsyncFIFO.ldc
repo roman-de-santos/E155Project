@@ -1,0 +1,60 @@
+set device "iCE40UP5K"
+set device_int "itpa08"
+set package "SG48"
+set package_int "SG48"
+set speed "High-Performance_1.2V"
+set speed_int "6"
+set operation "Industrial"
+set family "iCE40UP"
+set architecture "ice40tp"
+set partnumber "iCE40UP5K-SG48I"
+set WRAPPER_INST "lscc_fifo_dc_inst"
+set WADDR_DEPTH 4
+set WDATA_WIDTH 16
+set RADDR_DEPTH 4
+set RDATA_WIDTH 16
+set FIFO_CONTROLLER "FABRIC"
+set FWFT 0
+set FORCE_FAST_CONTROLLER 0
+set IMPLEMENTATION "EBR"
+set WADDR_WIDTH 2
+set RADDR_WIDTH 2
+set REGMODE "reg"
+set OREG_IMPLEMENTATION "LUT"
+set RESETMODE "async"
+set ENABLE_ALMOST_FULL_FLAG "FALSE"
+set ALMOST_FULL_ASSERTION "static-dual"
+set ALMOST_FULL_ASSERT_LVL 3
+set ALMOST_FULL_DEASSERT_LVL 2
+set ENABLE_ALMOST_EMPTY_FLAG "FALSE"
+set ALMOST_EMPTY_ASSERTION "static-dual"
+set ALMOST_EMPTY_ASSERT_LVL 1
+set ALMOST_EMPTY_DEASSERT_LVL 2
+set ENABLE_DATA_COUNT_WR "FALSE"
+set ENABLE_DATA_COUNT_RD "FALSE"
+set FAMILY "iCE40UP"
+
+
+if {$FAMILY == "LAV-AT"} {
+    set WR_CLK_PERIOD 5
+    set RD_CLK_PERIOD 5
+    
+    create_clock -name {wr_clk_i} -period $WR_CLK_PERIOD [get_ports wr_clk_i]
+    create_clock -name {rd_clk_i} -period $RD_CLK_PERIOD [get_ports rd_clk_i]
+}
+
+if {$FAMILY == "LIFCL" | $FAMILY == "LFCPNX" | $FAMILY == "LFD2NX" | $FAMILY == "LFMXO5"} {
+    set WR_CLK_PERIOD 8
+    set RD_CLK_PERIOD 8
+    
+    create_clock -name {wr_clk_i} -period $WR_CLK_PERIOD [get_ports wr_clk_i]
+    create_clock -name {rd_clk_i} -period $RD_CLK_PERIOD [get_ports rd_clk_i]
+}
+
+if {$FAMILY == "iCE40UP"} {
+    set WR_CLK_PERIOD 10
+    set RD_CLK_PERIOD 10
+    
+    create_clock -name {wr_clk_i} -period $WR_CLK_PERIOD [get_ports wr_clk_i]
+    create_clock -name {rd_clk_i} -period $RD_CLK_PERIOD [get_ports rd_clk_i]
+}

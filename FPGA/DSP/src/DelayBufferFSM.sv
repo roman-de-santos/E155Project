@@ -164,9 +164,9 @@
 			
 			// Max and min delay clamping
 			delaySum = (ADDR_WIDTH+1)'(AVG_DELAY) + (ADDR_WIDTH+1)'(extraDelay_s_i);
-			if 		(delaySum < 0) 					totalDelay = '0;
+			if 		(delaySum < 0) 						totalDelay = '0;
 			else if (delaySum > $signed(MAX_DELAY)) 	totalDelay = (ADDR_WIDTH'(MAX_DELAY));
-			else									totalDelay = $unsigned(ADDR_WIDTH'(delaySum));
+			else										totalDelay = $unsigned(ADDR_WIDTH'(delaySum));
 
 			// Calculate read address w/ wrap-around logic.
 			if (writeAddr_s >= totalDelay) begin
