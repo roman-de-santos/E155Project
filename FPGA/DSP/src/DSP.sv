@@ -23,7 +23,7 @@
 
 		// Data from I2S RX Async FIFO
 		input logic [PKT_WIDTH-1:0] i2sRxPkt_i,        // Dry input audio sample
-		input logic                 i2sRxPktValid_i,   // Strobe: New valid sample from RX FIFO
+		input logic                 pktI2SRxChanged_i,   // Strobe: New valid sample from RX FIFO
 
 		// User settings for LFO
 		input logic [3:0]           freqSetting_i,
@@ -31,7 +31,7 @@
 
 		// Data to I2S TX Async FIFO
 		output logic [PKT_WIDTH-1:0] i2sTxPkt_o,       // Mixed wet/dry audio sample
-		output logic                 i2sTxPktValid_o,  // Strobe: New valid sample to TX FIFO
+		output logic                 i2sTxPktChanged_o,  // Strobe: New valid sample to TX FIFO
 		
 		// Status/Error Outputs (optional)
 		output logic                 errorLED_o         // Delay Buffer FSM error
@@ -39,20 +39,21 @@
 		// Internal DSP logic
 		logic clkDSP;	// DSP System Clock (6 MHz)
 		logic [PKT_WIDTH-1:0] pktDry;
-		logic 				  pktDryChanged;// the same as i2sRxPktValid_i??
+		logic 				  pktDryChanged;// the same as pktI2SRxChanged_i??
 		logic [PKT_WIDTH-1:0] pktWet;
 		logic 				  pktWetChanged;
 		logic [PKT_WIDTH-1:0] delayLFO;
-		logic 		 		  rstDSP_n;
+		logic 		 		  rstI2S_n;
 		logic [PKT_WIDTH-1:0] pktMixed;
-		logic                 LFONewVal;
+		logic                 LFOChanged;
+		logic                 pktMixChanged;
 		
 		// Reset synchronizer to clkDSP
 		synchronizer rstDSP_sync(
 			.clk	( clkDSP );
 			.rst_n	(1'd1); // never resets
 			.d_a	( rst_n );
-			.q		( rstDSP_n );
+			.q		( rstI2S_n );
 		);
 		
 		// Generate clkDSP by instantiating high speed oscillator module from iCE40 library
@@ -75,8 +76,8 @@
 
 			// --- Write Domain (Slow) Interface ---
 			.pkt_i             (i2sRxPkt_i),      	// 16-bit audio packet to write
-			.pktChanged_i      (i2sRxPktValid_i), 	// Write Enable strobe (@ ~44.1kHz)
-			.rdEN_i            (pktWetChanged),		// Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
+			.pktChanged_i      (pktI2SRxChanged_i), 	// Write Enable strobe (@ ~44.1kHz)
+			.rdEN_i            (1'b1),		// Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
 
 			// --- Read Domain (Fast) Interface ---
 			.pktOut_s_o        (pktDry),  		// FIFO output
@@ -85,12 +86,12 @@
 
 		LFOgen (
 			.clk_i         (clkDSP),
-			.reset_i       (rst_n),
+			.reset_i       (rstI2S_n),
 			.freqSetting_i (freqSetting_i), 
 			.scaleFactor_i (scaleFactor_i),      
-			.FIFOupdate_i  (i2sRxPktValid_i),
+			.FIFOupdate_i  (pktI2SRxChanged_i),
 			.wave_o        (delayLFO),
-			.newValFlag_o  (LFONewVal)
+			.newValFlag_o  (LFOChanged)
 		);
 
 		
@@ -105,7 +106,7 @@
 			.clk                      (clkDSP),
 			.pkt_reg_i                (pktDry),              // Data In (Dry Signal)
 			.pktChanged_reg_i         (pktDryChanged),        // Write Strobe
-			.extraDelay_reg_i         (delayLFO),     // Variable Delay Offset
+			.extraDelay_reg_i         (delayLFO),           // Variable Delay Offset
 			.pktDelayed_reg_o         (pktWet),              // Data Out (Wet/Delayed Signal)
 			.pktDelayedChanged_comb_o (pktWetChanged),       // Read Strobe (Wet Valid)
 			.errorLED_reg_o           (errorLED_o)            // Error Output
@@ -114,12 +115,12 @@
 		Mixer #(
 			WIDTH = 16
 		) Mixer0 (
-			.clk       (clkDSP), 
-			.rst_n     (rst_n),
-		    .pktWet    (pktWet),
-            .pktDry    (pktDry),
-			.pktMixed  (pktMixed),
-			.pktChange (pktMixChanged)
+			.clk_i       (clkDSP), 
+			.rst_n_i     (rst_n),
+		    .pktWet_i    (pktWet),
+            .pktDry_i    (pktDry),
+			.pktMixed_o  (pktMixed),
+			.pktChange_o (pktMixChanged)
 		);
 		
 
@@ -132,16 +133,16 @@
 			// --- Clock & Global Reset Inputs ---
 			.clkRead_i         (clkDSP),    		// For STF: slow clock (1.4122 MHz), for FTS: fast clock (6 MHz)
 			.clkWrite_i        (clkI2S),        // For STF: fast clock (6 MHz), for FTS: slow clock (1.4122 MHz)
-			.rstWrite_n_i      (rst_n),      // Active low reset from write side
+			.rstWrite_n_i      (rstI2S_n),      // Active low reset from write side
 
 			// --- Write Domain (Slow) Interface ---
 			.pkt_i             (pktMixed),      	// 16-bit audio packet to write
 			.pktChanged_i      (pktMixChanged), 	// Write Enable strobe (@ ~44.1kHz)
-			.rdEN_i            (),			// Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
+			.rdEN_i            (1'b1),			        // Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
 
 			// --- Read Domain (Fast) Interface ---
-			.pktOut_s_o        (),  		// FIFO output
-			.pktOutChanged_c_o () 	// Strobe: '1' when new sample is different from old
+			.pktOut_s_o        (i2sTxPkt_o),  		// FIFO output
+			.pktOutChanged_c_o (i2sTxPktChanged_o) 	// Strobe: '1' when new sample is different from old
 		);
 		
 	endmodule
