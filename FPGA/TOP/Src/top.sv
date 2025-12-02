@@ -7,7 +7,9 @@ module top(
     input  logic [3:0] scaleFactor_i,
     output logic sclk_o,
     output logic ws_o,
-    output logic sdata_o
+    output logic sdata_o,
+    output logic errorLED,
+    output logic rstI2S_n
            );
 
 // Internal Logic
@@ -19,7 +21,7 @@ logic errorLED;
 
 // Instantiate modules
 
-I2Srx #(WIDTH) I2Srx0 (
+I2Srx #(WIDTH) u_I2Srx (
     .sclk_i          (sclk_i), 
     .rst_i           (rst_n_i), 
     .ws_i            (ws_i), 
@@ -29,8 +31,8 @@ I2Srx #(WIDTH) I2Srx0 (
     .pktI2SRxChanged (pktI2SRxChanged)
 );
 
-DSP #(PKT_WIDTH = WIDTH) u_DSP (
-    .rst_n              (rst_n_i),
+DSP #(WIDTH) u_DSP (
+    .rst_n             (rst_n_i),
     .clkI2s            (sclk_i),
     .i2sRxPkt_i        (rightChanIn),
     .pktI2SRxChanged_i (pktI2SRxChanged),
