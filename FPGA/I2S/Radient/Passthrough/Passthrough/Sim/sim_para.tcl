@@ -5,7 +5,7 @@ set ::bali::simulation::Para(DEVICEFAMILYNAME) {iCE40UP}
 set ::bali::simulation::Para(PROJECT) {Sim}
 set ::bali::simulation::Para(MDOFILE) {}
 set ::bali::simulation::Para(PROJECTPATH) {C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Radient/Passthrough/Passthrough/Sim}
-set ::bali::simulation::Para(FILELIST) {"C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv" }
+set ::bali::simulation::Para(FILELIST) {"C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv" "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv" }
 set ::bali::simulation::Para(GLBINCLIST) {}
 set ::bali::simulation::Para(INCLIST) {"none" "none" "none" "none"}
 set ::bali::simulation::Para(WORKLIBLIST) {"work" "work" "work" "" }

@@ -47,7 +47,7 @@ task send_i2s_frame(
         // --- Left Channel (WS=0) ---
         @ (negedge sclk_i);
         ws_i <= 0;
-        @ (negedge sclk_i);
+        @ (negedge sclk_i); // Needed to align?
 
         // Send bits MSB first
         for (int i = WIDTH - 1; i >= 0; i--) begin

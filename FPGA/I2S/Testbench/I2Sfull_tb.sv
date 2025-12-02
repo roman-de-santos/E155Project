@@ -24,8 +24,8 @@ end
 
 
 // Instantiate modules
-I2Stx #(WIDTH) I2Stx0 (sclk, rst, ws, sdata, left_tx_chan, right_tx_chan);
-I2Srx #(WIDTH) I2Srx0 (sclk, rst, ws, sdata, left_rx_chan, right_rx_chan, pktI2SRxChanged_o);
+I2Stx #(WIDTH) I2Stx0 (sclk, ~rst, ws, sdata, left_tx_chan, right_tx_chan);
+I2Srx #(WIDTH) I2Srx0 (sclk, ~rst, ws, sdata, left_rx_chan, right_rx_chan, pktI2SRxChanged_o);
 
 // Test data transfer
 initial begin
@@ -37,15 +37,15 @@ initial begin
 	@(negedge rst);
 
     // Transfer left data
-	@(posedge ws);
+	@(negedge ws);
 
     //Transfer right data
-	@(negedge ws);
+	@(posedge ws);
 
     
 	@(posedge sclk);
 	@(negedge sclk);
-	if (left_rx_chan == left_tx_chan && right_rx_chan == right_tx_chan)
+	if (left_rx_chan == (left_tx_chan << 4) && right_rx_chan == (right_tx_chan << 4))
 		$display("Test passed!");
 	else
 		$display("Test failed! Recieved (L):%h, (R):%h; Sent (L):%h, (R):%h", left_rx_chan, right_rx_chan, left_tx_chan, right_tx_chan);

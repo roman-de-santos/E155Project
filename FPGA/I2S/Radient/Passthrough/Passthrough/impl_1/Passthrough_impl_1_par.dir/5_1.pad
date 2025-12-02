@@ -6,20 +6,21 @@ Performance Grade:      High-Performance_1.2V
 PACKAGE:          SG48
 Package Status:                     Preliminary    Version 1.5
 
-Wed Nov 19 15:53:49 2025
+Tue Dec  2 02:09:01 2025
 
 Pinout by Port Name:
-+-----------+----------+--------------+-------+------------------------------------------+
-| Port Name | Pin/Bank | Buffer Type  | Site  | Properties                               |
-+-----------+----------+--------------+-------+------------------------------------------+
-| rst       | 43/0     | LVCMOS33_IN  | PR10A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| sclk_in   | 47/2     | LVCMOS33_IN  | PL7A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| sclk_out  | 13/1     | LVCMOS33_OUT | PL20A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| sdata_in  | 2/2      | LVCMOS33_IN  | PL9A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| sdata_out | 12/1     | LVCMOS33_OUT | PL19A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-| ws_in     | 10/1     | LVCMOS33_IN  | PL17A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
-| ws_out    | 20/1     | LVCMOS33_OUT | PL20B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
-+-----------+----------+--------------+-------+------------------------------------------+
++-------------------+----------+--------------+-------+------------------------------------------+
+| Port Name         | Pin/Bank | Buffer Type  | Site  | Properties                               |
++-------------------+----------+--------------+-------+------------------------------------------+
+| pktI2SRxChanged_o | 9/1      | LVCMOS33_OUT | PL16A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| rst               | 43/0     | LVCMOS33_IN  | PR10A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| sclk_in           | 47/2     | LVCMOS33_IN  | PL7A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| sclk_out          | 13/1     | LVCMOS33_OUT | PL20A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| sdata_in          | 2/2      | LVCMOS33_IN  | PL9A  | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| sdata_out         | 12/1     | LVCMOS33_OUT | PL19A | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
+| ws_in             | 10/1     | LVCMOS33_IN  | PL17A | DRIVE:NA IO_TYPE:LVCMOS33 PULLMODE:100K  |
+| ws_out            | 20/1     | LVCMOS33_OUT | PL20B | DRIVE:8mA IO_TYPE:LVCMOS33 PULLMODE:NA   |
++-------------------+----------+--------------+-------+------------------------------------------+
 
 Vccio by Bank:
 +------+-------+
@@ -38,7 +39,7 @@ Pinout by Pin Number:
 | 3/2      |     unused, PULL:UP |            |              | PL10B |                  |
 | 4/2      |     unused, PULL:UP |            |              | PL10A |                  |
 | 6/1      |     unused, PULL:UP |            |              | PL14B |                  |
-| 9/1      |     unused, PULL:UP |            |              | PL16A |                  |
+| 9/1      | pktI2SRxChanged_o   |            | LVCMOS33_OUT | PL16A |                  |
 | 10/1     | ws_in               | LOCATED    | LVCMOS33_IN  | PL17A |                  |
 | 11/1     |     unused, PULL:UP |            |              | PL18A |                  |
 | 12/1     | sdata_out           | LOCATED    | LVCMOS33_OUT | PL19A |                  |
@@ -95,6 +96,7 @@ Pinout by Pin Number:
 
 Locate Constraints for each Pin: 
 
+ldc_set_location -site {9} [ get_ports {pktI2SRxChanged_o} ]
 ldc_set_location -site {43} [ get_ports {rst} ]
 ldc_set_location -site {47} [ get_ports {sclk_in} ]
 ldc_set_location -site {13} [ get_ports {sclk_out} ]
@@ -109,5 +111,5 @@ ldc_set_location -site {20} [ get_ports {ws_out} ]
 
 Copyright (c) 2002-2024 Lattice Semiconductor Corporation,  All rights reserved.
 
-Wed Nov 19 15:53:49 2025
+Tue Dec  2 02:09:01 2025
 

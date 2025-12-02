@@ -1,4 +1,4 @@
-<top name = "top"  library = "work"  arch = ""  entry = "Verilog">
+<top name = "top_I2S"  library = "work"  arch = ""  entry = "Verilog">
 
 <clocks>
     <clockitem name = "sclk_in"  type = "port" />
