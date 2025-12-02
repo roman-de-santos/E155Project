@@ -18,10 +18,10 @@ logic errorLED;
 logic rstI2S_n;
 
 // I2S test cases
-logic testLeft1;
-logic testRight1;
-logic testLeft2;
-logic testRight2;
+logic [WIDTH-1:0] testLeft1, testRight1, testLeft2, testRight2;
+
+// Test bench signals
+logic test_num = 0;
 
 // Clock gen (44.1kHz)
 localparam sclkTs = 709;
@@ -33,7 +33,7 @@ end
 
 // Reset
 initial begin
-    #45 rst_n_i = 0;
+    #100 rst_n_i = 0;
 end
 
 // Instantiate modules
@@ -51,7 +51,7 @@ top dut (
 	.rstI2S_n       (rstI2S_n)
 );
 
-// I2S generating tast
+// I2S bitstream generating task
 task send_i2s_frame(
         input [WIDTH-1:0] left_data,
         input [WIDTH-1:0] right_data
@@ -108,8 +108,9 @@ initial begin
         $display("Reset complete. Starting test cases...");
 
         // Test Case 1
-        testLeft1  = 16'hDEAD;
-        testRight1 = 16'hBEEF;
+		test_num = 1;
+        testLeft1  = 16'h0DAD;
+        testRight1 = 16'h0BEF;
 
         // Send the first frame
         send_i2s_frame(testLeft1, testRight1);
@@ -117,9 +118,10 @@ initial begin
         // Give a delay for signals to propagate before checking
         #(sclkTs*100);
 
-		// Test Case 1
-        testLeft2  = 16'hCABB;
-        testRight2 = 16'hFABB;
+		// Test Case 2
+		test_num = 2;
+        testLeft2  = 16'h0AAA;
+        testRight2 = 16'h0BBB;
 		
         // Send the second frame
         send_i2s_frame(testLeft2, testRight2);
