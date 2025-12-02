@@ -3,9 +3,9 @@
 -reflib ovi_ice40up
 
 
-"C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top.sv" 
 "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv" 
 "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv" 
+"C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv" 
 "C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv" 
 -sv
 -optionset VOPTDEBUG

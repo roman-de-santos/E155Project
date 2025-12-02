@@ -2270,3 +2270,373 @@ C:/Users/rdesantos/Documents/GitHub/E155Project/FPGA/Src/I2Srx.sv(59): ERROR: mo
 -- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
 -- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
 -- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv' (VERI-1482)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(33): ERROR: 'ws' is not declared (VERI-1128)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(38): ERROR: 'sdata' is not declared (VERI-1128)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(41): ERROR: 'ws' is not declared (VERI-1128)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(49): ERROR: 'sdata' is not declared (VERI-1128)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(51): ERROR: 'ws' is not declared (VERI-1128)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(58): ERROR: 'ws' is not declared (VERI-1128)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(74): ERROR: 'ws' is not declared (VERI-1128)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(75): ERROR: 'sdata' is not declared (VERI-1128)
+C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv(112): ERROR: module 'i2s_rx_tb' is ignored due to previous errors (VERI-1072)
+-- Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Srx_tb.sv' ignored due to errors (VERI-1483)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/standard.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_1164.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mgc_qsim.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_bit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/numeric_std.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/std_logic_textio.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_attr.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_misc.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/math_real.vhd' (VHDL-1481)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/mixed_lang_vltype.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_arit.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_sign.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/syn_unsi.vhd
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/ispfpga/vhdl_packages/synattr.vhd
+-- Analyzing Verilog file 'C:/lscc/radiant/2025.1/cae_library/synthesis/verilog/iCE40UP.v' (VERI-1482)
+-- Analyzing VHDL file 'C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd' (VHDL-1481)
+-- Analyzing VHDL file C:/lscc/radiant/2025.1/cae_library/synthesis/vhdl/iCE40UP.vhd
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Srx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/I2Stx.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Src/top_I2S.sv' (VERI-1482)
+-- Analyzing Verilog file 'C:/Users/roman/Documents/GitHub/E155Project/FPGA/I2S/Testbench/I2Sfull_tb.sv' (VERI-1482)
