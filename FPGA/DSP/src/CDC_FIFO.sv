@@ -43,7 +43,7 @@ module CDC_FIFO #(
     // --- Write Domain (Slow) Interface ---
     input  logic [PKT_WIDTH-1:0]	pkt_i,      	// 16-bit audio packet to write
     input  logic        			pktChanged_i, 	// Write Enable strobe (@ ~44.1kHz)
-	input  logic					readEN_i,		// Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
+	input  logic					rdEN_i,			// Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
 
     // --- Read Domain (Fast) Interface ---
     output logic [PKT_WIDTH-1:0]	pktOut_s_o,  		// FIFO output
@@ -65,7 +65,7 @@ module CDC_FIFO #(
 	 * - Depth: 4
 	 * - Width: 16
      * - Implementation: EBR
-     * - Output Mode: First-Word Fall-Through (FWFT)
+     * - Output Mode: First-Word Fall-Through (FWFT)			// TODO: MIGHT WANNA DISABLE FWFT
      * - Output register: enabled (1 cycle delay)
      */
     AsyncFIFO CDC_AFIFO_STF (
@@ -74,7 +74,7 @@ module CDC_FIFO #(
         .rst_i      (!rstWrite_n_i),
         .rp_rst_i   (!rstWrite_n_i),
         .wr_en_i    (wrEN_c),
-        .rd_en_i    (!fifoEmpty_c),
+        .rd_en_i    (rdEN_i),
         .wr_data_i  (pkt_i),
 		
         .full_o     (fifoFull_c),
@@ -83,9 +83,10 @@ module CDC_FIFO #(
     );
 	
 	always_ff @( posedge clkWrite_i ) begin
-		if 	(!rstWrite_n_i) 			fifoPktOut_old_s <= '0;
-		else if (!fifoEmpty_c)	fifoPktOut_old_s <= fifoPktOut_old_s;
-		else						fifoPktOut_old_s <= fifoPktOut_s;
+		if 	(!rstWrite_n_i) fifoPktOut_old_s <= '0;
+		//else if (!fifoEmpty_c)	fifoPktOut_old_s <= fifoPktOut_s; // I couldn't get selective updating working
+		//else				fifoPktOut_old_s <= fifoPktOut_old_s;
+		else				fifoPktOut_old_s <= fifoPktOut_s; 	// Always latch new value
 	end
 
     // Output Assignments

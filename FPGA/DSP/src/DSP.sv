@@ -19,7 +19,7 @@
 	) (
 		input logic                 	rst_n,   	// Active-low asynchronous reset
 		input logic                 	clkI2S,  	// Asynchronous 1.4112 MHz I2S clock from MCU
-		input logic					rstI2S_n;	// The same reset but synchronized to the I2S clock
+		input logic						rstI2S_n;	// The same reset but synchronized to the I2S clock
 
 		// Data from I2S RX Async FIFO
 		input logic [PKT_WIDTH-1:0] i2sRxPkt_i,        // Dry input audio sample

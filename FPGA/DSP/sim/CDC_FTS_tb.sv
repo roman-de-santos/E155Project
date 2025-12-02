@@ -30,6 +30,8 @@ module CDC_FTS_tb;
     logic clkI2SBit_i;
     logic clkDSP_i;
     logic rstDSP_n_i;
+	logic sampleRate;
+	logic [3:0] sampleRate_count = 4'd0; // 4-bit counter (0 to 15) for division by 16
 
     // Write Interface (Fast)
     logic [PKT_WIDTH-1:0] pktI2S_i;
@@ -50,13 +52,26 @@ module CDC_FTS_tb;
     // Clock Generation (Asynchronous)
     // -------------------------------------------------------------------------
     
-    // Slow Clock (1.4112 MHz)
+    // Slow (I2S) Clock (1.4112 MHz)
     initial begin
         clkI2SBit_i = 0;
         forever #(CLK_SLOW_PERIOD/2.0) clkI2SBit_i = ~clkI2SBit_i;
     end
+	
+	// Sample rate counter
+	always_ff @(posedge clkI2SBit_i) begin
+		if (!rstDSP_n_i ) sampleRate <= 1'b0;
+		// Reset condition: when the counter reaches 15 (its final count)
+		else if (sampleRate_count == 4'd15) begin
+			sampleRate_count <= 4'd0;    // Reset the counter
+			sampleRate <= 1'b1;
+		end else begin
+			sampleRate_count <= sampleRate_count + 1; // Increment the counter
+			sampleRate <= 1'b0;
+		end
+	end
 
-    // Fast Clock (6 MHz)
+    // Fast (DSP) Clock (6 MHz)
     initial begin
         clkDSP_i = 0;
         // Offset start slightly to ensure edges aren't perfectly aligned
@@ -67,16 +82,17 @@ module CDC_FTS_tb;
     // -------------------------------------------------------------------------
     // DUT Instantiation
     // -------------------------------------------------------------------------
-    CDC_STF #(
+    CDC_FIFO #(
         .PKT_WIDTH(PKT_WIDTH)
     ) DUT (
-        .clkI2SBit_i     (clkDSP_i),
-        .clkDSP_i        (clkI2SBit_i),
-        .rstDSP_n_i      (rstDSP_n_i),
-        .pktI2S_i      	(pktI2S_i),
-        .pktValidI2S_i (pktValidI2S_i),
-        .pktDSP_reg_o    (pktDSP_reg_o),
-        .pktChangedDSP_comb_o (pktChangedDSP_comb_o)
+        .clkRead_i     	(clkDSP_i),
+        .clkWrite_i        (clkI2SBit_i),
+        .rstWrite_n_i      (rstDSP_n_i),
+        .pkt_i      		(pktI2S_i),
+        .pktChanged_i 		(pktValidI2S_i),
+		.rdEN_i				(sampleRate),
+        .pktOut_s_o    	(pktDSP_reg_o),
+        .pktOutChanged_c_o (pktChangedDSP_comb_o)
     );
 	
 	// Lattice iCE40 power up reset requirement for sim
@@ -149,7 +165,7 @@ module CDC_FTS_tb;
 				
 		
         // Allow time for data to propagate through CDC
-        wait_slow_cycles(20);
+        wait_slow_cycles(50);
 		
 		// -------------------------------------------------------------------------
 		// Test 2: Writing immediately after reset	
@@ -162,12 +178,12 @@ module CDC_FTS_tb;
         repeat (5) @(posedge clkDSP_i);
         @(posedge clkI2SBit_i)    rstDSP_n_i   = 1'b1;
 		
-		write_packet(16'h0001);
-		write_packet(16'h0010);
-		write_packet(16'h0100);
-		write_packet(16'h1000);
+		write_packet(16'hAAAA);
+		write_packet(16'hBBBB);
+		write_packet(16'hCCCC);
+		write_packet(16'hDDDD);
 		
-		wait_slow_cycles(20);
+		wait_slow_cycles(50);
 		
 		
 		// -------------------------------------------------------------------------
@@ -186,7 +202,7 @@ module CDC_FTS_tb;
 		@(posedge clkDSP_i)	pktI2S_i  <= 16'hEEEE;
 		@(posedge clkDSP_i)	pktI2S_i  <= 16'hFFFF;
 		
-		wait_slow_cycles(20);
+		wait_slow_cycles(100);
 		
 		
 		/*

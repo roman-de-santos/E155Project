@@ -108,16 +108,17 @@ module CDC_STF_tb;
     // -------------------------------------------------------------------------
     // DUT Instantiation
     // -------------------------------------------------------------------------
-    CDC_STF #(
+    CDC_FIFO #(
         .PKT_WIDTH(PKT_WIDTH)
     ) DUT (
-        .clkI2SBit_i     (clkI2SBit_i),
-        .clkDSP_i        (clkDSP_i),
-        .rstDSP_n_i      (rstDSP_n_i),
-        .pktI2S_i      	(pktI2S_i),
-        .pktValidI2S_i (pktValidI2S_i),
-        .pktDSP_reg_o    (pktDSP_reg_o),
-        .pktChangedDSP_comb_o (pktChangedDSP_comb_o)
+        .clkRead_i     		(clkI2SBit_i),
+        .clkWrite_i        	(clkDSP_i),
+        .rstWrite_n_i      	(rstDSP_n_i),
+        .pkt_i      		(pktI2S_i),
+        .pktChanged_i 		(pktValidI2S_i),
+		.rdEN_i				(1'b1), // MAYBE CAUSES A BUG--should only actually read when not empty
+        .pktOut_s_o    		(pktDSP_reg_o),
+        .pktOutChanged_c_o	(pktChangedDSP_comb_o)
     );
 	
 	// Lattice iCE40 power up reset requirement for sim
@@ -189,9 +190,6 @@ module CDC_STF_tb;
 		test_num = 1;
         $display("Starting Test 1: Single packet input -> output latency");
 		write_packet(16'h0001);
-		write_packet(16'h0010);
-		write_packet(16'h0100);
-		write_packet(16'h1000);
 		
 		
         // Allow time for data to propagate through CDC
@@ -208,10 +206,10 @@ module CDC_STF_tb;
         repeat (5) @(posedge clkI2SBit_i);
         @(posedge clkDSP_i)    rstDSP_n_i   = 1'b1;
 		
-		write_packet(16'h0001);
-		write_packet(16'h0010);
-		write_packet(16'h0100);
-		write_packet(16'h1000);
+		write_packet(16'hAAAA);
+		write_packet(16'hBBBB);
+		write_packet(16'hCCCC);
+		write_packet(16'hDDDD);
 		
 		wait_fast_cycles(20);
 		
