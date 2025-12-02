@@ -53,7 +53,7 @@
 		synchronizer u_RstI2Ssync(
 			.clk	( clkDSP ),
 			.rst_n	( 1'd1 ), // never resets
-			.d_a	( rst_n ),
+			.d_a	( ~rst_n ),
 			.q		( rstI2S_n_o )
 		);
 		
@@ -73,7 +73,7 @@
 			// --- Clock & Global Reset Inputs ---
 			.clkRead_i         (clkI2S), 	// For STF: slow clock (1.4122 MHz), for FTS: fast clock (6 MHz)
 			.clkWrite_i        (clkDSP),   // For STF: fast clock (6 MHz), for FTS: slow clock (1.4122 MHz)
-			.rstWrite_n_i      (rst_n),		// Active low reset from write side (syncronize???)
+			.rstWrite_n_i      (~rst_n),		// Active low reset from write side (syncronize???)
 
 			// --- Write Domain (Slow) Interface ---
 			.pkt_i             (i2sRxPkt_i),      	// 16-bit audio packet to write
@@ -87,7 +87,7 @@
 
 		LFOgen u_DelayLFO(
 			.clk_i         (clkDSP),
-			.reset_i       (rst_n),
+			.reset_i       (~rst_n),
 			.freqSetting_i (freqSetting_i), 
 			.scaleFactor_i (scaleFactor_i),      
 			.FIFOupdate_i  (pktI2SRxChanged_i),
@@ -103,7 +103,7 @@
 			.AVG_DELAY      (882),		// Default (20 ms)
 			.PKT_WIDTH      (PKT_WIDTH) // Should be 16
 		) u_DelayBuffer (
-			.rst_n                    (rst_n),
+			.rst_n                    (~rst_n),
 			.clk                      (clkDSP),
 			.pkt_s_i                (pktDry),              // Data In (Dry Signal)
 			.pktChanged_s_i         (pktDryChanged),        // Write Strobe
@@ -118,7 +118,7 @@
 			.WIDTH(PKT_WIDTH)
 		) u_Mixer (
 			.clk_i       		(clkDSP), 
-			.rst_n_i     		(rst_n),
+			.rst_n_i     		(~rst_n),
 		    .pktWet_i    		(pktWet),
             .pktDry_i    		(pktDry),
 			.pktWetChanged_i		(pktWetChanged),
@@ -134,7 +134,7 @@
 			// --- Clock & Global Reset Inputs ---
 			.clkRead_i         (clkDSP),    		// For STF: slow clock (1.4122 MHz), for FTS: fast clock (6 MHz)
 			.clkWrite_i        (clkI2S),        // For STF: fast clock (6 MHz), for FTS: slow clock (1.4122 MHz)
-			.rstWrite_n_i      (rst_n),      // Active low reset from write side
+			.rstWrite_n_i      (~rst_n),      // Active low reset from write side
 
 			// --- Write Domain (Slow) Interface ---
 			.pkt_i             (pktMixed),      	// 16-bit audio packet to write
