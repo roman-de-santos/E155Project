@@ -12,15 +12,21 @@ logic sdata_o;
 logic errorLED;
 logic rstI2S_n;
 
+// I2S test cases
+logic testLeft1;
+logic testRight1;
+logic testLeft2;
+logic testRight2
+
 // Clock Gen
 always begin
     #5 
-    sclk <= ~sclk;
+    sclk_i <= ~sclk_i;
 end
 
 // Reset
 initial begin
-    #45 rst = 0;
+    #45 rst_n_i = 0;
 end
 
 // Instantiate modules
@@ -38,29 +44,81 @@ top dut (
 	.rstI2S_n       (rstI2S_n)
 );
 
+// I2S generating tast
+task send_i2s_frame(
+        input [WIDTH-1:0] left_data,
+        input [WIDTH-1:0] right_data
+    );
+    begin
+        // Send Left Channel (ws=0)
+        @ (negedge sclk_i); // WS transition edge
+        ws_i <= 0;
+        
+
+        // Now, send all bits for the left channel, MSB first
+        for (int i = WIDTH - 1; i >= 0; i--) begin
+            sdata_i <= left_data[i];
+			
+			if (i == 0) begin // change Ws one cycle before the LSB
+				ws_i <= 1;
+			end
+            @ (negedge sclk_i);
+        end
+        
+
+        // Now, send all bits for the right channel, MSB first
+        for (int i = WIDTH - 1; i >= 0; i--) begin
+            sdata_i <= right_data[i];
+			if (i == 0) begin // change Ws one cycle before the LSB
+				ws_i <= 0;
+			end
+            @ (negedge sclk_i);
+        end
+        
+        // End of Frame 
+        @ (negedge sclk_i); // WS transition edge
+        ws <= 0;
+
+    end
+    endtask
+
 // Test data transfer
 initial begin
-    // Load transmit channels
-	left_tx_chan  = 16'hdead;
-	right_tx_chan = 16'hbeef;
-	freqSetting_i = 4'b0001;
-	scaleFactor_i = 4'b0001;
+	// Reset Phase 
+        $display("Starting testbench...");
+        rst_n_i = 0;    // Assert reset
+        ws_i = 0;     // Initialize signals
+        sdata_i = 0;
+        #100;       
+        rst_n_i = 1;  
 
-    //Sync to reset stage
-	@(negedge rst);
+		// Test different settings
+		freqSetting_i = 4'b0001;
+		scaleFactor_i = 4'b0001;  
 
-    // Transfer left data
-	@(posedge ws);
+        @ (posedge sclk_i); // Wait for one clock edge
+        
+        $display("Reset complete. Starting test cases...");
 
-    //Transfer right data
-	@(negedge ws);
+        // Test Case 1
+        testLeft1  = 16'hDEAD;
+        testRight1 = 16'hBEEF;
 
-	left_tx_chan  = 16'hbeef;
-	right_tx_chan = 16'hdead;
-    
-	@(posedge sclk);
-	@(negedge sclk);
-	#100 $stop();
+        // Send the first frame
+        send_i2s_frame(testLeft1, testRight1);
+        
+        // Give a small delay for signals to propagate before checking
+        #300;
+
+		// Test Case 1
+        testLeft2  = 16'hCABB;
+        testRight2 = 16'hFABB;
+		
+        // Send the second frame
+        send_i2s_frame(testLeft2, testRight2);
+        
+		#300 
+		$stop();
 end
 
 endmodule
