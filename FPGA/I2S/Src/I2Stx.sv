@@ -16,7 +16,7 @@ module I2Stx #(
 
 	// Counter
     always @(negedge sclk_i) begin
-        if (rst_i)
+        if (~rst_i)
             bitCnt <= 0;
         else if (bitCnt >= WIDTH*2)
             bitCnt <= 0;
@@ -31,7 +31,7 @@ module I2Stx #(
 		// Assign value first to prevent logic overwriting LSB
 		
 		
-		if (rst_i) begin
+		if (~rst_i) begin
 			shift_reg <= {1'b0, leftChan_i, rightChan_i};
 			sdata_o <= 1'b0;
 		end else if (bitCnt == (WIDTH*2 - 2)) begin
@@ -50,7 +50,7 @@ module I2Stx #(
 	
 	// ws_o clock
 	always @(negedge sclk_i) begin
-		if (rst_i) begin
+		if (~rst_i) begin
 			ws_o <= 1;    // start with left channel
 		end else if ((bitCnt == (WIDTH)) || (bitCnt == (WIDTH*2))) begin
 			ws_o <= ~ws_o; 

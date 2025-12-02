@@ -31,7 +31,7 @@ assign wsPEdge = ws_i & !wsPrev;
 
 // Check previous cycle since I2S runs on a 1 cycle delay
 always @(posedge sclk_i) begin
-	if (rst_i)begin
+	if (~rst_i)begin
 		left       = 0;
 		right      = 0;
 	end else if (wsPrev) begin
