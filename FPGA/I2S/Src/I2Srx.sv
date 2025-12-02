@@ -44,9 +44,9 @@ end
 // Latch L/R audio data
 always @(posedge sclk_i) begin
     if (rst_i) begin
-        leftChan_o        <= 0;
-        rightChan_o       <= 0;
-        pktI2SRxChanged_o <= 0;
+        leftChan_o        <= '0;
+        rightChan_o       <= '0;
+        pktI2SRxChanged_o <= '0;
     end else if (wsNEdge) begin
         // End of Right channel. Latch the *fully assembled* right data.
         rightChan_o <= (right << 4);

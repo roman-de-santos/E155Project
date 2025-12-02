@@ -91,7 +91,7 @@
 			.freqSetting_i (freqSetting_i), 
 			.scaleFactor_i (scaleFactor_i),      
 			.FIFOupdate_i  (pktI2SRxChanged_i),
-			.wave_o        (delayLFO),
+			.wave_o        (delayLFO[13:0]), //TODO: fix output width of LFOgen to be properly 14 bits
 			.newValFlag_o  (LFOChanged)
 		);
 
