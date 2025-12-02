@@ -7,11 +7,13 @@ module top(
     input  logic [3:0] scaleFactor_i,
     output logic sclk_o,
     output logic ws_o,
-    output logic sdata_o
-           );
+    output logic sdata_o,
+    output logic errorLED,
+    output logic rstI2S_n
+    );
 
 // Internal Logic
-parameter WIDTH = 16;
+localparam WIDTH = 16;
 logic [WIDTH-1:0] leftChan_o, rightChan_o, leftChan, rightChanIn;
 logic i2sTxPktChanged;
 logic rstI2S_n;
@@ -30,7 +32,7 @@ I2Srx #(WIDTH) I2Srx0 (
 );
 
 DSP #(PKT_WIDTH = WIDTH) DSP0 (
-    .rst_n              (rst_n_i),
+    .rst_n             (rst_n_i),
     .clkI2s            (sclk_i),
     .i2sRxPkt_i        (rightChanIn),
     .pktI2SRxChanged_i (pktI2SRxChanged),
