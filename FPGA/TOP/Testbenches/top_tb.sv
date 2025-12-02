@@ -1,5 +1,6 @@
 module top_tb ();
 
+// Module Signals
 logic sclk_i = 1'b1;
 logic rst_n_i = 1'b0;
 logic ws_i;
@@ -18,9 +19,11 @@ logic testRight1;
 logic testLeft2;
 logic testRight2
 
-// Clock Gen
+// Clock gen (44.1kHz)
+localparam sclkTs = 709;
+
 always begin
-    #5 
+    #sclkTs 
     sclk_i <= ~sclk_i;
 end
 
@@ -107,8 +110,8 @@ initial begin
         // Send the first frame
         send_i2s_frame(testLeft1, testRight1);
         
-        // Give a small delay for signals to propagate before checking
-        #300;
+        // Give a delay for signals to propagate before checking
+        #(sclkTs*100);
 
 		// Test Case 1
         testLeft2  = 16'hCABB;
@@ -117,7 +120,8 @@ initial begin
         // Send the second frame
         send_i2s_frame(testLeft2, testRight2);
         
-		#300 
+		// Give a delay for signals to propagate before checking
+		#(sclkTs*100)
 		$stop();
 end
 
