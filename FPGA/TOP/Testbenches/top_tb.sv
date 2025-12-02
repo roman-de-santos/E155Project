@@ -26,21 +26,19 @@ initial begin
 end
 
 
-
-
 // Instantiate modules
 top dut (
-	. (sclk_i),
-	. (rst_n_i),
-	. (ws_i),
-	. (sdata_i),
-	. (freqSetting_i),
-	. (scaleFactor_i),
-	. (sclk_o),
-	. (ws_o),
-	. (sdata_o),
-	. (errorLED),
-	. (rstI2S_n)
+	.sclk_i (sclk_i),
+	.rst_n_i (rst_n_i),
+	.ws_i (ws_i),
+	.sdata_i (sdata_i),
+	.freqSetting_i (freqSetting_i),
+	.scaleFactor_i (scaleFactor_i),
+	.sclk_o (sclk_o),
+	.ws_o (ws_o),
+	.sdata_o (sdata_o),
+	.errorLED (errorLED),
+	.rstI2S_n (rstI2S_n)
 );
 
 
@@ -55,19 +53,19 @@ initial begin
 	scaleFactor_i = 4'b0001;
 
     //Sync to reset stage
-	@(negedge rst);
+	@(negedge rst_n_i);
 
     // Transfer left data
-	@(posedge ws);
+	@(posedge ws_i);
 
     //Transfer right data
-	@(negedge ws);
+	@(negedge ws_i);
 
 	left_tx_chan  = 16'hbeef;
 	right_tx_chan = 16'hdead;
     
-	@(posedge sclk);
-	@(negedge sclk);
+	@(posedge sclk_i);
+	@(negedge sclk_i);
 	#100 $stop();
 end
 
