@@ -1,57 +1,62 @@
 module I2Srx #(
     parameter WIDTH = 16
 )(
-    input logic sclk,  // Clock
-    input logic rst,   // Reset
+    input logic sclk_i,  // Clock
+    input logic rst_i,   // Reset
 
-    input logic ws,    // Word Select
-    input logic sdata, // Audio Data
+    input logic ws_i,    // Word Select
+    input logic sdata_i, // Audio Data
 
     // Audio Output
-    output logic [WIDTH-1:0] left_chan,
-    output logic [WIDTH-1:0] right_chan
+    output logic [WIDTH-1:0] leftChan_o,
+    output logic [WIDTH-1:0] rightChan_o,
+    output logic             pktI2SRxChanged_o
 );
 
 logic [WIDTH-1:0] left;
 logic [WIDTH-1:0] right;
-logic ws_r;
-logic ws_nedge;
-logic ws_pedge;
+logic wsPrev;
+logic wsNEdge;
+logic wsPEdge;
 
-// Register ws to allow edge detection
-always @(negedge sclk) begin
-    ws_r = ws;
+// Register ws_i to allow edge detection
+always @(negedge sclk_i) begin
+    wsPrev = ws_i;
 end
 
 // Combinational edge detection
-assign ws_nedge = !ws & ws_r;
-assign ws_pedge = ws & !ws_r;
+assign wsNEdge = !ws_i & wsPrev;
+assign wsPEdge = ws_i & !wsPrev;
 
 
 // Check previous cycle since I2S runs on a 1 cycle delay
-always @(posedge sclk) begin
-	if (rst)begin
+always @(posedge sclk_i) begin
+	if (rst_i)begin
 		left       = 0;
 		right      = 0;
-	end else if (ws_r) begin
-		right = {right[WIDTH-2:0], sdata};
+	end else if (wsPrev) begin
+		right = {right[WIDTH-2:0], sdata_i};
 	end else begin
-		left = {left[WIDTH-2:0], sdata};
+		left = {left[WIDTH-2:0], sdata_i};
 	end
 end
 
 // Latch L/R audio data
-always @(posedge sclk) begin
-    if (rst) begin
-        left_chan  <= 0;
-        right_chan <= 0;
-    end else if (ws_nedge) begin
+always @(posedge sclk_i) begin
+    if (rst_i) begin
+        leftChan_o        <= 0;
+        rightChan_o       <= 0;
+        pktI2SRxChanged_o <= 0;
+    end else if (wsNEdge) begin
         // End of Right channel. Latch the *fully assembled* right data.
-        right_chan <= right;
-    end else if (ws_pedge) begin
+        rightChan_o <= right;
+    end else if (wsPEdge) begin
         // End of Left channel. Latch the *fully assembled* left data.
-        left_chan <= left;
-		//ASYNCH FIFO ENABLE HERE AFTER FULL CYCLE
+        leftChan_o <= left;
+		//asynch FIFO update after a fullt L/R cycle
+        pktI2SRxChanged_o <= 1'b1;
+    end else begin
+        pktI2SRxChanged_o <= 1'b0;
     end
 end
 

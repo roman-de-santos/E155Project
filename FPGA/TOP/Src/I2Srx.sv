@@ -9,7 +9,8 @@ module I2Srx #(
 
     // Audio Output
     output logic [WIDTH-1:0] leftChan_o,
-    output logic [WIDTH-1:0] rightChan_o
+    output logic [WIDTH-1:0] rightChan_o,
+    output logic             pktI2SRxChanged_o
 );
 
 logic [WIDTH-1:0] left;
@@ -43,15 +44,19 @@ end
 // Latch L/R audio data
 always @(posedge sclk_i) begin
     if (rst_i) begin
-        leftChan_o  <= 0;
-        rightChan_o <= 0;
+        leftChan_o        <= 0;
+        rightChan_o       <= 0;
+        pktI2SRxChanged_o <= 0;
     end else if (wsNEdge) begin
         // End of Right channel. Latch the *fully assembled* right data.
         rightChan_o <= right;
     end else if (wsPEdge) begin
         // End of Left channel. Latch the *fully assembled* left data.
         leftChan_o <= left;
-		//ASYNCH FIFO ENABLE HERE AFTER FULL CYCLE
+		//asynch FIFO update after a fullt L/R cycle
+        pktI2SRxChanged_o <= 1'b1;
+    end else begin
+        pktI2SRxChanged_o <= 1'b0;
     end
 end
 

@@ -17,7 +17,7 @@ module i2s_rx_tb;
 
     // Instantiate the Device Under Test (DUT)
 I2Stx #(WIDTH) I2Stx0 (sclk, rst, ws_out, sdata_out, left_chan, right_chan);
-I2Srx #(WIDTH) I2Srx0 (sclk, rst, ws_in, sdata_in, left_chan, right_chan);
+I2Srx #(WIDTH) I2Srx0 (sclk, rst, ws_in, sdata_in, left_chan, right_chan, pktI2SRxChanged_o);
 
     // Create a 10ns period clock
     always #5 sclk = ~sclk;
