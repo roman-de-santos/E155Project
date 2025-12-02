@@ -3,6 +3,8 @@ module top(
     input  logic rst_n_i,
     input  logic ws_i,
     input  logic sdata_i,
+    input  logic [3:0] reqSetting_i,
+    input  logic [3:0] freqSetting_i,
     output logic sclk_o,
     output logic ws_o,
     output logic sdata_o
@@ -16,7 +18,7 @@ logic [WIDTH-1:0] leftChan_o, rightChan_o, leftChan_i, rightChan_i;
 
 I2Srx #(WIDTH) I2Srx0 (sclk_i, ~rst_n_i, ws_i, sdata_i, leftChan_o, rightChan_0);
 
-DSP DSP1 ();
+DSP #(PKT_WIDTH = WIDTH) DSP0 ();
 
 I2Stx #(WIDTH) I2Stx0 (sclk_i, ~rst_n_i, ws_o, sdata_o, leftChan_i, rightChan_i);
 assign sclk_o = sclk_i;

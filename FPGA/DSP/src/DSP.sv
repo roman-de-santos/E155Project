@@ -55,6 +55,28 @@
 			.CLKHFEN ( 1'b1 ), // input
 			.CLKHF   ( clkDSP )     // output
 		);
+
+		// --- STF CDC FIFO ---
+		CDC_FIFO #(
+			parameter PKT_WIDTH = 16 // Must be 16 for chorus pedal design
+		) 
+		STF_CDC_FIFO
+		(
+			// --- Clock & Global Reset Inputs ---
+			.clkI2S  (clkRead_i),    		// For STF: slow clock (1.4122 MHz), for FTS: fast clock (6 MHz)
+			.clkDSP_n (clkWrite_i),        // For STF: fast clock (6 MHz), for FTS: slow clock (1.4122 MHz)
+			(rstWrite_n_i),      // Active low reset from write side
+
+			// --- Write Domain (Slow) Interface ---
+			(pkt_i),      	// 16-bit audio packet to write
+			(pktChanged_i), 	// Write Enable strobe (@ ~44.1kHz)
+			(rdEN_i),			// Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
+
+			// --- Read Domain (Fast) Interface ---
+			(pktOut_s_o),  		// FIFO output
+			(pktOutChanged_c_o) 	// Strobe: '1' when new sample is different from old
+		);
+
 		
 		// --- Circular Delay Buffer FSM ---
 		/*  */		
@@ -73,5 +95,26 @@
 			.errorLED_reg_o         (errorLED_o)            // Error Output
 		);
 		
+
+		// --- FTS CDC FIFO ---
+		CDC_FIFO #(
+			parameter PKT_WIDTH = 16 // Must be 16 for chorus pedal design
+		) 
+		FTS_CDC_FIFO
+		(
+			// --- Clock & Global Reset Inputs ---
+			.clkDSP_n  (clkRead_i),    		// For STF: slow clock (1.4122 MHz), for FTS: fast clock (6 MHz)
+			.clkI2S (clkWrite_i),        // For STF: fast clock (6 MHz), for FTS: slow clock (1.4122 MHz)
+			(rstWrite_n_i),      // Active low reset from write side
+
+			// --- Write Domain (Slow) Interface ---
+			(pkt_i),      	// 16-bit audio packet to write
+			(pktChanged_i), 	// Write Enable strobe (@ ~44.1kHz)
+			(rdEN_i),			// Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
+
+			// --- Read Domain (Fast) Interface ---
+			(pktOut_s_o),  		// FIFO output
+			(pktOutChanged_c_o) 	// Strobe: '1' when new sample is different from old
+		);
 		
 	endmodule
