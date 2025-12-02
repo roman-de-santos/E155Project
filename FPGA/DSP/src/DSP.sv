@@ -47,10 +47,10 @@
 		logic [PKT_WIDTH-1:0] 	delayLFO;
 		logic [PKT_WIDTH-1:0] 	pktMixed;
 		logic                 	LFOChanged;
-		logic                 	pktMixChanged;
+		logic                 	pktMixedChanged;
 		
 		// Reset synchronizer to clkDSP
-		synchronizer u_rstI2Ssync(
+		synchronizer u_RstI2Ssync(
 			.clk	( clkDSP ),
 			.rst_n	( 1'd1 ), // never resets
 			.d_a	( rst_n ),
@@ -87,7 +87,7 @@
 
 		LFOgen u_DelayLFO(
 			.clk_i         (clkDSP),
-			.reset_i       (rstI2S_n_o),
+			.reset_i       (rst_n),
 			.freqSetting_i (freqSetting_i), 
 			.scaleFactor_i (scaleFactor_i),      
 			.FIFOupdate_i  (pktI2SRxChanged_i),
@@ -105,38 +105,40 @@
 		) u_DelayBuffer (
 			.rst_n                    (rst_n),
 			.clk                      (clkDSP),
-			.pkt_reg_i                (pktDry),              // Data In (Dry Signal)
-			.pktChanged_reg_i         (pktDryChanged),        // Write Strobe
-			.extraDelay_reg_i         (delayLFO),           // Variable Delay Offset
-			.pktDelayed_reg_o         (pktWet),              // Data Out (Wet/Delayed Signal)
-			.pktDelayedChanged_comb_o (pktWetChanged),       // Read Strobe (Wet Valid)
-			.errorLED_reg_o           (errorLED_o)            // Error Output
+			.pkt_s_i                (pktDry),              // Data In (Dry Signal)
+			.pktChanged_s_i         (pktDryChanged),        // Write Strobe
+			.extraDelay_s_i         (delayLFO),           // Variable Delay Offset
+			.LFOChanged_s_i			(LFOChanged),		// New LFO value strobe
+			.pktDelayed_s_o         (pktWet),              // Data Out (Wet/Delayed Signal)
+			.pktDelayedChanged_c_o (pktWetChanged),       // Read Strobe (Wet Valid)
+			.errorLED_s_o           (errorLED_o)            // Error Output
 		);
 
 		Mixer #(
 			.WIDTH(PKT_WIDTH)
 		) u_Mixer (
-			.clk_i       (clkDSP), 
-			.rst_n_i     (rst_n),
-		    .pktWet_i    (pktWet),
-            .pktDry_i    (pktDry),
-			.pktMixed_o  (pktMixed),
-			.pktChange_o (pktMixChanged)
+			.clk_i       		(clkDSP), 
+			.rst_n_i     		(rst_n),
+		    .pktWet_i    		(pktWet),
+            .pktDry_i    		(pktDry),
+			.pktWetChanged_i		(pktWetChanged),
+			.pktMixed_o  		(pktMixed),
+			.pktMixedChanged_o 	(pktMixedChanged)
 		);
 		
 
 		// --- FTS CDC FIFO ---
-		module CDC_FIFO #(
+		CDC_FIFO #(
 			.PKT_WIDTH(PKT_WIDTH) // Must be 16 for chorus pedal design
 		) u_FTS_CDC_FIFO (
 			// --- Clock & Global Reset Inputs ---
 			.clkRead_i         (clkDSP),    		// For STF: slow clock (1.4122 MHz), for FTS: fast clock (6 MHz)
 			.clkWrite_i        (clkI2S),        // For STF: fast clock (6 MHz), for FTS: slow clock (1.4122 MHz)
-			.rstWrite_n_i      (rstI2S_n_o),      // Active low reset from write side
+			.rstWrite_n_i      (rst_n),      // Active low reset from write side
 
 			// --- Write Domain (Slow) Interface ---
 			.pkt_i             (pktMixed),      	// 16-bit audio packet to write
-			.pktChanged_i      (pktMixChanged), 	// Write Enable strobe (@ ~44.1kHz)
+			.pktChanged_i      (pktMixedChanged), 	// Write Enable strobe (@ ~44.1kHz)
 			.rdEN_i            (1'b1),			        // Read pktOut_s_o Enable Strobe (For STF: 1'b1, for FTS: @ ~44.1kHz)
 
 			// --- Read Domain (Fast) Interface ---

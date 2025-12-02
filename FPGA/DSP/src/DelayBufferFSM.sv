@@ -27,10 +27,10 @@
 	 * ADDR_WIDTH- Fixed address width for the SPRAM primitive (must be 14).
 	 *
 	 * Ports:
-	 * rst_n   					- Active-low synchronous reset.
+	 * rst_nÂ  Â 					- Active-low synchronous reset.
 	 * clk						- System clock (CLK_DSP).
-	 * pkt_s_i  				- Input data packet to be written.
-	 * pktChanged_s_i     	- Strobe: '1' for one cycle when `pkt_s_i` is valid data to be written.
+	 * pkt_s_iÂ  				- Input data packet to be written.
+	 * pktChanged_s_i Â   Â 	- Strobe: '1' for one cycle when `pkt_s_i` is valid data to be written.
 	 * extraDelay_s_i			- Signed, variable delay offset in samples (from LFO).
 	 * pktDelayed_s_o 		- Delayed data packet output (registered/latched).
 	 * pktDelayedChanged_c_o	- Strobe: '1' for one cycle indicating a new valid output sample is ready.
@@ -53,7 +53,7 @@
 		input logic                   			clk,
 		input logic 		[PKT_WIDTH-1:0] 	pkt_s_i,
 		input logic                   			pktChanged_s_i,
-		input logic  signed [ADDR_WIDTH-1:0]	extraDelay_s_i,
+		input logic  signed [ADDR_WIDTH-1:0]		extraDelay_s_i,
 		input logic								LFOChanged_s_i,
 		
 		output logic [PKT_WIDTH-1:0]   	pktDelayed_s_o,

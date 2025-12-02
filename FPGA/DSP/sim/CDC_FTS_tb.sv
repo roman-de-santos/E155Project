@@ -90,7 +90,7 @@ module CDC_FTS_tb;
         .rstWrite_n_i      (rstDSP_n_i),
         .pkt_i      		(pktI2S_i),
         .pktChanged_i 		(pktValidI2S_i),
-		.rdEN_i				(sampleRate),
+		.rdEN_i				(1'b1), // TEMP should be (sampleRate)
         .pktOut_s_o    	(pktDSP_reg_o),
         .pktOutChanged_c_o (pktChangedDSP_comb_o)
     );
