@@ -75,7 +75,8 @@ module DelayBufferManual_tb;
     logic [ADDR_WIDTH-1:0]  extraDelay_reg_i;
     logic [PKT_WIDTH-1:0]   pktDelayed_reg_o;
     logic                   pktDelayedChanged_comb_o;
-    logic                   errorLED_reg_o;           
+    logic                   errorLED_reg_o;   
+	logic					 LFOChanged_s_i;
 
     // Testbench state
 	int clk_cnt;
@@ -106,12 +107,13 @@ module DelayBufferManual_tb;
     ) DUT (
         .rst_n(rst_n),
         .clk(clk),
-        .pkt_reg_i(pkt_reg_i),
-        .pktChanged_reg_i(pktChanged_reg_i),
-        .extraDelay_reg_i(extraDelay_reg_i),
-        .pktDelayed_reg_o(pktDelayed_reg_o),
-        .pktDelayedChanged_comb_o(pktDelayedChanged_comb_o),
-        .errorLED_reg_o(errorLED_reg_o)                      
+        .pkt_s_i(pkt_reg_i),
+        .pktChanged_s_i(pktChanged_reg_i),
+        .extraDelay_s_i(extraDelay_reg_i),
+		.LFOChanged_s_i(LFOChanged_s_i),
+        .pktDelayed_s_o(pktDelayed_reg_o),
+        .pktDelayedChanged_c_o(pktDelayedChanged_comb_o),
+        .errorLED_s_o(errorLED_reg_o)                      
     );
 	
 	// Dummy packets array
@@ -129,6 +131,7 @@ module DelayBufferManual_tb;
         extraDelay_reg_i <= '0;
         packet_counter <= '0;
 		clk_cnt <= 0;
+		LFOChanged_s_i <= 0;
         wait_cycles(3);
         rst_n <= 1'b1;
         wait_cycles(2);
@@ -150,6 +153,9 @@ module DelayBufferManual_tb;
         
         // Clear strobe and data (data clear optional but good for clarity)
         pktChanged_reg_i = 0;
+		LFOChanged_s_i = 1;
+		@(posedge clk);
+		LFOChanged_s_i = 0;
 	endtask
     
     // -------------------------------------------------------------------------
@@ -179,7 +185,7 @@ module DelayBufferManual_tb;
             else begin $error("Test 1 Fail: pktDelayedChanged_comb_o is not 0 during reset."); errors++; end
         
         // UPDATED: Internal signal checks adapted for new FSM
-        assert (DUT.writeAddr_reg == 0) 
+        assert (DUT.writeAddr_s == 0) 
             else begin $error("Test 1 Fail: writeAddr_reg is not 0 during reset."); errors++; end
         
         // UPDATED: Check State instead of spramDOValid_reg
@@ -515,11 +521,11 @@ module DelayBufferManual_tb;
         // Note: We use DUT.READ assuming the tool can resolve the enum label hierarchically.
         // If not, use the integer value (likely 3'd4).
         force DUT.state = DUT.READ; 
-        force DUT.writeAddr_reg = 14'd2;
+        force DUT.writeAddr_s = 14'd2;
 		@(posedge clk);
 		@(posedge clk);
 		release DUT.state;
-        release DUT.writeAddr_reg;
+        release DUT.writeAddr_s;
 		@(posedge clk);
 
         // 3. Wait for Memory Access
@@ -575,10 +581,10 @@ module DelayBufferManual_tb;
 			
 			wait(DUT.state == DUT.IDLE);
 			// 2. Check the final write address (Should be 10)
-			assert (DUT.writeAddr_reg == 14'd10) begin
-				$display("Test 8 Info: Final writeAddr_reg is %0d (Expected 10)", DUT.writeAddr_reg);
+			assert (DUT.writeAddr_s == 14'd10) begin
+				$display("Test 8 Info: Final writeAddr_reg is %0d (Expected 10)", DUT.writeAddr_s);
 			end else begin
-				$error("Test 8 Fail: Final writeAddr_reg expected 10, got %0d. Calculation error.", DUT.writeAddr_reg);
+				$error("Test 8 Fail: Final writeAddr_reg expected 10, got %0d. Calculation error.", DUT.writeAddr_s);
 				errors++;
 			end
 
