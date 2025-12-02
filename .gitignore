@@ -1,3 +1,11 @@
+# KiCad files
+*#
+*.kicad_prl
+*.zip
+*.kicad_sch-bak
+*.lck
+
+# Radiant & Questa
 *.html
 *.build_status
 *.xml
@@ -11,10 +19,29 @@
 *.DS_Store
 *.emSession
 *.ini
-
-# KiCad files
-*#
-*.kicad_prl
-*.zip
-*.kicad_sch-bak
-*.lck
+*.recovery
+*.sty
+*.synthesis_touch
+*.pfl
+*.tcl
+*.udb
+*.psn
+*.lsedata
+*.synproj
+*.srp
+*.mrp
+*.vm
+*.arearep
+*.log
+*.vdb
+*.txt
+*.hrr
+/FPGA/DSP/sim/Questa/work
+/FPGA/DSP/sim/Questa/DelayBufferFSM/work
+/FPGA/DSP/sim/Questa/CDC_STF/work
+*.ldc
+*.cprj
+*.p2t
+*.par
+*.pad
+*.mti
