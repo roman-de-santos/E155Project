@@ -49,10 +49,10 @@ always @(posedge sclk_i) begin
         pktI2SRxChanged_o <= 0;
     end else if (wsNEdge) begin
         // End of Right channel. Latch the *fully assembled* right data.
-        rightChan_o <= right;
+        rightChan_o <= (right << 4);
     end else if (wsPEdge) begin
         // End of Left channel. Latch the *fully assembled* left data.
-        leftChan_o <= left;
+        leftChan_o <= (left << 4);
 		//asynch FIFO update after a fullt L/R cycle
         pktI2SRxChanged_o <= 1'b1;
     end else begin

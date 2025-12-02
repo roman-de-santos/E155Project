@@ -16,7 +16,6 @@ module top(
 localparam WIDTH = 16;
 logic [WIDTH-1:0] leftChan_o, rightChan_o, leftChan, rightChanIn;
 logic i2sTxPktChanged;
-logic rstI2S_n;
 logic errorLED;
 
 // Instantiate modules
@@ -31,7 +30,7 @@ I2Srx #(WIDTH) I2Srx0 (
     .pktI2SRxChanged (pktI2SRxChanged)
 );
 
-DSP #(PKT_WIDTH = WIDTH) DSP0 (
+DSP #(WIDTH) DSP0 (
     .rst_n             (rst_n_i),
     .clkI2s            (sclk_i),
     .i2sRxPkt_i        (rightChanIn),
