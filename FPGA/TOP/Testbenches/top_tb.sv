@@ -23,26 +23,20 @@ initial begin
     #45 rst = 0;
 end
 
-
-
-
 // Instantiate modules
 top dut (
-	. (sclk_i),
-	. (rst_n_i),
-	. (ws_i),
-	. (sdata_i),
-	. (freqSetting_i),
-	. (scaleFactor_i),
-	. (sclk_o),
-	. (ws_o),
-	. (sdata_o),
-	. (errorLED),
-	. (rstI2S_n)
+	.sclk_i         (sclk_i),
+	.rst_n_i        (rst_n_i),
+	.ws_i           (ws_i),
+	.sdata_i        (sdata_i),
+	.freqSetting_i  (freqSetting_i),
+	.scaleFactor_i  (scaleFactor_i),
+	.sclk_o         (sclk_o),
+	.ws_o           (ws_o),
+	.sdata_o        (sdata_o),
+	.errorLED       (errorLED),
+	.rstI2S_n       (rstI2S_n)
 );
-
-
-
 
 // Test data transfer
 initial begin
