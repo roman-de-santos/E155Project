@@ -19,7 +19,7 @@
 	) (
 		input logic                 	rst_n,   	// Active-low asynchronous reset
 		input logic                 	clkI2S,  	// Asynchronous 1.4112 MHz I2S clock from MCU
-		input logic						rstI2S_n;	// The same reset but synchronized to the I2S clock
+		input logic						rstI2S_n,	// The same reset but synchronized to the I2S clock
 
 		// Data from I2S RX Async FIFO
 		input logic [PKT_WIDTH-1:0] i2sRxPkt_i,        // Dry input audio sample
@@ -43,17 +43,16 @@
 		logic [PKT_WIDTH-1:0] pktWet;
 		logic 				  pktWetChanged;
 		logic [PKT_WIDTH-1:0] delayLFO;
-		logic 		 		  rstI2S_n;
 		logic [PKT_WIDTH-1:0] pktMixed;
 		logic                 LFOChanged;
 		logic                 pktMixChanged;
 		
 		// Reset synchronizer to clkDSP
 		synchronizer rstDSP_sync(
-			.clk	( clkDSP );
-			.rst_n	(1'd1); // never resets
-			.d_a	( rst_n );
-			.q		( rstI2S_n );
+			.clk	( clkDSP ),
+			.rst_n	(1'd1), // never resets
+			.d_a	( rst_n ),
+			.q		( rstI2S_n )
 		);
 		
 		// Generate clkDSP by instantiating high speed oscillator module from iCE40 library
@@ -65,7 +64,7 @@
 
 		// --- STF CDC FIFO ---
 		CDC_FIFO #(
-			parameter PKT_WIDTH = 16 // Must be 16 for chorus pedal design
+			.PKT_WIDTH(16)
 		) 
 		STF_CDC_FIFO
 		(
@@ -100,7 +99,7 @@
 		DelayBufferFSM #(
 			.BUF_DEPTH      (4410), 		// Default (100 ms)
 			.AVG_DELAY      (882),		// Default (20 ms)
-			.PKT_WIDTH      (PKT_WIDTH), // Should be 16
+			.PKT_WIDTH      (PKT_WIDTH) // Should be 16
 		) u_delay_buffer (
 			.rst_n                    (rst_n),
 			.clk                      (clkDSP),
@@ -113,7 +112,7 @@
 		);
 
 		Mixer #(
-			WIDTH = 16
+			.WIDTH(16)
 		) Mixer0 (
 			.clk_i       (clkDSP), 
 			.rst_n_i     (rst_n),
@@ -125,8 +124,8 @@
 		
 
 		// --- FTS CDC FIFO ---
-		module CDC_FIFO #(
-			parameter PKT_WIDTH = 16 // Must be 16 for chorus pedal design
+		CDC_FIFO #(
+			.PKT_WIDTH(16)
 		) 
 		FTS_CDC_FIFO
 		(

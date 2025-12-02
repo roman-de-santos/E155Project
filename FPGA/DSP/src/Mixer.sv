@@ -9,18 +9,18 @@ module Mixer#(
 		);
 
     // Internal Logic
-    logic [WIDTH-1:0] prevPktMixed;
+    logic [WIDTH-1:0] pktMixed, prevPktMixed;
 	
-	always_ff @( posedge clk ) begin
-		if ( ~rst_n ) begin	
+	always_ff @( posedge clk_i) begin
+		if ( ~rst_n_i ) begin	
             pktMixed_o <= 0;
             pktChange_o <= 0;
         end else begin 			
-            pktMixed <= (pktDry >>> 1) + (pktWet >>> 1); // Currently a 50% mix 0.5(wet+dry)
+            pktMixed <= (pktDry_i >>> 1) + (pktWet_i >>> 1); // Currently a 50% mix 0.5(wet+dry)
 
-            prevPktMixed <= pktMixed;
+            prevPktMixed <= pktMixed_o;
 
-            pktChange_o <= (pktMixed != prevPktMixed);
+            pktChange_o <= (pktMixed_o != prevPktMixed);
         end
 	end
 endmodule
