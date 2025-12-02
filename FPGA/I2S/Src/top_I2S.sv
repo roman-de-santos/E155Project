@@ -1,4 +1,4 @@
-module top(
+module top_I2S(
     input  logic sclk_in,
     input  logic rst,
     input  logic ws_in,

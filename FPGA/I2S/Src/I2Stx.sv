@@ -35,8 +35,11 @@ module I2Stx #(
 			shift_reg <= {1'b0, leftChan_i, rightChan_i};
 			sdata_o <= 1'b0;
 		end else if (bitCnt == (WIDTH*2 - 2)) begin
+			// latch input data
 			shift_reg <= {shift_reg[2*WIDTH],leftChan_i, rightChan_i};
 			sdata_o <= shift_reg[2*WIDTH];
+			// request new data
+
 		end else begin
 			shift_reg <= shift_reg << 1;	
 			sdata_o <= shift_reg[2*WIDTH];
