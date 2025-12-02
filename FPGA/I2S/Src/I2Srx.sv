@@ -43,7 +43,7 @@ end
 
 // Latch L/R audio data
 always @(posedge sclk_i) begin
-    if (rst_i) begin
+    if (~rst_i) begin
         leftChan_o        <= '0;
         rightChan_o       <= '0;
         pktI2SRxChanged_o <= '0;
