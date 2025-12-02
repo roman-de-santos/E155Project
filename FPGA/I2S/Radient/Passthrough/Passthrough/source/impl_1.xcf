@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8' ?>
 <!DOCTYPE		ispXCF	SYSTEM	"IspXCF.dtd" >
-<ispXCF version="R2024.2">
+<ispXCF version="R2025.1">
 	<Comment></Comment>
 	<Chain>
 		<Comm>SPI</Comm>

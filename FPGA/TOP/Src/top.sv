@@ -14,10 +14,8 @@ module top(
 
 // Internal Logic
 localparam WIDTH = 16;
-logic [WIDTH-1:0] leftChan_o, rightChan_o, leftChan, rightChanIn;
+logic [WIDTH-1:0] rightChanIn, leftChanIn, rightChanOut;
 logic i2sTxPktChanged;
-logic rstI2S_n;
-logic errorLED;
 
 // Instantiate modules
 
@@ -26,14 +24,14 @@ I2Srx #(WIDTH) u_I2Srx (
     .rst_i           (rst_n_i), 
     .ws_i            (ws_i), 
     .sdata_i         (sdata_i), 
-    .leftChan_o      (leftChanIn), 
+    .leftChan_o      (leftChanIn),  // unused
     .rightChan_o     (rightChanIn), 
-    .pktI2SRxChanged (pktI2SRxChanged)
+    .pktI2SRxChanged_o (pktI2SRxChanged)
 );
 
 DSP #(WIDTH) u_DSP (
     .rst_n             (rst_n_i),
-    .clkI2s            (sclk_i),
+    .clkI2S            (sclk_i),
     .i2sRxPkt_i        (rightChanIn),
     .pktI2SRxChanged_i (pktI2SRxChanged),
     .freqSetting_i     (freqSetting_i),

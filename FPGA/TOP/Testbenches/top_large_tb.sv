@@ -1,8 +1,4 @@
-`timescale 1ns / 1ps
-
 module top_tb ();
-
-localparam WIDTH = 16;
 
 // Module Signals
 logic sclk_i = 1'b1;
@@ -17,11 +13,8 @@ logic sdata_o;
 logic errorLED;
 logic rstI2S_n;
 
-// I2S test cases
-logic testLeft1;
-logic testRight1;
-logic testLeft2;
-logic testRight2;
+// Width
+localparam WIDTH = 16;
 
 // Clock gen (44.1kHz)
 localparam sclkTs = 709;
@@ -29,11 +22,6 @@ localparam sclkTs = 709;
 always begin
     #sclkTs 
     sclk_i <= ~sclk_i;
-end
-
-// Reset
-initial begin
-    #45 rst_n_i = 0;
 end
 
 // Instantiate modules
@@ -51,48 +39,49 @@ top dut (
 	.rstI2S_n       (rstI2S_n)
 );
 
-// I2S generating tast
 task send_i2s_frame(
         input [WIDTH-1:0] left_data,
         input [WIDTH-1:0] right_data
     );
     begin
-        // Send Left Channel (ws=0)
-        @ (negedge sclk_i); // WS transition edge
+        // --- Left Channel (WS=0) ---
+        @ (negedge sclk_i);
         ws_i <= 0;
-        
+        @ (negedge sclk_i);
 
-        // Now, send all bits for the left channel, MSB first
+        // Send bits MSB first
         for (int i = WIDTH - 1; i >= 0; i--) begin
             sdata_i <= left_data[i];
-			
-			if (i == 0) begin // change Ws one cycle before the LSB
-				ws_i <= 1;
-			end
+            
+            // Standard I2S: WS transitions 1 cycle before the MSB of the NEXT channel
+            // So we toggle it during the LSB of the CURRENT channel
+            if (i == 0) begin 
+                ws_i <= 1;
+            end
             @ (negedge sclk_i);
         end
         
-
-        // Now, send all bits for the right channel, MSB first
+        // --- Right Channel (WS=1) ---
+        // Note: WS was already set to 1 in the previous loop's LSB
+        
+        // Send bits MSB first
         for (int i = WIDTH - 1; i >= 0; i--) begin
             sdata_i <= right_data[i];
-			if (i == 0) begin // change Ws one cycle before the LSB
-				ws_i <= 0;
-			end
+            
+            if (i == 0) begin 
+                ws_i <= 0; // Prepare WS for the next Left channel
+            end
             @ (negedge sclk_i);
         end
         
-        // End of Frame 
-        @ (negedge sclk_i); // WS transition edge
-        ws_i <= 0;
-
+        // End of Frame cleanup
+        sdata_i <= 0;
     end
     endtask
 
-// Test data transfer
-initial begin
-	// Reset Phase 
-        $display("Starting testbench...");
+    initial begin
+        $display("Starting I2S Generation Test...");
+
         rst_n_i = 0;    // Assert reset
         ws_i = 0;     // Initialize signals
         sdata_i = 0;
@@ -101,32 +90,29 @@ initial begin
 
 		// Test different settings
 		freqSetting_i = 4'b0001;
-		scaleFactor_i = 4'b0001;  
+		scaleFactor_i = 4'b0100;  
 
         @ (posedge sclk_i); // Wait for one clock edge
         
         $display("Reset complete. Starting test cases...");
-
-        // Test Case 1
-        testLeft1  = 16'hDEAD;
-        testRight1 = 16'hBEEF;
-
-        // Send the first frame
-        send_i2s_frame(testLeft1, testRight1);
         
-        // Give a delay for signals to propagate before checking
-        #(sclkTs*100);
+        // Initialize Signals
+        ws_i = 0;
+        sdata_i = 0;
 
-		// Test Case 1
-        testLeft2  = 16'hCABB;
-        testRight2 = 16'hFABB;
-		
-        // Send the second frame
-        send_i2s_frame(testLeft2, testRight2);
-        
-		// Give a delay for signals to propagate before checking
-		#(sclkTs*100)
-		$stop();
-end
+        // Loop from 0 to 2000
+        for (int k = 0; k <= 2000; k++) begin
+            
+            // Send the I2S Frame (Left = k, Right = k)
+            send_i2s_frame(k[15:0], k[15:0]);
+            
+            // Wait the requested delay between frames
+            // Note: This creates a "gap" in the audio stream
+            #(sclkTs * 100); 
+        end
+
+        $display("Test Complete.");
+        $finish;
+    end
 
 endmodule
