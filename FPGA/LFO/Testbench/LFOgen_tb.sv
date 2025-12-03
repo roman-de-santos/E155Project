@@ -25,13 +25,13 @@ module LFOgen_tb;
 
     // --- Instantiate the Device Under Test (DUT) ---
     LFOgen DUT (
-        .clk(clk),
-        .reset(reset),
-        .freqSetting(freqSetting),
-        .scaleFactor(scaleFactor),
-		.FIFOupdate(FIFOupdate),
-        .waveOut(waveOut),
-		.newValFlag(newValFlag)		
+        .clk_i(clk),
+        .reset_i(reset),
+        .freqSetting_i(freqSetting),
+        .scaleFactor_i (scaleFactor),
+		.FIFOupdate_i(FIFOupdate),
+        .wave_o (waveOut),
+		.newValFlag_o (newValFlag)		
     );
 
     // Grab internal signals for verification
