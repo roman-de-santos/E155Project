@@ -1,0 +1,1749 @@
+Lattice Timing Report -  Setup  and Hold, Version Radiant Software (64-bit) 2025.1.0.39.0
+
+Tue Dec  2 05:24:15 2025
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2025 Lattice Semiconductor Corporation,  All rights reserved.
+
+Command line:    timing -sethld -v 10 -u 10 -endpoints 10 -nperend 1 -sp High-Performance_1.2V -hsp m -pwrprd -html -rpt top_impl_1.twr top_impl_1.udb -gui -msgset C:/Git/E155Project/FPGA/TOP/Radiant/top/promote.xml
+
+-----------------------------------------
+Design:          top
+Family:          iCE40UP
+Device:          iCE40UP5K
+Package:         SG48
+Performance:     High-Performance_1.2V
+Package Status:                     Preliminary    Version 1.5
+**Performance Hardware Data Status :   Advanced Version 1.0
+-----------------------------------------
+
+
+=====================================================================
+                    Table of Contents
+=====================================================================
+    1  Timing Overview
+        1.1  SDC Constraints
+        1.2  Constraint Coverage
+        1.3  Overall Summary
+        1.4  Unconstrained Report
+        1.5  Combinational Loop
+    2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+        2.1  Clock Summary
+        2.2  Endpoint slacks
+        2.3  Detailed Report
+    3  Hold at Speed Grade m Corner at -40 Degrees
+        3.1  Endpoint slacks
+        3.2  Detailed Report
+
+=====================================================================
+                    End of Table of Contents
+=====================================================================
+
+==============================================
+1  Timing Overview
+==============================================
+
+1.1  SDC Constraints
+=====================
+create_clock -name {u_DSP/clkDSP} -period 166.667 [get_pins {u_DSP/u_hf_osc/CLKHF }] 
+set_max_delay -from [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_100/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_85/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_84/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_162/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_155/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_154/Q0 }] -to [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/D0 }] -datapath_only 2.5
+set_max_delay -from [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_98/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_89/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_88/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_164/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_159/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_158/Q0 }] -to [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_78/C0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_92/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_93/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_146/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_152/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_153/D0 }] -datapath_only 149.999984375
+
+1.2  Constraint Coverage
+---------------------------
+Constraint Coverage: 64.3062%
+
+
+1.3  Overall Summary
+---------------------------
+ Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees     Timing Errors: 6 endpoints;  Total Negative Slack: 11.806 ns 
+ Hold at Speed Grade m Corner at -40 Degrees                          Timing Errors: 0 endpoints;  Total Negative Slack: 0.000 ns 
+
+1.4  Unconstrained Report
+===========================
+
+1.4.1  Unconstrained Start/End Points
+--------------------------------------
+
+Clocked but unconstrained timing start points
+-------------------------------------------------------------------
+         Listing 1 Start Points         |           Type           
+-------------------------------------------------------------------
+u_DSP/u_RstI2Ssync/q/PADDO              |          No required time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing start po |                          
+ints                                    |                         1
+                                        |                          
+-------------------------------------------------------------------
+
+Clocked but unconstrained timing end points
+-------------------------------------------------------------------
+         Listing 10 End Points          |           Type           
+-------------------------------------------------------------------
+{u_DSP/u_Mixer/pktMixed_o__i13/SR   u_DSP/u_Mixer/pktMixed_o__i14/SR}                           
+                                        |           No arrival time
+{u_DSP/u_Mixer/pktMixed_o__i11/SR   u_DSP/u_Mixer/pktMixed_o__i12/SR}                           
+                                        |           No arrival time
+{u_DSP/u_Mixer/pktMixed_o__i9/SR   u_DSP/u_Mixer/pktMixed_o__i10/SR}                           
+                                        |           No arrival time
+{u_DSP/u_Mixer/pktMixed_o__i7/SR   u_DSP/u_Mixer/pktMixed_o__i8/SR}                           
+                                        |           No arrival time
+{u_DSP/u_Mixer/pktMixed_o__i5/SR   u_DSP/u_Mixer/pktMixed_o__i6/SR}                           
+                                        |           No arrival time
+{u_DSP/u_Mixer/pktMixed_o__i3/SR   u_DSP/u_Mixer/pktMixed_o__i4/SR}                           
+                                        |           No arrival time
+{u_DSP/u_Mixer/pktMixed_o__i1/SR   u_DSP/u_Mixer/pktMixed_o__i2/SR}                           
+                                        |           No arrival time
+u_DSP/u_Mixer/pktMixed_o__i0/SR         |           No arrival time
+u_DSP/u_DelayLFO/phaseAcc__i0/SP        |           No arrival time
+u_DSP/u_DelayLFO/phaseAcc__i0/SR        |           No arrival time
+-------------------------------------------------------------------
+                                        |                          
+Number of unconstrained timing end poin |                          
+ts                                      |                       113
+                                        |                          
+-------------------------------------------------------------------
+
+1.4.2  Start/End Points Without Timing Constraints
+---------------------------------------------------
+
+I/O ports without constraint
+----------------------------
+Possible constraints to use on I/O ports are:
+set_input_delay,
+set_output_delay,
+set_max_delay,
+create_clock,
+create_generated_clock,
+...
+
+-------------------------------------------------------------------
+     Listing 10 Start or End Points     |           Type           
+-------------------------------------------------------------------
+scaleFactor_i[0]                        |                     input
+scaleFactor_i[1]                        |                     input
+scaleFactor_i[2]                        |                     input
+scaleFactor_i[3]                        |                     input
+freqSetting_i[0]                        |                     input
+freqSetting_i[1]                        |                     input
+freqSetting_i[2]                        |                     input
+freqSetting_i[3]                        |                     input
+sdata_i                                 |                     input
+ws_i                                    |                     input
+-------------------------------------------------------------------
+                                        |                          
+Number of I/O ports without constraint  |                        16
+                                        |                          
+-------------------------------------------------------------------
+
+Nets without clock definition
+Define a clock on a top level port or a generated clock on a clock divider pin associated with this net(s).
+-------------------------------------------------------------------
+            Listing 1 Net(s)            |        Source pin        
+-------------------------------------------------------------------
+sclk_o_c_c                              |    sclk_o_c_pad.bb_inst/O
+-------------------------------------------------------------------
+                                        |                          
+Number of clock nets without clock defi |                          
+nition                                  |                         1
+                                        |                          
+-------------------------------------------------------------------
+
+
+1.5  Combinational Loop
+========================
+None
+
+===============================================================
+2  Setup at Speed Grade High-Performance_1.2V Corner at 100 Degrees
+===============================================================
+
+2.1  Clock Summary
+=======================
+
+2.1.1 Clock "u_DSP/clkDSP"
+=======================
+create_clock -name {u_DSP/clkDSP} -period 166.667 [get_pins {u_DSP/u_hf_osc/CLKHF }] 
+
+Single Clock Domain
+-------------------------------------------------------------------------------------------------------
+           Clock u_DSP/clkDSP           |                    |       Period       |     Frequency      
+-------------------------------------------------------------------------------------------------------
+ From u_DSP/clkDSP                      |             Target |         166.667 ns |          6.000 MHz 
+                                        | Actual (all paths) |          49.703 ns |         20.120 MHz 
+u_DSP/u_hf_osc/CLKHF (MPW)              |   (50% duty cycle) |          20.792 ns |         48.095 MHz 
+-------------------------------------------------------------------------------------------------------
+
+Clock Domain Crossing
+
+2.2  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i0/D              
+                                         |   -3.025 ns 
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i2/D              
+                                         |   -2.430 ns 
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i1/D              
+                                         |   -2.391 ns 
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i0/D              
+                                         |   -1.320 ns 
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i1/D              
+                                         |   -1.320 ns 
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i2/D              
+                                         |   -1.320 ns 
+u_DSP/u_DelayBuffer/buffer/ADDRESS13     |  116.964 ns 
+u_DSP/u_DelayBuffer/buffer/ADDRESS12     |  118.206 ns 
+u_DSP/u_DelayBuffer/buffer/ADDRESS11     |  118.892 ns 
+u_DSP/u_DelayBuffer/buffer/ADDRESS10     |  119.024 ns 
+-------------------------------------------------------
+                                         |             
+Setup # of endpoints with negative slack:|           6 
+                                         |             
+-------------------------------------------------------
+
+2.3  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin      : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i0/Q  (SLICE_R11C11A)
+Path End        : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i0/D  (SLICE_R6C10A)
+Source Clock    : u_DSP/clkDSP (R)
+Logic Level     : 2
+Delay Ratio     : 32.0% (route), 68.0% (logic)
+Setup Constraint: 2.500 ns 
+Path Slack      : -3.025 ns  (Failed)
+Path Exception  : set_max_delay -from [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_100/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_85/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_84/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_162/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_155/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_154/Q0 }] -to [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/D0 }] -datapath_only 2.5
+
+
+Data Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_100/Q0
+                                          SLICE_R11C11A   INPUT DELAY      1.388                  6.887  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r[0]
+                                                          NET DELAY        3.463                 10.350  1       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/D0->u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/F0
+                                          SLICE_R6C10A    D0_TO_F0_DELAY   0.476                 10.826  1       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.rd_grey_sync_r[0].sig_018.FeedThruLUT
+                                                          NET DELAY        0.000                 10.826  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i0/D
+                                                          ENDPOINT         0.000                 10.826  1       
+Launch Clock Arrival                                      ENDPOINT        -5.499                  5.327  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+                                                          CONSTRAINT                              2.500  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Required Time                                                                                     2.500  
+Arrival Time                                                                                   -(5.525)  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Path Slack  (Failed)                                                                             -3.025  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin      : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_grey_sync_r_i2/Q  (SLICE_R11C17A)
+Path End        : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i2/D  (SLICE_R6C17B)
+Source Clock    : u_DSP/clkDSP (R)
+Logic Level     : 2
+Delay Ratio     : 28.0% (route), 72.0% (logic)
+Setup Constraint: 2.500 ns 
+Path Slack      : -2.430 ns  (Failed)
+Path Exception  : set_max_delay -from [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_100/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_85/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_84/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_162/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_155/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_154/Q0 }] -to [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/D0 }] -datapath_only 2.5
+
+
+Data Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_155/Q0
+                                          SLICE_R11C17A   INPUT DELAY      1.388                  6.887  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_grey_sync_r[2]
+                                                          NET DELAY        2.868                  9.755  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/D0->u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/F0
+                                          SLICE_R6C17B    D0_TO_F0_DELAY   0.476                 10.231  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.wr_grey_sync_r[2].sig_051.FeedThruLUT
+                                                          NET DELAY        0.000                 10.231  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i2/D
+                                                          ENDPOINT         0.000                 10.231  1       
+Launch Clock Arrival                                      ENDPOINT        -5.499                  4.732  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+                                                          CONSTRAINT                              2.500  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Required Time                                                                                     2.500  
+Arrival Time                                                                                   -(4.930)  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Path Slack  (Failed)                                                                             -2.430  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin      : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_grey_sync_r_i1/Q  (SLICE_R21C18A)
+Path End        : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i1/D  (SLICE_R18C18A)
+Source Clock    : u_DSP/clkDSP (R)
+Logic Level     : 2
+Delay Ratio     : 27.8% (route), 72.2% (logic)
+Setup Constraint: 2.500 ns 
+Path Slack      : -2.391 ns  (Failed)
+Path Exception  : set_max_delay -from [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_100/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_85/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_84/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_162/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_155/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_154/Q0 }] -to [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/D0 }] -datapath_only 2.5
+
+
+Data Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_154/Q0
+                                          SLICE_R21C18A   INPUT DELAY      1.388                  6.887  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_grey_sync_r[1]
+                                                          NET DELAY        2.829                  9.716  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/D0->u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/F0
+                                          SLICE_R18C18A   D0_TO_F0_DELAY   0.476                 10.192  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.wr_grey_sync_r[1].sig_052.FeedThruLUT
+                                                          NET DELAY        0.000                 10.192  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i1/D
+                                                          ENDPOINT         0.000                 10.192  1       
+Launch Clock Arrival                                      ENDPOINT        -5.499                  4.693  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+                                                          CONSTRAINT                              2.500  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Required Time                                                                                     2.500  
+Arrival Time                                                                                   -(4.891)  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Path Slack  (Failed)                                                                             -2.391  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin      : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_grey_sync_r_i0/Q  (SLICE_R21C18C)
+Path End        : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i0/D  (SLICE_R22C18C)
+Source Clock    : u_DSP/clkDSP (R)
+Logic Level     : 2
+Delay Ratio     : 19.3% (route), 80.7% (logic)
+Setup Constraint: 2.500 ns 
+Path Slack      : -1.320 ns  (Failed)
+Path Exception  : set_max_delay -from [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_100/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_85/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_84/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_162/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_155/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_154/Q0 }] -to [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/D0 }] -datapath_only 2.5
+
+
+Data Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_162/Q0
+                                          SLICE_R21C18C   INPUT DELAY      1.388                  6.887  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_grey_sync_r[0]
+                                                          NET DELAY        1.758                  8.645  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/D0->u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/F0
+                                          SLICE_R22C18C   D0_TO_F0_DELAY   0.476                  9.121  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.wr_grey_sync_r[0].sig_046.FeedThruLUT
+                                                          NET DELAY        0.000                  9.121  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i0/D
+                                                          ENDPOINT         0.000                  9.121  1       
+Launch Clock Arrival                                      ENDPOINT        -5.499                  3.622  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+                                                          CONSTRAINT                              2.500  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Required Time                                                                                     2.500  
+Arrival Time                                                                                   -(3.820)  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Path Slack  (Failed)                                                                             -1.320  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin      : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i1/Q  (SLICE_R12C11B)
+Path End        : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i1/D  (SLICE_R12C10A)
+Source Clock    : u_DSP/clkDSP (R)
+Logic Level     : 2
+Delay Ratio     : 19.3% (route), 80.7% (logic)
+Setup Constraint: 2.500 ns 
+Path Slack      : -1.320 ns  (Failed)
+Path Exception  : set_max_delay -from [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_100/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_85/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_84/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_162/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_155/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_154/Q0 }] -to [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/D0 }] -datapath_only 2.5
+
+
+Data Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_84/Q0
+                                          SLICE_R12C11B   INPUT DELAY      1.388                  6.887  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r[1]
+                                                          NET DELAY        1.758                  8.645  1       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/D0->u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/F0
+                                          SLICE_R12C10A   D0_TO_F0_DELAY   0.476                  9.121  1       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.rd_grey_sync_r[1].sig_026.FeedThruLUT
+                                                          NET DELAY        0.000                  9.121  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i1/D
+                                                          ENDPOINT         0.000                  9.121  1       
+Launch Clock Arrival                                      ENDPOINT        -5.499                  3.622  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+                                                          CONSTRAINT                              2.500  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Required Time                                                                                     2.500  
+Arrival Time                                                                                   -(3.820)  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Path Slack  (Failed)                                                                             -1.320  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin      : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r_i2/Q  (SLICE_R12C11A)
+Path End        : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i2/D  (SLICE_R12C10D)
+Source Clock    : u_DSP/clkDSP (R)
+Logic Level     : 2
+Delay Ratio     : 19.3% (route), 80.7% (logic)
+Setup Constraint: 2.500 ns 
+Path Slack      : -1.320 ns  (Failed)
+Path Exception  : set_max_delay -from [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_100/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_85/Q0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_84/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_162/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_155/Q0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_154/Q0 }] -to [get_pins {u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_82/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/D0 u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_97/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_142/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_148/D0 u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_149/D0 }] -datapath_only 2.5
+
+
+Data Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_85/Q0
+                                          SLICE_R12C11A   INPUT DELAY      1.388                  6.887  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_grey_sync_r[2]
+                                                          NET DELAY        1.758                  8.645  1       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/D0->u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_96/F0
+                                          SLICE_R12C10D   D0_TO_F0_DELAY   0.476                  9.121  1       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.rd_grey_sync_r[2].sig_025.FeedThruLUT
+                                                          NET DELAY        0.000                  9.121  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i2/D
+                                                          ENDPOINT         0.000                  9.121  1       
+Launch Clock Arrival                                      ENDPOINT        -5.499                  3.622  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name  Delay Name      Incr    Arrival/Required Time  Fanout  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+                                                          CONSTRAINT                              2.500  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Required Time                                                                                     2.500  
+Arrival Time                                                                                   -(3.820)  
+----------------------------------------  --------------  --------------  ------  ---------------------  ------  
+Path Slack  (Failed)                                                                             -1.320  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_DelayLFO/wave_o__i2/Q  (SLICE_R14C6C)
+Path End         : u_DSP/u_DelayBuffer/buffer/ADDRESS13  (SRAM_SRAM_R26C1B)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 42
+Delay Ratio      : 66.3% (route), 33.7% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 166.666 ns 
+Path Slack       : 116.963 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  135     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY               5.499                  5.499  135     
+{u_DSP/u_DelayLFO/wave_o__i3/CK   u_DSP/u_DelayLFO/wave_o__i2/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_DSP/u_DelayLFO/wave_o__i2/CK->u_DSP/u_DelayLFO/wave_o__i2/Q
+                                          SLICE_R14C6C       CLK_TO_Q1_DELAY         1.388                  6.887  1       
+u_DSP/u_DelayBuffer/delayLFO[1]                              NET DELAY               3.133                 10.020  1       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_1/C1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_1/CO1
+                                          SLICE_R16C4A       C1_TO_COUT1_DELAY       0.343                 10.363  2       
+u_DSP/u_DelayBuffer/n2001                                    NET DELAY               0.000                 10.363  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CO0
+                                          SLICE_R16C4B       CIN0_TO_COUT0_DELAY     0.277                 10.640  2       
+u_DSP/u_DelayBuffer/n3977                                    NET DELAY               0.000                 10.640  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CO1
+                                          SLICE_R16C4B       CIN1_TO_COUT1_DELAY     0.277                 10.917  2       
+u_DSP/u_DelayBuffer/n2003                                    NET DELAY               0.000                 10.917  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CO0
+                                          SLICE_R16C4C       CIN0_TO_COUT0_DELAY     0.277                 11.194  2       
+u_DSP/u_DelayBuffer/n3980                                    NET DELAY               0.000                 11.194  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CO1
+                                          SLICE_R16C4C       CIN1_TO_COUT1_DELAY     0.277                 11.471  2       
+u_DSP/u_DelayBuffer/n2005                                    NET DELAY               0.000                 11.471  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CO0
+                                          SLICE_R16C4D       CIN0_TO_COUT0_DELAY     0.277                 11.748  2       
+u_DSP/u_DelayBuffer/n3983                                    NET DELAY               0.000                 11.748  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CO1
+                                          SLICE_R16C4D       CIN1_TO_COUT1_DELAY     0.277                 12.025  2       
+u_DSP/u_DelayBuffer/n2007                                    NET DELAY               0.555                 12.580  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CO0
+                                          SLICE_R16C5A       CIN0_TO_COUT0_DELAY     0.277                 12.857  2       
+u_DSP/u_DelayBuffer/n3986                                    NET DELAY               0.000                 12.857  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CO1
+                                          SLICE_R16C5A       CIN1_TO_COUT1_DELAY     0.277                 13.134  2       
+u_DSP/u_DelayBuffer/n2009                                    NET DELAY               0.000                 13.134  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/CO0
+                                          SLICE_R16C5B       CIN0_TO_COUT0_DELAY     0.277                 13.411  2       
+u_DSP/u_DelayBuffer/n3989                                    NET DELAY               0.661                 14.072  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/D1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/S1
+                                          SLICE_R16C5B       D1_TO_F1_DELAY          0.449                 14.521  2       
+u_DSP/u_DelayBuffer/delaySum[11]                             NET DELAY               2.168                 16.689  2       
+u_DSP/u_DelayBuffer/i2_2_lut/A->u_DSP/u_DelayBuffer/i2_2_lut/Z
+                                          SLICE_R17C5D       D0_TO_F0_DELAY          0.449                 17.138  1       
+u_DSP/u_DelayBuffer/n6                                       NET DELAY               3.027                 20.165  1       
+u_DSP/u_DelayBuffer/i129_4_lut/D->u_DSP/u_DelayBuffer/i129_4_lut/Z
+                                          SLICE_R18C3A       C0_TO_F0_DELAY          0.449                 20.614  14      
+u_DSP/u_DelayBuffer/n28                                      NET DELAY               2.432                 23.046  14      
+u_DSP/u_DelayBuffer/i2533_3_lut/C->u_DSP/u_DelayBuffer/i2533_3_lut/Z
+                                          SLICE_R17C4B       C1_TO_F1_DELAY          0.449                 23.495  2       
+u_DSP/u_DelayBuffer/totalDelay[1]                            NET DELAY               2.168                 25.663  2       
+u_DSP/u_DelayBuffer/LessThan_26_i4_4_lut/C->u_DSP/u_DelayBuffer/LessThan_26_i4_4_lut/Z
+                                          SLICE_R18C3B       D0_TO_F0_DELAY          0.476                 26.139  1       
+u_DSP/u_DelayBuffer/n4_adj_501                               NET DELAY               0.304                 26.443  1       
+u_DSP/u_DelayBuffer/LessThan_26_i6_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i6_3_lut/Z
+                                          SLICE_R18C3B       C1_TO_F1_DELAY          0.476                 26.919  1       
+u_DSP/u_DelayBuffer/n6_adj_502                               NET DELAY               0.304                 27.223  1       
+u_DSP/u_DelayBuffer/LessThan_26_i8_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i8_3_lut/Z
+                                          SLICE_R18C3C       C0_TO_F0_DELAY          0.476                 27.699  1       
+u_DSP/u_DelayBuffer/n8_adj_503                               NET DELAY               0.304                 28.003  1       
+u_DSP/u_DelayBuffer/LessThan_26_i10_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i10_3_lut/Z
+                                          SLICE_R18C3C       C1_TO_F1_DELAY          0.476                 28.479  1       
+u_DSP/u_DelayBuffer/n10                                      NET DELAY               0.304                 28.783  1       
+u_DSP/u_DelayBuffer/LessThan_26_i12_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i12_3_lut/Z
+                                          SLICE_R18C3D       C0_TO_F0_DELAY          0.476                 29.259  1       
+u_DSP/u_DelayBuffer/n12_adj_504                              NET DELAY               0.304                 29.563  1       
+u_DSP/u_DelayBuffer/LessThan_26_i14_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i14_3_lut/Z
+                                          SLICE_R18C3D       C1_TO_F1_DELAY          0.476                 30.039  1       
+u_DSP/u_DelayBuffer/n14                                      NET DELAY               0.304                 30.343  1       
+u_DSP/u_DelayBuffer/LessThan_26_i16_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i16_3_lut/Z
+                                          SLICE_R18C4A       C0_TO_F0_DELAY          0.476                 30.819  1       
+u_DSP/u_DelayBuffer/n16                                      NET DELAY               0.304                 31.123  1       
+u_DSP/u_DelayBuffer/LessThan_26_i18_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i18_3_lut/Z
+                                          SLICE_R18C4A       C1_TO_F1_DELAY          0.476                 31.599  1       
+u_DSP/u_DelayBuffer/n18                                      NET DELAY               0.304                 31.903  1       
+u_DSP/u_DelayBuffer/LessThan_26_i20_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i20_3_lut/Z
+                                          SLICE_R18C4B       C0_TO_F0_DELAY          0.476                 32.379  1       
+u_DSP/u_DelayBuffer/n20                                      NET DELAY               0.304                 32.683  1       
+u_DSP/u_DelayBuffer/LessThan_26_i22_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i22_3_lut/Z
+                                          SLICE_R18C4B       C1_TO_F1_DELAY          0.476                 33.159  1       
+u_DSP/u_DelayBuffer/n22                                      NET DELAY               0.304                 33.463  1       
+u_DSP/u_DelayBuffer/LessThan_26_i24_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i24_3_lut/Z
+                                          SLICE_R18C4C       C0_TO_F0_DELAY          0.476                 33.939  1       
+u_DSP/u_DelayBuffer/n24                                      NET DELAY               0.304                 34.243  1       
+u_DSP/u_DelayBuffer/LessThan_26_i26_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i26_3_lut/Z
+                                          SLICE_R18C4C       C1_TO_F1_DELAY          0.476                 34.719  2       
+u_DSP/u_DelayBuffer/n26                                      NET DELAY               0.304                 35.023  2       
+u_DSP/u_DelayBuffer/LessThan_26_i28_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i28_3_lut/Z
+                                          SLICE_R18C4D       C0_TO_F0_DELAY          0.449                 35.472  12      
+u_DSP/u_DelayBuffer/n116                                     NET DELAY               3.542                 39.014  12      
+u_DSP/u_DelayBuffer/mux_124_i2_3_lut/C->u_DSP/u_DelayBuffer/mux_124_i2_3_lut/Z
+                                          SLICE_R21C3A       C1_TO_F1_DELAY          0.449                 39.463  1       
+u_DSP/u_DelayBuffer/n343[1]                                  NET DELAY               3.080                 42.543  1       
+u_DSP/u_DelayBuffer/add_314_4/B0->u_DSP/u_DelayBuffer/add_314_4/CO0
+                                          SLICE_R19C3B       B0_TO_COUT0_DELAY       0.357                 42.900  2       
+u_DSP/u_DelayBuffer/n4001                                    NET DELAY               0.000                 42.900  2       
+u_DSP/u_DelayBuffer/add_314_4/CI1->u_DSP/u_DelayBuffer/add_314_4/CO1
+                                          SLICE_R19C3B       CIN1_TO_COUT1_DELAY     0.277                 43.177  2       
+u_DSP/u_DelayBuffer/n2062                                    NET DELAY               0.000                 43.177  2       
+u_DSP/u_DelayBuffer/add_314_6/CI0->u_DSP/u_DelayBuffer/add_314_6/CO0
+                                          SLICE_R19C3C       CIN0_TO_COUT0_DELAY     0.277                 43.454  2       
+u_DSP/u_DelayBuffer/n4007                                    NET DELAY               0.000                 43.454  2       
+u_DSP/u_DelayBuffer/add_314_6/CI1->u_DSP/u_DelayBuffer/add_314_6/CO1
+                                          SLICE_R19C3C       CIN1_TO_COUT1_DELAY     0.277                 43.731  2       
+u_DSP/u_DelayBuffer/n2064                                    NET DELAY               0.000                 43.731  2       
+u_DSP/u_DelayBuffer/add_314_8/CI0->u_DSP/u_DelayBuffer/add_314_8/CO0
+                                          SLICE_R19C3D       CIN0_TO_COUT0_DELAY     0.277                 44.008  2       
+u_DSP/u_DelayBuffer/n4013                                    NET DELAY               0.000                 44.008  2       
+u_DSP/u_DelayBuffer/add_314_8/CI1->u_DSP/u_DelayBuffer/add_314_8/CO1
+                                          SLICE_R19C3D       CIN1_TO_COUT1_DELAY     0.277                 44.285  2       
+u_DSP/u_DelayBuffer/n2066                                    NET DELAY               0.555                 44.840  2       
+u_DSP/u_DelayBuffer/add_314_10/CI0->u_DSP/u_DelayBuffer/add_314_10/CO0
+                                          SLICE_R19C4A       CIN0_TO_COUT0_DELAY     0.277                 45.117  2       
+u_DSP/u_DelayBuffer/n4019                                    NET DELAY               0.000                 45.117  2       
+u_DSP/u_DelayBuffer/add_314_10/CI1->u_DSP/u_DelayBuffer/add_314_10/CO1
+                                          SLICE_R19C4A       CIN1_TO_COUT1_DELAY     0.277                 45.394  2       
+u_DSP/u_DelayBuffer/n2068                                    NET DELAY               0.000                 45.394  2       
+u_DSP/u_DelayBuffer/add_314_12/CI0->u_DSP/u_DelayBuffer/add_314_12/CO0
+                                          SLICE_R19C4B       CIN0_TO_COUT0_DELAY     0.277                 45.671  2       
+u_DSP/u_DelayBuffer/n4025                                    NET DELAY               0.000                 45.671  2       
+u_DSP/u_DelayBuffer/add_314_12/CI1->u_DSP/u_DelayBuffer/add_314_12/CO1
+                                          SLICE_R19C4B       CIN1_TO_COUT1_DELAY     0.277                 45.948  2       
+u_DSP/u_DelayBuffer/n2070                                    NET DELAY               0.000                 45.948  2       
+u_DSP/u_DelayBuffer/add_314_14/CI0->u_DSP/u_DelayBuffer/add_314_14/CO0
+                                          SLICE_R19C4C       CIN0_TO_COUT0_DELAY     0.277                 46.225  2       
+u_DSP/u_DelayBuffer/n4031                                    NET DELAY               0.661                 46.886  2       
+u_DSP/u_DelayBuffer/add_314_14/D1->u_DSP/u_DelayBuffer/add_314_14/S1
+                                          SLICE_R19C4C       D1_TO_F1_DELAY          0.449                 47.335  1       
+u_DSP/u_DelayBuffer/spramAD_c_13__N_354[14]
+                                                             NET DELAY               3.278                 50.613  1       
+u_DSP/u_DelayBuffer/spramAD_c_13__I_0_3_lut/A->u_DSP/u_DelayBuffer/spramAD_c_13__I_0_3_lut/Z
+                                          SLICE_R22C6D       D0_TO_F0_DELAY          0.449                 51.062  1       
+u_DSP/u_DelayBuffer/spramAD_c[13]                            NET DELAY               3.873                 54.935  1       
+u_DSP/u_DelayBuffer/buffer/ADDRESS13                         ENDPOINT                0.000                 54.935  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                166.666  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                166.666  135     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY               5.499                172.165  135     
+u_DSP/u_DelayBuffer/buffer/CLOCK                             CLOCK PIN               0.000                172.165  1       
+                                                             Uncertainty          -(0.000)                172.165  
+                                                             Setup time           -(0.267)                171.898  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                             171.898  
+Arrival Time                                                                                            -(54.934)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                      116.963  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_DelayLFO/wave_o__i2/Q  (SLICE_R14C6C)
+Path End         : u_DSP/u_DelayBuffer/buffer/ADDRESS12  (SRAM_SRAM_R26C1B)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 41
+Delay Ratio      : 66.0% (route), 34.0% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 166.666 ns 
+Path Slack       : 118.205 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  135     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY               5.499                  5.499  135     
+{u_DSP/u_DelayLFO/wave_o__i3/CK   u_DSP/u_DelayLFO/wave_o__i2/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_DSP/u_DelayLFO/wave_o__i2/CK->u_DSP/u_DelayLFO/wave_o__i2/Q
+                                          SLICE_R14C6C       CLK_TO_Q1_DELAY         1.388                  6.887  1       
+u_DSP/u_DelayBuffer/delayLFO[1]                              NET DELAY               3.133                 10.020  1       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_1/C1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_1/CO1
+                                          SLICE_R16C4A       C1_TO_COUT1_DELAY       0.343                 10.363  2       
+u_DSP/u_DelayBuffer/n2001                                    NET DELAY               0.000                 10.363  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CO0
+                                          SLICE_R16C4B       CIN0_TO_COUT0_DELAY     0.277                 10.640  2       
+u_DSP/u_DelayBuffer/n3977                                    NET DELAY               0.000                 10.640  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CO1
+                                          SLICE_R16C4B       CIN1_TO_COUT1_DELAY     0.277                 10.917  2       
+u_DSP/u_DelayBuffer/n2003                                    NET DELAY               0.000                 10.917  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CO0
+                                          SLICE_R16C4C       CIN0_TO_COUT0_DELAY     0.277                 11.194  2       
+u_DSP/u_DelayBuffer/n3980                                    NET DELAY               0.000                 11.194  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CO1
+                                          SLICE_R16C4C       CIN1_TO_COUT1_DELAY     0.277                 11.471  2       
+u_DSP/u_DelayBuffer/n2005                                    NET DELAY               0.000                 11.471  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CO0
+                                          SLICE_R16C4D       CIN0_TO_COUT0_DELAY     0.277                 11.748  2       
+u_DSP/u_DelayBuffer/n3983                                    NET DELAY               0.000                 11.748  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CO1
+                                          SLICE_R16C4D       CIN1_TO_COUT1_DELAY     0.277                 12.025  2       
+u_DSP/u_DelayBuffer/n2007                                    NET DELAY               0.555                 12.580  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CO0
+                                          SLICE_R16C5A       CIN0_TO_COUT0_DELAY     0.277                 12.857  2       
+u_DSP/u_DelayBuffer/n3986                                    NET DELAY               0.000                 12.857  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CO1
+                                          SLICE_R16C5A       CIN1_TO_COUT1_DELAY     0.277                 13.134  2       
+u_DSP/u_DelayBuffer/n2009                                    NET DELAY               0.000                 13.134  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/CO0
+                                          SLICE_R16C5B       CIN0_TO_COUT0_DELAY     0.277                 13.411  2       
+u_DSP/u_DelayBuffer/n3989                                    NET DELAY               0.661                 14.072  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/D1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/S1
+                                          SLICE_R16C5B       D1_TO_F1_DELAY          0.449                 14.521  2       
+u_DSP/u_DelayBuffer/delaySum[11]                             NET DELAY               2.168                 16.689  2       
+u_DSP/u_DelayBuffer/i2_2_lut/A->u_DSP/u_DelayBuffer/i2_2_lut/Z
+                                          SLICE_R17C5D       D0_TO_F0_DELAY          0.449                 17.138  1       
+u_DSP/u_DelayBuffer/n6                                       NET DELAY               3.027                 20.165  1       
+u_DSP/u_DelayBuffer/i129_4_lut/D->u_DSP/u_DelayBuffer/i129_4_lut/Z
+                                          SLICE_R18C3A       C0_TO_F0_DELAY          0.449                 20.614  14      
+u_DSP/u_DelayBuffer/n28                                      NET DELAY               2.432                 23.046  14      
+u_DSP/u_DelayBuffer/i2533_3_lut/C->u_DSP/u_DelayBuffer/i2533_3_lut/Z
+                                          SLICE_R17C4B       C1_TO_F1_DELAY          0.449                 23.495  2       
+u_DSP/u_DelayBuffer/totalDelay[1]                            NET DELAY               2.168                 25.663  2       
+u_DSP/u_DelayBuffer/LessThan_26_i4_4_lut/C->u_DSP/u_DelayBuffer/LessThan_26_i4_4_lut/Z
+                                          SLICE_R18C3B       D0_TO_F0_DELAY          0.476                 26.139  1       
+u_DSP/u_DelayBuffer/n4_adj_501                               NET DELAY               0.304                 26.443  1       
+u_DSP/u_DelayBuffer/LessThan_26_i6_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i6_3_lut/Z
+                                          SLICE_R18C3B       C1_TO_F1_DELAY          0.476                 26.919  1       
+u_DSP/u_DelayBuffer/n6_adj_502                               NET DELAY               0.304                 27.223  1       
+u_DSP/u_DelayBuffer/LessThan_26_i8_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i8_3_lut/Z
+                                          SLICE_R18C3C       C0_TO_F0_DELAY          0.476                 27.699  1       
+u_DSP/u_DelayBuffer/n8_adj_503                               NET DELAY               0.304                 28.003  1       
+u_DSP/u_DelayBuffer/LessThan_26_i10_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i10_3_lut/Z
+                                          SLICE_R18C3C       C1_TO_F1_DELAY          0.476                 28.479  1       
+u_DSP/u_DelayBuffer/n10                                      NET DELAY               0.304                 28.783  1       
+u_DSP/u_DelayBuffer/LessThan_26_i12_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i12_3_lut/Z
+                                          SLICE_R18C3D       C0_TO_F0_DELAY          0.476                 29.259  1       
+u_DSP/u_DelayBuffer/n12_adj_504                              NET DELAY               0.304                 29.563  1       
+u_DSP/u_DelayBuffer/LessThan_26_i14_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i14_3_lut/Z
+                                          SLICE_R18C3D       C1_TO_F1_DELAY          0.476                 30.039  1       
+u_DSP/u_DelayBuffer/n14                                      NET DELAY               0.304                 30.343  1       
+u_DSP/u_DelayBuffer/LessThan_26_i16_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i16_3_lut/Z
+                                          SLICE_R18C4A       C0_TO_F0_DELAY          0.476                 30.819  1       
+u_DSP/u_DelayBuffer/n16                                      NET DELAY               0.304                 31.123  1       
+u_DSP/u_DelayBuffer/LessThan_26_i18_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i18_3_lut/Z
+                                          SLICE_R18C4A       C1_TO_F1_DELAY          0.476                 31.599  1       
+u_DSP/u_DelayBuffer/n18                                      NET DELAY               0.304                 31.903  1       
+u_DSP/u_DelayBuffer/LessThan_26_i20_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i20_3_lut/Z
+                                          SLICE_R18C4B       C0_TO_F0_DELAY          0.476                 32.379  1       
+u_DSP/u_DelayBuffer/n20                                      NET DELAY               0.304                 32.683  1       
+u_DSP/u_DelayBuffer/LessThan_26_i22_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i22_3_lut/Z
+                                          SLICE_R18C4B       C1_TO_F1_DELAY          0.476                 33.159  1       
+u_DSP/u_DelayBuffer/n22                                      NET DELAY               0.304                 33.463  1       
+u_DSP/u_DelayBuffer/LessThan_26_i24_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i24_3_lut/Z
+                                          SLICE_R18C4C       C0_TO_F0_DELAY          0.476                 33.939  1       
+u_DSP/u_DelayBuffer/n24                                      NET DELAY               0.304                 34.243  1       
+u_DSP/u_DelayBuffer/LessThan_26_i26_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i26_3_lut/Z
+                                          SLICE_R18C4C       C1_TO_F1_DELAY          0.476                 34.719  2       
+u_DSP/u_DelayBuffer/n26                                      NET DELAY               0.304                 35.023  2       
+u_DSP/u_DelayBuffer/LessThan_26_i28_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i28_3_lut/Z
+                                          SLICE_R18C4D       C0_TO_F0_DELAY          0.449                 35.472  12      
+u_DSP/u_DelayBuffer/n116                                     NET DELAY               3.542                 39.014  12      
+u_DSP/u_DelayBuffer/mux_124_i2_3_lut/C->u_DSP/u_DelayBuffer/mux_124_i2_3_lut/Z
+                                          SLICE_R21C3A       C1_TO_F1_DELAY          0.449                 39.463  1       
+u_DSP/u_DelayBuffer/n343[1]                                  NET DELAY               3.080                 42.543  1       
+u_DSP/u_DelayBuffer/add_314_4/B0->u_DSP/u_DelayBuffer/add_314_4/CO0
+                                          SLICE_R19C3B       B0_TO_COUT0_DELAY       0.357                 42.900  2       
+u_DSP/u_DelayBuffer/n4001                                    NET DELAY               0.000                 42.900  2       
+u_DSP/u_DelayBuffer/add_314_4/CI1->u_DSP/u_DelayBuffer/add_314_4/CO1
+                                          SLICE_R19C3B       CIN1_TO_COUT1_DELAY     0.277                 43.177  2       
+u_DSP/u_DelayBuffer/n2062                                    NET DELAY               0.000                 43.177  2       
+u_DSP/u_DelayBuffer/add_314_6/CI0->u_DSP/u_DelayBuffer/add_314_6/CO0
+                                          SLICE_R19C3C       CIN0_TO_COUT0_DELAY     0.277                 43.454  2       
+u_DSP/u_DelayBuffer/n4007                                    NET DELAY               0.000                 43.454  2       
+u_DSP/u_DelayBuffer/add_314_6/CI1->u_DSP/u_DelayBuffer/add_314_6/CO1
+                                          SLICE_R19C3C       CIN1_TO_COUT1_DELAY     0.277                 43.731  2       
+u_DSP/u_DelayBuffer/n2064                                    NET DELAY               0.000                 43.731  2       
+u_DSP/u_DelayBuffer/add_314_8/CI0->u_DSP/u_DelayBuffer/add_314_8/CO0
+                                          SLICE_R19C3D       CIN0_TO_COUT0_DELAY     0.277                 44.008  2       
+u_DSP/u_DelayBuffer/n4013                                    NET DELAY               0.000                 44.008  2       
+u_DSP/u_DelayBuffer/add_314_8/CI1->u_DSP/u_DelayBuffer/add_314_8/CO1
+                                          SLICE_R19C3D       CIN1_TO_COUT1_DELAY     0.277                 44.285  2       
+u_DSP/u_DelayBuffer/n2066                                    NET DELAY               0.555                 44.840  2       
+u_DSP/u_DelayBuffer/add_314_10/CI0->u_DSP/u_DelayBuffer/add_314_10/CO0
+                                          SLICE_R19C4A       CIN0_TO_COUT0_DELAY     0.277                 45.117  2       
+u_DSP/u_DelayBuffer/n4019                                    NET DELAY               0.000                 45.117  2       
+u_DSP/u_DelayBuffer/add_314_10/CI1->u_DSP/u_DelayBuffer/add_314_10/CO1
+                                          SLICE_R19C4A       CIN1_TO_COUT1_DELAY     0.277                 45.394  2       
+u_DSP/u_DelayBuffer/n2068                                    NET DELAY               0.000                 45.394  2       
+u_DSP/u_DelayBuffer/add_314_12/CI0->u_DSP/u_DelayBuffer/add_314_12/CO0
+                                          SLICE_R19C4B       CIN0_TO_COUT0_DELAY     0.277                 45.671  2       
+u_DSP/u_DelayBuffer/n4025                                    NET DELAY               0.000                 45.671  2       
+u_DSP/u_DelayBuffer/add_314_12/CI1->u_DSP/u_DelayBuffer/add_314_12/CO1
+                                          SLICE_R19C4B       CIN1_TO_COUT1_DELAY     0.277                 45.948  2       
+u_DSP/u_DelayBuffer/n2070                                    NET DELAY               0.661                 46.609  2       
+u_DSP/u_DelayBuffer/add_314_14/D0->u_DSP/u_DelayBuffer/add_314_14/S0
+                                          SLICE_R19C4C       D0_TO_F0_DELAY          0.449                 47.058  1       
+u_DSP/u_DelayBuffer/spramAD_c_13__N_354[13]
+                                                             NET DELAY               3.027                 50.085  1       
+u_DSP/u_DelayBuffer/spramAD_c_13__I_16_3_lut/A->u_DSP/u_DelayBuffer/spramAD_c_13__I_16_3_lut/Z
+                                          SLICE_R22C4B       C1_TO_F1_DELAY          0.449                 50.534  1       
+u_DSP/u_DelayBuffer/spramAD_c[12]                            NET DELAY               3.159                 53.693  1       
+u_DSP/u_DelayBuffer/buffer/ADDRESS12                         ENDPOINT                0.000                 53.693  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                166.666  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                166.666  135     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY               5.499                172.165  135     
+u_DSP/u_DelayBuffer/buffer/CLOCK                             CLOCK PIN               0.000                172.165  1       
+                                                             Uncertainty          -(0.000)                172.165  
+                                                             Setup time           -(0.267)                171.898  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                             171.898  
+Arrival Time                                                                                            -(53.692)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                      118.205  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_DelayLFO/wave_o__i2/Q  (SLICE_R14C6C)
+Path End         : u_DSP/u_DelayBuffer/buffer/ADDRESS11  (SRAM_SRAM_R26C1B)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 40
+Delay Ratio      : 66.1% (route), 33.9% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 166.666 ns 
+Path Slack       : 118.891 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  135     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY               5.499                  5.499  135     
+{u_DSP/u_DelayLFO/wave_o__i3/CK   u_DSP/u_DelayLFO/wave_o__i2/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_DSP/u_DelayLFO/wave_o__i2/CK->u_DSP/u_DelayLFO/wave_o__i2/Q
+                                          SLICE_R14C6C       CLK_TO_Q1_DELAY         1.388                  6.887  1       
+u_DSP/u_DelayBuffer/delayLFO[1]                              NET DELAY               3.133                 10.020  1       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_1/C1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_1/CO1
+                                          SLICE_R16C4A       C1_TO_COUT1_DELAY       0.343                 10.363  2       
+u_DSP/u_DelayBuffer/n2001                                    NET DELAY               0.000                 10.363  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CO0
+                                          SLICE_R16C4B       CIN0_TO_COUT0_DELAY     0.277                 10.640  2       
+u_DSP/u_DelayBuffer/n3977                                    NET DELAY               0.000                 10.640  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CO1
+                                          SLICE_R16C4B       CIN1_TO_COUT1_DELAY     0.277                 10.917  2       
+u_DSP/u_DelayBuffer/n2003                                    NET DELAY               0.000                 10.917  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CO0
+                                          SLICE_R16C4C       CIN0_TO_COUT0_DELAY     0.277                 11.194  2       
+u_DSP/u_DelayBuffer/n3980                                    NET DELAY               0.000                 11.194  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CO1
+                                          SLICE_R16C4C       CIN1_TO_COUT1_DELAY     0.277                 11.471  2       
+u_DSP/u_DelayBuffer/n2005                                    NET DELAY               0.000                 11.471  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CO0
+                                          SLICE_R16C4D       CIN0_TO_COUT0_DELAY     0.277                 11.748  2       
+u_DSP/u_DelayBuffer/n3983                                    NET DELAY               0.000                 11.748  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CO1
+                                          SLICE_R16C4D       CIN1_TO_COUT1_DELAY     0.277                 12.025  2       
+u_DSP/u_DelayBuffer/n2007                                    NET DELAY               0.555                 12.580  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CO0
+                                          SLICE_R16C5A       CIN0_TO_COUT0_DELAY     0.277                 12.857  2       
+u_DSP/u_DelayBuffer/n3986                                    NET DELAY               0.000                 12.857  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CO1
+                                          SLICE_R16C5A       CIN1_TO_COUT1_DELAY     0.277                 13.134  2       
+u_DSP/u_DelayBuffer/n2009                                    NET DELAY               0.000                 13.134  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/CO0
+                                          SLICE_R16C5B       CIN0_TO_COUT0_DELAY     0.277                 13.411  2       
+u_DSP/u_DelayBuffer/n3989                                    NET DELAY               0.661                 14.072  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/D1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/S1
+                                          SLICE_R16C5B       D1_TO_F1_DELAY          0.449                 14.521  2       
+u_DSP/u_DelayBuffer/delaySum[11]                             NET DELAY               2.168                 16.689  2       
+u_DSP/u_DelayBuffer/i2_2_lut/A->u_DSP/u_DelayBuffer/i2_2_lut/Z
+                                          SLICE_R17C5D       D0_TO_F0_DELAY          0.449                 17.138  1       
+u_DSP/u_DelayBuffer/n6                                       NET DELAY               3.027                 20.165  1       
+u_DSP/u_DelayBuffer/i129_4_lut/D->u_DSP/u_DelayBuffer/i129_4_lut/Z
+                                          SLICE_R18C3A       C0_TO_F0_DELAY          0.449                 20.614  14      
+u_DSP/u_DelayBuffer/n28                                      NET DELAY               2.432                 23.046  14      
+u_DSP/u_DelayBuffer/i2533_3_lut/C->u_DSP/u_DelayBuffer/i2533_3_lut/Z
+                                          SLICE_R17C4B       C1_TO_F1_DELAY          0.449                 23.495  2       
+u_DSP/u_DelayBuffer/totalDelay[1]                            NET DELAY               2.168                 25.663  2       
+u_DSP/u_DelayBuffer/LessThan_26_i4_4_lut/C->u_DSP/u_DelayBuffer/LessThan_26_i4_4_lut/Z
+                                          SLICE_R18C3B       D0_TO_F0_DELAY          0.476                 26.139  1       
+u_DSP/u_DelayBuffer/n4_adj_501                               NET DELAY               0.304                 26.443  1       
+u_DSP/u_DelayBuffer/LessThan_26_i6_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i6_3_lut/Z
+                                          SLICE_R18C3B       C1_TO_F1_DELAY          0.476                 26.919  1       
+u_DSP/u_DelayBuffer/n6_adj_502                               NET DELAY               0.304                 27.223  1       
+u_DSP/u_DelayBuffer/LessThan_26_i8_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i8_3_lut/Z
+                                          SLICE_R18C3C       C0_TO_F0_DELAY          0.476                 27.699  1       
+u_DSP/u_DelayBuffer/n8_adj_503                               NET DELAY               0.304                 28.003  1       
+u_DSP/u_DelayBuffer/LessThan_26_i10_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i10_3_lut/Z
+                                          SLICE_R18C3C       C1_TO_F1_DELAY          0.476                 28.479  1       
+u_DSP/u_DelayBuffer/n10                                      NET DELAY               0.304                 28.783  1       
+u_DSP/u_DelayBuffer/LessThan_26_i12_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i12_3_lut/Z
+                                          SLICE_R18C3D       C0_TO_F0_DELAY          0.476                 29.259  1       
+u_DSP/u_DelayBuffer/n12_adj_504                              NET DELAY               0.304                 29.563  1       
+u_DSP/u_DelayBuffer/LessThan_26_i14_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i14_3_lut/Z
+                                          SLICE_R18C3D       C1_TO_F1_DELAY          0.476                 30.039  1       
+u_DSP/u_DelayBuffer/n14                                      NET DELAY               0.304                 30.343  1       
+u_DSP/u_DelayBuffer/LessThan_26_i16_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i16_3_lut/Z
+                                          SLICE_R18C4A       C0_TO_F0_DELAY          0.476                 30.819  1       
+u_DSP/u_DelayBuffer/n16                                      NET DELAY               0.304                 31.123  1       
+u_DSP/u_DelayBuffer/LessThan_26_i18_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i18_3_lut/Z
+                                          SLICE_R18C4A       C1_TO_F1_DELAY          0.476                 31.599  1       
+u_DSP/u_DelayBuffer/n18                                      NET DELAY               0.304                 31.903  1       
+u_DSP/u_DelayBuffer/LessThan_26_i20_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i20_3_lut/Z
+                                          SLICE_R18C4B       C0_TO_F0_DELAY          0.476                 32.379  1       
+u_DSP/u_DelayBuffer/n20                                      NET DELAY               0.304                 32.683  1       
+u_DSP/u_DelayBuffer/LessThan_26_i22_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i22_3_lut/Z
+                                          SLICE_R18C4B       C1_TO_F1_DELAY          0.476                 33.159  1       
+u_DSP/u_DelayBuffer/n22                                      NET DELAY               0.304                 33.463  1       
+u_DSP/u_DelayBuffer/LessThan_26_i24_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i24_3_lut/Z
+                                          SLICE_R18C4C       C0_TO_F0_DELAY          0.476                 33.939  1       
+u_DSP/u_DelayBuffer/n24                                      NET DELAY               0.304                 34.243  1       
+u_DSP/u_DelayBuffer/LessThan_26_i26_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i26_3_lut/Z
+                                          SLICE_R18C4C       C1_TO_F1_DELAY          0.476                 34.719  2       
+u_DSP/u_DelayBuffer/n26                                      NET DELAY               0.304                 35.023  2       
+u_DSP/u_DelayBuffer/LessThan_26_i28_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i28_3_lut/Z
+                                          SLICE_R18C4D       C0_TO_F0_DELAY          0.449                 35.472  12      
+u_DSP/u_DelayBuffer/n116                                     NET DELAY               3.542                 39.014  12      
+u_DSP/u_DelayBuffer/mux_124_i2_3_lut/C->u_DSP/u_DelayBuffer/mux_124_i2_3_lut/Z
+                                          SLICE_R21C3A       C1_TO_F1_DELAY          0.449                 39.463  1       
+u_DSP/u_DelayBuffer/n343[1]                                  NET DELAY               3.080                 42.543  1       
+u_DSP/u_DelayBuffer/add_314_4/B0->u_DSP/u_DelayBuffer/add_314_4/CO0
+                                          SLICE_R19C3B       B0_TO_COUT0_DELAY       0.357                 42.900  2       
+u_DSP/u_DelayBuffer/n4001                                    NET DELAY               0.000                 42.900  2       
+u_DSP/u_DelayBuffer/add_314_4/CI1->u_DSP/u_DelayBuffer/add_314_4/CO1
+                                          SLICE_R19C3B       CIN1_TO_COUT1_DELAY     0.277                 43.177  2       
+u_DSP/u_DelayBuffer/n2062                                    NET DELAY               0.000                 43.177  2       
+u_DSP/u_DelayBuffer/add_314_6/CI0->u_DSP/u_DelayBuffer/add_314_6/CO0
+                                          SLICE_R19C3C       CIN0_TO_COUT0_DELAY     0.277                 43.454  2       
+u_DSP/u_DelayBuffer/n4007                                    NET DELAY               0.000                 43.454  2       
+u_DSP/u_DelayBuffer/add_314_6/CI1->u_DSP/u_DelayBuffer/add_314_6/CO1
+                                          SLICE_R19C3C       CIN1_TO_COUT1_DELAY     0.277                 43.731  2       
+u_DSP/u_DelayBuffer/n2064                                    NET DELAY               0.000                 43.731  2       
+u_DSP/u_DelayBuffer/add_314_8/CI0->u_DSP/u_DelayBuffer/add_314_8/CO0
+                                          SLICE_R19C3D       CIN0_TO_COUT0_DELAY     0.277                 44.008  2       
+u_DSP/u_DelayBuffer/n4013                                    NET DELAY               0.000                 44.008  2       
+u_DSP/u_DelayBuffer/add_314_8/CI1->u_DSP/u_DelayBuffer/add_314_8/CO1
+                                          SLICE_R19C3D       CIN1_TO_COUT1_DELAY     0.277                 44.285  2       
+u_DSP/u_DelayBuffer/n2066                                    NET DELAY               0.555                 44.840  2       
+u_DSP/u_DelayBuffer/add_314_10/CI0->u_DSP/u_DelayBuffer/add_314_10/CO0
+                                          SLICE_R19C4A       CIN0_TO_COUT0_DELAY     0.277                 45.117  2       
+u_DSP/u_DelayBuffer/n4019                                    NET DELAY               0.000                 45.117  2       
+u_DSP/u_DelayBuffer/add_314_10/CI1->u_DSP/u_DelayBuffer/add_314_10/CO1
+                                          SLICE_R19C4A       CIN1_TO_COUT1_DELAY     0.277                 45.394  2       
+u_DSP/u_DelayBuffer/n2068                                    NET DELAY               0.000                 45.394  2       
+u_DSP/u_DelayBuffer/add_314_12/CI0->u_DSP/u_DelayBuffer/add_314_12/CO0
+                                          SLICE_R19C4B       CIN0_TO_COUT0_DELAY     0.277                 45.671  2       
+u_DSP/u_DelayBuffer/n4025                                    NET DELAY               0.661                 46.332  2       
+u_DSP/u_DelayBuffer/add_314_12/D1->u_DSP/u_DelayBuffer/add_314_12/S1
+                                          SLICE_R19C4B       D1_TO_F1_DELAY          0.449                 46.781  1       
+u_DSP/u_DelayBuffer/spramAD_c_13__N_354[12]
+                                                             NET DELAY               2.763                 49.544  1       
+u_DSP/u_DelayBuffer/spramAD_c_13__I_17_3_lut/A->u_DSP/u_DelayBuffer/spramAD_c_13__I_17_3_lut/Z
+                                          SLICE_R22C4B       D0_TO_F0_DELAY          0.449                 49.993  1       
+u_DSP/u_DelayBuffer/spramAD_c[11]                            NET DELAY               3.014                 53.007  1       
+u_DSP/u_DelayBuffer/buffer/ADDRESS11                         ENDPOINT                0.000                 53.007  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                166.666  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                166.666  135     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY               5.499                172.165  135     
+u_DSP/u_DelayBuffer/buffer/CLOCK                             CLOCK PIN               0.000                172.165  1       
+                                                             Uncertainty          -(0.000)                172.165  
+                                                             Setup time           -(0.267)                171.898  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                             171.898  
+Arrival Time                                                                                            -(53.006)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                      118.891  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_DelayLFO/wave_o__i2/Q  (SLICE_R14C6C)
+Path End         : u_DSP/u_DelayBuffer/buffer/ADDRESS10  (SRAM_SRAM_R26C1B)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 39
+Delay Ratio      : 66.6% (route), 33.4% (logic)
+Clock Skew       : 0.000 ns 
+Setup Constraint : 166.666 ns 
+Path Slack       : 119.023 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                  0.000  135     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY               5.499                  5.499  135     
+{u_DSP/u_DelayLFO/wave_o__i3/CK   u_DSP/u_DelayLFO/wave_o__i2/CK}
+                                                             CLOCK PIN               0.000                  5.499  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+u_DSP/u_DelayLFO/wave_o__i2/CK->u_DSP/u_DelayLFO/wave_o__i2/Q
+                                          SLICE_R14C6C       CLK_TO_Q1_DELAY         1.388                  6.887  1       
+u_DSP/u_DelayBuffer/delayLFO[1]                              NET DELAY               3.133                 10.020  1       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_1/C1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_1/CO1
+                                          SLICE_R16C4A       C1_TO_COUT1_DELAY       0.343                 10.363  2       
+u_DSP/u_DelayBuffer/n2001                                    NET DELAY               0.000                 10.363  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CO0
+                                          SLICE_R16C4B       CIN0_TO_COUT0_DELAY     0.277                 10.640  2       
+u_DSP/u_DelayBuffer/n3977                                    NET DELAY               0.000                 10.640  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_3/CO1
+                                          SLICE_R16C4B       CIN1_TO_COUT1_DELAY     0.277                 10.917  2       
+u_DSP/u_DelayBuffer/n2003                                    NET DELAY               0.000                 10.917  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CO0
+                                          SLICE_R16C4C       CIN0_TO_COUT0_DELAY     0.277                 11.194  2       
+u_DSP/u_DelayBuffer/n3980                                    NET DELAY               0.000                 11.194  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_5/CO1
+                                          SLICE_R16C4C       CIN1_TO_COUT1_DELAY     0.277                 11.471  2       
+u_DSP/u_DelayBuffer/n2005                                    NET DELAY               0.000                 11.471  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CO0
+                                          SLICE_R16C4D       CIN0_TO_COUT0_DELAY     0.277                 11.748  2       
+u_DSP/u_DelayBuffer/n3983                                    NET DELAY               0.000                 11.748  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_7/CO1
+                                          SLICE_R16C4D       CIN1_TO_COUT1_DELAY     0.277                 12.025  2       
+u_DSP/u_DelayBuffer/n2007                                    NET DELAY               0.555                 12.580  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CO0
+                                          SLICE_R16C5A       CIN0_TO_COUT0_DELAY     0.277                 12.857  2       
+u_DSP/u_DelayBuffer/n3986                                    NET DELAY               0.000                 12.857  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CI1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_9/CO1
+                                          SLICE_R16C5A       CIN1_TO_COUT1_DELAY     0.277                 13.134  2       
+u_DSP/u_DelayBuffer/n2009                                    NET DELAY               0.000                 13.134  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/CI0->u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/CO0
+                                          SLICE_R16C5B       CIN0_TO_COUT0_DELAY     0.277                 13.411  2       
+u_DSP/u_DelayBuffer/n3989                                    NET DELAY               0.661                 14.072  2       
+u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/D1->u_DSP/u_DelayBuffer/delayLFO_13__I_0_11/S1
+                                          SLICE_R16C5B       D1_TO_F1_DELAY          0.449                 14.521  2       
+u_DSP/u_DelayBuffer/delaySum[11]                             NET DELAY               2.168                 16.689  2       
+u_DSP/u_DelayBuffer/i2_2_lut/A->u_DSP/u_DelayBuffer/i2_2_lut/Z
+                                          SLICE_R17C5D       D0_TO_F0_DELAY          0.449                 17.138  1       
+u_DSP/u_DelayBuffer/n6                                       NET DELAY               3.027                 20.165  1       
+u_DSP/u_DelayBuffer/i129_4_lut/D->u_DSP/u_DelayBuffer/i129_4_lut/Z
+                                          SLICE_R18C3A       C0_TO_F0_DELAY          0.449                 20.614  14      
+u_DSP/u_DelayBuffer/n28                                      NET DELAY               2.432                 23.046  14      
+u_DSP/u_DelayBuffer/i2533_3_lut/C->u_DSP/u_DelayBuffer/i2533_3_lut/Z
+                                          SLICE_R17C4B       C1_TO_F1_DELAY          0.449                 23.495  2       
+u_DSP/u_DelayBuffer/totalDelay[1]                            NET DELAY               2.168                 25.663  2       
+u_DSP/u_DelayBuffer/LessThan_26_i4_4_lut/C->u_DSP/u_DelayBuffer/LessThan_26_i4_4_lut/Z
+                                          SLICE_R18C3B       D0_TO_F0_DELAY          0.476                 26.139  1       
+u_DSP/u_DelayBuffer/n4_adj_501                               NET DELAY               0.304                 26.443  1       
+u_DSP/u_DelayBuffer/LessThan_26_i6_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i6_3_lut/Z
+                                          SLICE_R18C3B       C1_TO_F1_DELAY          0.476                 26.919  1       
+u_DSP/u_DelayBuffer/n6_adj_502                               NET DELAY               0.304                 27.223  1       
+u_DSP/u_DelayBuffer/LessThan_26_i8_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i8_3_lut/Z
+                                          SLICE_R18C3C       C0_TO_F0_DELAY          0.476                 27.699  1       
+u_DSP/u_DelayBuffer/n8_adj_503                               NET DELAY               0.304                 28.003  1       
+u_DSP/u_DelayBuffer/LessThan_26_i10_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i10_3_lut/Z
+                                          SLICE_R18C3C       C1_TO_F1_DELAY          0.476                 28.479  1       
+u_DSP/u_DelayBuffer/n10                                      NET DELAY               0.304                 28.783  1       
+u_DSP/u_DelayBuffer/LessThan_26_i12_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i12_3_lut/Z
+                                          SLICE_R18C3D       C0_TO_F0_DELAY          0.476                 29.259  1       
+u_DSP/u_DelayBuffer/n12_adj_504                              NET DELAY               0.304                 29.563  1       
+u_DSP/u_DelayBuffer/LessThan_26_i14_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i14_3_lut/Z
+                                          SLICE_R18C3D       C1_TO_F1_DELAY          0.476                 30.039  1       
+u_DSP/u_DelayBuffer/n14                                      NET DELAY               0.304                 30.343  1       
+u_DSP/u_DelayBuffer/LessThan_26_i16_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i16_3_lut/Z
+                                          SLICE_R18C4A       C0_TO_F0_DELAY          0.476                 30.819  1       
+u_DSP/u_DelayBuffer/n16                                      NET DELAY               0.304                 31.123  1       
+u_DSP/u_DelayBuffer/LessThan_26_i18_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i18_3_lut/Z
+                                          SLICE_R18C4A       C1_TO_F1_DELAY          0.476                 31.599  1       
+u_DSP/u_DelayBuffer/n18                                      NET DELAY               0.304                 31.903  1       
+u_DSP/u_DelayBuffer/LessThan_26_i20_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i20_3_lut/Z
+                                          SLICE_R18C4B       C0_TO_F0_DELAY          0.476                 32.379  1       
+u_DSP/u_DelayBuffer/n20                                      NET DELAY               0.304                 32.683  1       
+u_DSP/u_DelayBuffer/LessThan_26_i22_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i22_3_lut/Z
+                                          SLICE_R18C4B       C1_TO_F1_DELAY          0.476                 33.159  1       
+u_DSP/u_DelayBuffer/n22                                      NET DELAY               0.304                 33.463  1       
+u_DSP/u_DelayBuffer/LessThan_26_i24_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i24_3_lut/Z
+                                          SLICE_R18C4C       C0_TO_F0_DELAY          0.476                 33.939  1       
+u_DSP/u_DelayBuffer/n24                                      NET DELAY               0.304                 34.243  1       
+u_DSP/u_DelayBuffer/LessThan_26_i26_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i26_3_lut/Z
+                                          SLICE_R18C4C       C1_TO_F1_DELAY          0.476                 34.719  2       
+u_DSP/u_DelayBuffer/n26                                      NET DELAY               0.304                 35.023  2       
+u_DSP/u_DelayBuffer/LessThan_26_i28_3_lut/A->u_DSP/u_DelayBuffer/LessThan_26_i28_3_lut/Z
+                                          SLICE_R18C4D       C0_TO_F0_DELAY          0.449                 35.472  12      
+u_DSP/u_DelayBuffer/n116                                     NET DELAY               3.542                 39.014  12      
+u_DSP/u_DelayBuffer/mux_124_i2_3_lut/C->u_DSP/u_DelayBuffer/mux_124_i2_3_lut/Z
+                                          SLICE_R21C3A       C1_TO_F1_DELAY          0.449                 39.463  1       
+u_DSP/u_DelayBuffer/n343[1]                                  NET DELAY               3.080                 42.543  1       
+u_DSP/u_DelayBuffer/add_314_4/B0->u_DSP/u_DelayBuffer/add_314_4/CO0
+                                          SLICE_R19C3B       B0_TO_COUT0_DELAY       0.357                 42.900  2       
+u_DSP/u_DelayBuffer/n4001                                    NET DELAY               0.000                 42.900  2       
+u_DSP/u_DelayBuffer/add_314_4/CI1->u_DSP/u_DelayBuffer/add_314_4/CO1
+                                          SLICE_R19C3B       CIN1_TO_COUT1_DELAY     0.277                 43.177  2       
+u_DSP/u_DelayBuffer/n2062                                    NET DELAY               0.000                 43.177  2       
+u_DSP/u_DelayBuffer/add_314_6/CI0->u_DSP/u_DelayBuffer/add_314_6/CO0
+                                          SLICE_R19C3C       CIN0_TO_COUT0_DELAY     0.277                 43.454  2       
+u_DSP/u_DelayBuffer/n4007                                    NET DELAY               0.000                 43.454  2       
+u_DSP/u_DelayBuffer/add_314_6/CI1->u_DSP/u_DelayBuffer/add_314_6/CO1
+                                          SLICE_R19C3C       CIN1_TO_COUT1_DELAY     0.277                 43.731  2       
+u_DSP/u_DelayBuffer/n2064                                    NET DELAY               0.000                 43.731  2       
+u_DSP/u_DelayBuffer/add_314_8/CI0->u_DSP/u_DelayBuffer/add_314_8/CO0
+                                          SLICE_R19C3D       CIN0_TO_COUT0_DELAY     0.277                 44.008  2       
+u_DSP/u_DelayBuffer/n4013                                    NET DELAY               0.000                 44.008  2       
+u_DSP/u_DelayBuffer/add_314_8/CI1->u_DSP/u_DelayBuffer/add_314_8/CO1
+                                          SLICE_R19C3D       CIN1_TO_COUT1_DELAY     0.277                 44.285  2       
+u_DSP/u_DelayBuffer/n2066                                    NET DELAY               0.555                 44.840  2       
+u_DSP/u_DelayBuffer/add_314_10/CI0->u_DSP/u_DelayBuffer/add_314_10/CO0
+                                          SLICE_R19C4A       CIN0_TO_COUT0_DELAY     0.277                 45.117  2       
+u_DSP/u_DelayBuffer/n4019                                    NET DELAY               0.000                 45.117  2       
+u_DSP/u_DelayBuffer/add_314_10/CI1->u_DSP/u_DelayBuffer/add_314_10/CO1
+                                          SLICE_R19C4A       CIN1_TO_COUT1_DELAY     0.277                 45.394  2       
+u_DSP/u_DelayBuffer/n2068                                    NET DELAY               0.661                 46.055  2       
+u_DSP/u_DelayBuffer/add_314_12/D0->u_DSP/u_DelayBuffer/add_314_12/S0
+                                          SLICE_R19C4B       D0_TO_F0_DELAY          0.449                 46.504  1       
+u_DSP/u_DelayBuffer/spramAD_c_13__N_354[11]
+                                                             NET DELAY               2.763                 49.267  1       
+u_DSP/u_DelayBuffer/spramAD_c_13__I_18_3_lut/A->u_DSP/u_DelayBuffer/spramAD_c_13__I_18_3_lut/Z
+                                          SLICE_R22C4C       D1_TO_F1_DELAY          0.449                 49.716  1       
+u_DSP/u_DelayBuffer/spramAD_c[10]                            NET DELAY               3.159                 52.875  1       
+u_DSP/u_DelayBuffer/buffer/ADDRESS10                         ENDPOINT                0.000                 52.875  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name           Incr      Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+                                                             CONSTRAINT              0.000                166.666  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY           0.000                166.666  135     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY               5.499                172.165  135     
+u_DSP/u_DelayBuffer/buffer/CLOCK                             CLOCK PIN               0.000                172.165  1       
+                                                             Uncertainty          -(0.000)                172.165  
+                                                             Setup time           -(0.267)                171.898  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Required Time                                                                                             171.898  
+Arrival Time                                                                                            -(52.874)  
+----------------------------------------  -----------------  -------------------  --------  ---------------------  ------  
+Path Slack  (Passed)                                                                                      119.023  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+
+===============================================================
+3  Hold at Speed Grade m Corner at -40 Degrees
+===============================================================
+
+3.1  Endpoint slacks
+=======================
+-------------------------------------------------------
+          Listing 10 End Points          |    Slack    
+-------------------------------------------------------
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.u_mem0/WADDR1              
+                                         |    1.454 ns 
+u_DSP/u_DelayLFO/multResult__i7/D        |    1.743 ns 
+u_DSP/u_DelayLFO/multResult__i2/D        |    1.743 ns 
+u_DSP/u_DelayLFO/multResult__i3/D        |    1.743 ns 
+u_DSP/u_DelayLFO/multResultPrev_i0_i0/D  |    1.743 ns 
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/D              
+                                         |    1.743 ns 
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync2_r_i0/D              
+                                         |    1.743 ns 
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync2_r_i2/D              
+                                         |    1.743 ns 
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1/D              
+                                         |    1.743 ns 
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync2_r_i0/D              
+                                         |    1.743 ns 
+-------------------------------------------------------
+                                         |             
+Hold # of endpoints with negative slack: |           0 
+                                         |             
+-------------------------------------------------------
+
+3.2  Detailed Report
+=======================
+
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Detail report of critical paths
+
+XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                    Detailed Report for timing paths 
+ +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ ++++Path 1  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Path Begin       : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/Q  (SLICE_R21C15B)
+Path End         : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.u_mem0/WADDR1  (EBR_EBR_R20C14)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 1
+Delay Ratio      : 47.8% (route), 52.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.454 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/CK   u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/CK->u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/Q
+                                          SLICE_R21C15B      CLK_TO_Q0_DELAY  0.779                  3.863  4       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/wr_addr_r[1]
+                                                             NET DELAY        0.712                  4.575  4       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.u_mem0/WADDR1
+                                                             ENDPOINT         0.000                  4.575  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/ICE_MEM.u_mem0/WCLK
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.037                  3.121  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.121  
+Arrival Time                                                                                         4.575  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.454  
+
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_DelayLFO/multResult__i7/Q  (SLICE_R10C8B)
+Path End         : u_DSP/u_DelayLFO/multResult__i7/D  (SLICE_R10C8B)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_DelayLFO/multResult__i6/CK   u_DSP/u_DelayLFO/multResult__i7/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_DelayLFO/multResult__i7/CK->u_DSP/u_DelayLFO/multResult__i7/Q
+                                          SLICE_R10C8B       CLK_TO_Q1_DELAY  0.779                  3.863  4       
+u_DSP/u_DelayLFO/multResult[7]                               NET DELAY        0.712                  4.575  4       
+u_DSP/u_DelayLFO/i981_4_lut/B->u_DSP/u_DelayLFO/i981_4_lut/Z
+                                          SLICE_R10C8B       D1_TO_F1_DELAY   0.252                  4.827  1       
+u_DSP/u_DelayLFO/n1330                                       NET DELAY        0.000                  4.827  1       
+u_DSP/u_DelayLFO/multResult__i7/D                            ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_DelayLFO/multResult__i6/CK   u_DSP/u_DelayLFO/multResult__i7/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_DelayLFO/multResult__i2/Q  (SLICE_R11C8D)
+Path End         : u_DSP/u_DelayLFO/multResult__i2/D  (SLICE_R11C8D)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_DelayLFO/multResult__i2/CK   u_DSP/u_DelayLFO/multResult__i3/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_DelayLFO/multResult__i2/CK->u_DSP/u_DelayLFO/multResult__i2/Q
+                                          SLICE_R11C8D       CLK_TO_Q0_DELAY  0.779                  3.863  3       
+u_DSP/u_DelayLFO/multResult[2]                               NET DELAY        0.712                  4.575  3       
+u_DSP/u_DelayLFO/i993_4_lut/B->u_DSP/u_DelayLFO/i993_4_lut/Z
+                                          SLICE_R11C8D       D0_TO_F0_DELAY   0.252                  4.827  1       
+u_DSP/u_DelayLFO/n1342                                       NET DELAY        0.000                  4.827  1       
+u_DSP/u_DelayLFO/multResult__i2/D                            ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_DelayLFO/multResult__i2/CK   u_DSP/u_DelayLFO/multResult__i3/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_DelayLFO/multResult__i3/Q  (SLICE_R11C8D)
+Path End         : u_DSP/u_DelayLFO/multResult__i3/D  (SLICE_R11C8D)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_DelayLFO/multResult__i2/CK   u_DSP/u_DelayLFO/multResult__i3/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_DelayLFO/multResult__i3/CK->u_DSP/u_DelayLFO/multResult__i3/Q
+                                          SLICE_R11C8D       CLK_TO_Q1_DELAY  0.779                  3.863  3       
+u_DSP/u_DelayLFO/multResult[3]                               NET DELAY        0.712                  4.575  3       
+u_DSP/u_DelayLFO/i991_4_lut/B->u_DSP/u_DelayLFO/i991_4_lut/Z
+                                          SLICE_R11C8D       D1_TO_F1_DELAY   0.252                  4.827  1       
+u_DSP/u_DelayLFO/n1340                                       NET DELAY        0.000                  4.827  1       
+u_DSP/u_DelayLFO/multResult__i3/D                            ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_DelayLFO/multResult__i2/CK   u_DSP/u_DelayLFO/multResult__i3/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_DelayLFO/multResult__i0/Q  (SLICE_R13C8A)
+Path End         : u_DSP/u_DelayLFO/multResultPrev_i0_i0/D  (SLICE_R14C8B)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_DelayLFO/multResult__i0/CK   u_DSP/u_DelayLFO/multResult__i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_DelayLFO/multResult__i0/CK->u_DSP/u_DelayLFO/multResult__i0/Q
+                                          SLICE_R13C8A       CLK_TO_Q0_DELAY  0.779                  3.863  3       
+u_DSP/u_DelayLFO/multResult[0]                               NET DELAY        0.712                  4.575  3       
+u_DSP.u_DelayLFO.SLICE_183/D0->u_DSP.u_DelayLFO.SLICE_183/F0
+                                          SLICE_R14C8B       D0_TO_F0_DELAY   0.252                  4.827  1       
+u_DSP.u_DelayLFO.multResult[0].sig_057.FeedThruLUT
+                                                             NET DELAY        0.000                  4.827  1       
+u_DSP/u_DelayLFO/multResultPrev_i0_i0/D                      ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_DelayLFO/multResultPrev_i0_i0/CK   u_DSP/u_DelayLFO/multResultPrev_i0_i1/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i0/Q  (SLICE_R21C15B)
+Path End         : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/D  (SLICE_R21C15B)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/CK   u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i0/CK->u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i0/Q
+                                          SLICE_R21C15B      CLK_TO_Q1_DELAY  0.779                  3.863  6       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/wr_addr_r[0]
+                                                             NET DELAY        0.712                  4.575  6       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.i945_2_lut_2_lut/A->u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.i945_2_lut_2_lut/Z
+                                          SLICE_R21C15B      D0_TO_F0_DELAY   0.252                  4.827  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/n1294
+                                                             NET DELAY        0.000                  4.827  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/D
+                                                             ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i1/CK   u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wr_addr_r_i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i0/Q  (SLICE_R19C16C)
+Path End         : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync2_r_i0/D  (SLICE_R19C16A)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i0/CK
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i0/CK->u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i0/Q
+                                          SLICE_R19C16C      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r[0]
+                                                             NET DELAY        0.712                  4.575  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_141/D0->u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_141/F0
+                                          SLICE_R19C16A      D0_TO_F0_DELAY   0.252                  4.827  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.rp_sync1_r[0].sig_045.FeedThruLUT
+                                                             NET DELAY        0.000                  4.827  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync2_r_i0/D
+                                                             ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync2_r_i0/CK
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i2/Q  (SLICE_R21C17A)
+Path End         : u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync2_r_i2/D  (SLICE_R21C17D)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i2/CK
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i2/CK->u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r_i2/Q
+                                          SLICE_R21C17A      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync1_r[2]
+                                                             NET DELAY        0.712                  4.575  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_139/D1->u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_139/F1
+                                          SLICE_R21C17D      D1_TO_F1_DELAY   0.252                  4.827  1       
+u_DSP.u_FTS_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.rp_sync1_r[2].sig_053.FeedThruLUT
+                                                             NET DELAY        0.000                  4.827  1       
+u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync2_r_i2/D
+                                                             ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/full_r_c/CK   u_DSP/u_FTS_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rp_sync2_r_i2/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1/Q  (SLICE_R17C11A)
+Path End         : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1/D  (SLICE_R17C11A)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1/CK   u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1/CK->u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1/Q
+                                          SLICE_R17C11A      CLK_TO_Q0_DELAY  0.779                  3.863  4       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/EBR.EBR_OTHER.u_fifo_mem0/mem_main/NON_MIX.ADDR_ROUTE[0].DATA_ROUTE[0].no_init.u_mem0/rd_addr_r[1]
+                                                             NET DELAY        0.712                  4.575  4       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.i951_2_lut_2_lut/C->u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.i951_2_lut_2_lut/Z
+                                          SLICE_R17C11A      D0_TO_F0_DELAY   0.252                  4.827  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/n1300
+                                                             NET DELAY        0.000                  4.827  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1/D
+                                                             ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+{u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i1/CK   u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/rd_addr_r_i0/CK}
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin       : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i0/Q  (SLICE_R14C12C)
+Path End         : u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync2_r_i0/D  (SLICE_R14C12D)
+Source Clock     : u_DSP/clkDSP (R)
+Destination Clock: u_DSP/clkDSP (R)
+Logic Level      : 2
+Delay Ratio      : 40.8% (route), 59.2% (logic)
+Clock Skew       : 0.000 ns 
+Hold Constraint  : 0.000 ns 
+Path Slack       : 1.743 ns  (Passed)
+
+
+Source Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i0/CK
+                                                             CLOCK PIN        0.000                  3.084  1       
+
+
+Data Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i0/CK->u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r_i0/Q
+                                          SLICE_R14C12C      CLK_TO_Q0_DELAY  0.779                  3.863  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync1_r[0]
+                                                             NET DELAY        0.712                  4.575  1       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_80/D0->u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.SLICE_80/F0
+                                          SLICE_R14C12D      D0_TO_F0_DELAY   0.252                  4.827  1       
+u_DSP.u_STF_CDC_FIFO.CDC_AFIFO_STF.lscc_fifo_dc_inst.fifo_dc0._FABRIC.u_fifo.wp_sync1_r[0].sig_017.FeedThruLUT
+                                                             NET DELAY        0.000                  4.827  1       
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync2_r_i0/D
+                                                             ENDPOINT         0.000                  4.827  1       
+
+
+Destination Clock Path
+Name                                      Cell/Site Name     Delay Name       Incr   Arrival/Required Time  Fanout  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+                                                             CONSTRAINT       0.000                  0.000  1       
+u_DSP.u_hf_osc/CLKHF                      HFOSC_HFOSC_R1C32  CLOCK LATENCY    0.000                  0.000  136     
+u_DSP/u_DelayBuffer/clkDSP                                   NET DELAY        3.084                  3.084  136     
+u_DSP/u_STF_CDC_FIFO/CDC_AFIFO_STF/lscc_fifo_dc_inst/fifo_dc0/_FABRIC.u_fifo/wp_sync2_r_i0/CK
+                                                             CLOCK PIN        0.000                  3.084  1       
+                                                             Uncertainty      0.000                  3.084  
+                                                             Hold time        0.000                  3.084  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Required Time                                                                                       -3.084  
+Arrival Time                                                                                         4.827  
+----------------------------------------  -----------------  ---------------  -----  ---------------------  ------  
+Path Slack  (Passed)                                                                                 1.743  
+
+
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+                    End of Detailed Report for timing paths 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+
+##########################################################
+
+
+
