@@ -1,11 +1,22 @@
-# KiCad files
-*#
-*.kicad_prl
-*.zip
-*.kicad_sch-bak
+# --- General Tool/OS Files ---
+*.DS_Store
 *.lck
+*.zip
+*.bak
+*#
+*~
 
-# Radiant & Questa
+# --- KiCad Files ---
+*.kicad_prl
+*.kicad_sch-bak
+
+# --- Lattice Radiant Files ---
+# Directories to ignore
+impl_*/
+_tmp/
+*.dir/
+
+# Generated files and reports (already largely covered)
 *.html
 *.build_status
 *.xml
@@ -16,7 +27,6 @@
 *.elf
 *.map
 *.jlink
-*.DS_Store
 *.emSession
 *.ini
 *.recovery
@@ -36,12 +46,18 @@
 *.vdb
 *.txt
 *.hrr
-/FPGA/DSP/sim/Questa/work   
-/FPGA/DSP/sim/Questa/DelayBufferFSM/work
-/FPGA/DSP/sim/Questa/CDC_STF/work
 *.cprj
 *.p2t
 *.par
 *.pad
-*.mti
 hdr_log
+
+# --- Questasim/ModelSim Files ---
+*.QTL
+*.QPG
+*.QDB
+*.mti
+*.wlf
+work/
+transcript
+modelsim.ini
