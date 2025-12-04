@@ -1,0 +1,15 @@
+Property_Name=CLOCK_NAME_u_DSP/clkDSP
+Property_Type=String
+Property_Value=u_DSP/clkDSP
+Property_Name=CLOCK_POINT_NAME_u_DSP/clkDSP
+Property_Type=String
+Property_Value=
+Property_Name=CLOCK_NETNAME_u_DSP/clkDSP
+Property_Type=String
+Property_Value=u_DSP.clkDSP
+Property_Name=REQUIRED_FREQUENCY_u_DSP/clkDSP
+Property_Type=Float
+Property_Value=6.00002
+Property_Name=ACTUAL_FREQUENCY_u_DSP/clkDSP
+Property_Type=Float
+Property_Value=20.1195

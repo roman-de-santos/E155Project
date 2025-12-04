@@ -1,0 +1,4 @@
+-gui
+-msgset "C:/Git/E155Project/FPGA/TOP/Radiant/top/promote.xml"
+
+-freq 0
