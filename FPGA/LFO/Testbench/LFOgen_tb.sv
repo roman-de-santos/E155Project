@@ -26,7 +26,7 @@ module LFOgen_tb;
     // --- Instantiate the Device Under Test (DUT) ---
     LFOgen DUT (
         .clk_i(clk),
-        .reset_i(reset),
+        .rst_n_i(reset),
         .freqSetting_i(freqSetting),
         .scaleFactor_i (scaleFactor),
 		.FIFOupdate_i(FIFOupdate),

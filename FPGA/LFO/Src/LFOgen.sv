@@ -5,7 +5,7 @@ module LFOgen (
     input  logic [3:0] scaleFactor_i,      // 0000=0.0, 1111=1.0
     input  logic       FIFOupdate_i,
 	
-    output logic signed [15:0] wave_o, //TODO: this should be [13:0]
+    output logic signed [13:0] wave_o,
 	output logic newValFlag_o
 );
 
@@ -17,7 +17,7 @@ module LFOgen (
 
     // Wave scaling
     logic signed [15:0] preWave;
-    logic signed [20:0] multResult;
+    logic signed [18:0] multResult;
     
     // Memory Array (256 Resolution, 16 bit width)
     reg signed [15:0] LUT [0:255];
@@ -25,7 +25,7 @@ module LFOgen (
     // Load the LUT
 	// Synthesis path: ./LFO-LUTs/sineFixed(256).mem
 	// Sim Path:       ../../../../Src/LFO-LUTs/sineFixed(256).mem
-    initial $readmemh("../../LFO/Src/LFO-LUTs/sineFixed(256).mem", LUT); // top_tb.sv sim path
+    initial $readmemh("sineFixed(256).mem", LUT); // top_tb.sv sim path
 
     // For initial testing we are using a dip switch
     // These values are precomputed tuningVal = (f_target) *(2^32) / (44.1*10^3) // Update
@@ -52,7 +52,7 @@ module LFOgen (
     end
 
     always @(posedge clk_i) begin
-        if (!rst_n_i) begin
+        if (rst_n_i) begin
             phaseAcc   	<= '0;
             wave_o     	<= '0;
 			preWave    	<= '0;
@@ -63,12 +63,12 @@ module LFOgen (
             // add stepsize
             phaseAcc <= phaseAcc + tuningVal; 
             preWave <= LUT[phaseAcc[31:24]];
-            multResult <= preWave * $signed({1'b0, scaleFactor_i});
+            multResult <= preWave[13:0] * $signed({1'b0, scaleFactor_i});
 			
 			// Normalize (scaleFactor_i = 0b1111 becomes 1)
 			// dividing by 16 is a good approximation that saves on hardware and improves speed
 			// Actual: (scaleFactor_i = 0b1111 becomes decimal 0.9375)
-			wave_o <= multResult[20:4];
+			wave_o <= multResult[18:5];
 			newValFlag_o <= 1;
 			
         end else begin
@@ -79,7 +79,5 @@ module LFOgen (
 			newValFlag_o<= 1'b0;
 		end
     end
-	//assign wave_o = multResult[20:4];
-	//assign newValFlag_o = (multResult != multResultPrev);
 
 endmodule
