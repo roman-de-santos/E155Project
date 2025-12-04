@@ -1,4 +1,8 @@
-module top(
+module top #(
+		parameter PKT_WIDTH = 16,	  // Required for DelayBufferFSM
+		parameter BUF_DEPTH = 4410,	// Default (100 ms)
+		parameter AVG_DELAY = 882	  // Default (20 ms)
+) (
     input  logic sclk_i,
     input  logic rst_n_i,
     input  logic ws_i,
@@ -10,7 +14,7 @@ module top(
     output logic sdata_o,
     output logic errorLED,
     output logic rstI2S_n
-           );
+);
 
 // Internal Logic
 localparam WIDTH = 16;
@@ -29,7 +33,11 @@ I2Srx #(WIDTH) u_I2Srx (
     .pktI2SRxChanged_o (pktI2SRxChanged)
 );
 
-DSP #(WIDTH) u_DSP (
+DSP #(
+    .PKT_WIDTH(WIDTH),
+    .BUF_DEPTH(BUF_DEPTH),
+    .AVG_DELAY(AVG_DELAY)
+  ) u_DSP (
     .rst_n             (rst_n_i),
     .clkI2S            (sclk_i),
     .i2sRxPkt_i        (rightChanIn),

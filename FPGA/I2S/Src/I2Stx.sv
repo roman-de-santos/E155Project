@@ -1,3 +1,5 @@
+// I2Stx.sv
+
 module I2Stx #(
     parameter WIDTH = 16
 )(
@@ -18,7 +20,7 @@ module I2Stx #(
     always @(negedge sclk_i) begin
         if (~rst_i)
             bitCnt <= 0;
-        else if (bitCnt >= WIDTH*2)
+        else if (bitCnt >= ((WIDTH*2)-1))
             bitCnt <= 0;
         else
             bitCnt <= bitCnt + 1;
@@ -35,11 +37,8 @@ module I2Stx #(
 			shift_reg <= {1'b0, leftChan_i, rightChan_i};
 			sdata_o <= 1'b0;
 		end else if (bitCnt == (WIDTH*2 - 2)) begin
-			// latch input data
 			shift_reg <= {shift_reg[2*WIDTH],leftChan_i, rightChan_i};
 			sdata_o <= shift_reg[2*WIDTH];
-			// request new data
-
 		end else begin
 			shift_reg <= shift_reg << 1;	
 			sdata_o <= shift_reg[2*WIDTH];
@@ -51,8 +50,8 @@ module I2Stx #(
 	// ws_o clock
 	always @(negedge sclk_i) begin
 		if (~rst_i) begin
-			ws_o <= 1;    // start with left channel
-		end else if ((bitCnt == (WIDTH)) || (bitCnt == (WIDTH*2))) begin
+			ws_o <= 0; 
+		end else if ((bitCnt == (WIDTH-1)) || (bitCnt == (WIDTH*2-1))) begin
 			ws_o <= ~ws_o; 
 		end
 	end

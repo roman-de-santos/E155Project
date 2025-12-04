@@ -3,6 +3,8 @@
 module top_tb ();
 
 localparam WIDTH = 16;
+localparam TEST_BUF_DEPTH = 90;
+localparam TEST_AVG_DELAY = 2;
 
 // Module Signals
 logic sclk_i = 1'b1;
@@ -21,23 +23,28 @@ logic rstI2S_n;
 logic [WIDTH-1:0] testLeft1, testRight1, testLeft2, testRight2;
 
 // Test bench signals
-logic test_num = 0;
+int test_num = 0;
+int packets_sent = 0; 
 
-// Clock gen (44.1kHz)
+// I2S period (44.1kHz)
 localparam sclkTs = 709;
 
+// Import dummy packets array
+import packets_array_pkg::*;
+packets_array_t packets_array;
+
+// Generate I2S clock
 always begin
     #sclkTs 
     sclk_i <= ~sclk_i;
 end
 
-// Reset
-initial begin
-    #100 rst_n_i = 0;
-end
-
-// Instantiate modules
-top dut (
+// Instantiate modules	
+top #(
+	.PKT_WIDTH(WIDTH),			// Must be 16
+	.BUF_DEPTH(TEST_BUF_DEPTH),	// Default 4410 (100 ms)
+	.AVG_DELAY(TEST_AVG_DELAY)	// Default 882 (20 ms)
+) dut (
 	.sclk_i         (sclk_i),
 	.rst_n_i        (rst_n_i),
 	.ws_i           (ws_i),
@@ -57,6 +64,7 @@ task send_i2s_frame(
         input [WIDTH-1:0] right_data
     );
     begin
+		packets_sent++;
         // Send Left Channel (ws=0)
         @ (negedge sclk_i); // WS transition edge
         ws_i <= 0;
@@ -89,45 +97,74 @@ task send_i2s_frame(
     end
     endtask
 
+	task automatic wait_cycles(input int num_cycles);
+        repeat (num_cycles) @(posedge sclk_i);
+    endtask
+
+	task automatic reset_dut;
+        $display("Resetting DUT...");
+        rst_n_i <= 1'b0;
+        ws_i <= '0;
+		sdata_i <= '0;
+		freqSetting_i <= '0;
+		scaleFactor_i <= '0;
+
+        packets_sent <= '0;
+
+        wait_cycles(3);
+        rst_n_i <= 1'b1;
+        wait_cycles(2);
+    endtask
+
 // Test data transfer
 initial begin
-	// Reset Phase 
-        $display("Starting testbench...");
-        rst_n_i = 0;    // Assert reset
-        ws_i = 0;     // Initialize signals
-        sdata_i = 0;
-        #100;       
-        rst_n_i = 1;  
+		// Dummy packets
+		packets_array = CONST_DATA_ARRAY;
 
-		// Test different settings
+		// Test settings
 		freqSetting_i = 4'b0001;
 		scaleFactor_i = 4'b0001;  
-
-        @ (posedge sclk_i); // Wait for one clock edge
         
+		$display("Starting testbench...");
+        reset_dut();
         $display("Reset complete. Starting test cases...");
 
         // Test Case 1
-		test_num = 1;
-        testLeft1  = 16'h0DAD;
-        testRight1 = 16'h0BEF;
+		begin
+			$display("Beginning test 1: two left & right packets");	
+			test_num = 1;
 
-        // Send the first frame
-        send_i2s_frame(testLeft1, testRight1);
-        
-        // Give a delay for signals to propagate before checking
-        #(sclkTs*100);
+			send_i2s_frame(16'h0AAA, 16'h0BBB);
+			wait_cycles(25); // Give a delay for signals to propagate
 
-		// Test Case 2
-		test_num = 2;
-        testLeft2  = 16'h0AAA;
-        testRight2 = 16'h0BBB;
+			send_i2s_frame(16'h0CCC, 16'h0DDD);
+			wait_cycles(25);
+
+			send_i2s_frame(16'h0EEE, 16'h0FFF);
+			wait_cycles(25);
+		end
+
 		
-        // Send the second frame
-        send_i2s_frame(testLeft2, testRight2);
+		// Test Case 2
+		begin
+			automatic int num_packets = 10;
+			$display("Beginning test 2: multiple packets");
+			test_num = 2;
+			testLeft2  = 16'hxxxx;
+			
+			reset_dut();
+
+			// Send the right packets
+			for (int i = 0; i <= num_packets; i++) begin
+					packets_sent++;
+					send_i2s_frame(testLeft2, packets_array[i]);
+
+					wait_cycles(50);
+				end
+		end
         
 		// Give a delay for signals to propagate before checking
-		#(sclkTs*100)
+		wait_cycles(50);
 		$stop();
 end
 

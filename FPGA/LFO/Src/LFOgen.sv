@@ -1,9 +1,10 @@
 module LFOgen (
     input  logic       clk_i,
-    input  logic       reset_i,
+    input  logic       rst_n_i,
     input  logic [3:0] freqSetting_i,      // Stepsize, Determines Frequency
     input  logic [3:0] scaleFactor_i,      // 0000=0.0, 1111=1.0
     input  logic       FIFOupdate_i,
+	
     output logic signed [15:0] wave_o, //TODO: this should be [13:0]
 	output logic newValFlag_o
 );
@@ -17,7 +18,6 @@ module LFOgen (
     // Wave scaling
     logic signed [15:0] preWave;
     logic signed [20:0] multResult;
-	logic signed [20:0] multResultPrev;
     
     // Memory Array (256 Resolution, 16 bit width)
     reg signed [15:0] LUT [0:255];
@@ -25,7 +25,7 @@ module LFOgen (
     // Load the LUT
 	// Synthesis path: ./LFO-LUTs/sineFixed(256).mem
 	// Sim Path:       ../../../../Src/LFO-LUTs/sineFixed(256).mem
-    initial $readmemh("./LFO-LUTs/sineFixed(256).mem", LUT);
+    initial $readmemh("../../LFO/Src/LFO-LUTs/sineFixed(256).mem", LUT); // top_tb.sv sim path
 
     // For initial testing we are using a dip switch
     // These values are precomputed tuningVal = (f_target) *(2^32) / (44.1*10^3) // Update
@@ -52,31 +52,34 @@ module LFOgen (
     end
 
     always @(posedge clk_i) begin
-        if (reset_i) begin
-            phaseAcc    <= 0;
-            wave_o     <= 0;
-			preWave     <= 0;
-			multResult  <= 0;
+        if (!rst_n_i) begin
+            phaseAcc   	<= '0;
+            wave_o     	<= '0;
+			preWave    	<= '0;
+			multResult 	<= '0;	
+			newValFlag_o<= 1'b0;
 
         end else if (FIFOupdate_i) begin
             // add stepsize
             phaseAcc <= phaseAcc + tuningVal; 
             preWave <= LUT[phaseAcc[31:24]];
-
             multResult <= preWave * $signed({1'b0, scaleFactor_i});
 			
-			multResultPrev <= multResult;
+			// Normalize (scaleFactor_i = 0b1111 becomes 1)
+			// dividing by 16 is a good approximation that saves on hardware and improves speed
+			// Actual: (scaleFactor_i = 0b1111 becomes decimal 0.9375)
+			wave_o <= multResult[20:4];
+			newValFlag_o <= 1;
 			
-			if (~(multResult == multResultPrev))begin
-				newValFlag_o <= 1;
-                // Normalize (scaleFactor_i = 0b1111 becomes 1)
-                // dividing by 16 is a good approximation that saves on hardware and improves speed
-                // Actual: (scaleFactor_i = 0b1111 becomes decimal 0.9375)
-                wave_o <= multResult[20:4];
-			end else begin
-				newValFlag_o <= 0;
-			end     
-        end
+        end else begin
+			phaseAcc   	<= phaseAcc;
+            wave_o   	<= wave_o;
+			preWave    	<= preWave;
+			multResult	<= multResult;	
+			newValFlag_o<= 1'b0;
+		end
     end
+	//assign wave_o = multResult[20:4];
+	//assign newValFlag_o = (multResult != multResultPrev);
 
 endmodule

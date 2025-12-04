@@ -1,10 +1,10 @@
 // Lucas Lemos - llemos@hmc.edu - 11/12/2025
-// Instantiates delay_buffer module for simple manual assertion simulating
+// Instantiates delay_buffer module for simulating
 `timescale 1 ps / 1 ps
 
 // Dummy packets for testing the buffer
 package packets_array_pkg;
-    parameter SIZE = 100;
+    parameter SIZE = 100;   
 
     typedef logic [15:0] pkt_t;
 
@@ -50,8 +50,8 @@ module DelayBufferManual_tb;
     // -------------------------------------------------------------------------
     // Testbench Parameters & Configuration
     // -------------------------------------------------------------------------
-    localparam TEST_BUF_DEPTH    = 90;
-    localparam TEST_AVG_DELAY = 4;
+    localparam TEST_BUF_DEPTH = 90;
+    localparam TEST_AVG_DELAY = 4;      
 
     //localparam TEST_EXTRA_DELAY = 3;
     // Total default delay = 7 cycles
