@@ -22,8 +22,10 @@ module LFOgen (
 
     reg signed [15:0] LUT [0:4095];
     
-    // Read in lookup table
-    initial $readmemh("sineFixed(4096).mem", LUT); 
+    // Load the LUT
+	// Synthesis path: ./LFO-LUTs/sineFixed(256).mem
+	// Sim Path:       ../../../../Src/LFO-LUTs/sineFixed(256).mem
+    initial $readmemh("sineFixed(256).mem", LUT); // top_tb.sv sim path
 
     // Frequency Tuning Values (Calculated for 44.1kHz sample rate)
     // These remain the same regardless of LUT size because the PhaseAcc is still 32-bit
@@ -49,13 +51,13 @@ module LFOgen (
         endcase
     end
 
-    always_ff @(posedge clk_i) begin
+    always @(posedge clk_i) begin
         if (~rst_n_i) begin
-            phaseAcc     <= '0;
-            wave_o       <= '0;
-            preWave      <= '0;
-            multResult   <= '0; 
-            newValFlag_o <= 1'b0;
+            phaseAcc   	 <= '0;
+            wave_o     	 <= '0;
+			preWave    	 <= '0;
+			multResult 	 <= '0;	
+			newValFlag_o <= 1'b0;
 
         end else if (FIFOupdate_i) begin
             // 1. Increment Phase
