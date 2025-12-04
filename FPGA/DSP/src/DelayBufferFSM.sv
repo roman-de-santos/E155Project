@@ -27,10 +27,10 @@
 	 * ADDR_WIDTH- Fixed address width for the SPRAM primitive (must be 14).
 	 *
 	 * Ports:
-	 * rst_nÂ  Â 					- Active-low synchronous reset.
+	 * rst_nÃ‚Â  Ã‚Â 					- Active-low synchronous reset.
 	 * clk						- System clock (CLK_DSP).
-	 * pkt_s_iÂ  				- Input data packet to be written.
-	 * pktChanged_s_i Â   Â 	- Strobe: '1' for one cycle when `pkt_s_i` is valid data to be written.
+	 * pkt_s_iÃ‚Â  				- Input data packet to be written.
+	 * pktChanged_s_i Ã‚Â   Ã‚Â 	- Strobe: '1' for one cycle when `pkt_s_i` is valid data to be written.
 	 * extraDelay_s_i			- Signed, variable delay offset in samples (from LFO).
 	 * pktDelayed_s_o 		- Delayed data packet output (registered/latched).
 	 * pktDelayedChanged_c_o	- Strobe: '1' for one cycle indicating a new valid output sample is ready.
@@ -135,7 +135,7 @@
 				WAIT:	if (LFOValid_s)			next_state = READ;
 						else					next_state = WAIT;
 				READ:							next_state = OUTPUT;
-				OUTPUT:	if (pktChanged_s_i) 	next_state = WRITE; // skip IDLE if next packet is ready
+				OUTPUT:	if (pktChanged_s_i) 		next_state = WRITE; // skip IDLE if next packet is ready
 						else					next_state = IDLE;
 				ERROR:	 						next_state = RESET; // NOTE: THIS TRANSITION MAY CAUSE A BUG
 				default: 						next_state = ERROR;
@@ -145,8 +145,8 @@
 		// LFO valid logic
 		always_ff @(posedge clk) begin
 			if 		(!rst_n)			LFOValid_s <= 1'b0;
-			else if	(pktChanged_s_i)	LFOValid_s <= 1'b0;
-			else if (LFOChanged_s_i)	LFOValid_s <= 1'b1;
+			else if	(pktChanged_s_i)		LFOValid_s <= 1'b0;
+			else if (LFOChanged_s_i)		LFOValid_s <= 1'b1;
 			else						LFOValid_s <= LFOValid_s;
 		end
 		

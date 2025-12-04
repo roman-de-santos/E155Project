@@ -42,8 +42,8 @@ end
 // Instantiate modules	
 top #(
 	.PKT_WIDTH(WIDTH),			// Must be 16
-	.BUF_DEPTH(TEST_BUF_DEPTH),	// Default 4410 (100 ms)
-	.AVG_DELAY(TEST_AVG_DELAY)	// Default 882 (20 ms)
+	.BUF_DEPTH(TEST_BUF_DEPTH),
+	.AVG_DELAY(TEST_AVG_DELAY)
 ) dut (
 	.sclk_i         (sclk_i),
 	.rst_n_i        (rst_n_i),
@@ -150,14 +150,12 @@ initial begin
 			automatic int num_packets = 10;
 			$display("Beginning test 2: multiple packets");
 			test_num = 2;
-			testLeft2  = 16'hxxxx;
 			
 			reset_dut();
 
 			// Send the right packets
-			for (int i = 0; i <= num_packets; i++) begin
-					packets_sent++;
-					send_i2s_frame(testLeft2, packets_array[i]);
+			for (int i = 0; i < num_packets; i++) begin
+					send_i2s_frame(16'hxxxx, packets_array[i]);
 
 					wait_cycles(50);
 				end

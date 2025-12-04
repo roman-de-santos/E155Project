@@ -68,7 +68,7 @@ module CDC_FIFO #(
      * - Output Mode: First-Word Fall-Through (FWFT)			// TODO: MIGHT WANNA DISABLE FWFT
      * - Output register: enabled (1 cycle delay)
      */
-    AsyncFIFO CDC_AFIFO_STF (
+    AsyncFIFO u_CDC_AFIFO_STF (
         .wr_clk_i   (clkRead_i),
         .rd_clk_i   (clkWrite_i),
         .rst_i      (!rstWrite_n_i),

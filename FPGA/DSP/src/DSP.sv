@@ -15,7 +15,9 @@
 	 *
 	 */
 	module DSP #(
-		parameter PKT_WIDTH = 16
+		parameter PKT_WIDTH = 16,	// Required for DelayBufferFSM
+		parameter BUF_DEPTH = 4410,	// Default (100 ms)
+		parameter AVG_DELAY = 882	// Default (20 ms)
 	) (
 		input logic                 	rst_n,   	// Active-low asynchronous reset
 		input logic                 	clkI2S,  	// Asynchronous 1.4112 MHz I2S clock from MCU
@@ -73,7 +75,7 @@
 			// --- Clock & Global Reset Inputs ---
 			.clkRead_i         (clkI2S), 	// For STF: slow clock (1.4122 MHz), for FTS: fast clock (6 MHz)
 			.clkWrite_i        (clkDSP),   // For STF: fast clock (6 MHz), for FTS: slow clock (1.4122 MHz)
-			.rstWrite_n_i      (~rst_n),		// Active low reset from write side (syncronize???)
+			.rstWrite_n_i      (rst_n),		// Active low reset from write side (syncronize???)
 
 			// --- Write Domain (Slow) Interface ---
 			.pkt_i             (i2sRxPkt_i),      	// 16-bit audio packet to write
@@ -87,11 +89,11 @@
 
 		LFOgen u_DelayLFO(
 			.clk_i         (clkDSP),
-			.reset_i       (~rst_n),
+			.rst_n_i       (rst_n),
 			.freqSetting_i (freqSetting_i), 
 			.scaleFactor_i (scaleFactor_i),      
-			.FIFOupdate_i  (pktI2SRxChanged_i),
-			.wave_o        (delayLFO[13:0]), //TODO: fix output width of LFOgen to be properly 14 bits
+			.FIFOupdate_i  (pktDryChanged),
+			.wave_o        (delayLFO), //TODO: fix output width of LFOgen to be properly 14 bits
 			.newValFlag_o  (LFOChanged)
 		);
 
@@ -99,29 +101,29 @@
 		// --- Circular Delay Buffer FSM ---
 		/*  */		
 		DelayBufferFSM #(
-			.BUF_DEPTH      (4410), 		// Default (100 ms)
-			.AVG_DELAY      (882),		// Default (20 ms)
-			.PKT_WIDTH      (PKT_WIDTH) // Should be 16
+			.BUF_DEPTH      (BUF_DEPTH), // Default (100 ms)
+			.AVG_DELAY      (AVG_DELAY), // Default (20 ms)
+			.PKT_WIDTH      (PKT_WIDTH)
 		) u_DelayBuffer (
-			.rst_n                    (~rst_n),
-			.clk                      (clkDSP),
-			.pkt_s_i                (pktDry),              // Data In (Dry Signal)
-			.pktChanged_s_i         (pktDryChanged),        // Write Strobe
-			.extraDelay_s_i         (delayLFO),           // Variable Delay Offset
+			.rst_n                	(rst_n),
+			.clk                 	(clkDSP),
+			.pkt_s_i              	(pktDry),              // Data In (Dry Signal)
+			.pktChanged_s_i       	(pktDryChanged),        // Write Strobe
+			.extraDelay_s_i       	(delayLFO[13:0]),           // Variable Delay Offset
 			.LFOChanged_s_i			(LFOChanged),		// New LFO value strobe
-			.pktDelayed_s_o         (pktWet),              // Data Out (Wet/Delayed Signal)
-			.pktDelayedChanged_c_o (pktWetChanged),       // Read Strobe (Wet Valid)
-			.errorLED_s_o           (errorLED_o)            // Error Output
+			.pktDelayed_s_o      	(pktWet),              // Data Out (Wet/Delayed Signal)
+			.pktDelayedChanged_c_o 	(pktWetChanged),       // Read Strobe (Wet Valid)
+			.errorLED_s_o          	(errorLED_o)            // Error Output
 		);
 
 		Mixer #(
 			.WIDTH(PKT_WIDTH)
 		) u_Mixer (
 			.clk_i       		(clkDSP), 
-			.rst_n_i     		(~rst_n),
+			.rst_n_i     		(rst_n),
 		    .pktWet_i    		(pktWet),
             .pktDry_i    		(pktDry),
-			.pktWetChanged_i		(pktWetChanged),
+			.pktWetChanged_i	(pktWetChanged),
 			.pktMixed_o  		(pktMixed),
 			.pktMixedChanged_o 	(pktMixedChanged)
 		);
@@ -134,7 +136,7 @@
 			// --- Clock & Global Reset Inputs ---
 			.clkRead_i         (clkDSP),    		// For STF: slow clock (1.4122 MHz), for FTS: fast clock (6 MHz)
 			.clkWrite_i        (clkI2S),        // For STF: fast clock (6 MHz), for FTS: slow clock (1.4122 MHz)
-			.rstWrite_n_i      (~rst_n),      // Active low reset from write side
+			.rstWrite_n_i      (rst_n),      // Active low reset from write side
 
 			// --- Write Domain (Slow) Interface ---
 			.pkt_i             (pktMixed),      	// 16-bit audio packet to write
