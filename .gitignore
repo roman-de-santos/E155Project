@@ -62,3 +62,7 @@ work/
 transcript
 modelsim.ini
 *.dmp
+
+# --- Quarto ---
+./Quarto/.quarto/
+./Quarto/_site/
