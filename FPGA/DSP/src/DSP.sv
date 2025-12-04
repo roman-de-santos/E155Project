@@ -35,10 +35,12 @@
 		output logic [PKT_WIDTH-1:0] i2sTxPkt_o,       // Mixed wet/dry audio sample
 		output logic                 i2sTxPktChanged_o,  // Strobe: New valid sample to TX FIFO
 		
-		output logic				rstI2S_n_o,	// The DSP reset synchronized to the I2S clock
+		output logic				 rstI2S_n_o,	// The DSP reset synchronized to the I2S clock
 		
 		// Status/Error Outputs (optional)
-		output logic                 errorLED_o         // Delay Buffer FSM error
+		output logic                 errorLED_o,         // Delay Buffer FSM error
+		output logic				 waitLED_c_o,		// Delay Buffer stuck in WAIT state
+		output logic 				 idleLED_c_o		// Delay Buffer stuck in IDLE state
 	);
 		// Internal DSP logic
 		logic 					clkDSP;	// DSP System Clock (6 MHz)
@@ -46,7 +48,7 @@
 		logic 				  	pktDryChanged;// the same as pktI2SRxChanged_i??
 		logic [PKT_WIDTH-1:0] 	pktWet;
 		logic 				  	pktWetChanged;
-		logic [PKT_WIDTH-1:0] 	delayLFO;
+		logic [13:0] 			delayLFO; // fixed to address width of SPRAM
 		logic [PKT_WIDTH-1:0] 	pktMixed;
 		logic                 	LFOChanged;
 		logic                 	pktMixedChanged;
@@ -55,7 +57,7 @@
 		synchronizer u_RstI2Ssync(
 			.clk	( clkDSP ),
 			.rst_n	( 1'd1 ), // never resets
-			.d_a	( ~rst_n ),
+			.d_a	( rst_n ),
 			.q		( rstI2S_n_o )
 		);
 		
@@ -86,7 +88,7 @@
 			.pktOut_s_o        (pktDry),  		// FIFO output
 			.pktOutChanged_c_o (pktDryChanged) 	// Strobe: '1' when new sample is different from old
 		);
-
+		
 		LFOgen u_DelayLFO(
 			.clk_i         (clkDSP),
 			.rst_n_i       (rst_n),
@@ -96,10 +98,7 @@
 			.wave_o        (delayLFO), //TODO: fix output width of LFOgen to be properly 14 bits
 			.newValFlag_o  (LFOChanged)
 		);
-
 		
-		// --- Circular Delay Buffer FSM ---
-		/*  */		
 		DelayBufferFSM #(
 			.BUF_DEPTH      (BUF_DEPTH), // Default (100 ms)
 			.AVG_DELAY      (AVG_DELAY), // Default (20 ms)
@@ -107,15 +106,17 @@
 		) u_DelayBuffer (
 			.rst_n                	(rst_n),
 			.clk                 	(clkDSP),
-			.pkt_s_i              	(pktDry),              // Data In (Dry Signal)
+			.pkt_s_i              	(pktDry),               // Data In (Dry Signal)
 			.pktChanged_s_i       	(pktDryChanged),        // Write Strobe
-			.extraDelay_s_i       	(delayLFO[13:0]),           // Variable Delay Offset
-			.LFOChanged_s_i			(LFOChanged),		// New LFO value strobe
+			.extraDelay_s_i       	(delayLFO),       // Variable Delay Offset
+			.LFOChanged_s_i			(LFOChanged),			// New LFO value strobe
 			.pktDelayed_s_o      	(pktWet),              // Data Out (Wet/Delayed Signal)
 			.pktDelayedChanged_c_o 	(pktWetChanged),       // Read Strobe (Wet Valid)
-			.errorLED_s_o          	(errorLED_o)            // Error Output
+			.errorLED_s_o          	(errorLED_o),
+			.waitLED_c_o			(waitLED_c_o),
+			.idleLED_c_o			(idleLED_c_o)
 		);
-
+		
 		Mixer #(
 			.WIDTH(PKT_WIDTH)
 		) u_Mixer (
@@ -127,7 +128,6 @@
 			.pktMixed_o  		(pktMixed),
 			.pktMixedChanged_o 	(pktMixedChanged)
 		);
-		
 
 		// --- FTS CDC FIFO ---
 		CDC_FIFO #(

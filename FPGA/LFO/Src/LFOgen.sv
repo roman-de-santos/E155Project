@@ -25,7 +25,7 @@ module LFOgen (
     // Load the LUT
 	// Synthesis path: ./LFO-LUTs/sineFixed(256).mem
 	// Sim Path:       ../../../../Src/LFO-LUTs/sineFixed(256).mem
-    initial $readmemh("sineFixed(256).mem", LUT); // top_tb.sv sim path
+    initial $readmemh("../../LFO/Src/LFO-LUTs/sineFixed(256).mem", LUT); // top_tb.sv sim path
 
     // For initial testing we are using a dip switch
     // These values are precomputed tuningVal = (f_target) *(2^32) / (44.1*10^3) // Update
@@ -52,7 +52,7 @@ module LFOgen (
     end
 
     always @(posedge clk_i) begin
-        if (rst_n_i) begin
+        if (!rst_n_i) begin
             phaseAcc   	<= '0;
             wave_o     	<= '0;
 			preWave    	<= '0;

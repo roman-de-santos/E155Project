@@ -61,3 +61,4 @@ hdr_log
 work/
 transcript
 modelsim.ini
+*.dmp

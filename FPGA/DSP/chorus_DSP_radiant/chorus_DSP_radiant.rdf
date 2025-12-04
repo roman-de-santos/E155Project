@@ -10,7 +10,7 @@
             <Options VerilogStandard="System Verilog"/>
         </Source>
         <Source name="../src/DSP.sv" type="Verilog" type_short="Verilog">
-            <Options VerilogStandard="System Verilog"/>
+            <Options VerilogStandard="System Verilog" top_module="DSP"/>
         </Source>
         <Source name="../src/Mixer.sv" type="Verilog" type_short="Verilog">
             <Options VerilogStandard="System Verilog"/>

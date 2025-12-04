@@ -17,10 +17,7 @@ logic sclk_o;
 logic ws_o;
 logic sdata_o;
 logic errorLED;
-logic rstI2S_n;
-
-// I2S test cases
-logic [WIDTH-1:0] testLeft1, testRight1, testLeft2, testRight2;
+logic rstI2S_n_o;
 
 // Test bench signals
 int test_num = 0;
@@ -55,7 +52,7 @@ top #(
 	.ws_o           (ws_o),
 	.sdata_o        (sdata_o),
 	.errorLED       (errorLED),
-	.rstI2S_n       (rstI2S_n)
+	.rstI2S_n_o       (rstI2S_n_o)
 );
 
 // I2S bitstream generating task
@@ -106,8 +103,6 @@ task send_i2s_frame(
         rst_n_i <= 1'b0;
         ws_i <= '0;
 		sdata_i <= '0;
-		freqSetting_i <= '0;
-		scaleFactor_i <= '0;
 
         packets_sent <= '0;
 
@@ -122,7 +117,7 @@ initial begin
 		packets_array = CONST_DATA_ARRAY;
 
 		// Test settings
-		freqSetting_i = 4'b0001;
+		freqSetting_i = 4'b1111;
 		scaleFactor_i = 4'b0001;  
         
 		$display("Starting testbench...");
@@ -147,7 +142,7 @@ initial begin
 		
 		// Test Case 2
 		begin
-			automatic int num_packets = 10;
+			automatic int num_packets = 100;
 			$display("Beginning test 2: multiple packets");
 			test_num = 2;
 			
