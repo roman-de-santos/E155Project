@@ -19,7 +19,7 @@ module LFOgen (
     logic signed [15:0] preWave;
     logic signed [18:0] multResult;
     
-    // Memory Array (256 Resolution, 16 bit width)
+    // Memory Array (256 Resolution, 14 bit width)
     reg signed [15:0] LUT [0:255];
     
     // Load the LUT
@@ -59,18 +59,23 @@ module LFOgen (
 			multResult 	<= '0;	
 			newValFlag_o<= 1'b0;
 
-        end else if (FIFOupdate_i) begin
+end else if (FIFOupdate_i) begin
             // add stepsize
             phaseAcc <= phaseAcc + tuningVal; 
-            preWave <= LUT[phaseAcc[31:24]];
-            multResult <= preWave[13:0] * $signed({1'b0, scaleFactor_i});
-			
-			// Normalize (scaleFactor_i = 0b1111 becomes 1)
-			// dividing by 16 is a good approximation that saves on hardware and improves speed
-			// Actual: (scaleFactor_i = 0b1111 becomes decimal 0.9375)
-			wave_o <= multResult[18:5];
-			newValFlag_o <= 1;
-			
+            
+            // FIX: Sign-extend the 14-bit LUT data to 16 bits
+            // We take the 14 bits from the LUT, and replicate bit 13 (the sign bit) twice
+            // to fill the upper bits [15:14].
+            preWave <= {{2{LUT[phaseAcc[31:24]][13]}}, LUT[phaseAcc[31:24]][13:0]};
+            
+            // Now preWave is a correct signed 16-bit number (e.g. 0xFF94 for -108)
+            // We can use the full register for multiplication
+            multResult <= preWave * $signed({1'b0, scaleFactor_i});
+            
+            // Normalize
+            wave_o <= multResult[18:5];
+            newValFlag_o <= 1;
+            
         end else begin
 			phaseAcc   	<= phaseAcc;
             wave_o   	<= wave_o;

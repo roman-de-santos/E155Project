@@ -47,6 +47,7 @@ module LFOgen_tb;
     // --- Strobe Generation ---
     initial begin
         FIFOupdate = 1'b0;
+		
         
         // Optional: Align start with the main clock to avoid race conditions
         @(posedge clk); 
@@ -78,7 +79,7 @@ module LFOgen_tb;
         $display("---------------------------------------------------------");
         
         // 1. Initial Reset Phase
-        reset = 1'b1;
+        reset = 1'b0;
         freqSetting = 4'b0000;
         scaleFactor = 4'b0000;
         # (CLK_PERIOD * 5); 
@@ -86,7 +87,8 @@ module LFOgen_tb;
         $display("[%0t] Reset held high. phaseAcc: 0x%h, waveOut: %d", $time, phaseAcc_mon, waveOut);
         
         // 2. Release Reset
-        reset = 1'b0;
+        reset = 1'b1;
+		DUT.phaseAcc = 32'h80000000; //start at -108 ish
         # (CLK_PERIOD); 
         
         // 3. Sync to 48kHz tick
