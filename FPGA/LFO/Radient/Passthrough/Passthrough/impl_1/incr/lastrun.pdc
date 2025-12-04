@@ -1,7 +1,0 @@
-ldc_set_location -site {43} [get_ports rst]
-ldc_set_location -site {2} [get_ports sdata_in]
-ldc_set_location -site {10} [get_ports ws_in]
-ldc_set_location -site {47} [get_ports sclk_in]
-ldc_set_location -site {20} [get_ports ws_out]
-ldc_set_location -site {12} [get_ports sdata_out]
-ldc_set_location -site {13} [get_ports sclk_out]
