@@ -4,9 +4,9 @@ module LFOgen (
     input  logic [3:0] freqSetting_i,      // Stepsize, Determines Frequency
     input  logic [3:0] scaleFactor_i,      // 0000=0.0, 1111=1.0
     input  logic       FIFOupdate_i,
-	
+    
     output logic signed [13:0] wave_o,
-	output logic newValFlag_o
+    output logic newValFlag_o
 );
 
     // Phase Accumulator
@@ -19,17 +19,15 @@ module LFOgen (
     logic signed [15:0] preWave;
     logic signed [18:0] multResult;
     
-    // Memory Array (256 Resolution, 14 bit width)
-    reg signed [15:0] LUT [0:255];
-    
-    // Load the LUT
-	// Synthesis path: ./LFO-LUTs/sineFixed(256).mem
-	// Sim Path:       ../../../../Src/LFO-LUTs/sineFixed(256).mem
-    initial $readmemh("sineFixed(256).mem", LUT); // top_tb.sv sim path
 
-    // For initial testing we are using a dip switch
-    // These values are precomputed tuningVal = (f_target) *(2^32) / (44.1*10^3) // Update
-	always_comb begin
+    reg signed [15:0] LUT [0:4095];
+    
+    // Read in lookup table
+    initial $readmemh("sineFixed(4096).mem", LUT); 
+
+    // Frequency Tuning Values (Calculated for 44.1kHz sample rate)
+    // These remain the same regardless of LUT size because the PhaseAcc is still 32-bit
+    always_comb begin
         case (freqSetting_i)
             4'b0000: tuningVal = 32'd9739;    // 0.1 Hz
             4'b0001: tuningVal = 32'd38957;   // 0.4 Hz
@@ -51,38 +49,39 @@ module LFOgen (
         endcase
     end
 
-    always @(posedge clk_i) begin
+    always_ff @(posedge clk_i) begin
         if (~rst_n_i) begin
-            phaseAcc   	 <= '0;
-            wave_o     	 <= '0;
-			preWave    	 <= '0;
-			multResult 	 <= '0;	
-			newValFlag_o <= 1'b0;
+            phaseAcc     <= '0;
+            wave_o       <= '0;
+            preWave      <= '0;
+            multResult   <= '0; 
+            newValFlag_o <= 1'b0;
 
-end else if (FIFOupdate_i) begin
-            // add stepsize
+        end else if (FIFOupdate_i) begin
+            // 1. Increment Phase
             phaseAcc <= phaseAcc + tuningVal; 
             
-            // FIX: Sign-extend the 14-bit LUT data to 16 bits
-            // We take the 14 bits from the LUT, and replicate bit 13 (the sign bit) twice
-            // to fill the upper bits [15:14].
-            preWave <= {{2{LUT[phaseAcc[31:24]][13]}}, LUT[phaseAcc[31:24]][13:0]};
+            // --- CHANGE 3: Indexing Logic ---
+            // Use [31:20] (Top 12 bits) to access 4096 entries
+            // LUT[idx][13] is the sign bit (assuming 14-bit data in LUT)
+            preWave <= {{2{LUT[phaseAcc[31:20]][13]}}, LUT[phaseAcc[31:20]][13:0]};
             
-            // Now preWave is a correct signed 16-bit number (e.g. 0xFF94 for -108)
-            // We can use the full register for multiplication
+            // 2. Scale
+            // preWave is 16-bit signed. scaleFactor is unsigned 4-bit treated as fraction
             multResult <= preWave * $signed({1'b0, scaleFactor_i});
             
-            // Normalize
+            // 3. Normalize output
             wave_o <= multResult[18:5];
             newValFlag_o <= 1;
             
         end else begin
-			phaseAcc   	<= phaseAcc;
-            wave_o   	<= wave_o;
-			preWave    	<= preWave;
-			multResult	<= multResult;	
-			newValFlag_o<= 1'b0;
-		end
+            // Hold values
+            phaseAcc     <= phaseAcc;
+            wave_o       <= wave_o;
+            preWave      <= preWave;
+            multResult   <= multResult;  
+            newValFlag_o <= 1'b0;
+        end
     end
 
 endmodule
