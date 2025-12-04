@@ -19,7 +19,7 @@ module I2Stx #(
 	// Counter
     always @(negedge sclk_i) begin
         if (~rst_i)
-            bitCnt <= 0;
+            bitCnt <= -1;
         else if (bitCnt >= ((WIDTH*2)-1))
             bitCnt <= 0;
         else
