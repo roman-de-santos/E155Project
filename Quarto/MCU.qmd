@@ -30,6 +30,6 @@ of clock frequencies in audio processing. Our target was 44.1kHz samples per sec
 a bit clock 32*44.1kHz. We want a new sample every 44.1kHz but since the data is serialized (more info under the documentation tab) it takes 32 sclk cycles to transfer one full
 left and right sample. Thus our SAI module recieves 256*44.1kHz and divides it by 16 to achieve the desired clock frequency for data transfer. 
 
-## Block Diagram of MCU (Replace with better image??????????)
+## Block Diagram of MCU
 
 ![Figure 1: MCU Block Diagram](images/TopBlockDiagramMCU.png)

@@ -6,9 +6,9 @@ number-sections: true
 * New Communication Protocol @sec-new-protocol
 * New Hardware @sec-new-hardware
     * PCM5102 DAC @sec-PCM5102
-    * Op Amps Hardware @sec-op-amps
+    * Op Amp Hardware @sec-op-amps
 * Schematics @sec-schematics
-* Block Diagram @sec-block-diagram
+* Analog Block Diagram @sec-block-diagram
 * Bill of Materials @sec-bill-of-materials
 * Github Breakdown @sec-github
 
@@ -96,11 +96,11 @@ Below in Figure 3 a schematic of our system is provided.The general flow of the 
 
 ![Figure 3: Schematic](images/Schematic.png)
 
-## Block Diagram {#sec-block-diagram}
+## Analog Block Diagram {#sec-block-diagram}
 
-Below in Figure 4 the Block diagram for the top level system is shown. For more detailed block diagrams of each section (MCU/FPGA) please check their respective page.
+Below in Figure 4 the Block diagram for the Analog input shown. For more detailed block diagrams of each section (MCU/FPGA) please check their respective page.
 
-![Figure 4: Top Block Diagram](images/TopBlockDiagram.png)
+![Figure 4: Analog Block Diagram](images/TopBlockDiagramAnalog.png)
 
 ## Bill of Materials {#sec-bill-of-materials}
 

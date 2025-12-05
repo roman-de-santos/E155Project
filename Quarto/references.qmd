@@ -1,0 +1,10 @@
+---
+title: "References"
+---
+
+
+* MicroP's Website: [E155](https://hmc-e155.github.io/)
+
+* Communication Protocol outline: [I2S NXP Spec](https://www.nxp.com/docs/en/user-manual/UM11732.pdf)
+
+* DAC control signals: [StackExchange](https://raspberrypi.stackexchange.com/questions/76188/how-to-make-pcm5102-dac-work-on-raspberry-pi-zerow)

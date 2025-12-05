@@ -12,6 +12,7 @@ website:
       - MCU.qmd
       - Specifications.qmd
       - team.qmd
+      - references.qmd
 
 format:
   html:

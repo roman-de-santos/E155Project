@@ -39,7 +39,7 @@ css-styles: |
 
 **Cameron Hernandez**
 
-UPDATE THIS CAM
+My name is Cameron Hernandez, I am a Senior at Harvey Mudd College currently perusing a bachelors in engineering. I am is passionate about electronic hardware and circuit designs. I have expierence ranging from working with power electronincs, desigining autonomous robotics, simulating electrically small antennas, and creating a multicycle processor. Stepping away from electrical engineering, I have taken engineering courses in the chemical, mechanical, material, and systems domains.
 
 <a href="https://www.linkedin.com/in/cameron-hernandez-91b431212/" class="linkedin-btn" target="_blank">Connect on LinkedIn</a>
 :::
@@ -49,7 +49,7 @@ UPDATE THIS CAM
 
 **Lucas Lemos**
 
-UPDATE THIS LUCAS
+Lucas Lemos is a senior undergraduate at Harvey Mudd College studying for a B.S. Engineering. He is a self-motivated engineer & student leader passionate about merging creative design and technical expertise. He has proficiency and interest in controls and electronics. Lucas has designed an embedded audio system and PCB for Motiv Electric Trucks, an analog instrumentation PCB for the HRL Labs Clinic Team, a QTP test rack for qualifying the reactor control system PCBAs for Radiant Nuclear, and is currently developing power electronics for the Exolambda Clinic team.
 
 <a href="https://www.linkedin.com/in/lucas-a-lemos/" class="linkedin-btn" target="_blank">Connect on LinkedIn</a>
 :::
@@ -57,7 +57,7 @@ UPDATE THIS LUCAS
 ::: {.team-member}
 ![](images/Roman.png)
 
-Micro poops
+Hello, I’m Roman a student who is passionate about low-level systems. This includes C, Assembly, and IC/circuit design. I have been a TA for Computer Science, Physics, and Intro IC Lab. I am comfortable with many common Engineering software programs (Solidworks, ComSol, and Fusion) and computer languages (Matlab, Python, Java, Java Script, HTML, and C). So far, my favorite project I’ve worked on is my 32-bit CPU verification project.
 
 **Roman De Santos**
 

@@ -13,6 +13,10 @@ The FPGA decodes the incoming I2S data and routes it to a DSP module, which util
 Finally, the processed audio is packaged and transmitted out to an external DAC via I2S,
 converted back to an analog signal, and scaled to a safe output range suitable for a standard guitar amplifier.
 
+## Final Project picture
+
+![Figure 1: Final project in its enclosure](images/FinalProject.png)
+
 ## Video Demonstration
 
 {{< video https://youtube.com/watch?v=/Rw8HaAM1LVo?feature=share >}}
@@ -20,5 +24,9 @@ converted back to an analog signal, and scaled to a safe output range suitable f
 ## Block Diagram
 
 
+![Figure 2: Top Block Diagram](images/TopBlockDiagramAll.png)
 
-![Figure 1: Top Block Diagram](images/TopBlockDiagramAll.png)
+## Acknowledgements
+
+As a team we want to thank Prof. Spencer for providing valuable feedback on all our submitted assignments to help us form better 
+code writing habits. We also want to thank Xavier for helping us with debugging on the circuit.
