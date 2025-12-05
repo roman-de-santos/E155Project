@@ -1,4 +1,6 @@
-# MCU Implementation
+---
+title: "MCU"
+---
 
 ## Summary
 

@@ -1,7 +1,10 @@
-# Micro P's Analysis of Spec Requirements
+---
+title: "Specifications and Results"
+---
 
 ## Specifications Overview
 For the Micro P's Project, the specifications are as follows:
+
 * Audibly implements the intended effect.
 * Physical switch can toggle the audio effect applied to the input.
 * I2S is used to communicate between the MCU and FPGA.
@@ -10,6 +13,7 @@ For the Micro P's Project, the specifications are as follows:
 * DAC outputs signal compatible with a guitar amplifier.
 
 **Technical Requirements Checklist:**
+
 * Smooth
 * Proper amplitude
 * AC-coupled

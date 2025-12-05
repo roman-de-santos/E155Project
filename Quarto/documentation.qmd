@@ -3,18 +3,18 @@ title: Documentation
 number-sections: true
 ---
 
-* New Communication Protocol in @sec-new-protocol
-* New Hardware in @sec-new-hardware
-    * PCM5102 DAC in @sec-PCM5102
-    * Op Amps Hardware in @sec-op-amps
-* Schematics in @sec-schematics
-* Block Diagram in @sec-block-diagram
-* Bill of Materials in @sec-bill-of-materials
-* Github Breakdown in @sec-github
+* New Communication Protocol @sec-new-protocol
+* New Hardware @sec-new-hardware
+    * PCM5102 DAC @sec-PCM5102
+    * Op Amps Hardware @sec-op-amps
+* Schematics @sec-schematics
+* Block Diagram @sec-block-diagram
+* Bill of Materials @sec-bill-of-materials
+* Github Breakdown @sec-github
 
 
 
-##New Protocol I2S {#sec-new-protocol}
+## New Protocol I2S {#sec-new-protocol}
 
 This section discusses the protocol used to communicate between the FPGA, MCU, and the DAC. Our group decided to use the I2S Standard format ( [NXP Semiconductors](https://www.nxp.com/docs/en/user-manual/UM11732.pdf))
 due to it being a standard audio format that at an initial review seemed relativly easy to implement in verilog.
@@ -42,7 +42,7 @@ clock based on the WS input
 This bord uses a slightly different naming convention for the inputs compared to the official NXP Semiconductors standard, but the convention is similar.
 
 | PCM5102 Naming | NXP Standard | Required? | Function |
-|----------------|:-------------|----------:|:--------:|
+|----------------|:-------------|:---------:|:--------:|
 | SCLK           | MCLK         | No        |  Master CLock for filtering/reference   |
 | BCK            | SCLK         | Yes       |  Bit clock                              |
 | DIN            | SD           | Yes       |  Serial data                            |
@@ -76,7 +76,7 @@ the I2S output to the DAC and comparing the input and output waveform.
 This peice of hardware introduced us to mixed signal processing, specifically in audio. Previously we had a lab, lab 4 where we used PWM waves to control a speaker. In this lab the 
 output was strictly digital. With our new set up, our hardware expands on this and allows us to use many more intensity levels to create richer audio.
 
-### Op-Amp Hardware {sec-op-amps}
+### Op-Amp Hardware {#sec-op-amps}
 
 For this project MCP6002 op Amps were used for the analog conditioning. From Figure 3, the schematic shows the initial conditioning was done by op-Amps U1A and U1B. This stage
 centers the signal around 1.65V since the MCU's ADC can only read voltages between 0-3.3V. The input guitar signal is also quite weak at a max of 300mV, so a gain of 10.1 is applied
@@ -90,23 +90,41 @@ The next analog section with active filtering by op Amps is connected to the DAC
 amp since the amp expects voltages in the range of 100s of mV. The ouput of this topology is passed through an AC couple to remove DC bias, centering the wave back at
 zero and removing the offset we added initially to place it in the range of 0-3.3V for the MCU. This allows us to use the bipolar output of the guitar amp.
 
-## Schematic {sec-schematics}
+## Schematic {#sec-schematics}
 
 Below in Figure 3 a schematic of our system is provided.The general flow of the diagram is left to right, top to bottom. 
 
 ![Figure 3: Schematic](images/Schematic.png)
 
-## Block Diagram {sec-block-diagram}
+## Block Diagram {#sec-block-diagram}
 
 Below in Figure 4 the Block diagram for the top level system is shown. For more detailed block diagrams of each section (MCU/FPGA) please check their respective page.
 
 ![Figure 4: Top Block Diagram](images/TopBlockDiagram.png)
 
-## Bill of Materials {sec-bill-of-materials}
+## Bill of Materials {#sec-bill-of-materials}
+
+| Item Description | Part Number | Source | QTY | Unit Price | Shipping | Tax | Net Cost |
+| :--- | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| DC Power Jack | A-1656 | [Tayda Electronics](https://www.taydaelectronics.com/dc-power-jack-2-1mm-enclosed-frame-with-switch-white.html) | 1 | 0.14 | 1.19 | 0.00 | 1.33 |
+| Pedal Switch | A7459 | [Tayda Electronics](https://www.taydaelectronics.com/3pdt-compact-stomp-foot-pedal-switch-on-on-latching-solder-lug.html) | 1 | 2.70 | 1.19 | 0.00 | 3.89 |
+| Pot Knobs Plastic | A-4560 | [Tayda Electronics](https://www.taydaelectronics.com/knob-davies-1900h-clone-cream.html) | 3 | 0.42 | 1.19 | 0.00 | 2.45 |
+| Pot Knobs Aluminium | A-5966 | [Tayda Electronics](https://www.taydaelectronics.com/aluminium-silver-knob-15x17mm-shaft-hole-6x18t-5966.html) | 3 | 0.63 | 1.19 | 0.00 | 3.08 |
+| Linear Pot 10K | A-8047 | [Tayda Electronics](https://www.taydaelectronics.com/tayda-10k-ohm-linear-taper-potentiometer-spline-shaft-solder-lugs.html) | 3 | 0.59 | 1.19 | 0.00 | 2.96 |
+| Log Pot 10K | A-1957 | [Tayda Electronics](https://www.taydaelectronics.com/10k-ohm-logarithmic-taper-potentiometer-with-solder-lugs.html) | 3 | 0.50 | 1.19 | 0.00 | 2.69 |
+| Pot Cover | A-5527 | [Tayda Electronics](https://www.taydaelectronics.com/dust-seal-covers-for-potentiometer.html) | 3 | 0.04 | 1.19 | 0.00 | 1.31 |
+| PCB Standoffs | A-2868 | [Tayda Electronics](https://www.taydaelectronics.com/hc-6-6mm-pcb-support-html.html) | 7 | 0.10 | 1.19 | 0.00 | 1.89 |
+| 6.35mm Nut | A-6441 | [Tayda Electronics](https://www.taydaelectronics.com/nut-for-6-35mm-socket-pj-669-and-pj-670.html) | 3 | 0.07 | 1.19 | 0.00 | 1.40 |
+| 9V Battery Holder | A-843 | [Tayda Electronics](https://www.taydaelectronics.com/9v-battery-holder-6.html) | 2 | 0.47 | 1.19 | 0.00 | 2.13 |
+| 6.35mm 1/4" Stereo socket | A-5069 | [Tayda Electronics](https://www.taydaelectronics.com/6-35mm-1-4-stereo-chassis-socket-jack-3-terminals.html) | 3 | 0.38 | 1.19 | 0.00 | 2.33 |
+| Enclosure | A-5837 | [Tayda Electronics](https://www.taydaelectronics.com/cream-125b-style-aluminum-diecast-enclosure.html) | 1 | 5.99 | 1.19 | 0.00 | 7.18 |
+| 6.35mm 1/4" Mono Socket | A-4556 | [Tayda Electronics](https://www.taydaelectronics.com/6-35mm-1-4-mono-chassis-socket-jack.html) | 2 | 0.87 | 1.19 | 0.00 | 2.93 |
+| 3PDT Nut | A-4802 | [Tayda Electronics](https://www.taydaelectronics.com/m12-white-color-aluminum-nut-for-3pdt-footswitch.html) | 1 | 0.39 | 1.19 | 0.00 | 1.58 |
+| DAC PCM5102 | B0DNW32Y46 | [Amazon](https://www.amazon.com/PCM5102-PCM5102A-Digital-Converter-Raspberry/dp/B0DNW32Y46) | 2 | 4.44 | 0 | 0.44 | 9.75 |
+| **TOTAL** | | | | | | | **46.9** |
 
 
-
-## Github {sec-github}
+## Github {#sec-github}
 
 All of our source code is found on our project's github [here](https://github.com/roman-de-santos/E155Project).
 Notible files are listed below.

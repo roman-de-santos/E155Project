@@ -1,4 +1,6 @@
-# FPGA Implementation
+---
+title: "FPGA"
+---
 
 ## Top Internal Modules
 

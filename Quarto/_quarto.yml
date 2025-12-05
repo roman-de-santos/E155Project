@@ -7,7 +7,11 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - documentation.qmd
+      - FPGA.qmd
+      - MCU.qmd
+      - Specifications.qmd
+      - team.qmd
 
 format:
   html:

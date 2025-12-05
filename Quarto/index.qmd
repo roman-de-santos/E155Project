@@ -15,7 +15,7 @@ converted back to an analog signal, and scaled to a safe output range suitable f
 
 ## Video Demonstration
 
-{{< video https://youtube.com/shorts/Rw8HaAM1LVo?feature=share >}}
+{{< video https://youtube.com/watch?v=/Rw8HaAM1LVo?feature=share >}}
 
 ## Block Diagram
 

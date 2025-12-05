@@ -1,5 +1,5 @@
 ---
-title: "Meet the Team"
+title: "Team"
 format: html
 css-styles: |
   .team-member {
@@ -30,7 +30,7 @@ css-styles: |
   }
 ---
 
-## Our Team
+## Meet the Team
 
 ::: {layout-ncol=3}
 
@@ -56,6 +56,8 @@ UPDATE THIS LUCAS
 
 ::: {.team-member}
 ![](images/Roman.png)
+
+Micro poops
 
 **Roman De Santos**
 
