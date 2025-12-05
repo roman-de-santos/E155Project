@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>E155ProjectPortfolio</title>
+<title>E155 Project Portfolio – E155ProjectPortfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,8 +97,28 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
-<span class="menu-text">About</span></a>
+    <a class="nav-link" href="./documentation.html"> 
+<span class="menu-text">Documentation</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./FPGA.html"> 
+<span class="menu-text">FPGA</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./MCU.html"> 
+<span class="menu-text">MCU</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./Specifications.html"> 
+<span class="menu-text">Specifications and Results</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./team.html"> 
+<span class="menu-text">Team</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./references.html"> 
+<span class="menu-text">References</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -111,15 +131,24 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#video-demonstration" id="toc-video-demonstration" class="nav-link" data-scroll-target="#video-demonstration">Video Demonstration</a></li>
+  <li><a href="#block-diagram" id="toc-block-diagram" class="nav-link" data-scroll-target="#block-diagram">Block Diagram</a></li>
+  <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">E155ProjectPortfolio</h1>
+<h1 class="title">E155 Project Portfolio</h1>
 </div>
 
 
@@ -136,10 +165,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This is a Quarto website.</p>
-<p>To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.</p>
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>This project implements a digital guitar pedal capable of applying a real-time chorus effect to an instrument input. The system utilizes a hybrid architecture featuring a microcontroller (MCU), an FPGA, an external DAC, and custom analog circuitry. The analog front-end passes the guitar input through gain scaling and offset adjustment, followed by 4th-order anti-aliasing filters. The signal is then digitized by the MCU’s internal ADC and transferred via DMA to an SAI module for output in I2S format.</p>
+<p>The FPGA decodes the incoming I2S data and routes it to a DSP module, which utilizes SRAM to generate the chorus modulation. Finally, the processed audio is packaged and transmitted out to an external DAC via I2S, converted back to an analog signal, and scaled to a safe output range suitable for a standard guitar amplifier.</p>
+</section>
+<section id="video-demonstration" class="level2">
+<h2 class="anchored" data-anchor-id="video-demonstration">Video Demonstration</h2>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed//Rw8HaAM1LVo?feature=share" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+</section>
+<section id="block-diagram" class="level2">
+<h2 class="anchored" data-anchor-id="block-diagram">Block Diagram</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/TopBlockDiagramAll.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Top Block Diagram</figcaption>
+</figure>
+</div>
+</section>
+<section id="acknowledgements" class="level2">
+<h2 class="anchored" data-anchor-id="acknowledgements">Acknowledgements</h2>
+<p>As a team we want to thank Prof.&nbsp;Spencer for providing valuable feedback on all our submitted assignments to help us form better code writing habits. We also want to thank Xavier for helping us with debugging on the circuit.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
