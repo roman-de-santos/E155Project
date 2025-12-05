@@ -1,0 +1,67 @@
+---
+title: "Meet the Team"
+format: html
+css-styles: |
+  .team-member {
+    text-align: center;
+  }
+  .team-member img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  /* Button Styling */
+  .linkedin-btn {
+    display: inline-block;
+    background-color: #0077b5; /* LinkedIn Blue */
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9em;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  .linkedin-btn:hover {
+    background-color: #005582; /* Darker blue on hover */
+    color: white;
+  }
+---
+
+## Our Team
+
+::: {layout-ncol=3}
+
+::: {.team-member}
+![](images/Cameron.png)
+
+**Cameron Hernandez**
+
+UPDATE THIS CAM
+
+<a href="https://www.linkedin.com/in/cameron-hernandez-91b431212/" class="linkedin-btn" target="_blank">Connect on LinkedIn</a>
+:::
+
+::: {.team-member}
+![](images/Lucas.png)
+
+**Lucas Lemos**
+
+UPDATE THIS LUCAS
+
+<a href="https://www.linkedin.com/in/lucas-a-lemos/" class="linkedin-btn" target="_blank">Connect on LinkedIn</a>
+:::
+
+::: {.team-member}
+![](images/Roman.png)
+
+**Roman De Santos**
+
+
+
+<a href="https://www.linkedin.com/in/roman-de-santos/" class="linkedin-btn" target="_blank">Connect on LinkedIn</a>
+:::
+
+:::
