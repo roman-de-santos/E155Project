@@ -247,7 +247,9 @@
   },
   "libraries": {
     "pinned_footprint_libs": [],
-    "pinned_symbol_libs": []
+    "pinned_symbol_libs": [
+      "Switch"
+    ]
   },
   "meta": {
     "filename": "tremolo_guitar_pedal.kicad_pro",

@@ -492,6 +492,7 @@
 						(size 1.27 1.27)
 					)
 					(justify left)
+					(hide yes)
 				)
 			)
 			(property "Value" "NUCLEO-L432KC"
@@ -574,14 +575,14 @@
 				(pin passive line
 					(at -5.08 0 0)
 					(length 3.81)
-					(name "PA0"
+					(name "PA3"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "12"
+					(number "9"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1116,15 +1117,16 @@
 			(in_bom yes)
 			(on_board yes)
 			(property "Reference" "CN3"
-				(at 0 6.35 0)
+				(at 2.286 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(hide yes)
 				)
 			)
 			(property "Value" "NUCLEO-L432KC"
-				(at 0 3.81 0)
+				(at 2.286 3.81 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1179,7 +1181,7 @@
 			(symbol "Conn_01x02_1_1"
 				(rectangle
 					(start -1.27 1.27)
-					(end 5.08 -3.81)
+					(end 5.08 -6.35)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -1210,17 +1212,28 @@
 						(type none)
 					)
 				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 				(pin bidirectional line
 					(at -5.08 0 0)
 					(length 3.81)
-					(name "PA10"
+					(name "PA8"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "2"
+					(number "18"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1231,14 +1244,32 @@
 				(pin bidirectional line
 					(at -5.08 -2.54 0)
 					(length 3.81)
-					(name "PA8"
+					(name "PA9"
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
 						)
 					)
-					(number "12"
+					(number "19"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin bidirectional line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "PA10"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "20"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4572,6 +4603,374 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Switch:SW_DIP_x04"
+			(pin_names
+				(offset 0)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 8.89 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_DIP_x04"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "dip switch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SW?DIP?x4*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_DIP_x04_0_0"
+				(circle
+					(center -2.032 5.08)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.032 2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center -2.032 -2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 5.207) (xy 2.3622 6.2484)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 2.667) (xy 2.3622 3.7084)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 0.127) (xy 2.3622 1.1684)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.524 -2.3876) (xy 2.3622 -1.3462)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 5.08)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 0)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.508)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_DIP_x04_0_1"
+				(rectangle
+					(start -3.81 7.62)
+					(end 3.81 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "SW_DIP_x04_1_1"
+				(pin passive line
+					(at -7.62 5.08 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 2.54 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 -2.54 0)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 5.08 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 5.08)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Switch:SW_Push_SPDT"
 			(pin_names
 				(offset 0)
@@ -5240,6 +5639,18 @@
 		(uuid 29208470-1b51-4012-af34-884ec877804d)
 	)
 	(rectangle
+		(start 144.78 76.835)
+		(end 209.55 102.87)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(uuid 930ed1dc-c450-4bd5-b899-992e8e99e71d)
+	)
+	(rectangle
 		(start 20.955 76.835)
 		(end 86.36 102.87)
 		(stroke
@@ -5329,6 +5740,18 @@
 		)
 		(uuid "0b9dcbee-86ae-4c5c-8b3f-e5f3b657ef41")
 	)
+	(text "Modulation Switches"
+		(exclude_from_sim no)
+		(at 157.48 80.01 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+				(bold yes)
+			)
+		)
+		(uuid "146aad29-2f46-4dba-8646-d339dbcc6b81")
+	)
 	(text "uP's Guitar Pedal"
 		(exclude_from_sim no)
 		(at 216.408 173.99 0)
@@ -5362,7 +5785,7 @@
 	)
 	(text "Effect Potentiometers"
 		(exclude_from_sim no)
-		(at 154.94 79.502 0)
+		(at 151.13 275.082 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5404,7 +5827,7 @@
 	)
 	(text "these will go to MCU pins"
 		(exclude_from_sim no)
-		(at 177.292 102.362 0)
+		(at 173.482 297.942 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -5717,6 +6140,12 @@
 		(uuid "3fa186d7-6677-4c4b-82b3-726bb2e6444a")
 	)
 	(junction
+		(at 182.88 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "422a601e-603f-4e6d-854e-a44e8b8a6afa")
+	)
+	(junction
 		(at 195.58 46.99)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5747,6 +6176,18 @@
 		(uuid "4dee0543-990f-4200-90da-3405368308b8")
 	)
 	(junction
+		(at 182.88 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "51e47af5-1795-45ff-91b4-b8cc6408445c")
+	)
+	(junction
+		(at 182.88 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "59c0e350-d706-4799-b672-8c928fa7ad23")
+	)
+	(junction
 		(at 90.17 64.77)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5757,6 +6198,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "78ce4a91-f155-4783-9a00-ba0e936e9b0e")
+	)
+	(junction
+		(at 152.4 88.9)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "798dd3fb-1487-486a-a253-08f1856b7799")
 	)
 	(junction
 		(at 176.53 44.45)
@@ -5777,6 +6224,12 @@
 		(uuid "7de8cb4c-d6f9-40a9-9c8d-89ea4e18966e")
 	)
 	(junction
+		(at 152.4 91.44)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "847ebbc0-79a4-4333-876d-c5827a550d38")
+	)
+	(junction
 		(at 125.73 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5787,6 +6240,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "94b52092-c259-422c-b4c4-5d470da9c2f4")
+	)
+	(junction
+		(at 152.4 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9941959d-0b17-45f2-b03f-584a7fce796f")
 	)
 	(junction
 		(at 156.21 44.45)
@@ -5986,6 +6445,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 91.44) (xy 184.15 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1657ed08-97da-4ec4-a2c2-b1f4b4a4b6bf")
+	)
+	(wire
+		(pts
 			(xy 248.92 115.57) (xy 248.92 119.38)
 		)
 		(stroke
@@ -5993,6 +6462,16 @@
 			(type default)
 		)
 		(uuid "19ee932d-9225-4fc6-8146-de034b681e9f")
+	)
+	(wire
+		(pts
+			(xy 182.88 88.9) (xy 182.88 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1fd0dcc7-cd18-429d-8732-dbb5390f5647")
 	)
 	(wire
 		(pts
@@ -6023,6 +6502,16 @@
 			(type default)
 		)
 		(uuid "2aabd0b7-377c-4a96-87af-3c4c1ca66833")
+	)
+	(wire
+		(pts
+			(xy 182.88 86.36) (xy 182.88 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2e3f4135-28fb-4cb8-b712-e911da122590")
 	)
 	(wire
 		(pts
@@ -6063,6 +6552,16 @@
 			(type default)
 		)
 		(uuid "368eb22d-0dca-4687-8a8b-ac7e15741596")
+	)
+	(wire
+		(pts
+			(xy 152.4 88.9) (xy 152.4 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "375f22c7-6c00-49d8-87e3-aa5399cbb069")
 	)
 	(wire
 		(pts
@@ -6176,6 +6675,16 @@
 	)
 	(wire
 		(pts
+			(xy 184.15 86.36) (xy 182.88 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5652c8ec-9fef-47a5-9e2b-6458da7f3d49")
+	)
+	(wire
+		(pts
 			(xy 90.17 41.91) (xy 82.55 41.91)
 		)
 		(stroke
@@ -6263,6 +6772,16 @@
 			(type default)
 		)
 		(uuid "66f8ba51-dce6-48e1-800b-2781ae4cc731")
+	)
+	(wire
+		(pts
+			(xy 153.67 86.36) (xy 152.4 86.36)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "697b394b-133f-49e8-b7ff-4c3e39ba0bb5")
 	)
 	(wire
 		(pts
@@ -6476,6 +6995,16 @@
 	)
 	(wire
 		(pts
+			(xy 182.88 93.98) (xy 184.15 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a059560b-a6b2-4bf3-9ced-8b0c0fb1ae96")
+	)
+	(wire
+		(pts
 			(xy 90.17 64.77) (xy 92.71 64.77)
 		)
 		(stroke
@@ -6546,6 +7075,26 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 93.98) (xy 153.67 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4ac0aac-c4d8-46da-8070-5dcdf20be092")
+	)
+	(wire
+		(pts
+			(xy 152.4 88.9) (xy 153.67 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b81b4881-e91a-4bf6-95d3-a1ca3233f765")
+	)
+	(wire
+		(pts
 			(xy 99.06 57.15) (xy 100.33 57.15)
 		)
 		(stroke
@@ -6573,6 +7122,16 @@
 			(type default)
 		)
 		(uuid "ba60f695-90d8-4b01-93d0-e1d3003cb4b4")
+	)
+	(wire
+		(pts
+			(xy 182.88 91.44) (xy 182.88 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "baeedd1f-ee1d-4b88-9eda-988c4a6df9da")
 	)
 	(wire
 		(pts
@@ -6716,6 +7275,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 91.44) (xy 153.67 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e62816f9-ffd8-4e20-922e-e0bf5cd152f6")
+	)
+	(wire
+		(pts
 			(xy 124.46 44.45) (xy 125.73 44.45)
 		)
 		(stroke
@@ -6726,6 +7295,16 @@
 	)
 	(wire
 		(pts
+			(xy 152.4 91.44) (xy 152.4 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e6d79817-9e5e-45cd-9ae7-05b8a8fcd3aa")
+	)
+	(wire
+		(pts
 			(xy 257.81 34.29) (xy 262.89 34.29)
 		)
 		(stroke
@@ -6733,6 +7312,16 @@
 			(type default)
 		)
 		(uuid "e84bf8e6-9368-4937-95b5-43a718a67737")
+	)
+	(wire
+		(pts
+			(xy 152.4 86.36) (xy 152.4 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e906d59c-b4ff-4df3-a7b8-cebfc7306ad4")
 	)
 	(wire
 		(pts
@@ -6773,6 +7362,16 @@
 			(type default)
 		)
 		(uuid "ee134e59-11cb-48de-a5d7-f1c4bf98ff2c")
+	)
+	(wire
+		(pts
+			(xy 182.88 88.9) (xy 184.15 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "eecaab8b-9394-4758-93a9-5b5c88d2d490")
 	)
 	(wire
 		(pts
@@ -6884,6 +7483,36 @@
 		)
 		(uuid "15052a39-ad1f-40e5-a2af-e07911104f56")
 	)
+	(label "P32"
+		(at 199.39 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "22b44184-2b9e-43c9-baef-6ede48953282")
+	)
+	(label "P31"
+		(at 199.39 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "23082731-9f07-436f-9d90-9cb3dd95cd5b")
+	)
+	(label "P35"
+		(at 199.39 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4b6d5424-44ad-44be-b9fe-5647fa279e8a")
+	)
 	(label "SAI_SCK_A"
 		(at 49.53 92.71 0)
 		(effects
@@ -6893,6 +7522,26 @@
 			(justify left bottom)
 		)
 		(uuid "4f71ac99-d1a3-44fd-8766-7873808d09cd")
+	)
+	(label "P6"
+		(at 168.91 88.9 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5a548aa7-d33b-4043-a5ed-999e10bec5f8")
+	)
+	(label "P19"
+		(at 168.91 93.98 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "68148884-e3c8-46c2-a640-5692b8dc5b87")
 	)
 	(label "FPGA_SCK"
 		(at 44.45 130.81 0)
@@ -6913,6 +7562,16 @@
 			(justify left bottom)
 		)
 		(uuid "6e733d43-6d24-41e6-8dd4-5828e45d9a7d")
+	)
+	(label "P11"
+		(at 168.91 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "79d306b8-0d6d-4a3d-83c3-caae292a180c")
 	)
 	(label "FPGA_FS"
 		(at 44.45 133.35 0)
@@ -6943,6 +7602,26 @@
 			(justify left bottom)
 		)
 		(uuid "d5bdcda1-4b49-4ce2-abf4-63b7546015bd")
+	)
+	(label "P4"
+		(at 168.91 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "df4d5ea1-9b9c-4eab-86d0-129ad8575dbb")
+	)
+	(label "P37"
+		(at 199.39 86.36 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "e9b22056-d0bc-458d-ac2d-1519da7f70bf")
 	)
 	(label "SAI_FS_A"
 		(at 49.53 97.79 0)
@@ -7289,7 +7968,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer")
-		(at 198.12 91.44 0)
+		(at 194.31 287.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -7298,7 +7977,7 @@
 		(fields_autoplaced yes)
 		(uuid "19dfb4b0-3e06-4a9a-b9bf-264735b611e9")
 		(property "Reference" "mix"
-			(at 195.58 90.1699 0)
+			(at 191.77 285.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7307,7 +7986,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 195.58 92.7099 0)
+			(at 191.77 288.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7316,7 +7995,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 198.12 91.44 0)
+			(at 194.31 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7325,7 +8004,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 198.12 91.44 0)
+			(at 194.31 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7334,7 +8013,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 198.12 91.44 0)
+			(at 194.31 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -7493,6 +8172,81 @@
 			(project "tremolo_guitar_pedal"
 				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
 					(reference "U3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R_Potentiometer")
+		(at 134.62 146.05 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "22dc8a7d-bb03-4d6a-a40f-36647d0e8d3f")
+		(property "Reference" "speed1"
+			(at 132.08 144.7799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Value" "10k, log"
+			(at 132.08 147.3199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 134.62 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Potentiometer"
+			(at 134.62 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c50cb183-2c3c-45ef-b322-fc6da37353ce")
+		)
+		(pin "2"
+			(uuid "80a37a36-a0af-4a38-bd75-3b18392108ff")
+		)
+		(pin "3"
+			(uuid "9f929c43-90d7-4c65-b837-b7412f7b7387")
+		)
+		(instances
+			(project "tremolo_guitar_pedal"
+				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
+					(reference "speed1")
 					(unit 1)
 				)
 			)
@@ -8138,7 +8892,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer")
-		(at 177.8 91.44 0)
+		(at 173.99 287.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8147,7 +8901,7 @@
 		(fields_autoplaced yes)
 		(uuid "3cd0e73e-0c32-4993-88ae-5a5162a1ae9a")
 		(property "Reference" "depth"
-			(at 175.26 90.1699 0)
+			(at 171.45 285.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8156,7 +8910,7 @@
 			)
 		)
 		(property "Value" "10k"
-			(at 175.26 92.7099 0)
+			(at 171.45 288.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8165,7 +8919,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 91.44 0)
+			(at 173.99 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8174,7 +8928,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 177.8 91.44 0)
+			(at 173.99 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8183,7 +8937,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 177.8 91.44 0)
+			(at 173.99 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8448,6 +9202,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Value" "3PDT Footswitch"
@@ -8569,72 +9324,6 @@
 			(project "tremolo_guitar_pedal"
 				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
 					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+12V")
-		(at 96.52 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "4eb83134-0821-4a68-aae2-95a25e85a751")
-		(property "Reference" "#PWR024"
-			(at 96.52 93.98 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+12V"
-			(at 96.52 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 96.52 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 96.52 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+12V\""
-			(at 96.52 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "fe46d1b4-be8f-4a90-81d3-c8f319b7c761")
-		)
-		(instances
-			(project ""
-				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
-					(reference "#PWR024")
 					(unit 1)
 				)
 			)
@@ -8778,7 +9467,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 177.8 95.25 0)
+		(at 173.99 290.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -8786,7 +9475,7 @@
 		(dnp no)
 		(uuid "5332143b-8f4a-4304-b1ea-587a90aefbce")
 		(property "Reference" "#PWR030"
-			(at 177.8 101.6 0)
+			(at 173.99 297.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8795,7 +9484,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 177.8 100.33 0)
+			(at 173.99 295.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8804,7 +9493,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 95.25 0)
+			(at 173.99 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8813,7 +9502,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 95.25 0)
+			(at 173.99 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -8822,7 +9511,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 177.8 95.25 0)
+			(at 173.99 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9188,15 +9877,15 @@
 	(symbol
 		(lib_id "Device:R")
 		(at 133.35 135.89 90)
+		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "5d2cece2-e008-41c1-85a5-990f2c5dfaee")
 		(property "Reference" "R17"
-			(at 133.35 142.24 90)
+			(at 133.35 129.54 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9204,8 +9893,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "910"
-			(at 133.35 132.08 90)
+		(property "Value" "47k"
+			(at 133.35 139.7 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9213,7 +9902,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 133.35 137.668 90)
+			(at 133.35 134.112 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9558,7 +10247,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 156.21 87.63 0)
+		(at 152.4 283.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9567,7 +10256,7 @@
 		(fields_autoplaced yes)
 		(uuid "6df5a746-b107-4f75-83e2-a1bcb5dd736f")
 		(property "Reference" "#PWR027"
-			(at 156.21 91.44 0)
+			(at 152.4 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9576,7 +10265,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 156.21 82.55 0)
+			(at 152.4 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9584,7 +10273,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 87.63 0)
+			(at 152.4 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9593,7 +10282,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 156.21 87.63 0)
+			(at 152.4 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9602,7 +10291,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 156.21 87.63 0)
+			(at 152.4 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9693,6 +10382,72 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3.3V")
+		(at 96.52 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "773d7a06-5665-4815-a249-4e79dc7112aa")
+		(property "Reference" "#PWR024"
+			(at 96.52 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3.3V"
+			(at 96.52 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 96.52 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 96.52 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 96.52 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d5661d72-b544-4837-815f-1a7f504d57f5")
+		)
+		(instances
+			(project "tremolo_guitar_pedal"
+				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
+					(reference "#PWR024")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 176.53 59.69 0)
 		(unit 1)
@@ -9760,7 +10515,7 @@
 	)
 	(symbol
 		(lib_id "MCU_ST_STM32L4:STM32L432KCUx")
-		(at -20.32 107.95 0)
+		(at 110.49 307.34 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -9769,7 +10524,7 @@
 		(fields_autoplaced yes)
 		(uuid "831f9896-fc77-4478-97ed-3b03e305d26a")
 		(property "Reference" "U5"
-			(at -18.1767 133.35 0)
+			(at 112.6333 332.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9778,7 +10533,7 @@
 			)
 		)
 		(property "Value" "STM32L432KCUx"
-			(at -18.1767 135.89 0)
+			(at 112.6333 335.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9787,7 +10542,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-32-1EP_5x5mm_P0.5mm_EP3.45x3.45mm"
-			(at -30.48 130.81 0)
+			(at 100.33 330.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9797,7 +10552,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.st.com/resource/en/datasheet/stm32l432kc.pdf"
-			(at -20.32 107.95 0)
+			(at 110.49 307.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9806,7 +10561,7 @@
 			)
 		)
 		(property "Description" "STMicroelectronics Arm Cortex-M4 MCU, 256KB flash, 64KB RAM, 80 MHz, 1.71-3.6V, 26 GPIO, UFQFPN32"
-			(at -20.32 107.95 0)
+			(at 110.49 307.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10009,6 +10764,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Value" "3PDT Footswitch"
@@ -10199,7 +10955,7 @@
 	)
 	(symbol
 		(lib_id "FPGA_Lattice:ICE40UP5K-SG48ITR")
-		(at -73.66 104.14 0)
+		(at 57.15 303.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10207,7 +10963,7 @@
 		(dnp no)
 		(uuid "8c5f02b0-1b97-42c0-a4de-2c9cb3f32262")
 		(property "Reference" "U6"
-			(at -81.534 135.128 0)
+			(at 49.276 334.518 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10216,7 +10972,7 @@
 			)
 		)
 		(property "Value" "ICE40UP5K-SG48ITR"
-			(at -81.534 137.668 0)
+			(at 49.276 337.058 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10225,7 +10981,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:QFN-48-1EP_7x7mm_P0.5mm_EP5.6x5.6mm"
-			(at -73.66 138.43 0)
+			(at 57.15 337.82 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10234,7 +10990,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.latticesemi.com/Products/FPGAandCPLD/iCE40Ultra"
-			(at -83.82 78.74 0)
+			(at 46.99 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10243,7 +10999,7 @@
 			)
 		)
 		(property "Description" "iCE40 UltraPlus FPGA, 5280 LUTs, 1.2V, 48-pin QFN"
-			(at -73.66 104.14 0)
+			(at 57.15 303.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10477,7 +11233,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 198.12 95.25 0)
+		(at 194.31 290.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10485,7 +11241,7 @@
 		(dnp no)
 		(uuid "90d18057-1b11-4e86-a748-78a392b1c31b")
 		(property "Reference" "#PWR032"
-			(at 198.12 101.6 0)
+			(at 194.31 297.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10494,7 +11250,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 198.12 100.33 0)
+			(at 194.31 295.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10503,7 +11259,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 198.12 95.25 0)
+			(at 194.31 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10512,7 +11268,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 198.12 95.25 0)
+			(at 194.31 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10521,7 +11277,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 198.12 95.25 0)
+			(at 194.31 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10543,7 +11299,7 @@
 	)
 	(symbol
 		(lib_id "Device:R_Potentiometer")
-		(at 156.21 91.44 0)
+		(at 152.4 287.02 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10552,7 +11308,7 @@
 		(fields_autoplaced yes)
 		(uuid "9274fabb-c513-432b-acda-ef4c824c96be")
 		(property "Reference" "speed"
-			(at 153.67 90.1699 0)
+			(at 149.86 285.7499 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10561,7 +11317,7 @@
 			)
 		)
 		(property "Value" "10k, log"
-			(at 153.67 92.7099 0)
+			(at 149.86 288.2899 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10570,7 +11326,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 91.44 0)
+			(at 152.4 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10579,7 +11335,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 156.21 91.44 0)
+			(at 152.4 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10588,7 +11344,7 @@
 			)
 		)
 		(property "Description" "Potentiometer"
-			(at 156.21 91.44 0)
+			(at 152.4 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10968,11 +11724,14 @@
 				(hide yes)
 			)
 		)
-		(pin "12"
+		(pin "19"
 			(uuid "57626950-9ea3-4743-850f-3c6ad31d3617")
 		)
-		(pin "2"
+		(pin "20"
 			(uuid "0fee9602-2994-45ae-86cd-b9729cbd36f7")
+		)
+		(pin "18"
+			(uuid "aed51ac8-f31b-4329-9fd5-9b5ec20311ed")
 		)
 		(instances
 			(project "tremolo_guitar_pedal"
@@ -10985,7 +11744,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 177.8 87.63 0)
+		(at 173.99 283.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -10994,7 +11753,7 @@
 		(fields_autoplaced yes)
 		(uuid "9d46a91d-fe5b-4d0d-abd8-78b65e43c4f6")
 		(property "Reference" "#PWR029"
-			(at 177.8 91.44 0)
+			(at 173.99 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11003,7 +11762,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 177.8 82.55 0)
+			(at 173.99 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11011,7 +11770,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 177.8 87.63 0)
+			(at 173.99 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11020,7 +11779,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 177.8 87.63 0)
+			(at 173.99 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11029,7 +11788,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 177.8 87.63 0)
+			(at 173.99 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11698,7 +12457,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 198.12 87.63 0)
+		(at 194.31 283.21 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11707,7 +12466,7 @@
 		(fields_autoplaced yes)
 		(uuid "bef3e037-e2d9-4436-961c-28f45f82dc24")
 		(property "Reference" "#PWR031"
-			(at 198.12 91.44 0)
+			(at 194.31 287.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11716,7 +12475,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 198.12 82.55 0)
+			(at 194.31 278.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11724,7 +12483,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 198.12 87.63 0)
+			(at 194.31 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11733,7 +12492,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 198.12 87.63 0)
+			(at 194.31 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11742,7 +12501,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 198.12 87.63 0)
+			(at 194.31 283.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11818,7 +12577,7 @@
 				(hide yes)
 			)
 		)
-		(pin "12"
+		(pin "9"
 			(uuid "cbe34571-035d-45ec-a13e-095652e9e917")
 		)
 		(instances
@@ -12028,6 +12787,72 @@
 			(project "tremolo_guitar_pedal"
 				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
 					(reference "C13")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 182.88 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cbfa02a7-e941-4494-8f4b-8ebad72fe3b2")
+		(property "Reference" "#PWR014"
+			(at 182.88 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 182.88 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 182.88 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 182.88 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 182.88 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "872196d1-2c45-4e2f-a558-c599c7cc25c2")
+		)
+		(instances
+			(project "tremolo_guitar_pedal"
+				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
+					(reference "#PWR014")
 					(unit 1)
 				)
 			)
@@ -12384,6 +13209,158 @@
 		)
 	)
 	(symbol
+		(lib_id "Switch:SW_DIP_x04")
+		(at 161.29 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dde00ffa-9101-440f-a5b4-8b96ea7ec5c7")
+		(property "Reference" "SW4"
+			(at 161.29 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "SW_Depth"
+			(at 161.29 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 161.29 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 161.29 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
+			(at 161.29 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "fbc7dd9b-3c85-429d-b779-bbc646e76820")
+		)
+		(pin "3"
+			(uuid "e0195f0b-d4d5-4f45-974d-375d162144e0")
+		)
+		(pin "1"
+			(uuid "6f9c0d46-29b9-4900-a119-47a3712b601b")
+		)
+		(pin "2"
+			(uuid "593fd433-0fec-4da4-a3b4-c4a7176d10ec")
+		)
+		(pin "8"
+			(uuid "852f1387-8c02-4f9a-acda-4d3d0a7492a7")
+		)
+		(pin "5"
+			(uuid "f27ccd72-256e-4298-bb26-71f2fa4a846d")
+		)
+		(pin "4"
+			(uuid "573f102e-f6e1-4d84-a517-02915dd2cc69")
+		)
+		(pin "6"
+			(uuid "64c20310-2282-4e79-a200-51399073646e")
+		)
+		(instances
+			(project ""
+				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
+					(reference "SW4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 152.4 93.98 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ddf0083d-a075-43c7-a01d-3ae5f6c3996e")
+		(property "Reference" "#PWR02"
+			(at 152.4 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 152.4 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 152.4 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e0cc4bdc-c91b-467b-8b80-42a0012a626a")
+		)
+		(instances
+			(project "tremolo_guitar_pedal"
+				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
+					(reference "#PWR02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 240.03 132.08 0)
 		(unit 1)
@@ -12586,7 +13563,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 156.21 95.25 0)
+		(at 152.4 290.83 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12594,7 +13571,7 @@
 		(dnp no)
 		(uuid "eb82ceea-fe42-4dd2-8597-1e25a92ae726")
 		(property "Reference" "#PWR028"
-			(at 156.21 101.6 0)
+			(at 152.4 297.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12603,7 +13580,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 156.21 100.33 0)
+			(at 152.4 295.91 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12612,7 +13589,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 156.21 95.25 0)
+			(at 152.4 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12621,7 +13598,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 156.21 95.25 0)
+			(at 152.4 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12630,7 +13607,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 156.21 95.25 0)
+			(at 152.4 290.83 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12716,6 +13693,92 @@
 			(project ""
 				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_DIP_x04")
+		(at 191.77 91.44 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ee1f9a13-1bc4-4cb8-9399-1d1be123149b")
+		(property "Reference" "SW5"
+			(at 191.77 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "SW_Speed"
+			(at 191.77 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 191.77 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 191.77 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "4x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol"
+			(at 191.77 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "7"
+			(uuid "fbc7dd9b-3c85-429d-b779-bbc646e76820")
+		)
+		(pin "3"
+			(uuid "e0195f0b-d4d5-4f45-974d-375d162144e0")
+		)
+		(pin "1"
+			(uuid "6f9c0d46-29b9-4900-a119-47a3712b601b")
+		)
+		(pin "2"
+			(uuid "593fd433-0fec-4da4-a3b4-c4a7176d10ec")
+		)
+		(pin "8"
+			(uuid "852f1387-8c02-4f9a-acda-4d3d0a7492a7")
+		)
+		(pin "5"
+			(uuid "f27ccd72-256e-4298-bb26-71f2fa4a846d")
+		)
+		(pin "4"
+			(uuid "573f102e-f6e1-4d84-a517-02915dd2cc69")
+		)
+		(pin "6"
+			(uuid "64c20310-2282-4e79-a200-51399073646e")
+		)
+		(instances
+			(project ""
+				(path "/8a33e168-654f-4001-b61c-1ca3dc65eab0"
+					(reference "SW5")
 					(unit 1)
 				)
 			)
@@ -12945,6 +14008,7 @@
 				(font
 					(size 1.27 1.27)
 				)
+				(hide yes)
 			)
 		)
 		(property "Value" "3PDT Footswitch"
