@@ -137,6 +137,7 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#final-project-picture" id="toc-final-project-picture" class="nav-link" data-scroll-target="#final-project-picture">Final Project picture</a></li>
   <li><a href="#video-demonstration" id="toc-video-demonstration" class="nav-link" data-scroll-target="#video-demonstration">Video Demonstration</a></li>
   <li><a href="#block-diagram" id="toc-block-diagram" class="nav-link" data-scroll-target="#block-diagram">Block Diagram</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements">Acknowledgements</a></li>
@@ -170,6 +171,15 @@ ul.task-list li input[type="checkbox"] {
 <p>This project implements a digital guitar pedal capable of applying a real-time chorus effect to an instrument input. The system utilizes a hybrid architecture featuring a microcontroller (MCU), an FPGA, an external DAC, and custom analog circuitry. The analog front-end passes the guitar input through gain scaling and offset adjustment, followed by 4th-order anti-aliasing filters. The signal is then digitized by the MCU’s internal ADC and transferred via DMA to an SAI module for output in I2S format.</p>
 <p>The FPGA decodes the incoming I2S data and routes it to a DSP module, which utilizes SRAM to generate the chorus modulation. Finally, the processed audio is packaged and transmitted out to an external DAC via I2S, converted back to an analog signal, and scaled to a safe output range suitable for a standard guitar amplifier.</p>
 </section>
+<section id="final-project-picture" class="level2">
+<h2 class="anchored" data-anchor-id="final-project-picture">Final Project picture</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/FinalProject.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Final project in its enclosure</figcaption>
+</figure>
+</div>
+</section>
 <section id="video-demonstration" class="level2">
 <h2 class="anchored" data-anchor-id="video-demonstration">Video Demonstration</h2>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed//Rw8HaAM1LVo?feature=share" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
@@ -179,7 +189,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/TopBlockDiagramAll.png" class="img-fluid figure-img"></p>
-<figcaption>Figure 1: Top Block Diagram</figcaption>
+<figcaption>Figure 2: Top Block Diagram</figcaption>
 </figure>
 </div>
 </section>

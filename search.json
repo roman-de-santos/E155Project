@@ -35,6 +35,13 @@
     "text": "This project implements a digital guitar pedal capable of applying a real-time chorus effect to an instrument input. The system utilizes a hybrid architecture featuring a microcontroller (MCU), an FPGA, an external DAC, and custom analog circuitry. The analog front-end passes the guitar input through gain scaling and offset adjustment, followed by 4th-order anti-aliasing filters. The signal is then digitized by the MCU’s internal ADC and transferred via DMA to an SAI module for output in I2S format.\nThe FPGA decodes the incoming I2S data and routes it to a DSP module, which utilizes SRAM to generate the chorus modulation. Finally, the processed audio is packaged and transmitted out to an external DAC via I2S, converted back to an analog signal, and scaled to a safe output range suitable for a standard guitar amplifier."
   },
   {
+    "objectID": "index.html#final-project-picture",
+    "href": "index.html#final-project-picture",
+    "title": "E155 Project Portfolio",
+    "section": "Final Project picture",
+    "text": "Final Project picture\n\n\n\nFigure 1: Final project in its enclosure"
+  },
+  {
     "objectID": "index.html#video-demonstration",
     "href": "index.html#video-demonstration",
     "title": "E155 Project Portfolio",
@@ -46,7 +53,7 @@
     "href": "index.html#block-diagram",
     "title": "E155 Project Portfolio",
     "section": "Block Diagram",
-    "text": "Block Diagram\n\n\n\nFigure 1: Top Block Diagram"
+    "text": "Block Diagram\n\n\n\nFigure 2: Top Block Diagram"
   },
   {
     "objectID": "index.html#acknowledgements",
