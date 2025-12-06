@@ -53,7 +53,7 @@ Since we are using mono audio our group decided to use the left channel of the F
 ### MCU Sample Collection
 * **Process:** The MCU collects samples from the guitar using the analog-to-digital converter (ADC) peripheral.
 * **Requirement:** Because the guitar outputs an analog signal, it must be digitally sampled.
-* **Rate:** A sample rate of 44.1 kHz was chosen to target CD-quality audio.
+* **Rate:** A sample rate of 44.1 kHz was chosen to target CD-quality audio. There was an error percentage of about 0.11% since the PLL configuration for the event generator was slightly off.
 
 ### FPGA DSP Block Implementation
 * **Implementation:** The FPGA incorporates the DSP block to apply a filter on the sampled audio.
@@ -73,5 +73,26 @@ Since we are using mono audio our group decided to use the left channel of the F
 * **Components:** The system uses input and output buffers, DC bias, a 4th-order Sallen-Key Butterworth antialiasing filter, and coupling capacitors.
 * **Protection:** Op-amp rails ensure signals greater than 3.3V do not enter the ADC.
 * **Power:** All IC power rails are decoupled with capacitors.
+
+## FPGA Testbench Results:
+
+![Figure 2: I2S Testbench](I2STestbenchWaves)
+
+Figure 2 shows a successful transaction from the I2S reciever (rx) to the I2S transmitter (tx) without the DSP module to test signal passthrough. In the signals 'left_chan' and 'right_chan' the rx module correctly interpreted
+incoming packet as 0xdeadbeef and 0x123456.
+
+![Figure 3: LFO Testbench](images/LFOTestbench.png)
+
+Figure 3 shows a successful tesbench for the Low Frequency Oscillator (LFO), a sub-module of the DSP module. 'WAVE_o' Shows the value being read from the sine wave LUT and the frequency of 
+the 'newValFlag_o' shows that the value is updating correctly depending on the value of the 'freqSetting' to change the speed of the oscillator. 
+
+![Figure 4: CDC_FTS Testbench](images/CDCFTSTestbench.png)
+
+Figure 4 shows a successful testbench for a clock domain crossing from the fast FPGA system to the slower I2S clock. 'register_o' is being populated with the values we expect.
+
+![Figure 5: Top Testbench](images/TopTestbench.png)
+
+Figure 5 shows a succesful testbench for the Top module where a packet in I2S format was fed in and the output packet was expected to be 0x6ab0 after mixing. 
+This testbench was used to test the async FIFOs for clock domain crossing between the I2S modules and the DSP module, the LFO gen module, the mixer, and the delay buffer. fifoPktOut_s shows the output was as expected.
 
 ***
