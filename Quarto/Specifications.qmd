@@ -44,6 +44,12 @@ For the Micro P's Project, the specifications are as follows:
 * **Protocol:** Communication is established via the SAI module using I2S. This allows for two-channel digital audio transmission as Pulse Code Modulation (PCM), which is essential for high-quality audio.
 * **Signals:** The protocol uses Serial Clock (SCK), Word Select (WS), and Serial Data (SD) to synchronize data transfer.
 
+![Figure 1: Successful I2S transaction](images/DigitalTraceI2S.png)
+
+Figure 1 shows the successful I2S transaction according to our outline in the documentation tab on this website. Channels D0-2
+are the I2S inputs to the FPGA generated from the MCU. Notice how the channel is set up to be in mono so the data is replicated along the left and right channel. Channels D4-D6 are the I2S outputs from the FPGA after they are modified.
+Since we are using mono audio our group decided to use the left channel of the FPGA output to showcase the input to the delay buffer. The right channel shows the mixed data and our DAC isolates this channel. This was intended for debugging purposes.
+
 ### MCU Sample Collection
 * **Process:** The MCU collects samples from the guitar using the analog-to-digital converter (ADC) peripheral.
 * **Requirement:** Because the guitar outputs an analog signal, it must be digitally sampled.
