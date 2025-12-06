@@ -223,6 +223,13 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Protocol:</strong> Communication is established via the SAI module using I2S. This allows for two-channel digital audio transmission as Pulse Code Modulation (PCM), which is essential for high-quality audio.</li>
 <li><strong>Signals:</strong> The protocol uses Serial Clock (SCK), Word Select (WS), and Serial Data (SD) to synchronize data transfer.</li>
 </ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/DigitalTraceI2S.png" class="img-fluid figure-img"></p>
+<figcaption>Figure 1: Successful I2S transaction</figcaption>
+</figure>
+</div>
+<p>Figure 1 shows the successful I2S transaction according to our outline in the documentation tab on this website. Channels D0-2 are the I2S inputs to the FPGA generated from the MCU. Notice how the channel is set up to be in mono so the data is replicated along the left and right channel. Channels D4-D6 are the I2S outputs from the FPGA after they are modified. Since we are using mono audio our group decided to use the left channel of the FPGA output to showcase the input to the delay buffer. The right channel shows the mixed data and our DAC isolates this channel. This was intended for debugging purposes.</p>
 </section>
 <section id="mcu-sample-collection" class="level3">
 <h3 class="anchored" data-anchor-id="mcu-sample-collection">MCU Sample Collection</h3>
