@@ -1,6 +1,8 @@
 # E155Project
 Micro P's Final Project, Chorus Effect Guitar Pedal 
 
+Website: https://roman-de-santos.github.io/E155Project/
+
 
 * `FPGA/`:
     * `DSP/` Contains the chorus effect DSP algorithm with testbenches
