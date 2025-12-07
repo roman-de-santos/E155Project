@@ -175,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="specifications-overview" class="level2">
 <h2 class="anchored" data-anchor-id="specifications-overview">Specifications Overview</h2>
-<p>For the Micro P`s Project, the specifications are as follows:</p>
+<p>For the Micro P’s Project, the specifications are as follows:</p>
 <ul>
 <li>Audibly implements the intended effect.</li>
 <li>Physical switch can toggle the audio effect applied to the input.</li>
@@ -275,32 +275,32 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="fpga-testbench-results">FPGA Testbench Results:</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="I2STestbenchWaves.png" class="img-fluid figure-img"></p>
+<p><img src="images/I2STestbenchWaves.png" class="img-fluid figure-img"></p>
 <figcaption>Figure 2: I2S Testbench</figcaption>
 </figure>
 </div>
-<p>Figure 2 shows a successful transaction from the I2S reciever (rx) to the I2S transmitter (tx) without the DSP module to test signal passthrough. In the signals <code>left_chan</code> and <code>right_chan</code> the rx module correctly interpreted incoming packet as 0xdeadbeef and 0x123456.</p>
+<p>Figure 2 shows a successful transaction from the I2S reciever (rx) to the I2S transmitter (tx) without the DSP module to test signal passthrough. In the signals ‘left_chan’ and ‘right_chan’ the rx module correctly interpreted incoming packet as 0xdeadbeef and 0x123456.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/LFOTestbench.png" class="img-fluid figure-img"></p>
 <figcaption>Figure 3: LFO Testbench</figcaption>
 </figure>
 </div>
-<p>Figure 3 shows a successful tesbench for the Low Frequency Oscillator (LFO), a sub-module of the DSP module. <code>WAVE_o</code> Shows the value being read from the sine wave LUT and the frequency of the <code>newValFlag_o</code> shows that the value is updating correctly depending on the value of the `freqSetting’ to change the speed of the oscillator.</p>
+<p>Figure 3 shows a successful tesbench for the Low Frequency Oscillator (LFO), a sub-module of the DSP module. ‘WAVE_o’ Shows the value being read from the sine wave LUT and the frequency of the ‘newValFlag_o’ shows that the value is updating correctly depending on the value of the ‘freqSetting’ to change the speed of the oscillator.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/CDCFTSTestbench.png" class="img-fluid figure-img"></p>
 <figcaption>Figure 4: CDC_FTS Testbench</figcaption>
 </figure>
 </div>
-<p>Figure 4 shows a successful testbench for a clock domain crossing from the fast FPGA system to the slower I2S clock. <code>register_o</code> is being populated with the values we expect.</p>
+<p>Figure 4 shows a successful testbench for a clock domain crossing from the fast FPGA system to the slower I2S clock. ‘register_o’ is being populated with the values we expect.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/TopTestbench.png" class="img-fluid figure-img"></p>
 <figcaption>Figure 5: Top Testbench</figcaption>
 </figure>
 </div>
-<p>Figure 5 shows a succesful testbench for the Top module where a packet in I2S format was fed in and the output packet was expected to be 0x6ab0 after mixing. This testbench was used to test the async FIFOs for clock domain crossing between the I2S modules and the DSP module, the LFO gen module, the mixer, and the delay buffer. <code>fifoPktOut_s</code> shows the output was as expected.</p>
+<p>Figure 5 shows a succesful testbench for the Top module where a packet in I2S format was fed in and the output packet was expected to be 0x6ab0 after mixing. This testbench was used to test the async FIFOs for clock domain crossing between the I2S modules and the DSP module, the LFO gen module, the mixer, and the delay buffer. fifoPktOut_s shows the output was as expected.</p>
 <hr>
 
 
