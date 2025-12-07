@@ -76,7 +76,7 @@ Since we are using mono audio our group decided to use the left channel of the F
 
 ## FPGA Testbench Results:
 
-![Figure 2: I2S Testbench](I2STestbenchWaves)
+![Figure 2: I2S Testbench](images/I2STestbenchWaves.png)
 
 Figure 2 shows a successful transaction from the I2S reciever (rx) to the I2S transmitter (tx) without the DSP module to test signal passthrough. In the signals 'left_chan' and 'right_chan' the rx module correctly interpreted
 incoming packet as 0xdeadbeef and 0x123456.
